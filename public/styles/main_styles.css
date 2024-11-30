@@ -1886,13 +1886,14 @@ section
 }
 .footer_social
 {
-	margin-top: 23px;
+	margin-top: 5px;
+	margin-bottom: 5px;
 }
 .footer_social ul li
 {
 	display: inline-block;
-	width: 35px;
-	height: 45px;
+	width: 25px;
+	height: 25px;
 	background: #4b505d;
 	border-radius: 50%;
 	-webkit-transition: all 200ms ease;
@@ -1903,7 +1904,7 @@ section
 }
 .footer_social ul li:not(:last-child)
 {
-	margin-right: 6px;
+	margin-right: 10px;
 }
 .footer_social ul li a
 {
@@ -1914,7 +1915,7 @@ section
 .footer_social ul li a i
 {
 	color: #FFFFFF;
-	line-height: 45px;
+	line-height: 25px;
 }
 .footer_social ul li:hover
 {

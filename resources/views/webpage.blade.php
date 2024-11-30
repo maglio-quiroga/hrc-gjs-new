@@ -29,15 +29,12 @@
     <div id="app">
         <div class="super_container">
             @include('template.header')
-            @include('template.menu')
             @include('template.homes')
             @include('template.features')
             @include('template.event')
             @include('template.team')
             @include('template.lastNews')
             @include('template.footer')
-
-           
         </div>
     </div>
     <script src="js/jquery-3.2.1.min.js"></script>

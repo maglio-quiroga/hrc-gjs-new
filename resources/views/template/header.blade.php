@@ -1,6 +1,6 @@
 <header class="header">
 			
     @include('template.top-bar')
-    @include('template.header-content')
+    @include('template.navbar')
 	
 </header>

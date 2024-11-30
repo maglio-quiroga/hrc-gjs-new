@@ -35,7 +35,6 @@
     <div id="app">
         <div class="super_container">
             @include('template.header')
-            @include('template.menu')
             <div>
             
                 <div class="container">
