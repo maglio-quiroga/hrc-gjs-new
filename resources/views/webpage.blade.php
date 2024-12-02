@@ -29,6 +29,7 @@
     <div id="app">
         <div class="super_container">
             @include('template.header')
+            @include('template.menu')
             @include('template.homes')
             @include('template.noticiasDestacadas')
             @include('template.serviciosyunidades')
