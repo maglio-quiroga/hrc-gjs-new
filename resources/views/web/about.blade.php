@@ -7,77 +7,83 @@
                 <div class="row">
                     <div class="col">
                         <div class="container text-center">
-                        </br></br>
+                            <br><br>
                             <h2 class="section_title">Bienvenidos a Dirección de Formación Continua</h2>
-                            </br></br>
-
-                            <div class="section_subtitle"><p></p></div>
+                            <br><br>
+                            <div class="section_subtitle">
+                                <p></p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                
-                <div style="width: full;">
 
+                <div style="width: 100%;">
                     <iframe width="100%" height="610" class="embed-responsive-item"
-                    src="video/video.mp4" type="video/mp4"
-      allowfullscreen autoplay
-    ></iframe>
+                            src="https://www.youtube.com/embed/oqsil9V2c7Q?autoplay=1&controls=0"
+                            allowfullscreen></iframe>
+                </div>
+                <br><br>
+
+                @foreach ([
+                    ['title' => 'Reseña histórica',
+                      'img' => 'images/about/01-frontis-hrc-anos-40-1.jpg',
+                      'text' => "
+                      El Hospital Regional San José del Carmen de Copiapó es un establecimiento de salud pública, ubicado en la capital de la Región de Atacama.  Es el hospital más antiguo de la zona y el más grande de la tercera región.
+                      Los orígenes del Hospital Regional de Copiapó San José del Carmen se remontan al año 1848 cuando se construye el denominado “Establecimiento de Beneficia” en los terrenos que donó Candelaria Goyenechea.
+                      En 1869 se construyó un Hospicio en el mismo lugar, donde se recibió a numerosos heridos de guerra provenientes del conflicto en el norte. El Hospicio resultó completamente destruido luego del terremoto de Vallenar del año 1922. Un año después, Carlos Van Buren, realiza una donación para construir un nuevo hospital, cuyo patrón pasó a ser San José del Carmen.
+                      El hospital sufrió un incendio en el año 1965 que destruyó parte de sus instalaciones. En julio del año 1968 el presidente Eduardo Frei Montalva Anunció la construcción de un nuevo hospital en el mismo sitio, siendo Entregada la primera etapa en el año 1971 y la segunda en el año 1974.La tercera etapa fue entregada en el año 1995, bajo la presidencia de Eduardo Frei Ruiz-Tagle.
+                      En el año 2007 un convenio firmado entre el Ministerio de Salud y el Gobierno Regional de Atacama permitió iniciar el Proceso de Normalización del Hospital Regional de Copiapó, el cual contempla la construcción de una nueva torre de hospitalización, edificio de Salud Mental y un nuevo edificio de Urgencia, entre otras obras.
+                      El Hospital Regional de Copiapó, es hoy un Establecimiento de Salud de Alta Complejidad; Por el propio Ministerio de Salud con Registro N° 229 de la Superintendencia de Salud desde el año 2016 (24 de agosto). Re-acreditado con observaciones el 24 de abril, 2020. (Resolución final pendiente)."
+                    ],
+                    ['title' => 'Nuestra Misión',
+                      'img' => 'images/about/mision.jpg',
+                      'text' => 'Somos un hospital de alta complejidad asistencial docente, que entregamos servicios integrales de salud a la comunidad, con trabajos en red centrado en las personas.'
+                    ],
+                    [
+                        'title' => 'Nuestra Visión',
+                        'img' => 'images/about/vision.jpg',
+                        'text' => 'Ser un Hospital referente en la red asistencial que esté orientado a la excelencia en sus resultados sanitarios.'
+                    ],
+                    [
+                        'title' => 'Nuestra Valores',
+                        'img' => 'images/about/valores.webp',
+                        'texts' => [
+                            'Respeto' => 'Es el reconocimiento o valoración de las cualidades de los demás y sus derechos como pacientes o personas integrantes de esta organización.',
+
+                            'Probidad' => 'Es la moralidad, integridad y honradez en las acciones realizadas día a día dentro y fuera de la institución.',
+
+                            'Responsabilidad' => 'Es el compromiso de cada uno de los miembros de la institución de hacerse cargo de la calidad y seguridad de los servicios de salud entregados.',
+
+                            'Compromiso' => 'Es el trabajo en equipo, para entregar ayuda a los usuarios o compañeros de trabajo, que significa estar disponibles en el momento indicado.',
+
+                            'Empatía' => 'Es la capacidad de ponerse en el lugar de otra persona, de intentar evaluar las acciones en función de la situación de esa persona en particular, sus emociones y síntomas.'
+                        ]
+                    ]
+                ] as $section)
+                    <div class="card mb-3" style="max-width: 100%;">
+                        <div class="row g-0"style="margin-right: 0px; margin-left: 0px; padding-bottom: 20px">
+                            <div class="col-md-4">
+                                <br>
+                                <img src="{{ $section['img'] }}" class="img-fluid rounded-start" style="border-radius: 3%;" alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h3 class="card-title">{{ $section['title'] }}</h3>
+                                    @if (isset($section['text']))
+                                        <p class="card-text" style="text-align: justify">{{ $section['text'] }}</p>
+                                    @else
+                                        @foreach ($section['texts'] as $key => $text)
+                                        <p class="card-text" style="text-align: justify"><b>{{ $key }}</b>: {{ $text }}</p>
+                                        @endforeach
+                                    @endif
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <br>
-
-
-                <br>
-                <div class="card mb-3" style="max-width: full;">
-                    <div class="row g-0">
-                      <div class="col-md-4">
-                        <br>
-                        <img src="images/about_1.jpg" class="img-fluid rounded-start" alt="...">
-                      </div>
-                      <div class="col-md-8">
-                        <div class="card-body">
-                            <h3 class="card-title">Quienes Somos</h3>
-                            <p class="card-text">Un equipo multidiciplinario, proactivo y comprometido con la formación continua a nivel local, nacional e internacional desde un enfoque democrático e inclusivo.</p>
-                          
-                        </div>
-                      </div>
-                    </div>
-                </div>
-                <br>
-
-                <div class="card mb-3" style="max-width: full;">
-                    <div class="row g-0">
-                      <div class="col-md-4">
-                        <br>
-                        <img src="images/mision.jpg" class="img-fluid rounded-start" alt="...">
-                      </div>
-                      <div class="col-md-8">
-                        <div class="card-body">
-                            <h3 class="card-title">Nuestra Misión</h3>
-                            <p class="card-text" style="text-align: justify">Entregar herramientas para satisfacer las necesidades e intereses generales de la sociedad a través de diplomados, cursos, postítulos y otros programas que el entorno requiera. Todo aquello que implique perfeccionamiento, capacitación, desarrollo y mejora permanente de profesionales en distintas disciplinas o áreas de interés, tanto en el ámbito público como privado, con el propósito de entregar conocimiento a todas aquellas personas que desean mantenerse actualizadas en sus competencias que caracterizan a su actividad o recibir un conocimiento nuevo, extendiendo sus saberes ya sean en sus áreas como en otras complementarias, contribuyendo a su desarrollo personal y fortaleciendo a las organizaciones.</p>
-                          
-                        </div>
-                      </div>
-                    </div>
-                </div>
-                <br>
-                <div class="card mb-3" style="max-width: full;">
-                    <div class="row g-0">
-                      <div class="col-md-4">
-                        <br>
-                        <img src="images/vision.jpg" class="img-fluid rounded-start" alt="...">
-                      </div>
-                      <div class="col-md-8">
-                        <div class="card-body">
-                            <h3 class="card-title">Nuestra Visión</h3>
-                            <p class="card-text" style="text-align: justify">Ser una unidad universitaria que proporciona programas de formación continua que generan aprendizaje con estándares de calidad integral y accesibilidad universal, proporcionando excelencia y pertinencia en las necesidades de formación regional y nacional, para sectores público y privado, con la base de un sistema institucional de formación continua innovador, flexible, democratico, inclusivo, con un alto sentido ético y de calidad que aporta valor a los (as)  profesionales con un interés de perfeccionamiento con el sello Universidad de Atacama.</p>
-                          
-                        </div>
-                      </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </div>
 </div>
-
 @endsection
