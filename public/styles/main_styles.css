@@ -786,7 +786,6 @@ section
 	height: 100%;
 	background-repeat: no-repeat;
 	background-size: cover;
-	opacity: 0.6;
 	background-position: center center;
 	
 }
@@ -1322,58 +1321,58 @@ section
 }
 
 /*********************************
-10. Events
+10. noticias
 *********************************/
 
-.events
+.noticias
 {
 	width: 100%;
 	padding-top: 93px;
 	padding-bottom: 70px;
 	background: #FFFFFF;
 }
-.events_row
+.noticias_row
 {
 	margin-top: 47px;
 }
-.event_left
+.noticia_left
 {
 	padding-right: 20px;
 }
-.event_mid
+.noticia_mid
 {
 	padding-left: 10px;
 	padding-right: 10px;
 }
-.event_right
+.noticia_right
 {
 	padding-left: 20px;
 }
-.event_image
+.noticia_image
 {
 	width: 100%;
 	border-radius: 5px;
 	overflow: hidden;
 }
-.event_image img
+.noticia_image img
 {
 	max-width: 100%;
 }
-.event_body
+.noticia_body
 {
 	padding-top: 30px;
 	padding-bottom: 30px;
 }
-.event_date
+.noticia_date
 {
 	box-shadow: 0px 1px 10px rgba(29, 34, 47, 0.1);
 }
-.event_date > div
+.noticia_date > div
 {
 	width: 60px;
 	height: 60px;
 }
-.event_day
+.noticia_day
 {
 	font-family: 'Museo Sans 500','Roboto Slab', serif;
 	font-size: 24px;
@@ -1381,7 +1380,7 @@ section
 	font-weight: 700;
 	line-height: 0.75;
 }
-.event_month
+.noticia_month
 {
 	font-family: 'Museo Sans 500','Roboto Slab', serif;
 	font-size: 14px;
@@ -1390,20 +1389,20 @@ section
 	line-height: 0.75;
 	margin-top: 9px;
 }
-.event:hover .event_date > div
+.noticia:hover .event_date > div
 {
 	background: #14bdee;
 }
-.event:hover .event_day,
-.event:hover .event_month
+.noticia:hover .event_day,
+.noticia:hover .event_month
 {
 	color: #FFFFFF;
 }
-.event_content
+.noticia_content
 {
 	padding-left: 20px;
 }
-.event_title a
+.noticia_title a
 {
 	font-family: 'Museo Sans 500','Roboto Slab', serif;
 	font-size: 20px;
@@ -1416,29 +1415,29 @@ section
 	-o-transition: all 200ms ease;
 	transition: all 200ms ease;
 }
-.event_title a:hover
+.noticia_title a:hover
 {
 	color: #14bdee;
 }
-.event_info_container
+.noticia_info_container
 {
 	margin-top: 11px;
 }
-.event_info
+.noticia_info
 {
 	display: inline-block;
 	color: #b5b8be;
 	font-size: 14px;
 }
-.event_info:not(:last-child)
+.noticia_info:not(:last-child)
 {
 	margin-right: 17px;
 }
-.event_info span
+.noticia_info span
 {
 	margin-left: 4px;
 }
-.event_text
+.noticia_text
 {
 	margin-top: 12px;
 }
@@ -1573,48 +1572,53 @@ section
 }
 
 /*********************************
-12. News
+12. Mapa
 *********************************/
-
-.news
+.mapa_container
+{
+	width: 100%;
+	padding-top: 50px;
+	background: #FFFFFF;
+}
+.mapa
 {
 	width: 100%;
 	padding-top: 93px;
 	padding-bottom: 100px;
 	background: #FFFFFF;
 }
-.news_row
+.mapa_row
 {
 	margin-top: 55px;
 }
-.news_post_large_container
+.mapa_post_large_container
 {
 	padding-right: 30px;
 }
-.news_post_large
+.mapa_post_large
 {
 	width: 100%;
 }
-.news_post_image
+.mapa_post_image
 {
 	width: 100%;
 	border-radius: 6px;
 	overflow: hidden;
 }
-.news_post_image img
+.mapa_post_image img
 {
 	max-width: 100%;
 }
-.news_post_large_title
+.mapa_post_large_title
 {
 	margin-top: 23px;
 }
-.news_post_large_title a
+.mapa_post_large_title a
 {
 	font-family: 'Museo Sans 500','Roboto Slab', serif;
 	font-size: 20px;
 	font-weight: 700;
-	color: #384158;
+	color: #000000;
 	line-height: 1.4;
 	-webkit-transition: all 200ms ease;
 	-moz-transition: all 200ms ease;
@@ -1622,20 +1626,20 @@ section
 	-o-transition: all 200ms ease;
 	transition: all 200ms ease;
 }
-.news_post_large_title a:hover
+.mapa_post_large_title a:hover
 {
 	color: #14bdee;
 }
-.news_post_meta
+.mapa_post_meta
 {
 	margin-top: 11px;
 }
-.news_post_meta ul li
+.mapa_post_meta ul li
 {
 	display: inline-block;
 	position: relative;
 }
-.news_post_meta ul li:not(:last-of-type)::after
+.mapa_post_meta ul li:not(:last-of-type)::after
 {
 	display: inline-block;
 	position: relative;
@@ -1643,7 +1647,7 @@ section
 	margin-left: 14px;
 	margin-right: 11px;
 }
-.news_post_meta ul li a
+.mapa_post_meta ul li a
 {
 	font-size: 14px;
 	font-weight: 400;
@@ -1655,19 +1659,19 @@ section
 	-o-transition: all 200ms ease;
 	transition: all 200ms ease;
 }
-.news_post_meta ul li a:hover
+.mapa_post_meta ul li a:hover
 {
 	color: #14bdee;
 }
-.news_post_text
+.mapa_post_text
 {
 	margin-top: 13px;
 }
-.news_post_link
+.mapa_post_link
 {
 	margin-top: 19px;
 }
-.news_post_link a
+.mapa_post_link a
 {
 	font-size: 14px;
 	font-weight: 400;
@@ -1680,27 +1684,27 @@ section
 	-o-transition: all 200ms ease;
 	transition: all 200ms ease;
 }
-.news_post_link a:hover
+.mapa_post_link a:hover
 {
 	color: #14bdee;
 }
-.news_posts_small
+.mapa_posts_small
 {
-	margin-top: -6px;
+	margin-top: -1px;
 }
-.news_post_small:not(:last-child)
+.mapa_post_small:not(:last-child)
 {
-	padding-bottom: 31px;
-	border-bottom: solid 1px #e5e5e5;
+	padding-bottom: 15px;
+	/* border-bottom: solid 1px #e5e5e5; */
 }
-.news_post_small:not(:first-child)
+.mapa_post_small:not(:first-child)
 {
 	padding-top: 29px;
 }
-.news_post_small_title a
+.mapa_post_small_title a
 {
 	font-family: 'Museo Sans 500','Roboto Slab', serif;
-	font-size: 18px;
+	font-size: 25px;
 	font-weight: 700;
 	line-height: 1.55;
 	color: #384158;
@@ -1710,7 +1714,7 @@ section
 	-o-transition: all 200ms ease;
 	transition: all 200ms ease;
 }
-.news_post_small_title a:hover
+.mapa_post_small_title a:hover
 {
 	color: #14bdee;
 }
@@ -1821,7 +1825,54 @@ section
 }
 
 /*********************************
-14. Footer
+14. Paginas del gobierno
+*********************************/
+
+.pagespublic
+{
+	width: 100%;
+	background: #FFFFFF;
+	padding-top: 93px;
+	padding-bottom: 103px;
+}
+.pagespublic_row
+{
+	margin-top: 55px;
+}
+.pagepublic
+{
+	width: 100%;
+	padding-top: 30px;
+	padding-bottom: 28px;
+	padding-left: 15px;
+	padding-right: 15px;
+	background: #FFFFFF;
+}
+.pagepublic_container
+{
+	width: 90%;
+}
+.pagepublic:hover
+{
+	box-shadow: 0px 5px 40px rgba(29,34,47,0.15);
+}
+.pagepublic_icon
+{
+	height: 55px;
+}
+.pagepublic_icon img
+{
+	max-width: 100%;
+}
+.pagepublic_title
+{
+	position: relative;
+	font-size: 20px;
+	margin-top: 23px;
+}
+
+/*********************************
+15. Footer
 *********************************/
 
 .footer

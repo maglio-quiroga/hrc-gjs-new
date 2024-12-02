@@ -1,5 +1,5 @@
 <footer class='footer'>
-    <div class="footer_background" style="background-image:url(images/footer_background.png);background-color: #244c5a"></div>
+    <div class="footer_background" style="background-image:url(images/footer_background.png);background-color: #029834"></div>
     <div class="container">
         <div class="row footer_row">
             <div class="col">

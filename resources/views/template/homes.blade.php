@@ -6,13 +6,13 @@
 
             <!-- Home Slider Item -->
             <div class="owl-item">
-                <div class="home_slider_background" style="background-image:url(images/home_slider_1.jpg)"></div>
+                <div class="home_slider_background" style="background-image:url(images/100años.png)"></div>
                 <div class="home_slider_content">
                     <div class="container">
                         <div class="row">
                             <div class="col text-center">
-                                <div class="home_slider_title" style="color:#051c29">Formación Continua</div>
-                                <div class="home_slider_subtitle" style="color:#0a1e29">Futuro al Alcance de Todos</div>
+                                <!-- {{--  <div class="home_slider_title" style="color:#051c29">Formación Continua</div>  --}}
+                                {{--  <div class="home_slider_subtitle" style="color:#0a1e29">Futuro al Alcance de Todos</div>  --}} -->
                                 <!--<div class="home_slider_form_container">
                                     <form action="#" id="home_search_form_1" class="home_search_form d-flex flex-lg-row flex-column align-items-center justify-content-between">
                                         <div class="d-flex flex-row align-items-center justify-content-start">
@@ -39,13 +39,13 @@
 
             <!-- Home Slider Item -->
             <div class="owl-item">
-                <div class="home_slider_background" style="background-image:url(images/home_slider_2.jpg)"></div>
+                <div class="home_slider_background" style="background-image:url(images/100años.png)"></div>
                 <div class="home_slider_content">
                     <div class="container">
                         <div class="row">
                             <div class="col text-center">
-                                <div class="home_slider_title" style="color:#051c29">Formación Continua</div>
-                                <div class="home_slider_subtitle" style="color:#051c29">Futuro al Alcance de Todos</div>
+                                <!-- {{--  <div class="home_slider_title" style="color:#051c29">Formación Continua</div>  --}}
+                                {{--  <div class="home_slider_subtitle" style="color:#0a1e29">Futuro al Alcance de Todos</div>  --}} -->
                                 <!--<div class="home_slider_form_container">
                                     <form action="#" id="home_search_form_2" class="home_search_form d-flex flex-lg-row flex-column align-items-center justify-content-between">
                                         <div class="d-flex flex-row align-items-center justify-content-start">
@@ -72,13 +72,13 @@
 
             <!-- Home Slider Item -->
             <div class="owl-item">
-                <div class="home_slider_background" style="background-image:url(images/home_slider_3.jpg)"></div>
+                <div class="home_slider_background" style="background-image:url(images/100años.png)"></div>
                 <div class="home_slider_content">
                     <div class="container">
                         <div class="row">
                             <div class="col text-center">
-                                <div class="home_slider_title" style="color:#051c29">Formación Continua</div>
-                                <div class="home_slider_subtitle" style="color:#051c29">Futuro al Alcance de Todos</div>
+                                {{--  <div class="home_slider_title" style="color:#051c29">Formación Continua</div>  --}}
+                                {{--  <div class="home_slider_subtitle" style="color:#0a1e29">Futuro al Alcance de Todos</div>  --}}
                                 <!--<div class="home_slider_form_container">
                                     <form action="#" id="home_search_form_3" class="home_search_form d-flex flex-lg-row flex-column align-items-center justify-content-between">
                                         <div class="d-flex flex-row align-items-center justify-content-start">

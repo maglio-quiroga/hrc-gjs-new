@@ -30,10 +30,11 @@
         <div class="super_container">
             @include('template.header')
             @include('template.homes')
-            @include('template.features')
-            @include('template.event')
-            @include('template.team')
-            @include('template.lastNews')
+            @include('template.noticiasDestacadas')
+            @include('template.serviciosyunidades')
+            @include('template.instagram')
+            @include('template.mapa')
+            @include('template.pag_gobierno')
             @include('template.footer')
         </div>
     </div>

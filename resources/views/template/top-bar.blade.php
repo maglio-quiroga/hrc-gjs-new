@@ -1,5 +1,5 @@
 <!-- Top Bar -->
-<div class="top_bar" style="background-color: #244c5a","font-family: Museo Sans 500">
+<div class="top_bar" style="background-color: #029834","font-family: Museo Sans 500">
     <div class="top_bar_container">
         <div class="container">
             <div class="row">
