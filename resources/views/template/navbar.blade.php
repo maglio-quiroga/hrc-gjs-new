@@ -17,7 +17,6 @@
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="{{route('about')}}">Nosotros</a>
                                 <a class="dropdown-item" href="{{route('directivo')}}">Equipo directivo</a>
-                                <a class="dropdown-item" href="{{route('direccion')}}">Dirección</a>
                                 <a class="dropdown-item" href="{{route('servicios')}}">Servicios y unidades</a>
                                 </ul>
                             </li>

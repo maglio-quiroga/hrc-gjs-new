@@ -12,10 +12,6 @@ class PageController extends Controller
     public function about(){
         return view('web.about');
     }
-    public function direccion(){
-        return view('web.direccion');
-    }
-
     public function directivo(){
         return view('web.directivo');
     }
