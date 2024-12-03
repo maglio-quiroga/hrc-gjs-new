@@ -9,7 +9,7 @@
 2. Body and some general stuff
 3. Header
 	3.1 Top Bar
-	3.2 Header Content
+	3.2 Navbar
 	3.3 Logo
 	3.4 Main Nav
 	3.5 Hamburger
@@ -272,7 +272,7 @@ section
 .top_bar
 {
 	width: 100%;
-	background: #14bdee;
+	background: #029834;
 }
 .header.scrolled .top_bar
 {
@@ -335,27 +335,83 @@ section
 }
 
 /*********************************
-3.2 Header Content
+3.2 Navbar
 *********************************/
 
-.header_container
+.navbar_container
 {
 	width: 100%;
 	background: #FFFFFF;
 }
-.header_content
-{
-	height: 90px;
-	-webkit-transition: all 200ms ease;
-	-moz-transition: all 200ms ease;
-	-ms-transition: all 200ms ease;
-	-o-transition: all 200ms ease;
-	transition: all 200ms ease;
+
+.navbar {
+
+	background-color: #FFFFFF;
 }
-.header.scrolled .header_content
-{
-	height: 80px;
+@media only screen and (max-width: 991px) {
+	.navbar {
+		width: 100%;
+	}
 }
+
+.navbar-nav .nav-link {
+	color: #000000;
+	transition: color 0.2s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+	color: #007bff;
+}
+
+.navbar-brand img {
+	max-width: 80px;
+	height: auto;
+}
+
+@media (max-width: 768px) {
+.navbar-brand img {
+	width: 150px;
+	height: auto;
+}
+}
+
+.navbar-nav li a {
+    font-size: 18px;
+    font-weight: 500;
+    color: #384158;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+
+.navbar-nav li a:hover,
+.navbar-nav li.active a {
+    color: #14bdee;
+}
+
+.navbar-nav li.active::after {
+    display: block;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #14bdee;
+    content: '';
+}
+
+.navbar-nav .dropdown-menu a {
+    color: #384158;
+    font-size: 16px;
+}
+
+.navbar-nav .dropdown-menu a:hover {
+    color: #14bdee;
+}
+
+  
 
 /*********************************
 3.3 Logo
@@ -413,128 +469,7 @@ section
 3.4 Main Nav
 *********************************/
 
-.main_nav_contaner
-{
 
-}
-.main_nav,
-.search_button,
-.shopping_cart
-{
-	display: inline-block;
-}
-.main_nav li
-{
-	display: inline-block;
-	position: relative;
-}
-.main_nav li:not(:last-child)
-{
-	margin-right: 44px;
-}
-.main_nav li a
-{
-	font-size: 18px;
-	font-weight: 500;
-	color: #384158;
-	-webkit-transition: all 200ms ease;
-	-moz-transition: all 200ms ease;
-	-ms-transition: all 200ms ease;
-	-o-transition: all 200ms ease;
-	transition: all 200ms ease;
-}
-.main_nav li a:hover,
-.main_nav li.active a
-{
-	color: #14bdee;
-}
-.main_nav li.active::after
-{
-	display: block;
-	position: absolute;
-	bottom: -2px;
-	left: 0;
-	width: 100%;
-	height: 2px;
-	background: #14bdee;
-	content: '';
-}
-.search_button
-{
-	margin-left: 46px;
-	cursor: pointer;
-}
-.shopping_cart
-{
-	margin-left: 23px;
-	cursor: pointer;
-}
-.search_button i,
-.shopping_cart i
-{
-	font-size: 18px;
-	color: #181818;
-	-webkit-transition: all 200ms ease;
-	-moz-transition: all 200ms ease;
-	-ms-transition: all 200ms ease;
-	-o-transition: all 200ms ease;
-	transition: all 200ms ease;
-}
-.search_button:hover i,
-.shopping_cart:hover i
-{
-	color: #14bdee;
-}
-.header_search_form
-{
-	display: block;
-	position: relative;
-	width: 40%;
-}
-.header_search_container
-{
-	position: absolute;
-	bottom: 0px;
-	left: 0px;
-	width: 100%;
-	background: #14bdee;
-	z-index: -1;
-	opacity: 0;
-	-webkit-transition: all 400ms ease;
-	-moz-transition: all 400ms ease;
-	-ms-transition: all 400ms ease;
-	-o-transition: all 400ms ease;
-	transition: all 400ms ease;
-}
-.header_search_container.active
-{
-	bottom: -73px;
-	opacity: 1;
-}
-.header_search_content
-{
-	width: 100%;
-	height: 73px;
-}
-.search_input
-{
-	width: 100%;
-	height: 40px;
-	border: none;
-	outline: none;
-	padding-left: 20px;
-}
-.header_search_button
-{
-	position: absolute;
-	top: 0;
-	right: 0;
-	width: 40px;
-	height: 100%;
-	border: none;
-	outline: none;
-	cursor: pointer;
-}
 
 /*********************************
 3.5 Hamburger
@@ -1490,6 +1425,7 @@ section
 .team_body
 {
 	width: 100%;
+	height: 255px;
 	padding-top: 108px;
 	padding-bottom: 24px;
 	background: #FFFFFF;
@@ -1509,6 +1445,8 @@ section
 .team_title a
 {
 	font-family: 'Museo Sans 500','Roboto Slab', serif;
+	padding-left: 10px;
+	padding-right: 10px;
 	font-size: 20px;
 	font-weight: 700;
 	color: #384158;
@@ -1528,6 +1466,8 @@ section
 	font-weight: 400;
 	color: #76777a;
 	margin-top: 6px;
+	padding-left: 10px;
+	padding-right: 10px;
 }
 .social_list
 {
