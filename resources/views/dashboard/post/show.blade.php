@@ -1,8 +1,8 @@
 @extends('dashboard.master')
 @section('content')
-<div class="card content-fluid">
+<div class="card content-fluid text-center">
     <div class="card-header">
-        <h3 class="card-title" style="color: #244c5a">ADMINISTRADOR: Noticia</h3>
+        <h3 class="card-title text-color">ADMINISTRADOR: Noticia</h3>
     </div>
     <div class="card-body">
         <div class="container" style="text-align: left" >

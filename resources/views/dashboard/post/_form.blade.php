@@ -17,8 +17,8 @@
     placeholder="Contenido ">{{ old('content', $post->content) }}</textarea>
 
 @if (isset($task)&& $task=='edit')
-<label for="">Imagen</label>
-<input type="file" name="image" accept="image/uploads/posts">
+<label class='text-color' for="">Imagen</label>
+<input class='text-color' type="file" name="image" accept="image/uploads/posts">
 @endif
 
 
