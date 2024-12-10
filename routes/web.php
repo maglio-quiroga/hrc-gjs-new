@@ -1,8 +1,10 @@
 <?php
 
+use Illuminate\Routing\RouteGroup;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\Web\WebPostController;
 use App\Http\Controllers\Dashboard\PostController;
 use App\Http\Controllers\Dashboard\CategoryController;
 use App\Http\Middleware\UserAccessDashboardMiddleware;
@@ -31,6 +33,13 @@ Route::group(['prefix' => 'dashboard','middleware'=>['auth',UserAccessDashboardM
     Route::resource('post', PostController::class);
     Route::resource('category', CategoryController::class);
 });
+
+Route::group(['prefix'=>'posted'],function(){
+    Route::controller(WebPostController::class)->group(function(){
+        Route::get('/','index')->name('web.post.index');
+        Route::get('/{post}','show')->name('web.post.show');
+    });
+})->name('posted');   
 
 require __DIR__.'/auth.php';
 
