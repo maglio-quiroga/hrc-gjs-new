@@ -8,7 +8,10 @@ use Illuminate\Http\Request;
 class PageController extends Controller
 {
     public function inicio(){
-        return view('webpage');
+        //return view('webpage');
+        $post = Post::where("posted", "yes")->first(); 
+        $posts = Post::where("posted", "yes")->take(9)->get(); 
+        return view('webpage', compact('post', 'posts'));
     }
     public function about(){
         return view('web.about');
@@ -156,4 +159,10 @@ class PageController extends Controller
 
         return view('web.directivo', compact('members'));
     }
+
+    public function new()
+    {
+        
+    }
+
 }

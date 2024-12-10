@@ -51,7 +51,7 @@
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Noticias</a>
+          <a class="nav-link" href="{{ route('web.post.index') }}">Noticias</a>
         </li>
       </ul>
     </div>

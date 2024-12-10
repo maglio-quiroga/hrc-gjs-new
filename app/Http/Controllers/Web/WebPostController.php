@@ -15,9 +15,9 @@ class WebPostController extends Controller
     }
     public function new()
     {
-        // Obtiene 10 noticias que están marcadas como publicadas
         $posts = Post::where("posted", "yes")->take(10)->get();
-        return view("template.noticiasDestacadas", compact("posts"));
+        //dd($posts);
+        return view('webpage', compact("posts"));
     }
     public function show(Post $post)
     {
