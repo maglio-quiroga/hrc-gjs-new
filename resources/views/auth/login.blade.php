@@ -1,47 +1,75 @@
-<x-guest-layout>
-    <!-- Session Status -->
-    <x-auth-session-status class="mb-4" :status="session('status')" />
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen flex items-center justify-center bg-cover bg-center" 
+      style="background-image: url('{{ asset('images/100años.png') }}');">
 
-    <form method="POST" action="{{ route('login') }}">
-        @csrf
-
-        <!-- Email Address -->
-        <div>
-            <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
-            <x-input-error :messages="$errors->get('email')" class="mt-2" />
+    <!-- Contenedor del formulario -->
+    <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
+        <!-- Logo -->
+        <div class="flex justify-center mb-4">
+            <img src="{{ asset('images/logos/logo_white-236x191.png') }}" alt="Logo" class="h-20 w-auto">
         </div>
 
-        <!-- Password -->
-        <div class="mt-4">
-            <x-input-label for="password" :value="__('Password')" />
+        <!-- Título del formulario -->
+        <h2 class="text-center text-3xl font-bold mb-6" style="color: #019934;">
+            Iniciar Sesión
+        </h2>
 
-            <x-text-input id="password" class="block mt-1 w-full"
-                            type="password"
-                            name="password"
-                            required autocomplete="current-password" />
+        <!-- Formulario -->
+        <form method="POST" action="{{ route('login') }}">
+            @csrf
+            
+            <!-- Correo Electrónico -->
+            <div class="mb-4">
+                <label for="email" class="block text-gray-700 font-medium mb-2">Correo Electrónico</label>
+                <input id="email" type="email" name="email" required 
+                       class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#019934]" 
+                       placeholder="Ingresa tu correo">
+            </div>
 
-            <x-input-error :messages="$errors->get('password')" class="mt-2" />
-        </div>
+            <!-- Contraseña -->
+            <div class="mb-6">
+                <label for="password" class="block text-gray-700 font-medium mb-2">Contraseña</label>
+                <input id="password" type="password" name="password" required 
+                       class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#019934]" 
+                       placeholder="Ingresa tu contraseña">
+            </div>
 
-        <!-- Remember Me -->
-        <div class="block mt-4">
-            <label for="remember_me" class="inline-flex items-center">
-                <input id="remember_me" type="checkbox" class="rounded dark:bg-gray-900 border-gray-300 dark:border-gray-700 text-indigo-600 shadow-sm focus:ring-indigo-500 dark:focus:ring-indigo-600 dark:focus:ring-offset-gray-800" name="remember">
-                <span class="ms-2 text-sm text-gray-600 dark:text-gray-400">{{ __('Remember me') }}</span>
-            </label>
-        </div>
+            <!-- Botón de Inicio de Sesión -->
+            <button type="submit" 
+                    class="w-full text-white py-2 px-4 rounded-md font-bold transition duration-300 bg-[#019934] hover:bg-[#017A24]">
+                Iniciar Sesión
+            </button>
 
-        <div class="flex items-center justify-end mt-4">
-            @if (Route::has('password.request'))
-                <a class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800" href="{{ route('password.request') }}">
-                    {{ __('Forgot your password?') }}
+            <!-- Recordar y enlace de recuperación -->
+            <div class="flex items-center justify-between mt-4">
+                <label class="inline-flex items-center">
+                    <input type="checkbox" name="remember" class="form-checkbox text-[#019934]">
+                    <span class="ml-2 text-gray-700 text-sm">Recuérdame</span>
+                </label>
+                <a href="{{ route('password.request') }}" class="text-sm hover:underline text-[#019934]">
+                    ¿Olvidaste tu contraseña?
                 </a>
-            @endif
+            </div>
+        </form>
 
-            <x-primary-button class="ms-3">
-                {{ __('Log in') }}
-            </x-primary-button>
+        <!-- Enlace de Registro -->
+        <div class="mt-6 text-center">
+            <p class="text-sm text-gray-600">
+                ¿No tienes una cuenta? 
+                <a href="{{ route('register') }}" class="text-[#019934] font-medium hover:underline">
+                    Regístrate aquí
+                </a>
+            </p>
         </div>
-    </form>
-</x-guest-layout>
+    </div>
+
+</body>
+</html>

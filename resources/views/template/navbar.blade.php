@@ -2,7 +2,7 @@
     <div class="navbar_container d-flex flex-row align-items-center justify-content-center">
 <nav class="navbar navbar-expand-lg navbar-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" href="{{ route('inicio') }}">
       <img src="{{ asset('images/logos/logo_white-236x191.png') }}" alt="Logo">
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
