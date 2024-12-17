@@ -89,3 +89,36 @@
 .menu-color{
     @apply text-blue-400
 }
+/* Colores base */
+.bg-primary {
+    @apply bg-[#019934];
+}
+
+.bg-secondary {
+    @apply bg-[#1EA54B];
+}
+
+.bg-light-green {
+    @apply bg-[#25A851];
+}
+
+.text-primary {
+    @apply text-[#019934];
+}
+
+.text-secondary {
+    @apply text-[#1EA54B];
+}
+
+/* Colores más claros */
+.bg-light {
+    @apply bg-[#C5E8D1];
+}
+
+.bg-lighter {
+    @apply bg-[#E9F6EE];
+}
+/* Clase para el texto blanco en la navegación */
+.text-nav-white {
+    @apply text-white;
+}
