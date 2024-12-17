@@ -28,16 +28,16 @@
             Información al Paciente
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown2">
-            <li><a class="dropdown-item" href="#">Horarios</a></li>
-            <li><a class="dropdown-item" href="#">Cuando acudir a urgencias</a></li>
-            <li><a class="dropdown-item" href="#">Donación de sangre</a></li>
-            <li><a class="dropdown-item" href="#">Plan estratégico</a></li>
-            <li><a class="dropdown-item" href="#">Reglamento interno</a></li>
-            <li><a class="dropdown-item" href="#">Aranceles</a></li>
-            <li><a class="dropdown-item" href="#">GES</a></li>
-            <li><a class="dropdown-item" href="#">OIRS</a></li>
-            <li><a class="dropdown-item" href="#">Legal</a></li>
-          </ul>
+            <li><a class="dropdown-item" href="{{ route('horarios') }}">Horarios</a></li>
+            <li><a class="dropdown-item" href="{{ route('como_acudir_urgencias') }}">Cuando acudir a urgencias</a></li>
+            <li><a class="dropdown-item" href="{{ route('donacion_de_sangre') }}">Donación de sangre</a></li>
+            <li><a class="dropdown-item" href="{{ route('plan_estrategico') }}">Plan estratégico</a></li>
+            <li><a class="dropdown-item" href="{{ route('reglamento_interno') }}">Reglamento interno</a></li>
+            <li><a class="dropdown-item" href="{{ route('aranceles') }}">Aranceles</a></li>
+            <li><a class="dropdown-item" href="{{ route('ges') }}">GES</a></li>
+            <li><a class="dropdown-item" href="{{ route('oirs') }}">OIRS</a></li>
+            <li><a class="dropdown-item" href="{{ route('legal') }}">Legal</a></li>
+        </ul>        
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown3" role="button" data-bs-toggle="dropdown" aria-expanded="false">

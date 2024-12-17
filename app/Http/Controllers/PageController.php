@@ -160,9 +160,49 @@ class PageController extends Controller
         return view('web.directivo', compact('members'));
     }
 
-    public function new()
+    public function horarios()
     {
-        
+        return view('web.horarios');
+    }
+
+    public function como_acudir_urgencias()
+    {
+        return view('web.como_acudir_urgencias');
+    }
+
+    public function donacion_de_sangre()
+    {
+        return view('web.donacion_de_sangre');
+    }
+
+    public function reglamento_interno()
+    {
+        return view('web.reglamento_interno');
+    }
+
+    public function plan_estrategico()
+    {
+        return view('web.plan_estrategico');
+    }
+    
+    public function aranceles()
+    {
+        return view('web.aranceles');
+    }
+    
+    public function ges()
+    {
+        return view('web.ges');
+    }
+
+    public function oirs()
+    {
+        return view('web.oirs');
+    }
+    
+    public function legal()
+    {
+        return view('web.legal');
     }
 
 }

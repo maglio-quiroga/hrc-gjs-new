@@ -28,6 +28,16 @@ Route::get('/equipo-directivo', [PageController::class, 'directivo'])->name('dir
 Route::get('/direccion', [PageController::class, 'direccion'])->name('direccion');
 Route::get('/servicios', [PageController::class, 'servicios'])->name('servicios');
 
+Route::get('/horarios', [PageController::class, 'horarios'])->name('horarios');
+Route::get('/como_acudir_urgencias', [PageController::class, 'como_acudir_urgencias'])->name('como_acudir_urgencias');
+Route::get('/donacion_de_sangre', [PageController::class, 'donacion_de_sangre'])->name('donacion_de_sangre');
+Route::get('/reglamento_interno', [PageController::class, 'reglamento_interno'])->name('reglamento_interno');
+Route::get('/plan_estrategico', [PageController::class, 'plan_estrategico'])->name('plan_estrategico');
+Route::get('/aranceles', [PageController::class, 'aranceles'])->name('aranceles');
+Route::get('/ges', [PageController::class, 'ges'])->name('ges');
+Route::get('/oirs', [PageController::class, 'oirs'])->name('oirs');
+Route::get('/legal', [PageController::class, 'legal'])->name('legal');
+
 
 Route::group(['prefix' => 'dashboard','middleware'=>['auth',UserAccessDashboardMiddleware::class]], function() {
     Route::resource('post', PostController::class);
