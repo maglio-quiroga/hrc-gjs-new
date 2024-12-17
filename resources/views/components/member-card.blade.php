@@ -1,9 +1,17 @@
-<div class="" style="margin-bottom: 20px">
-    <div class="team_item">
-        <div class="team_image"><img src={{$member['image']}} alt=""></div>
-        <div class="team_body">
-            <div class="team_title"><a style="color:#244c5a" onmouseover="this.style.color='#14bdee'" onmouseout="this.style.color='#244c5a'" href="">{{$member['name']}}</a></div>
-            <div class="team_subtitle">{{$member['title']}}</div>
-        </div>
+<div class="card text-center d-flex flex-column" style="position: relative; height: 100%;">
+    <img src="{{ $member['image'] ?? 'images/default.jpg' }}" 
+         class="card-img-top img-fluid" 
+         style="object-fit: cover; max-height: 200px;" 
+         alt="{{ $member['name'] ?? 'Nombre no disponible' }}">
+
+    <div class="card-body flex-grow-1 d-flex flex-column">
+        <h5 class="card-title">{{ $member['name'] ?? 'Nombre no disponible' }}</h5>
+        <p class="card-text flex-grow-1">{{ $member['title'] ?? 'Título no disponible' }}</p>
     </div>
+
+    <button class="card-button" 
+            data-bs-toggle="modal" 
+            data-bs-target="#modal-{{ $loop->index }}">
+        Más información
+    </button>
 </div>
