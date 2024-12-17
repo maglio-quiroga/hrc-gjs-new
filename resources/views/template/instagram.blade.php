@@ -19,12 +19,6 @@
 					<div class="team_image"><img src="images/asd2.jpg" alt=""></div>
 					<div class="team_body">
 						<div class="team_title"><a href="#">Dia del parademico y los tens</a></div>
-						<div class="social_list">
-							<ul>
-								<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-								
-							</ul>
-						</div>
 					</div>
 				</div>
 			</div>
@@ -35,11 +29,6 @@
 					<div class="team_image"><img src="images/asd2.jpg" alt=""></div>
 					<div class="team_body">
 						<div class="team_title"><a href="#">Dia nacional del transplante</a></div>
-						<div class="social_list">
-							<ul>
-							<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-							</ul>
-						</div>
 					</div>
 				</div>
 			</div>
@@ -50,11 +39,6 @@
 					<div class="team_image"><img src="images/asd2.jpg" alt=""></div>
 					<div class="team_body">
 						<div class="team_title"><a href="#">Dia de la educacion parvularia</a></div>
-						<div class="social_list">
-							<ul>
-							<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-							</ul>
-						</div>
 					</div>
 				</div>
 			</div>
@@ -65,11 +49,6 @@
 					<div class="team_image"><img src="images/asd2.jpg" alt=""></div>
 					<div class="team_body">
 						<div class="team_title"><a href="#">Director(s) HRC, director SSA</a></div>
-						<div class="social_list">
-							<ul>
-							<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-							</ul>
-						</div>
 					</div>
 				</div>
 			</div>
