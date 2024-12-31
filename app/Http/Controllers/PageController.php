@@ -94,7 +94,7 @@ class PageController extends Controller
             [
                 'name' => 'Danary Vera Moreta',
                 'title' => 'Subdirección Administrativa', 
-                'image' => 'images/personal/subdirector_administrativo.webp',
+                'image' => '',##esta foto no esta##
                 'description' => "
                 La Subdirección Administrativa entre las funciones que desempeña destaca la gestión administrativa del establecimiento en materias relativas a asuntos contables, financieros de recursos físicos, abastecimiento y de servicios generales; Coordinar estudio del proyecto de presupuesto del hospital para el subtítulo 22; elaborar programas anuales de compra; presentar proyecto presupuestario para el período siguiente; preparar bases técnicas y administrativas para procesos licitatorios de compras de bienes o servicios de consumo necesarios; elaborar participativamente la Planificación estratégica y monitorear el desarrollo del plan de implementación; dar cumplimiento a los indicadores de autogestión que les sean aplicables, las características obligatorias y no obligatorias para la acreditación, además de aquellas relativas a compromisos de gestión y metas sanitarias entre otras (Art. 264 Manual Organizacional HRC).
                 "
