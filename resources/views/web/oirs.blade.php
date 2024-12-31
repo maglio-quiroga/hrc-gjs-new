@@ -24,8 +24,8 @@
             <!-- Atención Presencial -->
             <div class="col-md-6 mb-4">
                 <div class="card shadow-sm">
-                    <div class="card-header bg-success text-white">
-                        <h5>Presencial</h5>
+                    <div class="card-header bg-success">
+                        <h5 class="text-white">Presencial</h5>
                     </div>
                     <div class="card-body">
                         <p>
@@ -38,8 +38,8 @@
             <!-- Página Web -->
             <div class="col-md-6 mb-4">
                 <div class="card shadow-sm">
-                    <div class="card-header bg-success text-white">
-                        <h5>Página Web</h5>
+                    <div class="card-header bg-success">
+                        <h5 class="text-white">Página Web</h5>
                     </div>
                     <div class="card-body">
                         <p>
@@ -55,8 +55,8 @@
             <!-- Carta -->
             <div class="col-md-6 mb-4">
                 <div class="card shadow-sm">
-                    <div class="card-header bg-success text-white">
-                        <h5>Carta</h5>
+                    <div class="card-header bg-success">
+                        <h5 class="text-white">Carta</h5>
                     </div>
                     <div class="card-body">
                         <p>
@@ -69,8 +69,8 @@
             <!-- Atención Telefónica -->
             <div class="col-md-6 mb-4">
                 <div class="card shadow-sm">
-                    <div class="card-header bg-success text-white">
-                        <h5>Vía Telefónica</h5>
+                    <div class="card-header bg-success">
+                        <h5 class="text-white">Vía Telefónica</h5>
                     </div>
                     <div class="card-body">
                         <p>
