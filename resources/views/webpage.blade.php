@@ -34,6 +34,7 @@
             @include('template.instagram')
             @include('template.mapa')
             @include('template.pag_gobierno')
+            @include('template.campañas')
             @include('template.footer')
         </div>
     </div>
