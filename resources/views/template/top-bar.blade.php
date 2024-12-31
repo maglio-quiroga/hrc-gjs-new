@@ -7,14 +7,8 @@
                     <div class="top_bar_content d-flex flex-row align-items-center justify-content-end">
                         <div class="footer_social">
                             <ul >
-                                <!-- <li style="background-color: #1e2434"><a href="https://www.facebook.com/eco.uda.cl"><i class="fa fa-facebook" aria-hidden="false"></i></a></li> -->
-                                <li style="background-color: #1e2434"><a
-                                        href="https://www.instagram.com/hospitalregionalcopiapo/"><i
-                                            class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                                <li style="background-color: #1e2434"><a href="https://twitter.com/OnlineUda"><i class="fa fa-twitter"
-                                            aria-hidden="true"></i></a></li>
-                                <li style="background-color: #1e2434"><a href="https://www.youtube.com/@hospitalregionalcopiaposan9695"><i
-                                                class="fa fa-youtube-play" aria-hidden="true"></i></a>
+                                <li style="background-color: #1e2434"><a href=""><i
+                                    class="fa fa-sign-in" aria-hidden="true"></i></a>
                                 </li>
                             </ul>
                         </div>

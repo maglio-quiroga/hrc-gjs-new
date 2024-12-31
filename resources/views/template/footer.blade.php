@@ -15,14 +15,33 @@
 
                             </div>
                         </div>
+                        
                         <div class="col-lg-3 footer_col">
-                            <div class="footer_section footer_contact">
-                                <div class="footer_title mb-3" style="font-family:Montserrat">Contacto</div>
-                                <div class="footer_contact_info">
-                                    <ul>
-                                        <li>Mesa Central 52-2-46700</li>
-                                        <li>Anexo Minsal 52-2-467391</li>
-                                        <li>Los Carrera #1320, Copiapó, Chile.</li>
+                            <div class="row d-flex flex-row justify-content-around">
+                                <div class="footer_section footer_contact">
+                                    <div class="footer_title mb-3" style="font-family:Montserrat">Contacto</div>
+                                    <div class="footer_contact_info">
+                                        <ul>
+                                            <li>Mesa Central 52-2-46700</li>
+                                            <li>Anexo Minsal 52-2-467391</li>
+                                            <li>Los Carrera #1320, Copiapó, Chile.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row d-flex flex-row justify-content-around">
+                                <div class="footer_social" style="padding-top: 25px">
+                                    <div class="footer_title mb-3" style="font-family:Montserrat">Redes Sociales</div>
+                                    <ul >
+                                        <!-- <li style="background-color: #1e2434"><a href="https://www.facebook.com/eco.uda.cl"><i class="fa fa-facebook" aria-hidden="false"></i></a></li> -->
+                                        <li style="background-color: #4ab66e"><a
+                                                href="https://www.instagram.com/hospitalregionalcopiapo/"><i
+                                                    class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                        <li style="background-color: #58bd7c"><a href="https://twitter.com/OnlineUda"><i class="fa fa-twitter"
+                                                    aria-hidden="true"></i></a></li>
+                                        <li style="background-color: #58bd7c"><a href="https://www.youtube.com/@hospitalregionalcopiaposan9695"><i
+                                                        class="fa fa-youtube-play" aria-hidden="true"></i></a>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
