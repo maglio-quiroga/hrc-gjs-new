@@ -200,9 +200,29 @@ class PageController extends Controller
         return view('web.oirs');
     }
     
-    public function legal()
+    public function deberes_y_derechos()
     {
-        return view('web.legal');
+        return view('web.deberes_y_derechos');
+    }
+
+    public function ley_mila()
+    {
+        return view('web.ley_mila');
+    }
+
+    public function ley_dominga()
+    {
+        return view('web.ley_dominga');
+    }
+
+    public function ley_ive()
+    {
+        return view('web.ley_ive');
+    }
+
+    public function ley_rs()
+    {
+        return view('web.ley_rs');
     }
 
 }

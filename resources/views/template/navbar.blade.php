@@ -24,7 +24,7 @@
           </ul>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown2" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
             Información al Paciente
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown2">
@@ -36,7 +36,16 @@
             <li><a class="dropdown-item" href="{{ route('aranceles') }}">Aranceles</a></li>
             <li><a class="dropdown-item" href="{{ route('ges') }}">GES</a></li>
             <li><a class="dropdown-item" href="{{ route('oirs') }}">OIRS</a></li>
-            <li><a class="dropdown-item" href="{{ route('legal') }}">Legal</a></li>
+            <li class="dropend">
+              <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">Aspecto Legal</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="{{ route('deberes_y_derechos') }}">Ley N°20.584: Derechos y Deberes del Paciente</a></li>
+                <li><a class="dropdown-item" href="{{ route('ley_mila') }}">Ley N°21.372: Ley Mila</a></li>
+                <li><a class="dropdown-item" href="{{ route('ley_dominga') }}">Ley N°21.371: Ley Dominga</a></li>
+                <li><a class="dropdown-item" href="{{ route('ley_ive') }}">Ley N°21.030: Interrupción Voluntaria del Embarazo</a></li>
+                <li><a class="dropdown-item" href="{{ route('ley_rs') }}">Ley N°20.850: Ley Ricarte Soto</a></li>
+              </ul>
+            </li>
         </ul>        
         </li>
         <li class="nav-item dropdown">

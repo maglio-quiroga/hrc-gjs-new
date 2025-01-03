@@ -36,7 +36,11 @@ Route::get('/plan_estrategico', [PageController::class, 'plan_estrategico'])->na
 Route::get('/aranceles', [PageController::class, 'aranceles'])->name('aranceles');
 Route::get('/ges', [PageController::class, 'ges'])->name('ges');
 Route::get('/oirs', [PageController::class, 'oirs'])->name('oirs');
-Route::get('/legal', [PageController::class, 'legal'])->name('legal');
+Route::get('/deberes_y_derechos', [PageController::class, 'deberes_y_derechos'])->name('deberes_y_derechos');
+Route::get('/ley_mila', [PageController::class, 'ley_mila'])->name('ley_mila');
+Route::get('/ley_dominga', [PageController::class, 'ley_dominga'])->name('ley_dominga');
+Route::get('/ley_ive', [PageController::class, 'ley_ive'])->name('ley_ive');
+Route::get('/ley_rs', [PageController::class, 'ley_rs'])->name('ley_rs');
 
 
 Route::group(['prefix' => 'dashboard','middleware'=>['auth',UserAccessDashboardMiddleware::class]], function() {
