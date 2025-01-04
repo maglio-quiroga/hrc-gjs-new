@@ -40,10 +40,10 @@
               <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">Aspecto Legal</a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="{{ route('deberes_y_derechos') }}">Ley N°20.584: Derechos y Deberes del Paciente</a></li>
-                <li><a class="dropdown-item" href="{{ route('ley_mila') }}">Ley N°21.372: Ley Mila</a></li>
-                <li><a class="dropdown-item" href="{{ route('ley_dominga') }}">Ley N°21.371: Ley Dominga</a></li>
-                <li><a class="dropdown-item" href="{{ route('ley_ive') }}">Ley N°21.030: Interrupción Voluntaria del Embarazo</a></li>
                 <li><a class="dropdown-item" href="{{ route('ley_rs') }}">Ley N°20.850: Ley Ricarte Soto</a></li>
+                <li><a class="dropdown-item" href="{{ route('ley_ive') }}">Ley N°21.030: Interrupción Voluntaria del Embarazo</a></li>
+                <li><a class="dropdown-item" href="{{ route('ley_dominga') }}">Ley N°21.371: Ley Dominga</a></li>
+                <li><a class="dropdown-item" href="{{ route('ley_mila') }}">Ley N°21.372: Ley Mila</a></li>
               </ul>
             </li>
         </ul>        
