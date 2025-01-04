@@ -165,4 +165,16 @@ class PageController extends Controller
         
     }
 
+    public function cuentas_publicas(){
+        return view('web.comunidad.cuentas_publicas');
+    }
+
+    public function hospital_amigo(){
+        return view('web.comunidad.hospital_amigo');
+    }
+
+    public function consejo_consultivo(){
+        return view('web.comunidad.consejo_consultivo');
+    }
+
 }
