@@ -11,7 +11,65 @@ class PageController extends Controller
         //return view('webpage');
         $post = Post::where("posted", "yes")->first(); 
         $posts = Post::where("posted", "yes")->take(9)->get(); 
-        return view('webpage', compact('post', 'posts'));
+
+        $enlaces_interes = [
+            [
+                'id' => 1,
+                'name' => 'Transparencia Activa',
+                'image' => 'images/enlaces-interes/banner_transparencia_activa.jpg',
+                'link' => 'https://www.portaltransparencia.cl/PortalPdT/',
+            ],
+            [
+                'id' => 2,
+                'name' => 'Plan Estratégico',
+                'image' => 'images/enlaces-interes/banner_plan_estrategico.jpg',
+                'link' => 'https://hospitalcopiapo.cl/docs/PlanificacionEstrategica2021_2025.pdf',
+            ],
+            [
+                'id' => 3,
+                'name' => 'Cuenta Pública',
+                'image' => 'images/enlaces-interes/banner_cuenta_publica.jpg',
+                'link' => '',
+            ],
+            [
+                'id' => 4,
+                'name' => 'Participación Ciudadana',
+                'image' => 'images/enlaces-interes/banner_participacion_ciudadana.jpg',
+                'link' => 'http://ssat.redsalud.gob.cl/usuarios/proyectos-de-participacion-ciudadana-aps-2/proyectos-de-participacion-ciudadana-aps-2020/participacion-ciudadana-en-la-formulacion-de-la-estrategia-nacional-de-salud-2021-2030-en-chile/',
+            ],
+            [
+                'id' => 5,
+                'name' => 'Empleos Públicos',
+                'image' => 'images/enlaces-interes/banner_empleos_publicos.jpg',
+                'link' => 'https://www.empleospublicos.cl/',
+            ],
+            [
+                'id' => 6,
+                'name' => 'Seguridad de la Información',
+                'image' => 'images/enlaces-interes/banner_seg_info.jpg',
+                'link' => 'https://www.minsal.cl/seguridad_de_la_informacion/',
+            ],
+            [
+                'id' => 7,
+                'name' => 'Servicio de Salud Atacama',
+                'image' => 'images/enlaces-interes/banner_ssa.jpg',
+                'link' => 'https://www.saludatacama.cl/',
+            ],
+            [
+                'id' => 8,
+                'name' => 'Sistema OIRS',
+                'image' => 'images/enlaces-interes/banner_oirs.jpg',
+                'link' => 'https://oirs.minsal.cl/',
+            ],
+            [
+                'id' => 9,
+                'name' => 'Farmacia de Turno',
+                'image' => 'images/enlaces-interes/banner_farmacia_turno.jpg',
+                'link' => 'https://seremienlinea.minsal.cl/asdigital/index.php?mfarmacias',
+            ],
+        ];
+
+        return view('webpage', compact('post', 'posts', 'enlaces_interes'));
     }
     public function about(){
         return view('web.about');
