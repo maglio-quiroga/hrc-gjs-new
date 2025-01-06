@@ -35,6 +35,7 @@
             @include('template.mapa')
             @include('template.pag_gobierno')
             @include('template.campañas')
+            @include('template.videos_interes')
             @include('template.footer')
         </div>
     </div>
