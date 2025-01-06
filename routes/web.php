@@ -42,6 +42,9 @@ Route::get('/ley_dominga', [PageController::class, 'ley_dominga'])->name('ley_do
 Route::get('/ley_ive', [PageController::class, 'ley_ive'])->name('ley_ive');
 Route::get('/ley_rs', [PageController::class, 'ley_rs'])->name('ley_rs');
 
+Route::get('/cuentas_publicas', [PageController::class, 'cuentas_publicas'])->name('cuentas_publicas');
+Route::get('/hospital_amigo', [PageController::class, 'hospital_amigo'])->name('hospital_amigo');
+Route::get('/consejo_consultivo', [PageController::class, 'consejo_consultivo'])->name('consejo_consultivo');
 
 Route::group(['prefix' => 'dashboard','middleware'=>['auth',UserAccessDashboardMiddleware::class]], function() {
     Route::resource('post', PostController::class);

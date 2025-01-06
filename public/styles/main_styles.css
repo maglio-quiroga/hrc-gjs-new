@@ -341,12 +341,12 @@ section
 .navbar_container
 {
 	width: 100%;
-	background: #FFFFFF;
+	background: #e2f3eb;
 }
 
 .navbar {
 
-	background-color: #FFFFFF;
+	background-color: #e2f3eb;
 }
 @media only screen and (max-width: 991px) {
 	.navbar {
@@ -360,7 +360,7 @@ section
 }
 
 .navbar-nav .nav-link:hover {
-	color: #007bff;
+	color: #75c891;
 }
 
 .navbar-brand img {
@@ -388,7 +388,7 @@ section
 
 .navbar-nav li a:hover,
 .navbar-nav li.active a {
-    color: #14bdee;
+    color: #c5e8d1;
 }
 
 .navbar-nav li.active::after {
@@ -398,7 +398,7 @@ section
     left: 0;
     width: 100%;
     height: 2px;
-    background: #14bdee;
+    background: #c5e8d1;
     content: '';
 }
 
@@ -408,7 +408,7 @@ section
 }
 
 .navbar-nav .dropdown-menu a:hover {
-    color: #14bdee;
+    color: #c5e8d1;
 }
 
   
@@ -700,7 +700,7 @@ section
 .home
 {
 	width: 100%;
-	height: 1000px;
+	height: 800px;
 }
 .home_slider_container
 {
@@ -826,7 +826,7 @@ section
 {
 	width: 120px;
 	height: 46px;
-	background: #14bdee;
+	background: #b6e2c5;
 	border: none;
 	outline: none;
 	border-radius: 3px;
@@ -869,7 +869,7 @@ section
 }
 .home_slider_nav:hover
 {
-	background: #14bdee;
+	background: #b6e2c5;
 }
 
 /*********************************
@@ -1377,6 +1377,26 @@ section
 	margin-top: 12px;
 }
 
+.btn-secondary
+{
+	background-color: #38a735;
+}
+
+.custom-carousel-control 
+{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    background-color: rgba(36, 171, 47, 0.5);
+    border-radius: 50%;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /*********************************
 11. Team
 *********************************/
@@ -1630,7 +1650,7 @@ section
 }
 .mapa_posts_small
 {
-	margin-top: -1px;
+	padding-top: 20px;
 }
 .mapa_post_small:not(:last-child)
 {
@@ -1656,7 +1676,30 @@ section
 }
 .mapa_post_small_title a:hover
 {
-	color: #14bdee;
+	color: #b6e3c5;
+}
+
+.accordion-item
+{
+	color: #3a4857;
+    background-color: #f8fcf9;
+    border: var(--bs-accordion-border-width) solid #ffffff;
+}
+
+.accordion-button
+{
+	background-color: #f8f9f3;
+}
+.accordion-button:not(.collapsed)
+{
+	color: #000000;         /* Color de texto azul */
+    background-color: #b6e3c5; /* Fondo azul claro */
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.125);
+}
+
+.accordion-header
+{
+	background-color:  #f8f9f3;
 }
 
 /*********************************
@@ -1798,7 +1841,7 @@ section
 }
 .pagepublic_icon img
 {
-	max-width: 100%;
+	max-width: 75%;
 	height: auto;
 }
 .pagepublic_title
