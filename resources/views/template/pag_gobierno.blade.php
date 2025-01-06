@@ -5,127 +5,118 @@
         <div class="row">
             <div class="col">
                 <div class="section_title_container text-center">
-                    <h2 class="section_title">Paginas del Gobierno</h2>
+                    <h2 class="section_title" style="padding-bottom: 50px">Paginas del Gobierno</h2>
                 </div>
             </div>
         </div>
         <div class="row pagespublic_row">
-            
             <!-- Features Item -->
-            <div class="col-lg-3 pagepublic_col">
+            <div class="col-lg-3 col-md-4 col-sm-6 pagepublic_col">
                 <div class="pagepublic text-center trans_400">
-                    <div class="pagepublic_icon"><img src="images/gobierno/banner_gob2.png" alt=""></div>
-                    {{--  <h3 class="pagepublic_title">Ley de transparencia</h3>
-                    <div class="pagepublic_text"><p>Transparencia Activa</p></div>  --}}
+                    <a href="https://oirs.minsal.cl/" target="_blank" class="pagepublic_icon">
+                        <img src="images/gobierno/banner_gob2.png" alt="Descripción de la Imagen">
+                    </a>
                 </div>
             </div>
 
             <!-- Features Item -->
-            <div class="col-lg-3 pagepublic_col">
+            <div class="col-lg-3 col-md-4 col-sm-6 pagepublic_col">
                 <div class="pagepublic text-center trans_400">
-                    <div class="pagepublic_icon"><img src="images/gobierno/banner_gob16.png" alt=""></div>
-                    {{--  <h3 class="pagepublic_title">Ley del lobby</h3>
-                    <div class="pagepublic_text"><p>Plataforma</p></div>  --}}
+                    <a href="https://www.portaltransparencia.cl/PortalPdT/" target="_blank" class="pagepublic_icon">
+                        <img src="images/gobierno/banner_gob16.png" alt="Descripción de la Imagen">
+                    </a>
                 </div>
             </div>
 
             <!-- Features Item -->
-            <div class="col-lg-3 pagepublic_col">
+            <div class="col-lg-3 col-md-4 col-sm-6 pagepublic_col">
                 <div class="pagepublic text-center trans_400">
-                    <div class="pagepublic_icon"><img src="images/gobierno/banner_gob14.png" alt=""></div>
-                    {{--  <h3 class="pagepublic_title">Defensora ciudadana</h3>
-                    <div class="pagepublic_text"><p>Comisión</p></div>  --}}
+                    <a href="https://oirs.minsal.cl/" target="_blank" class="pagepublic_icon">
+                        <img src="images/gobierno/banner_gob14.png" alt="Descripción de la Imagen">
+                    </a>
                 </div>
             </div>
 
             <!-- Features Item -->
-            <div class="col-lg-3 pagepublic_col">
+            <div class="col-lg-3 col-md-4 col-sm-6 pagepublic_col">
                 <div class="pagepublic text-center trans_400">
-                    <div class="pagepublic_icon"><img src="images/gobierno/banner_gob12.png" alt=""></div>
-                    {{--  <h3 class="pagepublic_title">Transparente Historico</h3>
-                    <div class="pagepublic_text"><p>Gobierno</p></div>  --}}
-                </div>
-            </div>
-
-        </div>
-        <div class="row pagespublic_row">
-            
-            <!-- Features Item -->
-            <div class="col-lg-3 pagepublic_col">
-                <div class="pagepublic text-center trans_400">
-                    <div class="pagepublic_icon"><img src="images/gobierno/banner_gob7.png" alt=""></div>
-                    {{--  <h3 class="pagepublic_title">Portal Empleos Públicos</h3>
-                    <div class="pagepublic_text"><p>Servicio civil</p></div>  --}}
+                    <a href="https://oirs.minsal.cl/" target="_blank" class="pagepublic_icon">
+                        <img src="images/gobierno/banner_gob12.png" alt="Descripción de la Imagen">
+                    </a>
                 </div>
             </div>
 
             <!-- Features Item -->
-            <div class="col-lg-3 pagepublic_col">
+            <div class="col-lg-3 col-md-4 col-sm-6 pagepublic_col">
                 <div class="pagepublic text-center trans_400">
-                    <div class="pagepublic_icon"><img src="images/gobierno/banner_gob13.png" alt=""></div>
-                    {{--  <h3 class="pagepublic_title">Mercado Publico</h3>
-                    <div class="pagepublic_text"><p>ChileCompra</p></div>  --}}
+                    <a href="https://www.empleospublicos.cl/" target="_blank" class="pagepublic_icon">
+                        <img src="images/gobierno/banner_gob7.png" alt="Descripción de la Imagen">
+                    </a>
                 </div>
             </div>
 
             <!-- Features Item -->
-            <div class="col-lg-3 pagepublic_col">
+            <div class="col-lg-3 col-md-4 col-sm-6 pagepublic_col">
                 <div class="pagepublic text-center trans_400">
-                    <div class="pagepublic_icon"><img src="images/gobierno/banner_gob15.png" alt=""></div>
-                    {{--  <h3 class="pagepublic_title">Ley de transparencia</h3>
-                    <div class="pagepublic_text"><p>Solicitud de información</p></div>  --}}
+                    <a href="https://www.minsal.cl/seguridad_de_la_informacion/" target="_blank" class="pagepublic_icon">
+                        <img src="images/gobierno/banner_gob13.png" alt="Descripción de la Imagen">
+                    </a>
                 </div>
             </div>
 
             <!-- Features Item -->
-            <div class="col-lg-3 pagepublic_col">
+            <div class="col-lg-3 col-md-4 col-sm-6 pagepublic_col">
                 <div class="pagepublic text-center trans_400">
-                    <div class="pagepublic_icon"><img src="images/gobierno/banner_gob9.png" alt=""></div>
-                    {{--  <h3 class="pagepublic_title">Atencion Ciudadana</h3>
-                    <div class="pagepublic_text"><p>Portal</p></div>  --}}
-                </div>
-            </div>
-
-        </div>
-
-        <div class="row pagespublic_row">
-            
-            <!-- Features Item -->
-            <div class="col-lg-3 pagepublic_col">
-                <div class="pagepublic text-center trans_400">
-                    <div class="pagepublic_icon"><img src="images/gobierno/banner_gob10.png" alt=""></div>
-                    {{--  <h3 class="pagepublic_title">Portal Empleos Públicos</h3>
-                    <div class="pagepublic_text"><p>Servicio civil</p></div>  --}}
+                    <a href="https://www.saludatacama.cl/" target="_blank" class="pagepublic_icon">
+                        <img src="images/gobierno/banner_gob15.png" alt="Descripción de la Imagen">
+                    </a>
                 </div>
             </div>
 
             <!-- Features Item -->
-            <div class="col-lg-3 pagepublic_col">
+            <div class="col-lg-3 col-md-4 col-sm-6 pagepublic_col">
                 <div class="pagepublic text-center trans_400">
-                    <div class="pagepublic_icon"><img src="images/gobierno/banner_gob4.png" alt=""></div>
-                    {{--  <h3 class="pagepublic_title">Mercado Publico</h3>
-                    <div class="pagepublic_text"><p>ChileCompra</p></div>  --}}
+                    <a href="https://seremienlinea.minsal.cl/asdigital/index.php?mfarmacias" target="_blank" class="pagepublic_icon">
+                        <img src="images/gobierno/banner_gob9.png" alt="Descripción de la Imagen">
+                    </a>
                 </div>
             </div>
 
             <!-- Features Item -->
-            <div class="col-lg-3 pagepublic_col">
+            <div class="col-lg-3 col-md-4 col-sm-6 pagepublic_col">
                 <div class="pagepublic text-center trans_400">
-                    <div class="pagepublic_icon"><img src="images/gobierno/banner_gob6.png" alt=""></div>
-                    {{--  <h3 class="pagepublic_title">Ley de transparencia</h3>
-                    <div class="pagepublic_text"><p>Solicitud de información</p></div>  --}}
+                    <a href="https://oirs.minsal.cl/" target="_blank" class="pagepublic_icon">
+                        <img src="images/gobierno/banner_gob10.png" alt="Descripción de la Imagen">
+                    </a>
                 </div>
             </div>
 
             <!-- Features Item -->
-            <div class="col-lg-3 pagepublic_col">
+            <div class="col-lg-3 col-md-4 col-sm-6 pagepublic_col">
                 <div class="pagepublic text-center trans_400">
-                    <div class="pagepublic_icon"><img src="images/gobierno/banner_gob3.png" alt=""></div>
-                    {{--  <h3 class="pagepublic_title">Atencion Ciudadana</h3>
-                    <div class="pagepublic_text"><p>Portal</p></div>  --}}
+                    <a href="https://www.leylobby.gob.cl/instituciones/AO019" target="_blank" class="pagepublic_icon">
+                        <img src="images/gobierno/banner_gob4.png" alt="Descripción de la Imagen">
+                    </a>
                 </div>
             </div>
 
+            <!-- Features Item -->
+            <div class="col-lg-3 col-md-4 col-sm-6 pagepublic_col">
+                <div class="pagepublic text-center trans_400">
+                    <a href="https://webhosting.redsalud.gov.cl/transparencia/index.php" target="_blank" class="pagepublic_icon">
+                        <img src="images/gobierno/banner_gob6.png" alt="Descripción de la Imagen">
+                    </a>
+                </div>
+            </div>
+
+            <!-- Features Item -->
+            <div class="col-lg-3 col-md-4 col-sm-6 pagepublic_col">
+                <div class="pagepublic text-center trans_400">
+                    <a href="https://www.portaltransparencia.cl/PortalPdT/directorio-de-organismos-regulados/?org=AO113" target="_blank" class="pagepublic_icon">
+                        <img src="images/gobierno/banner_gob3.png" alt="Descripción de la Imagen">
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 </div>

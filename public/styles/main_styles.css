@@ -1429,8 +1429,8 @@ section
 }
 .team_image
 {
-	width: 180px;
-	height: 160px;
+	width: 70%;
+	height: 185px;
 	border-radius: 6px;
 	overflow: hidden;
 	margin-left: auto;
@@ -1445,11 +1445,11 @@ section
 .team_body
 {
 	width: 100%;
-	height: 255px;
+	height: 180px;
 	padding-top: 108px;
 	padding-bottom: 24px;
 	background: #FFFFFF;
-	border-radius: 6px;
+	border-radius: 15px;
 	box-shadow: 0px 1px 10px rgba(29,34,47,0.1);
 	text-align: center;
 	-webkit-transition: all 200ms ease;
@@ -1478,7 +1478,7 @@ section
 }
 .team_title a:hover
 {
-	color: #14bdee;
+	color:#b6e3c5;
 }
 .team_subtitle
 {
@@ -1513,7 +1513,7 @@ section
 }
 .social_list ul li:hover a i
 {
-	color: #14bdee;
+	color: #b6e3c5;
 }
 .team_col .team_item
 {
@@ -1529,6 +1529,10 @@ section
 {
 	padding-left: 6px;
 	padding-right: 0;
+}
+.team .section_title
+{
+	padding-bottom: 50px;
 }
 
 /*********************************
@@ -1810,63 +1814,79 @@ section
 /*********************************
 14. Paginas del gobierno
 *********************************/
-.pagespublic
-{
-	width: 100%;
-	background: #FFFFFF;
-	padding-top: 93px;
-	padding-bottom: 103px;
+
+.pagespublic {
+    padding: 40px 0;
 }
-.pagespublic_row
-{
-	margin-top: 55px;
+.pagespublic .pagepublic {
+    margin-bottom: 30px;
+    transition: transform 0.3s;
 }
-.pagepublic
-{
-	width: 100%;
-	padding-top: 30px;
-	padding-bottom: 28px;
-	padding-left: 15px;
-	padding-right: 15px;
-	background: #FFFFFF;
+.pagespublic .pagepublic:hover {
+    transform: scale(1.05);
 }
-.pagepublic_container
-{
-	width: 90%;
-	margin: 0 auto;
+.pagespublic .pagepublic_icon img {
+    max-width: 100%;
+    height: auto;
+	padding-bottom: 30px;
 }
-.pagepublic:hover
+.pagespublic .section_title
 {
-	box-shadow: 0px 5px 40px rgba(29,34,47,0.15);
+	padding-bottom: 50px;
 }
-.pagepublic_icon img
-{
-	max-width: 75%;
-	height: auto;
+
+@media (max-width: 991px) {
+    .pagespublic .pagepublic_col {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
 }
-.pagepublic_title
-{
-	position: relative;
-	font-size: 20px;
-	margin-top: 23px;
-}
-@media only screen and (max-width: 991px) 
-{
-	.pagepublic_container
-	{
-		width: 90%;
-	}
-}
-@media only screen and (max-width: 767px) 
-{
-	.pagepublic_container
-	{
-		width: 100%;
-	}
+
+@media (max-width: 767px) {
+    .pagespublic .pagepublic_col {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
 }
 
 /*********************************
-15. Footer
+15. Campañas
+*********************************/
+.campañas {
+    padding: 40px 0;
+}
+.campañas .campaña {
+    margin-bottom: 15px;
+    transition: transform 0.3s;
+}
+.campañas .campaña:hover {
+    transform: scale(1.05);
+}
+.campañas .campaña_icon img {
+    max-width: 100%;
+    height: auto;
+	padding-bottom: 10px;
+}
+.campañas .section_title
+{
+	padding-bottom: 50px;
+}
+@media (max-width: 991px) {
+    .campañas .campaña_col {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 767px) {
+    .campañas .campaña_col {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+/*********************************
+16. Footer
 *********************************/
 
 .footer
