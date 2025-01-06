@@ -69,7 +69,40 @@ class PageController extends Controller
             ],
         ];
 
-        return view('webpage', compact('post', 'posts', 'enlaces_interes'));
+        $campañas = [
+            [
+                'id' => 1,
+                'image'=> 'images/campañas/camp2.png',
+                'link' => 'https://diprece.minsal.cl/programas-de-salud/programa-vih-sida-e-its/informacion-a-la-comunidad-vih-sida-e-its/',
+            ],
+            [
+                'id' => 2,
+                'image'=> 'images/campañas/camp3.png',
+                'link' => 'https://enfermedadesrespiratorias.minsal.cl/',
+            ],
+            [
+                'id' => 3,
+                'image'=> 'images/campañas/camp4.png',
+                'link' => 'https://www.gob.cl/copagocero/',
+            ],
+            [
+                'id' => 4,
+                'image'=> 'images/campañas/camp5.png',
+                'link' => 'https://www.minsal.cl/alerta-de-calor/',
+            ],
+            [
+                'id' => 5,
+                'image'=> 'images/campañas/camp6.jpg',
+                'link' => 'https://unchilemassano.minsal.gob.cl/',
+            ],
+            [
+                'id' => 6,
+                'image'=> 'images/campañas/camp7.png',
+                'link' => 'https://www.minsal.cl/guias-alimentarias-para-chile/',
+            ],
+        ];
+
+        return view('webpage', compact('post', 'posts', 'enlaces_interes', 'campañas'));
     }
     public function about(){
         return view('web.about');
