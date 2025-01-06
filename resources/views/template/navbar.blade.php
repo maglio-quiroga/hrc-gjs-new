@@ -44,10 +44,9 @@
                 Comunidad
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown3">
-                <li><a class="dropdown-item" href="#">Hospital transparente</a></li>
-                <li><a class="dropdown-item" href="#">Hospital amigo</a></li>
-                <li><a class="dropdown-item" href="#">Consejo consultivo</a></li>
-                <li><a class="dropdown-item" href="#">Trabaje con nosotros</a></li>
+                <li><a class="dropdown-item" href="{{ route('cuentas_publicas') }}">Cuentas Públicas</a></li>
+                <li><a class="dropdown-item" href="{{ route('hospital_amigo') }}">Hospital Amigo</a></li>
+                <li><a class="dropdown-item" href="{{ route('consejo_consultivo') }}">Consejo Consultivo</a></li>
               </ul>
             </li>
             <li class="nav-item">
