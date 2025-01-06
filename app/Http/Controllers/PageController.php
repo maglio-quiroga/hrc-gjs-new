@@ -160,9 +160,69 @@ class PageController extends Controller
         return view('web.directivo', compact('members'));
     }
 
-    public function new()
+    public function horarios()
     {
-        
+        return view('web.horarios');
+    }
+
+    public function como_acudir_urgencias()
+    {
+        return view('web.como_acudir_urgencias');
+    }
+
+    public function donacion_de_sangre()
+    {
+        return view('web.donacion_de_sangre');
+    }
+
+    public function reglamento_interno()
+    {
+        return view('web.reglamento_interno');
+    }
+
+    public function plan_estrategico()
+    {
+        return view('web.plan_estrategico');
+    }
+    
+    public function aranceles()
+    {
+        return view('web.aranceles');
+    }
+    
+    public function ges()
+    {
+        return view('web.ges');
+    }
+
+    public function oirs()
+    {
+        return view('web.oirs');
+    }
+    
+    public function deberes_y_derechos()
+    {
+        return view('web.deberes_y_derechos');
+    }
+
+    public function ley_mila()
+    {
+        return view('web.ley_mila');
+    }
+
+    public function ley_dominga()
+    {
+        return view('web.ley_dominga');
+    }
+
+    public function ley_ive()
+    {
+        return view('web.ley_ive');
+    }
+
+    public function ley_rs()
+    {
+        return view('web.ley_rs');
     }
 
     public function cuentas_publicas(){
