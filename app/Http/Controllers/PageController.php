@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Post;
 use App\Models\Service;
+use App\Models\Team;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
