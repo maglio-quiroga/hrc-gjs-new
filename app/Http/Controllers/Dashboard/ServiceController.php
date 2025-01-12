@@ -65,6 +65,10 @@ class ServiceController extends Controller
     public function update(PutRequest $request, string $id)
     {
         $data = $request->validated();
+        if (isset($data["image"])) {
+            $data["image"] = $filename = time().".".$data["image"]->extension();
+            $request->image->move(public_path("image/uploads/service"),$filename);
+        }
         $service = Service::findOrFail($id);
 
         $service->update($data);

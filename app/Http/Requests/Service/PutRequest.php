@@ -14,7 +14,7 @@ class PutRequest extends FormRequest
         return [
             'name' => 'required|string|max:255',
             'description' => 'nullable|string',
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
         ];
     }
     
@@ -23,7 +23,7 @@ class PutRequest extends FormRequest
         return [
             'name.required' => 'El nombre es requerido.',
             'description.required' => 'La descripción es requerida.',
-            'image.required' => 'La imagen es requerida.',
+            // 'image.required' => 'La imagen es requerida.',
             'image.mimes' => 'El archivo debe ser una imagen.',
             'image.max' => 'El archivo debe tener un tamaño máximo de 2MB.',
         ];
