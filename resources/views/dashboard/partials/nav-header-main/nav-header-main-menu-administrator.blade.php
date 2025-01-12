@@ -16,10 +16,10 @@
         <svg class="w-6 h-6 menu-color" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"></path></svg>    
     </div>{{ __('Usuarios') }}
 </x-dropdown-link>
-<x-dropdown-link :href="route('category.index')" :active="request()->routeIs('category.index')" class="icon-menu icon-menu-hover-blue">
+<x-dropdown-link :href="route('team.index')" :active="request()->routeIs('category.index')" class="icon-menu icon-menu-hover-blue">
     <div class="mr-3 text-blue-600">
         <svg class="w-6 h-6 menu-color" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 6a3 3 0 013-3h12a3 3 0 013 3v8a3 3 0 01-3 3H4a3 3 0 01-3-3V6zm4 1.5a2 2 0 114 0 2 2 0 01-4 0zm2 3a4 4 0 00-3.665 2.395.75.75 0 00.416 1A8.98 8.98 0 007 14.5a8.98 8.98 0 003.249-.604.75.75 0 00.416-1.001A4.001 4.001 0 007 10.5zm5-3.75a.75.75 0 01.75-.75h2.5a.75.75 0 010 1.5h-2.5a.75.75 0 01-.75-.75zm0 6.5a.75.75 0 01.75-.75h2.5a.75.75 0 010 1.5h-2.5a.75.75 0 01-.75-.75zm.75-4a.75.75 0 000 1.5h2.5a.75.75 0 000-1.5h-2.5z"></path></svg>    
-    </div>{{ __('Perfiles') }}
+    </div>{{ __('Equipo') }}
 </x-dropdown-link>
 <x-dropdown-link :href="route('category.index')" :active="request()->routeIs('category.index')" class="icon-menu icon-menu-hover-blue">
     <div class="mr-3 text-blue-600">
