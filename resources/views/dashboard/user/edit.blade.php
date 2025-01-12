@@ -9,7 +9,7 @@
                 @include('dashboard.partials.validation-error')
                 <form action="{{ route('user.update', $user->id) }}" method="POST" enctype="multipart/form-data">
                     @method('PATCH')
-                    @include('dashboard.users._form', ["task" => "edit"])
+                    @include('dashboard.user._form', ["task" => "edit"])
                 </form>
             </div>
         </div>

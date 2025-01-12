@@ -6,6 +6,11 @@
 <input class="form-control mb-2" type="email" name="email" id="email" placeholder="Correo Electrónico"
     value="{{ old('email', isset($user) ? $user->email : '') }}">   
 
+<select class="form-control mb-2" name="role" id="role">
+    <option value="user" {{ isset($user) && !$user->isAdmin() ? 'selected' : '' }}>Usuario</option>
+    <option value="admin" {{ isset($user) && $user->isAdmin() ? 'selected' : '' }}>Administrador</option>
+</select>
+
 <input class="form-control mb-2" type="password" name="password" id="password" placeholder="Contraseña"
     value="">   
 

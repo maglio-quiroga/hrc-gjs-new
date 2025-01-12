@@ -5,8 +5,8 @@ namespace App\Http\Controllers\Dashboard;
 use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\User\PutRequest;
-use App\Http\Requests\User\StoreRequest;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Validation\Rules\Password;
 
 class UserController extends Controller
 {
@@ -19,7 +19,7 @@ class UserController extends Controller
     {
         $users = User::orderBy('created_at', 'desc')->paginate(10);
 
-        return view('dashboard.users.index', compact('users'));
+        return view('dashboard.user.index', compact('users'));
     }
 
     /**
@@ -29,7 +29,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        return view('dashboard.users.create');
+        return view('dashboard.user.create');
     }
 
     /**
@@ -38,22 +38,22 @@ class UserController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreRequest $request)
+    public function store(Request $request)
     {
         $data = $request->validate([
             'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
-            'password' => ['required', 'confirmed', Rules\Password::defaults()],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:'.User::class],
+            'password' => ['required', 'string'],
         ]);
 
         User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
-            'rol' => $data['rol'],
+            // 'rol' => $data['rol'],
         ]);
 
-        return to_route('dashboard.users.index')->with('status', 'Usuario creado correctamente');
+        return to_route('user.index')->with('status', 'Usuario creado correctamente');
     }
 
     /**
@@ -61,7 +61,7 @@ class UserController extends Controller
      */
     public function show(User $user)
     {
-        return view('dashboard.users.show',["user"=>$user]);
+        return view('dashboard.user.show',["user"=>$user]);
     }
 
     /**
@@ -72,7 +72,7 @@ class UserController extends Controller
      */
     public function edit(User $user)
     {
-        return view('dashboard.users.edit', compact('user'));
+        return view('dashboard.user.edit', compact('user'));
     }
 
     /**
@@ -82,18 +82,23 @@ class UserController extends Controller
      * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function update(PutRequest $request, User $user)
+    public function update(Request $request, User $user)
     {
-        $data = $request->validated();
-
-        $user->update([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => $request->filled('password') ? Hash::make($data['password']) : $user->password,
-            'rol' => $data['rol'],
+        $data = $request->validate([
+            'name' => ['nullable', 'string', 'max:255'],
+            'email' => ['nullable', 'string', 'email', 'max:255', 'unique:'.User::class.',id,'.$user->id],
+            'password' => ['nullable', 'string'],
+            'rol' => ['nullable', 'string'],
         ]);
 
-        return to_route('dashboard.users.index')->with('status', 'Usuario actualizado correctamente');
+        $user->update([
+            'name' => $data['name'] ?? $user->name,
+            'email' => $data['email'] ?? $user->email,
+            'password' => $request->filled('password') ? Hash::make($data['password']) : $user->password,
+            'rol' => $data['rol'] ?? $user->rol,
+        ]);
+
+        return to_route('user.index')->with('status', 'Usuario actualizado correctamente');
     }
 
     /**
@@ -106,6 +111,6 @@ class UserController extends Controller
     {
         $user->delete();
 
-        return to_route('dashboard.users.index')->with('status', 'Usuario eliminado correctamente');
+        return to_route('user.index')->with('status', 'Usuario eliminado correctamente');
     }
 }

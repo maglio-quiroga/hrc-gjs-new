@@ -13,6 +13,9 @@
     
             <label for="email" class="form-label"><strong>Correo Electrónico</strong></label>
             <input readonly class="form-control mb-2" type="email" name="email" id="email" value="{{ $user->email }}">
+
+            <label for="role" class="form-label"><strong>Rol</strong></label>
+            <input readonly class="form-control mb-2" type="text" name="role" id="role" value="{{ $user->rol }}">
             
             @if ($user->image)
                 <img src="/image/uploads/users/{{ $user->image }}" style="width:250px" alt="{{ $user->name }}">
