@@ -8,7 +8,6 @@ use App\Http\Controllers\Web\WebPostController;
 use App\Http\Controllers\Dashboard\PostController;
 use App\Http\Controllers\Dashboard\CategoryController;
 use App\Http\Middleware\UserAccessDashboardMiddleware;
-use App\Http\Controllers\InstagramController;
 
 /*Route::get('/', function () {
     return view('welcome');
@@ -58,18 +57,6 @@ Route::group(['prefix'=>'posted'],function(){
         Route::get('/{post}','show')->name('web.post.show');
     });
 })->name('posted');   
-
-// Ruta para redirigir al usuario a Instagram
-Route::get('/instagram/redirect', [InstagramController::class, 'redirectToInstagram'])->name('instagram.redirect');
-
-// Ruta para manejar la respuesta de Instagram
-Route::get('/instagram/callback', [InstagramController::class, 'handleCallback'])->name('instagram.callback');
-
-// Ruta para obtener las publicaciones del usuario
-Route::get('/instagram/media', [InstagramController::class, 'getUserMedia'])->name('instagram.media');
-
-
-
 
 require __DIR__.'/auth.php';
 
