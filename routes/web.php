@@ -7,6 +7,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Web\WebPostController;
 use App\Http\Controllers\Dashboard\PostController;
 use App\Http\Controllers\Dashboard\CategoryController;
+use App\Http\Controllers\Dashboard\UserController;
 use App\Http\Middleware\UserAccessDashboardMiddleware;
 
 /*Route::get('/', function () {
@@ -49,6 +50,7 @@ Route::get('/consejo_consultivo', [PageController::class, 'consejo_consultivo'])
 Route::group(['prefix' => 'dashboard','middleware'=>['auth',UserAccessDashboardMiddleware::class]], function() {
     Route::resource('post', PostController::class);
     Route::resource('category', CategoryController::class);
+    Route::resource('user', UserController::class);
 });
 
 Route::group(['prefix'=>'posted'],function(){
