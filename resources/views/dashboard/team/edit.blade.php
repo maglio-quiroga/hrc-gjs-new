@@ -8,7 +8,7 @@
             <div>
                 <div class="container" style="text-align: left">
                     @include('dashboard.partials.validation-error')
-                    <form action="{{ route('team.update', $team->id) }}" method="POST">
+                    <form action="{{ route('team.update', $team->id) }}" method="POST" enctype="multipart/form-data">
                         @method('PUT')
                         @include('dashboard.team._form')
                     </form>

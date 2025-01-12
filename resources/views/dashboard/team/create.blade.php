@@ -8,7 +8,7 @@
             <div>
                 @include('dashboard.partials.validation-error')
 
-                <form action="{{ route('team.store') }}" method="POST" enctype="multipart/form-data">>
+                <form action="{{ route('team.store') }}" method="POST" enctype="multipart/form-data">
 
                     @include('dashboard.team._form')
 

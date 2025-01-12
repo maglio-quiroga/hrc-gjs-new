@@ -64,17 +64,16 @@ class TeamController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(PutRequest $request, string $id)
     {
-        $request->validate([
-            'name' => 'required|string|max:255',
-            'position' => 'required|string|max:255',
-            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
-            'description' => 'nullable|string',
-        ]);
+        $data = $request->validated();
+        if (isset($data["image"])) {
+            $data["image"] = $filename = time().".".$data["image"]->extension();
+            $request->image->move(public_path("image/uploads/team"),$filename);
+        }
 
         $team = Team::findOrFail($id);
-        $team->update($request->all());
+        $team->update($data);
 
         return redirect()->route('team.index')->with('success', 'Team updated successfully.');
     }
