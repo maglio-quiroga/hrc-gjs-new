@@ -8,6 +8,8 @@ use App\Http\Controllers\Web\WebPostController;
 use App\Http\Controllers\Dashboard\PostController;
 use App\Http\Controllers\Dashboard\CategoryController;
 use App\Http\Controllers\Dashboard\UserController;
+use App\Http\Controllers\Dashboard\ServiceController;
+use App\Http\Controllers\Dashboard\TeamController;
 use App\Http\Middleware\UserAccessDashboardMiddleware;
 
 /*Route::get('/', function () {
@@ -51,6 +53,8 @@ Route::group(['prefix' => 'dashboard','middleware'=>['auth',UserAccessDashboardM
     Route::resource('post', PostController::class);
     Route::resource('category', CategoryController::class);
     Route::resource('user', UserController::class);
+    Route::resource('service', ServiceController::class);
+    Route::resource('team', TeamController::class);
 });
 
 Route::group(['prefix'=>'posted'],function(){
