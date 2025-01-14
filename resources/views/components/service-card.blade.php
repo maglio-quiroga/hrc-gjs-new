@@ -1,5 +1,5 @@
 <div class="card">
-    <img src="{{ $service['image'] }}" class="card-img" alt="{{ $service['name'] }}">
+    <img src="/image/uploads/service/{{ $service['image'] }}" class="card-img" alt="{{ $service['name'] }}">
     <div class="card-content">
         <h5 class="card-title">{{ $service['name'] }}</h5>
         <p class="card-text">{{ $service['description'] }}</p>
