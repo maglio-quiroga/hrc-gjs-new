@@ -4,17 +4,41 @@
 
 
 /* tabla basica */
-.table{
-    @apply table-auto w-full justify-center
-}
-.table th{
-    @apply px-6 py-2 bg-gray-100 font-medium text-gray-700 uppercase border leading-4 tracking-widest 
-}
+
 .table tr{
     @apply border
 }
 .table td{
     @apply px-6 py-2 whitespace-normal
+}
+/* Estilo para títulos de tabla con color gris suave */
+.table th {
+    @apply px-6 py-3 bg-gray-200 text-gray-700 font-semibold uppercase border leading-4 tracking-widest;
+    text-align: center;
+    border-right: 2px solid white;
+}
+.table th:last-child {
+    border-right: none; /* Quita el borde de la última columna */
+}
+
+.table tr:nth-child(even) {
+    @apply bg-gray-50;
+}
+
+.table tr:hover {
+    @apply bg-indigo-100;
+}
+
+.table td {
+    @apply px-6 py-2 whitespace-normal text-gray-700 text-center;
+}
+
+.table th:first-child, .table td:first-child {
+    @apply rounded-l-lg;
+}
+
+.table th:last-child, .table td:last-child {
+    @apply rounded-r-lg;
 }
 /* Formulario */
 .form-control{
@@ -59,7 +83,11 @@
     @apply bg-white
 }
 .card-title{
-    @apply py-3 px-6 border-b border-gray-300 rounded-t-lg text-2xl font-bold
+   
+    @apply text-gray-500 text-lg font-medium;
+    /* text-gray-500 hace el color más suave
+       text-lg reduce el tamaño ligeramente
+       font-medium ajusta el peso de la fuente */
 }
 
 /* icon */
@@ -99,6 +127,7 @@
 
 .card-body {
     min-height: auto;
+    
 }
 
 .card {
@@ -107,7 +136,9 @@
     flex-direction: column;
     justify-content: space-between;
     overflow: visible;
+
 }
+
 
 .card-img-top {
     object-fit: cover;
@@ -133,3 +164,15 @@
 .card-button:hover {
     background-color: #3a9f6f;
 }
+/* nav */
+
+.bg-primary{
+    background-color: #4b9011;
+}
+/* Estilo mejorado para tablas */
+.table {
+    @apply table-auto w-full justify-center bg-white rounded-lg shadow-md overflow-hidden;
+}
+
+
+
