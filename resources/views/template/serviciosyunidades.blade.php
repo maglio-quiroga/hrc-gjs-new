@@ -14,8 +14,7 @@
             <div class="col-lg-3 feature_col">
                 <div class="feature text-center trans_400">
                     <div class="feature_icon"><img src="images/icon_1.png" alt=""></div>
-                    <h3 class="feature_title">The Experts</h3>
-                    <div class="feature_text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p></div>
+                    <h3 class="feature_title">Centro de Diagnóstico y Tratamiento (CDT)</h3>
                 </div>
             </div>
 
@@ -23,8 +22,7 @@
             <div class="col-lg-3 feature_col">
                 <div class="feature text-center trans_400">
                     <div class="feature_icon"><img src="images/icon_2.png" alt=""></div>
-                    <h3 class="feature_title">Book & Library</h3>
-                    <div class="feature_text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p></div>
+                    <h3 class="feature_title">Hospitalización/h3>
                 </div>
             </div>
 
@@ -32,8 +30,7 @@
             <div class="col-lg-3 feature_col">
                 <div class="feature text-center trans_400">
                     <div class="feature_icon"><img src="images/icon_3.png" alt=""></div>
-                    <h3 class="feature_title">Best Courses</h3>
-                    <div class="feature_text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p></div>
+                    <h3 class="feature_title">Pabellones</h3>
                 </div>
             </div>
 
@@ -41,8 +38,7 @@
             <div class="col-lg-3 feature_col">
                 <div class="feature text-center trans_400">
                     <div class="feature_icon"><img src="images/icon_4.png" alt=""></div>
-                    <h3 class="feature_title">Award & Reward</h3>
-                    <div class="feature_text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p></div>
+                    <h3 class="feature_title">Servicio de Urgencia</h3>
                 </div>
             </div>
 
@@ -53,8 +49,7 @@
             <div class="col-lg-3 feature_col">
                 <div class="feature text-center trans_400">
                     <div class="feature_icon"><img src="images/icon_1.png" alt=""></div>
-                    <h3 class="feature_title">The Experts</h3>
-                    <div class="feature_text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p></div>
+                    <h3 class="feature_title">Imagenología</h3>
                 </div>
             </div>
 
@@ -62,8 +57,7 @@
             <div class="col-lg-3 feature_col">
                 <div class="feature text-center trans_400">
                     <div class="feature_icon"><img src="images/icon_2.png" alt=""></div>
-                    <h3 class="feature_title">Book & Library</h3>
-                    <div class="feature_text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p></div>
+                    <h3 class="feature_title">Laboratorio</h3>
                 </div>
             </div>
 
@@ -71,8 +65,7 @@
             <div class="col-lg-3 feature_col">
                 <div class="feature text-center trans_400">
                     <div class="feature_icon"><img src="images/icon_3.png" alt=""></div>
-                    <h3 class="feature_title">Best Courses</h3>
-                    <div class="feature_text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p></div>
+                    <h3 class="feature_title">Cartera de servicios</h3>
                 </div>
             </div>
 
@@ -80,8 +73,7 @@
             <div class="col-lg-3 feature_col">
                 <div class="feature text-center trans_400">
                     <div class="feature_icon"><img src="images/icon_4.png" alt=""></div>
-                    <h3 class="feature_title">Award & Reward</h3>
-                    <div class="feature_text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p></div>
+                    <h3 class="feature_title">Farmacia</h3>
                 </div>
             </div>
 
