@@ -11,7 +11,7 @@
 
 <hr class="h-0 my-2 border border-solid border-t-0 border-gray-400 opacity-50" />
 
-<x-dropdown-link :href="route('category.index')" :active="request()->routeIs('category.index')" class="icon-menu icon-menu-hover-blue">
+<x-dropdown-link :href="route('user.index')" :active="request()->routeIs('category.index')" class="icon-menu icon-menu-hover-blue">
     <div class="mr-3 text-blue-600">
         <svg class="w-6 h-6 menu-color" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"></path></svg>    
     </div>{{ __('Usuarios') }}
