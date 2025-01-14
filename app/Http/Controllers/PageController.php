@@ -21,58 +21,61 @@ class PageController extends Controller
 
     public function servicios()
     {
-        // Datos de ejemplo para los servicios
-        $services = [
-            [
-                'id' => 1,
-                'name' => 'Centro de Diagnóstico y Tratamiento (CDT)',
-                'image' => '/images/servicios/centro_diagnostico.webp',
-                'description' => 'Atención médica ambulatoria y hospitalaria con especialidades y subespecialidades, incluyendo rehabilitación y procedimientos avanzados.'
-            ],
-            [
-                'id' => 2,
-                'name' => 'Hospitalización',
-                'image' => '/images/servicios/hospitalizacion.webp',
-                'description' => 'Cuidados integrales con 306 camas para diversas categorías, incluyendo unidades críticas, pediatría y psiquiatría.'
-            ],
-            [
-                'id' => 3,
-                'name' => 'Pabellones',
-                'image' => '/images/servicios/pabellon.webp',
-                'description' => 'Completo servicio quirúrgico con 11 pabellones equipados para cirugías complejas y emergencias las 24 horas.'
-            ],
-            [
-                'id' => 4,
-                'name' => 'Servicio de Urgencia',
-                'image' => '/images/servicios/servicio_urgencia.webp',
-                'description' => 'Atención médica inmediata 24/7 en especialidades básicas y urgencias respiratorias, pediátricas y gineco-obstétricas.'
-            ],
-            [
-                'id' => 5,
-                'name' => 'Imagenología',
-                'image' => '/images/servicios/imagenologia.webp',
-                'description' => 'Diagnóstico avanzado con tomografías, resonancias, ultrasonidos y otras técnicas de vanguardia.'
-            ],
-            [
-                'id' => 6,
-                'name' => 'Laboratorio',
-                'image' => '/images/servicios/laboratorio.webp',
-                'description' => 'Análisis de muestras biológicas con tecnologías avanzadas en bioquímica, microbiología e inmunología.'
-            ],
-            [
-                'id' => 7,
-                'name' => 'Cartera de servicios',
-                'image' => '/images/servicios/cartera_servicios.webp',
-                'description' => 'Atención especializada para patologías complejas con derivaciones desde APS y hospitales de la región.'
-            ],
-            [
-                'id' => 8,
-                'name' => 'Farmacia',
-                'image' => '/images/servicios/farmacia.webp',
-                'description' => 'Garantiza el uso racional de medicamentos con apoyo técnico de químicos farmacéuticos especializados.'
-            ]
-        ];
-        
+        $services = Service::all();
+
+        // Si no hay servicios en la base de datos, usar los datos estáticos
+        if ($services->isEmpty()) {
+            $services = collect([
+                [
+                    'id' => 1,
+                    'name' => 'Centro de Diagnóstico y Tratamiento (CDT)',
+                    'image' => 'centro_diagnostico.webp',
+                    'description' => 'Atención médica ambulatoria y hospitalaria con especialidades y subespecialidades, incluyendo rehabilitación y procedimientos avanzados.'
+                ],
+                [
+                    'id' => 2,
+                    'name' => 'Hospitalización',
+                    'image' => 'hospitalizacion.webp',
+                    'description' => 'Cuidados integrales con 306 camas para diversas categorías, incluyendo unidades críticas, pediatría y psiquiatría.'
+                ],
+                [
+                    'id' => 3,
+                    'name' => 'Pabellones',
+                    'image' => 'pabellon.webp',
+                    'description' => 'Completo servicio quirúrgico con 11 pabellones equipados para cirugías complejas y emergencias las 24 horas.'
+                ],
+                [
+                    'id' => 4,
+                    'name' => 'Servicio de Urgencia',
+                    'image' => 'servicio_urgencia.webp',
+                    'description' => 'Atención médica inmediata 24/7 en especialidades básicas y urgencias respiratorias, pediátricas y gineco-obstétricas.'
+                ],
+                [
+                    'id' => 5,
+                    'name' => 'Imagenología',
+                    'image' => 'imagenologia.webp',
+                    'description' => 'Diagnóstico avanzado con tomografías, resonancias, ultrasonidos y otras técnicas de vanguardia.'
+                ],
+                [
+                    'id' => 6,
+                    'name' => 'Laboratorio',
+                    'image' => 'laboratorio.webp',
+                    'description' => 'Análisis de muestras biológicas con tecnologías avanzadas en bioquímica, microbiología e inmunología.'
+                ],
+                [
+                    'id' => 7,
+                    'name' => 'Cartera de servicios',
+                    'image' => 'cartera_servicios.webp',
+                    'description' => 'Atención especializada para patologías complejas con derivaciones desde APS y hospitales de la región.'
+                ],
+                [
+                    'id' => 8,
+                    'name' => 'Farmacia',
+                    'image' => 'farmacia.webp',
+                    'description' => 'Garantiza el uso racional de medicamentos con apoyo técnico de químicos farmacéuticos especializados.'
+                ]
+        ]);
+    }
 
         // Retorna la vista con los datos de los servicios
         return view('web.servicios', compact('services'));
