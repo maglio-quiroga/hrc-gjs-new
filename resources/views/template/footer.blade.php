@@ -37,7 +37,7 @@
                                         <li style="background-color: #4ab66e"><a
                                                 href="https://www.instagram.com/hospitalregionalcopiapo/"><i
                                                     class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                                        <li style="background-color: #58bd7c"><a href="https://twitter.com/OnlineUda"><i class="fa fa-twitter"
+                                        <li style="background-color: #58bd7c"><a href="https://x.com/hospitalcopiapo/"><i class="fa fa-twitter"
                                                     aria-hidden="true"></i></a></li>
                                         <li style="background-color: #58bd7c"><a href="https://www.youtube.com/@hospitalregionalcopiaposan9695"><i
                                                         class="fa fa-youtube-play" aria-hidden="true"></i></a>

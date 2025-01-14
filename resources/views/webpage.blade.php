@@ -30,7 +30,6 @@
             @include('template.header')
             @include('template.homes')
             @include('template.noticiasDestacadas', ['posts' => $posts])
-            @include('template.serviciosyunidades')
             @include('template.instagram')
             @include('template.mapa')
             @include('template.pag_gobierno')
