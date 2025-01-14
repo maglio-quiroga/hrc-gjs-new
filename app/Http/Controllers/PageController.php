@@ -233,55 +233,55 @@ class PageController extends Controller
                 'id' => 1,
                 'name' => 'Cuenta Pública 2023',
                 'image' => '/images/cuentas publicas/cuenta2023.png',
-                'document' => 'https://hrc2024.hospitalcopiapo.cl/wp-content/uploads/2024/04/CP_2023.pdf'
+                'document' => '/files/cuentas_publicas/CP_2023.pdf'
             ],
             [
                 'id' => 2,
                 'name' => 'Cuenta Pública 2022',
                 'image' => '/images/cuentas publicas/cuenta2022.jpg',
-                'document' => 'https://hrc2024.hospitalcopiapo.cl/wp-content/uploads/2024/01/CP_2022.pdf'
+                'document' => '/files/cuentas_publicas/CP_2022.pdf'
             ],
             [
                 'id' => 3,
                 'name' => 'Cuenta Pública 2021',
                 'image' => '/images/cuentas publicas/cuenta2021.jpg',
-                'document' => 'https://hrc2024.hospitalcopiapo.cl/wp-content/uploads/2024/04/CP_2021.pdf'
+                'document' => '/files/cuentas_publicas/CP_2021.pdf'
             ],
             [
                 'id' => 4,
                 'name' => 'Cuenta Pública 2020',
                 'image' => '/images/cuentas publicas/cuenta2020.jpg',
-                'document' => 'https://hrc2024.hospitalcopiapo.cl/wp-content/uploads/2024/04/CP_2020.pdf'
+                'document' => '/files/cuentas_publicas/CP_2020.pdf'
             ],
             [
                 'id' => 5,
                 'name' => 'Cuenta Pública 2019',
                 'image' => '/images/cuentas publicas/cuenta2019.jpg',
-                'document' => 'https://hrc2024.hospitalcopiapo.cl/wp-content/uploads/2024/04/CP_2019.pdf'
+                'document' => '/files/cuentas_publicas/CP_2019.pdf'
             ],
             [
                 'id' => 6,
                 'name' => 'Cuenta Pública 2018',
                 'image' => '/images/cuentas publicas/cuenta2018.jpg',
-                'document' => 'https://hrc2024.hospitalcopiapo.cl/wp-content/uploads/2024/04/CP_2018.pdf'
+                'document' => '/files/cuentas_publicas/CP_2018.pdf'
             ],
             [
                 'id' => 7,
                 'name' => 'Cuenta Pública 2017',
                 'image' => '/images/cuentas publicas/cuenta2017.jpg',
-                'document' => 'https://hrc2024.hospitalcopiapo.cl/wp-content/uploads/2024/04/CP_2017.pdf'
+                'document' => '/files/cuentas_publicas/CP_2017.pdf'
             ],
             [
                 'id' => 8,
                 'name' => 'Cuenta Pública 2016',
                 'image' => '/images/cuentas publicas/cuenta2016.jpg',
-                'document' => 'https://hrc2024.hospitalcopiapo.cl/wp-content/uploads/2024/04/CP_2016.pdf'
+                'document' => '/files/cuentas_publicas/CP_2016.pdf'
             ],
             [
                 'id' => 9,
                 'name' => 'Cuenta Pública 2015',
                 'image' => '/images/cuentas publicas/cuenta2015.jpg',
-                'document' => 'https://hrc2024.hospitalcopiapo.cl/wp-content/uploads/2024/04/CP_2015.pdf'
+                'document' => '/files/cuentas_publicas/CP_2015.pdf'
             ]
         ];
 
