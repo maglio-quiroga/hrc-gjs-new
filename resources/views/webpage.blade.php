@@ -30,11 +30,11 @@
             @include('template.header')
             @include('template.homes')
             @include('template.noticiasDestacadas', ['posts' => $posts])
-            @include('template.serviciosyunidades')
             @include('template.instagram')
             @include('template.mapa')
             @include('template.pag_gobierno')
             @include('template.campañas')
+            @include('template.videos_interes')
             @include('template.footer')
         </div>
     </div>
