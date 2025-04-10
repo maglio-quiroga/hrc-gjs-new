@@ -16,6 +16,7 @@
 <textarea class="form-control mb-2" id="content" rows="3" name="content"
     placeholder="Contenido ">{{ old('content', $post->content) }}</textarea>
 
+
 @if (isset($task)&& $task=='edit')
 <label class='text-color' for="">Imagen</label>
 <input class='text-color' type="file" name="image" accept="image/uploads/posts">
@@ -24,6 +25,8 @@
 
 
 <input type="submit" class="btn btn-secondary btn-block btn-sm mt-3 mb-3" value="Enviar">
+
+
 
 
 
