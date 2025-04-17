@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use Illuminate\Routing\RouteGroup;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
@@ -62,7 +63,19 @@ Route::group(['prefix'=>'posted'],function(){
         Route::get('/','index')->name('web.post.index');
         Route::get('/{post}','show')->name('web.post.show');
     });
-})->name('posted');   
+})->name('posted');
+
+//faltan los handler y controladores
+
+Route::prefix('admin')->group(
+    function () {
+        Route::get('/',[AdminController::class , 'dashboard']);
+        Route::get('/{model}/{action?}',[AdminController::class , 'handleRoute'])->name('admin.handle.view');
+        Route::post('{model}/create',[AdminController::class , 'create'])->name('admin.handle.create');
+        Route::post('{model}/{target}/update',[AdminController::class , 'update'])->name('admin.handle.update');
+        Route::post('{model}/{target}/delete',[AdminController::class , 'delete'])->name('admin.handle.delete');
+    }
+);
 
 require __DIR__.'/auth.php';
 
