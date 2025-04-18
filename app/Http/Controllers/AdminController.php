@@ -50,6 +50,19 @@ class AdminController extends Controller
             $data = $request->all();
         }
 
+        foreach ($request->files as $key => $file) {
+            if ($request->hasFile($key) && $request->file($key)->isValid()) {
+    
+                $originalName = $file->getClientOriginalName();
+                $filename = time() . '_' . $originalName;
+    
+                $destinationPath = public_path("image/uploads/{$model}");
+                $file->move($destinationPath, $filename);
+    
+                $data[$key] = "image/uploads/{$model}/{$filename}";
+            }
+        }
+
         $modelClass::create($data);
         return redirect()->route('admin.handle.view', ['model' => $model]);
     }
@@ -72,6 +85,22 @@ class AdminController extends Controller
             $data = $request->validate($modelClass::$rules); //por si agregan en los modelos validaciones estrictas.
         } else {
             $data = $request->all();
+        }
+
+        foreach ($request->files as $key => $file) {
+            if ($request->hasFile($key) && $request->file($key)->isValid()) {
+    
+                $originalName = $request->file($key)->getClientOriginalName();
+                $filename = time() . '_' . $originalName;
+    
+                $destinationPath = public_path("image/uploads/{$model}");
+                $request->file($key)->move($destinationPath, $filename);
+    
+                $data[$key] = "image/uploads/{$model}/{$filename}";
+    
+            } else {
+                $data[$key] = $record->$key;
+            }
         }
 
         $record->update($data);
