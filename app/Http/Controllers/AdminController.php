@@ -17,7 +17,7 @@ class AdminController extends Controller
         return view("admin.admin");
     }
 
-    function handleRoute(string $model , ?string $action = null) {
+    function handleRoute(string $model , ?string $action = null, ?int $target) {
 
         $modelClass = $this->resolveModelClass($model);
 
@@ -33,7 +33,12 @@ class AdminController extends Controller
         }
 
         $records = $modelClass::orderBy('created_at', 'desc')->paginate(10);
-        return view($viewName, compact('model', 'action', 'records'));
+        $record = null;
+
+        if ($target !== null) {
+            $record = $modelClass::findOrFail($target);
+        }
+        return view($viewName, compact('model', 'action', 'records','record'));
 
     }
 

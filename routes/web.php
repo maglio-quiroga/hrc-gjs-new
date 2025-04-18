@@ -70,7 +70,7 @@ Route::group(['prefix'=>'posted'],function(){
 Route::prefix('admin')->group(
     function () {
         Route::get('/',[AdminController::class , 'dashboard']);
-        Route::get('/{model}/{action?}',[AdminController::class , 'handleRoute'])->name('admin.handle.view');
+        Route::get('/{model}/{action?}/{target?}',[AdminController::class , 'handleRoute'])->name('admin.handle.view');
         Route::post('{model}/create',[AdminController::class , 'create'])->name('admin.handle.create');
         Route::post('{model}/{target}/update',[AdminController::class , 'update'])->name('admin.handle.update');
         Route::post('{model}/{target}/delete',[AdminController::class , 'delete'])->name('admin.handle.delete');
