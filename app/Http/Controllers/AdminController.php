@@ -17,7 +17,7 @@ class AdminController extends Controller
         return view("admin.admin");
     }
 
-    function handleRoute(string $model , ?string $action = null, ?int $target) {
+    function handleRoute(string $model , ?string $action = null, ?int $target = null) {
 
         $modelClass = $this->resolveModelClass($model);
 
@@ -30,6 +30,12 @@ class AdminController extends Controller
 
         if (! view()->exists($viewName)) {
             abort(404, "Vista '{$viewName}' no encontrada.");
+        }
+
+        if ($action === 'edit') {
+            if ($target === null) { // si es null la id se cae en la uri /admin/{modelo}/edit/ por que le falta la id a la plantilla
+                return redirect()->route('admin.handle.view', ['model' => $model])
+                    ->with('error', 'ID no especificado para editar.');
         }
 
         $records = $modelClass::orderBy('created_at', 'desc')->paginate(10);
