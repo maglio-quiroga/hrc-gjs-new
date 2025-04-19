@@ -46,6 +46,7 @@ class AdminController extends Controller
         }
         return view($viewName, compact('model', 'action', 'records','record'));
 
+        }
     }
 
     function create(string $model , Request $request) {
