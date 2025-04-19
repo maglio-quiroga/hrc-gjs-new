@@ -32,10 +32,9 @@ class AdminController extends Controller
             abort(404, "Vista '{$viewName}' no encontrada.");
         }
 
-        if ($action === 'edit') {
-            if ($target === null) { // si es null la id se cae en la uri /admin/{modelo}/edit/ por que le falta la id a la plantilla
-                return redirect()->route('admin.handle.view', ['model' => $model])
-                    ->with('error', 'ID no especificado para editar.');
+        if ($action === 'edit' && $target === null) {
+            return redirect()->route('admin.handle.view', ['model' => $model])
+                ->with('error', 'ID no especificado para editar.');
         }
 
         $records = $modelClass::orderBy('created_at', 'desc')->paginate(10);
@@ -44,9 +43,8 @@ class AdminController extends Controller
         if ($target !== null) {
             $record = $modelClass::findOrFail($target);
         }
-        return view($viewName, compact('model', 'action', 'records','record'));
 
-        }
+        return view($viewName, compact('model', 'action', 'records', 'record'));
     }
 
     function create(string $model , Request $request) {
