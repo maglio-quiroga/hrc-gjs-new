@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <title>Listado de Servicios</title>
     <link rel="stylesheet" href="{{ asset('css/services.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
 </head>
 <body>
     <h1>Servicios</h1>
-    <a href="{{ route('admin.handle.view', ['model' => 'service', 'action' => 'create']) }}">Crear nuevo</a>
-    <table border="1">
+    <a href="{{ route('admin.handle.view', ['model' => 'service', 'action' => 'create']) }}" class="btn btn-success mb-3">Crear nuevo</a>
+    <table  class="table table-striped table-hover" border="1">
         <thead>
             <tr>
                 <th>ID</th>

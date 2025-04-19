@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Editar Servicio</title>
     <link rel="stylesheet" href="{{ asset('css/services.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
     <h1>Editar Servicio</h1>
@@ -25,5 +26,6 @@
         <button type="submit">Actualizar</button>
     </form>
     <a href="{{ route('admin.handle.view', ['model' => 'service']) }}">Volver</a>
+    <script src="{{ asset('js/services.js') }}"></script>
 </body>
 </html>
