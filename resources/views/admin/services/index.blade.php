@@ -9,7 +9,7 @@
 </head>
 <body>
     <h1>Servicios</h1>
-    <a href="{{ route('admin.handle.view', ['model' => 'service', 'action' => 'create']) }}" class="btn btn-success mb-3">Crear nuevo</a>
+    <a href="{{ route('admin.handle.view', ['model' => 'services', 'action' => 'create']) }}" class="btn btn-success mb-3">Crear nuevo</a>
     <table  class="table table-striped table-hover" border="1">
         <thead>
             <tr>
@@ -32,8 +32,8 @@
                         @endif
                     </td>
                     <td>
-                        <a href="{{ route('admin.handle.view', ['model' => 'service', 'action' => 'edit', 'target' => $service->id]) }}">Editar</a>
-                        <form action="{{ route('admin.handle.delete', ['model' => 'service', 'target' => $service->id]) }}" method="POST" style="display:inline;">
+                        <a href="{{ route('admin.handle.view', ['model' => 'services', 'action' => 'edit', 'target' => $service->id]) }}">Editar</a>
+                        <form action="{{ route('admin.handle.delete', ['model' => 'services', 'target' => $service->id]) }}" method="POST" style="display:inline;">
                             @csrf
                             <button type="submit" onclick="return confirm('¿Estás seguro?')">Eliminar</button>
                         </form>

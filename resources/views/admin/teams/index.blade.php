@@ -56,7 +56,6 @@
     
                                 <form action="{{ route('admin.handle.delete', ['model' => 'teams', 'target' => $record->id]) }}" method="POST" class="d-inline-block" onsubmit="return confirm('¿Estás seguro de eliminar este miembro?')">
                                     @csrf
-                                    @method('DELETE')
                                     <button type="submit" class="btn btn-sm btn-danger">
                                         <i class="bi bi-trash"></i> Eliminar
                                     </button>

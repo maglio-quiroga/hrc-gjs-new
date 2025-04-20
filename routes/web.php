@@ -67,33 +67,15 @@ Route::group(['prefix'=>'posted'],function(){
 
 //faltan los handler y controladores
 
-Route::prefix('admin')->group(function () {
-
-    // Dashboard principal
-    Route::get('/', [AdminController::class, 'dashboard'])->name('admin.dashboard');
-
-    // Crear un nuevo registro
-    Route::post('{model}/create', [AdminController::class, 'create'])->name('admin.handle.create');
-
-    // Actualizar un registro
-    Route::post('{model}/{target}/update', [AdminController::class, 'update'])
-        ->where('target', '[0-9]+')
-        ->name('admin.handle.update');
-
-    // Eliminar un registro
-    Route::delete('{model}/{target}/delete', [AdminController::class, 'delete'])
-        ->where('target', '[0-9]+')
-        ->name('admin.handle.delete');
-
-    // Vista dinámica: index, edit, create, etc.
-    Route::get('{model}/{action?}/{target?}', [AdminController::class, 'handleRoute'])
-        ->where([
-            'action' => '[a-zA-Z]+',
-            'target' => '[0-9]+'
-        ])
-        ->name('admin.handle.view');
-
-});
+Route::prefix('admin')->group(
+    function () {
+        Route::get('/',[AdminController::class , 'dashboard']);
+        Route::get('/{model}/{action?}/{target?}',[AdminController::class , 'handleRoute'])->name('admin.handle.view');
+        Route::post('{model}/create',[AdminController::class , 'create'])->name('admin.handle.create');
+        Route::post('{model}/{target}/update',[AdminController::class , 'update'])->name('admin.handle.update');
+        Route::post('{model}/{target}/delete',[AdminController::class , 'delete'])->name('admin.handle.delete');
+    }
+);
 
 require __DIR__.'/auth.php';
 
