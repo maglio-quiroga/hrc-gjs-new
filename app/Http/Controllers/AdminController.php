@@ -31,8 +31,7 @@ class AdminController extends Controller
         if (! view()->exists($viewName)) {
             abort(404, "Vista '{$viewName}' no encontrada.");
         }
-
-        // Validación específica para edit
+      
         if ($action === 'edit' && $target === null) {
             return redirect()->route('admin.handle.view', ['model' => $model])
                 ->with('error', 'ID no especificado para editar.');
