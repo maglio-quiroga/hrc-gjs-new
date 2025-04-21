@@ -65,9 +65,9 @@ Route::group(['prefix'=>'posted'],function(){
     });
 })->name('posted');
 
-//faltan los handler y controladores
+//LO nuevo --------------------------
 
-Route::prefix('admin')->group(
+Route::middleware(['auth',UserAccessDashboardMiddleware::class])->prefix('admin')->group(
     function () {
         Route::get('/',[AdminController::class , 'dashboard']);
         Route::get('/{model}/{action?}/{target?}',[AdminController::class , 'handleRoute'])->name('admin.handle.view');
