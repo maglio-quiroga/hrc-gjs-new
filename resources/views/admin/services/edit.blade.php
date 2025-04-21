@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>Editar Servicio</h1>
-    <form action="{{ route('admin.handle.update', ['model' => 'service', 'target' => $record->id]) }}" method="POST" enctype="multipart/form-data">
+    <form action="{{ route('admin.handle.update', ['model' => 'services', 'target' => $record->id]) }}" method="POST" enctype="multipart/form-data">
         @csrf
         <label>Nombre:</label><br>
         <input type="text" name="name" value="{{ old('name', $record->name) }}" required><br><br>
@@ -25,7 +25,7 @@
 
         <button type="submit">Actualizar</button>
     </form>
-    <a href="{{ route('admin.handle.view', ['model' => 'service']) }}">Volver</a>
+    <a href="{{ route('admin.handle.view', ['model' => 'services']) }}">Volver</a>
     <script src="{{ asset('js/services.js') }}"></script>
 </body>
 </html>

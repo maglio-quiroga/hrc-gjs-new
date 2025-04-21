@@ -10,7 +10,7 @@
     <div class="container">
         <h1 class="mb-4">Crear nuevo Servicio</h1>
 
-        <form id="serviceForm" action="{{ route('admin.handle.create', ['model' => 'service']) }}" method="POST" enctype="multipart/form-data" class="card p-4 shadow-sm bg-white">
+        <form id="serviceForm" action="{{ route('admin.handle.create', ['model' => 'services']) }}" method="POST" enctype="multipart/form-data" class="card p-4 shadow-sm bg-white">
             @csrf
 
             <div class="mb-3">
@@ -29,7 +29,7 @@
             </div>
 
             <div class="d-flex justify-content-between">
-                <a href="{{ route('admin.handle.view', ['model' => 'service']) }}" class="btn btn-secondary">Volver</a>
+                <a href="{{ route('admin.handle.view', ['model' => 'services']) }}" class="btn btn-secondary">Volver</a>
                 <button type="submit" class="btn btn-primary">Guardar</button>
             </div>
         </form>

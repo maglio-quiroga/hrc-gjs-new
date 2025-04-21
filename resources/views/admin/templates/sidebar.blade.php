@@ -1,3 +1,4 @@
+
 <link rel="stylesheet" href="{{ asset('styles/elements/sidebar.css') }}">
 
 <header>
@@ -25,8 +26,6 @@
             </div>Servicios</a>
 
         </div>
-        
-
 
 
     </div>
