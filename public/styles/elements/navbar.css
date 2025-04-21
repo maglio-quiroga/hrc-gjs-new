@@ -1,0 +1,40 @@
+.navbar{
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    width: 85%;
+    z-index: 1000;
+    height: 64px;
+    background-color: #509414;
+    justify-content: flex-end;
+    gap: 10px;
+    align-items: center;
+    box-shadow: 4px 0px 10px gray;
+}
+.navbtn{
+    display: flex;
+    width: 120px;
+    height: 50px;
+    padding-right: 1%;
+    background-color: #ffffff;
+    border-radius: 15px;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+.navbtn:hover {
+    transform: scale(1.02);
+    cursor: pointer;
+}
+.navbar a {
+    color: inherit;           
+    text-decoration: none;    
+    cursor: pointer;          
+  }
+  .navbar a:hover,
+  .navbar a:focus,
+  .navbar a:active,
+  .navbar a:visited {
+    text-decoration: none;
+    color: inherit;
+}
