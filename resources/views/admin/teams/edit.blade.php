@@ -54,7 +54,7 @@
                 @if ($record->image)
                     <div class="mt-3">
                         <label class="form-label">Imagen actual:</label>
-                        <img src="{{ asset($record->image) }}" alt="{{ $record->name }}" class="rounded-circle" width="70" height="70" style="object-fit: cover;">
+                        <img src="{{ asset($record->image) }}" alt="{{ $record->name }}" width="100" loading="lazy">
                     </div>
                 @else
                     <div class="mt-3 text-muted">No hay imagen de perfil actual.</div>

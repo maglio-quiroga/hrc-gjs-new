@@ -37,26 +37,28 @@
             <table class="table table-hover table-bordered align-middle text-center">
                 <thead class="table-dark">
                     <tr>
-                        <th>Imagen</th>
+                        <th>ID</th>
                         <th>Nombre</th>
                         <th>Posición</th>
                         <th>Descripción</th>
+                        <th>Imagen</th>
                         <th>Acciones</th>
                     </tr>
                 </thead>
                 <tbody>
                     @forelse ($records as $record)
                         <tr>
+                            <td>{{ $record->id }}</td>
+                            <td>{{ $record->name }}</td> <!-- Cambié nombre a name -->
+                            <td>{{ $record->position }}</td> <!-- Cambié posicion a position -->
+                            <td>{{ $record->description }}</td> <!-- Cambié descripcion a description -->
                             <td>
                                 @if ($record->image) <!-- Cambié imagen_perfil a image -->
-                                    <img src="{{ asset($record->image) }}" alt="{{ $record->name }}" class="rounded-circle" width="70" height="70" style="object-fit: cover;">
+                                    <img src="{{ asset($record->image) }}" alt="{{ $record->name }}" width="100" loading="lazy">
                                 @else
                                     <span class="text-muted">Sin imagen</span>
                                 @endif
                             </td>
-                            <td>{{ $record->name }}</td> <!-- Cambié nombre a name -->
-                            <td>{{ $record->position }}</td> <!-- Cambié posicion a position -->
-                            <td>{{ $record->description }}</td> <!-- Cambié descripcion a description -->
                             <td>
                                 <a href="{{ route('admin.handle.view', ['model' => 'teams', 'action' => 'edit', 'target' => $record->id]) }}" class="btn btn-sm btn-warning me-1">
                                     <i class="bi bi-pencil-square"></i> Editar
@@ -77,10 +79,6 @@
                     @endforelse
                 </tbody>
             </table>
-        </div>
-    
-        <div class="d-flex justify-content-center mt-4">
-            {{ $records->links() }}
         </div>
     </div>
     </div>

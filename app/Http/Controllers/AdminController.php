@@ -37,8 +37,8 @@ class AdminController extends Controller
                 ->with('error', 'ID no especificado para editar.');
         }
 
-        // Datos generales
-        $records = $modelClass::orderBy('created_at', 'desc')->paginate(10);
+        // REGISTROS DEL MODELO Y REGISTRO DEL TARGET -> (ID)
+        $records = $modelClass::all();
         $record = null;
 
         if ($target !== null) {
