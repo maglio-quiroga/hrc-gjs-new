@@ -69,7 +69,7 @@ Route::group(['prefix'=>'posted'],function(){
 
 Route::middleware(['auth',UserAccessDashboardMiddleware::class])->prefix('admin')->group(
     function () {
-        Route::get('/',[AdminController::class , 'dashboard']);
+        Route::get('/',[AdminController::class , 'dashboard'])->name('admin.resume');
         Route::get('/{model}/{action?}/{target?}',[AdminController::class , 'handleRoute'])->name('admin.handle.view');
         Route::post('{model}/create',[AdminController::class , 'create'])->name('admin.handle.create');
         Route::post('{model}/{target}/update',[AdminController::class , 'update'])->name('admin.handle.update');

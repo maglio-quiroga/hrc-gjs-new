@@ -9,9 +9,9 @@
     justify-content: flex-start;
     gap: 15%;
 }
-.sidebar img{
-    padding-left: 15%;
-    padding-right: 15%;
+.sidebar > a > img{
+    transform: scale(.85);
+    max-width: 10vw;
 }
 .sidebar a {
     font-weight: bold;
