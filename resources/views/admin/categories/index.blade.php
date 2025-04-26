@@ -46,7 +46,7 @@
                         @forelse ($records as $record)
                             <tr>
                                 <td>{{ $record->id }}</td>
-                                <td>{{ $record->titulo }}</td>
+                                <td>{{ $record->title }}</td>
                                 <td>
                                     <a href="{{ route('admin.handle.view', ['model' => 'categories', 'action' => 'edit', 'target' => $record->id]) }}" class="btn btn-sm btn-warning me-1">
                                         <i class="bi bi-pencil-square"></i> Editar
