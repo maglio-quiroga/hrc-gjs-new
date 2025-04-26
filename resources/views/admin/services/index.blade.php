@@ -23,6 +23,8 @@
     <a href="{{ route('admin.handle.view', ['model' => 'services', 'action' => 'create']) }}" class="btn btn-success mb-3"><i class="bi bi-plus-circle me-1"></i> Agregar nuevo servicio</a>
     </div>
 
+    @include('admin.templates.alerts')
+
     <div class="table-responsive">
     <table  class="table table-hover table-bordered align-middle text-center">
         <thead class="table-dark">
