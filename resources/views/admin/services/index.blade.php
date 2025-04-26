@@ -23,6 +23,9 @@
     <a href="{{ route('admin.handle.view', ['model' => 'services', 'action' => 'create']) }}" class="btn btn-success mb-3"><i class="bi bi-plus-circle me-1"></i> Agregar nuevo servicio</a>
     </div>
 
+    <div class="d-flex justify-content-end mt-3 py-3">
+        <input type="text" id="searchInput" class="form-control w-25" placeholder="Buscar servicio...">
+    </div>
     <div class="table-responsive">
     <table  class="table table-hover table-bordered align-middle text-center">
         <thead class="table-dark">
@@ -58,9 +61,13 @@
             @endforeach
         </tbody>
     </table>
-    </div>
+            <div class="d-flex justify-content-center">
+                <button id="loadMoreBtn" class="btn btn-primary mt-3">Cargar más</button>
+            </div>
+         </div>
 
+        </div>
     </div>
-    </div>
+    <script src="{{ asset('js/services.js') }}"></script>
 </body>
 </html>
