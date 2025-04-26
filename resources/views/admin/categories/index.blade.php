@@ -42,9 +42,9 @@
                             <th>Acciones</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody id="category-table-body">
                         @forelse ($records as $record)
-                            <tr>
+                            <tr class="category-row" style="display: none;">
                                 <td>{{ $record->id }}</td>
                                 <td>{{ $record->title }}</td>
                                 <td>
@@ -68,7 +68,60 @@
                     </tbody>
                 </table>
             </div>
+
+            @if ($records->count() > 0)
+            <div class="d-flex justify-content-center mt-4">
+                <button id="toggle-btn" class="btn btn-outline-primary btn-sm rounded-pill px-4 py-2 d-flex align-items-center gap-2">
+                    <i id="toggle-icon" class="bi bi-arrow-down-circle"></i> 
+                    <span id="toggle-text">Ver más</span>
+                </button>
+            </div>
+
+
+            @endif
+
         </div>
     </div>
+
+    <script>
+        const toggleBtn = document.getElementById('toggle-btn');
+        const toggleIcon = document.getElementById('toggle-icon');
+        const toggleText = document.getElementById('toggle-text');
+        const tableRows = document.querySelectorAll('tbody tr');
+        let showingAll = false;
+
+        function updateTable() {
+            tableRows.forEach((row, index) => {
+                if (!showingAll && index >= 5) {
+                    row.style.display = 'none';
+                } else {
+                    row.style.display = '';
+                }
+            });
+        }
+
+        toggleBtn.addEventListener('click', () => {
+            showingAll = !showingAll;
+            updateTable();
+
+            if (showingAll) {
+                toggleBtn.classList.remove('btn-outline-primary');
+                toggleBtn.classList.add('btn-outline-secondary'); // Color rojo
+                toggleIcon.className = 'bi bi-arrow-up-circle';
+                toggleText.textContent = 'Ver menos';
+            } else {
+                toggleBtn.classList.remove('btn-outline-secondary');
+                toggleBtn.classList.add('btn-outline-primary'); // Color azul
+                toggleIcon.className = 'bi bi-arrow-down-circle';
+                toggleText.textContent = 'Ver más';
+            }
+        });
+
+        // Inicializar
+        updateTable();
+    </script>
+
+
+
 </body>
 </html>
