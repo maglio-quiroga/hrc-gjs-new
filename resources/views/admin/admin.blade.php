@@ -16,6 +16,7 @@
             @include('admin.templates.navbar')
         </div>
         <div class="placeholder4">
+            @include('admin.templates.alerts')
             <p>Aca estara un resumen de los modelos</p>
         </div>
     </div>

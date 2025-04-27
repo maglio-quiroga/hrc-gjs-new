@@ -26,12 +26,8 @@
             </a>
         </div>
     
-        @if (session('success'))
-            <div class="alert alert-success alert-dismissible fade show" role="alert">
-                {{ session('success') }}
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
-            </div>
-        @endif
+        @include('admin.templates.alerts')
+    
         <div class="row mb-3">
             <div class="col">
                 <input type="text" id="inputBuscarNombre" class="form-control" placeholder="Buscar por nombre" onkeyup="buscarTabla()">
@@ -40,6 +36,7 @@
                 <input type="text" id="inputBuscarPosicion" class="form-control" placeholder="Buscar por posición" onkeyup="buscarTabla()">
             </div>
         </div>        
+    
         <div class="table-responsive">
             <table class="table table-hover table-bordered align-middle text-center" id="team-table">
                 <thead class="table-dark">
