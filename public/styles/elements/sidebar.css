@@ -3,6 +3,7 @@
     flex-direction: column;
     position: fixed;
     width: 15%;
+    min-width: 50px;
     z-index: 1000;
     height: 100vh;
     background-color: #438509;
@@ -10,8 +11,9 @@
     gap: 15%;
 }
 .sidebar > a > img{
-    transform: scale(.85);
+    margin-left: 6%;
     max-width: 10vw;
+    min-width: 50px;
 }
 .sidebar a {
     font-weight: bold;
@@ -44,7 +46,17 @@
     cursor: pointer;
 }
 .icon-svg {
+    min-width: 45px;
     width: 45px;
     height: 45px;
-  }
-  
+}
+
+@media (max-width: 768px) { /* o el tamaño que tú quieras */
+    .sidebtn span {
+        display: none;
+    }
+    
+    .sidebtn {
+        justify-content: center; /* centra el ícono cuando no haya texto */
+    }
+}
