@@ -10,9 +10,9 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/v4-shims.css">
-    <link rel="stylesheet" type="text/css" href="styles/css/lightbox.css">
+    <!--<link rel="stylesheet" type="text/css" href="styles/css/lightbox.css">
     <link rel="stylesheet" type="text/css" href="styles/css/flexslider.css">
-	<link rel="stylesheet" type="text/css" href="styles/css/jquery.rateyo.css"/>
+	<link rel="stylesheet" type="text/css" href="styles/css/jquery.rateyo.css"/>-->
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
