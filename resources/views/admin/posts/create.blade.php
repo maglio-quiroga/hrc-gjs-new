@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Crear Post</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/posts.css') }}">
+</head>
+<body class="bg-light py-5">
+    <div class="container">
+
+        @php
+            use App\Models\Category;
+            $categories = Category::all();
+        @endphp
+
+        <h1 class="mb-4">Crear nuevo Post</h1>
+
+        <form action="{{ route('admin.handle.create', ['model' => 'posts']) }}" method="POST" enctype="multipart/form-data" class="card p-4 shadow-sm bg-white">
+            @csrf
+
+            <div class="mb-3">
+                <label class="form-label">Título:</label>
+                <input type="text" name="title" class="form-control" value="{{ old('title') }}" required>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Contenido:</label>
+                <textarea name="content" rows="5" class="form-control" required>{{ old('content') }}</textarea>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Imagen:</label>
+                <input type="file" name="image" class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Categoría:</label>
+                <select name="category_id" class="form-select" required>
+                    <option value="">Selecciona una categoría</option>
+                    @foreach ($categories as $category)
+                        <option value="{{ $category->id }}" {{ old('category_id') == $category->id ? 'selected' : '' }}>
+                            {{ $category->title }}
+                        </option>
+                    @endforeach
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Estado de publicación:</label>
+                <select name="posted" class="form-select" required>
+                    <option value="1" {{ old('posted') == '1' ? 'selected' : '' }}>Publicado</option>
+                    <option value="0" {{ old('posted') == '0' ? 'selected' : '' }}>Borrador</option>
+                </select>
+            </div>
+
+            <div class="d-flex justify-content-between">
+                <a href="{{ route('admin.handle.view', ['model' => 'posts']) }}" class="btn btn-secondary">Volver</a>
+                <button type="submit" class="btn btn-primary">Guardar</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
