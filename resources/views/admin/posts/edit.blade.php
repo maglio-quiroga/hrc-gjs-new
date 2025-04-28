@@ -15,7 +15,7 @@
             $categories = Category::all();
         @endphp
 
-        <form action="{{ route('admin.handle.update', ['model' => 'post', 'target' => $record->id]) }}" method="POST" enctype="multipart/form-data" class="card p-4 shadow-sm bg-white">
+        <form action="{{ route('admin.handle.update', ['model' => 'posts', 'target' => $record->id]) }}" method="POST" enctype="multipart/form-data" class="card p-4 shadow-sm bg-white">
             @csrf
 
             <div class="mb-3">
