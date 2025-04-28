@@ -76,6 +76,10 @@
             @endforelse
         </tbody>
     </table>
+    <div class="text-center my-3">
+        <button id="loadMore" class="btn btn-primary">Cargar más</button>
+    </div>
+
     </div>
 
     </div>
