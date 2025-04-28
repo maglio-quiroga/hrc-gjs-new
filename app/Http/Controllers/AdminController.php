@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
+use Exception;
 
 class AdminController extends Controller
 {
@@ -25,7 +26,7 @@ class AdminController extends Controller
             abort(404, "Modelo '{$model}' no encontrado.");
         }
 
-        $action = $action ?: 'index';
+        $action = $action ?: 'index'; // valores de $action son [index , create , edit]
         $viewName = "admin.{$model}.{$action}";
 
         if (! view()->exists($viewName)) {
@@ -33,49 +34,66 @@ class AdminController extends Controller
         }
       
         if ($action === 'edit' && $target === null) {
-            return redirect()->route('admin.handle.view', ['model' => $model])
-                ->with('error', 'ID no especificado para editar.');
+
+            return redirect()->route('admin.handle.view', ['model' => $model])->with('error', 'ID no especificado para editar.');
+
         }
 
-        // REGISTROS DEL MODELO Y REGISTRO DEL TARGET -> (ID)
-        $records = $modelClass::all();
-        $record = null;
+        try {
 
-        if ($target !== null) {
-            $record = $modelClass::findOrFail($target);
+            $records = $modelClass::all();
+            $record = $target ? $modelClass::findOrFail($target) : null;
+
+            return response()->view($viewName, compact('model', 'action', 'records', 'record'), 200);
+
+        } catch (Exception $err) {
+
+            return redirect()->route('admin.resume')->with('error','Error interno al redireccionar a la ruta');
+
         }
-
-        return view($viewName, compact('model', 'action', 'records', 'record'));
     }
 
     function create(string $model , Request $request) {
 
         $modelClass = $this->resolveModelClass($model);
+
         if (! class_exists($modelClass)) {
             abort(404, "Modelo '{$model}' no encontrado.");
         }
 
-        if (property_exists($modelClass, 'rules')) {
-            $data = $request->validate($modelClass::$rules); //por si agregan en los modelos validaciones estrictas.
-        } else {
-            $data = $request->all();
-        }
+        try {
 
-        foreach ($request->files as $key => $file) {
-            if ($request->hasFile($key) && $request->file($key)->isValid()) {
-    
-                $originalName = $file->getClientOriginalName();
-                $filename = time() . '_' . $originalName;
-    
-                $destinationPath = public_path("image/uploads/{$model}");
-                $file->move($destinationPath, $filename);
-    
-                $data[$key] = "image/uploads/{$model}/{$filename}";
+            if (property_exists($modelClass, 'rules')) {
+
+                $data = $request->validate($modelClass::$rules);
+
+            } else {
+
+                $data = $request->all();
+
             }
-        }
 
-        $modelClass::create($data);
-        return redirect()->route('admin.handle.view', ['model' => $model]);
+            foreach ($request->files as $key => $file) {
+
+                if ($request->hasFile($key) && $file->isValid()) {
+
+                    $originalName = $file->getClientOriginalName();
+                    $filename = time() . '_' . $originalName;
+                    $destinationPath = public_path("image/uploads/{$model}");
+                    $file->move($destinationPath, $filename);
+                    $data[$key] = "image/uploads/{$model}/{$filename}";
+
+                }
+            }
+
+            $modelClass::create($data);
+            return redirect()->route('admin.handle.view', ['model' => $model])->with('success','Registro creado correctamente');
+
+        } catch (Exception $err) {
+
+            return redirect()->route('admin.handle.view', ['model' => $model])->with('error', 'Error interno al crear el registro.');
+
+        }
     }
 
     function update(string $model , Request $request, int $target){
@@ -86,36 +104,44 @@ class AdminController extends Controller
             abort(404, "Modelo '{$model}' no encontrado.");
         }
 
-        $record = $modelClass::find($target);
+        try {
+            $record = $modelClass::findOrFail($target);
 
-        if (! $record) {
-            abort(404, "Registro con ID '{$target}' no encontrado.");
-        }
+            if (property_exists($modelClass, 'rules')) {
 
-        if (property_exists($modelClass, 'rules')) {
-            $data = $request->validate($modelClass::$rules); //por si agregan en los modelos validaciones estrictas.
-        } else {
-            $data = $request->all();
-        }
+                $data = $request->validate($modelClass::$rules);
 
-        foreach ($request->files as $key => $file) {
-            if ($request->hasFile($key) && $request->file($key)->isValid()) {
-    
-                $originalName = $request->file($key)->getClientOriginalName();
-                $filename = time() . '_' . $originalName;
-    
-                $destinationPath = public_path("image/uploads/{$model}");
-                $request->file($key)->move($destinationPath, $filename);
-    
-                $data[$key] = "image/uploads/{$model}/{$filename}";
-    
             } else {
-                $data[$key] = $record->$key;
-            }
-        }
 
-        $record->update($data);
-        return redirect()->route('admin.handle.view', ['model' => $model]);
+                $data = $request->all();
+
+            }
+
+            foreach ($request->files as $key => $file) {
+
+                if ($request->hasFile($key) && $file->isValid()) {
+
+                    $originalName = $file->getClientOriginalName();
+                    $filename = time() . '_' . $originalName;
+                    $destinationPath = public_path("image/uploads/{$model}");
+                    $file->move($destinationPath, $filename);
+                    $data[$key] = "image/uploads/{$model}/{$filename}";
+
+                } else {
+
+                    $data[$key] = $record->$key;
+
+                }
+            }
+
+            $record->update($data);
+            return redirect()->route('admin.handle.view', ['model' => $model])->with('success','Registro actualizado correctamente');
+
+        } catch (Exception $err) {
+
+            return redirect()->route('admin.handle.view', ['model' => $model])->with('error','Error interno al actualizar el registro');
+
+        }
 
     }
 
@@ -127,14 +153,16 @@ class AdminController extends Controller
             abort(404, "Modelo '{$model}' no encontrado.");
         }
 
-        $record = $modelClass::find($target);
+        try {
 
-        if (! $record) {
-            abort(404, "Registro con ID '{$target}' no encontrado.");
+            $modelClass::findOrFail($target)->delete();
+            return redirect()->route('admin.handle.view', ['model' => $model])->with('success','Registro eliminado correctamente');
+
+        } catch (Exception $err) {
+
+            return redirect()->route('admin.handle.view', ['model' => $model])->with('error','Error interno al eliminar el registro');
+
         }
-
-        $modelClass::destroy($target);
-        return redirect()->route('admin.handle.view', ['model' => $model]);
 
     }
 }
