@@ -184,6 +184,11 @@
             </div>
         </div>
      
+
+
+
+
+                                            
     <!-- Botón de Accesibilidad ♿ -->
     <button id="btnAccesibilidad" aria-label="Menú de Accesibilidad">♿</button>
 

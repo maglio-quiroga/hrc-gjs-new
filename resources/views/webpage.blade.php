@@ -26,18 +26,7 @@
 
 </head>
 <body>
-
-    <!-- Botón de Accesibilidad ♿ -->
-    <button id="btnAccesibilidad" aria-label="Menú de Accesibilidad">♿</button>
-
-    <!-- Menú Flotante Accesibilidad -->
-    <div id="menuAccesibilidad">
-        <button id="contrasteBtn">Cambiar Contraste</button>
-        <button id="aumentarBtn">Aumentar Texto</button>
-        <button id="reducirBtn">Reducir Texto</button>
-        <button id="lecturaBtn">Lectura de Pantalla</button>
-    </div>
-
+    
     <div id="app">
         <div class="super_container">
             @include('template.header')
