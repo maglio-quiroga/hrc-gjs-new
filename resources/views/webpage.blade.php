@@ -22,9 +22,22 @@
     <link rel="stylesheet" type="text/css" href="styles/main_styles.css">
     <link rel="stylesheet" type="text/css" href="styles/responsive.css">
     <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <link rel="stylesheet" href="styles/accesibilidad.css">
 
 </head>
 <body>
+
+    <!-- Botón de Accesibilidad ♿ -->
+    <button id="btnAccesibilidad" aria-label="Menú de Accesibilidad">♿</button>
+
+    <!-- Menú Flotante Accesibilidad -->
+    <div id="menuAccesibilidad">
+        <button id="contrasteBtn">Cambiar Contraste</button>
+        <button id="aumentarBtn">Aumentar Texto</button>
+        <button id="reducirBtn">Reducir Texto</button>
+        <button id="lecturaBtn">Lectura de Pantalla</button>
+    </div>
+
     <div id="app">
         <div class="super_container">
             @include('template.header')
@@ -39,6 +52,17 @@
         </div>
     </div>
 
+    <!-- Botón de Accesibilidad ♿ -->
+    <button id="btnAccesibilidad" aria-label="Menú de Accesibilidad">♿</button>
+
+    <!-- Menú Flotante Accesibilidad -->
+    <div id="menuAccesibilidad">
+        <button id="contrasteBtn">Cambiar Contraste</button>
+        <button id="aumentarBtn">Aumentar Texto</button>
+        <button id="reducirBtn">Reducir Texto</button>
+        <button id="lecturaBtn">Lectura de Pantalla</button>
+    </div>
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="plugins/greensock/TweenMax.min.js"></script>
@@ -50,5 +74,6 @@
     <script src="plugins/easing/easing.js"></script>
     <script src="plugins/parallax-js-master/parallax.min.js"></script>
     <script src="js/custom.js"></script>
+    <script src="js/accesibilidad.js"></script>
 </body>
 </html>
