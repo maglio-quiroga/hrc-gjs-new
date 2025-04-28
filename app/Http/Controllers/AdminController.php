@@ -5,6 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Exception;
+use App\Models\Category;
+use App\Models\Post;
+use App\Models\Service;
+use App\Models\Team;
 
 class AdminController extends Controller
 {
@@ -15,7 +19,12 @@ class AdminController extends Controller
     }
 
     function dashboard() {
-        return view("admin.admin");
+        $categories = Category::orderByDesc('updated_at')->take(5)->get();
+        $posts      = Post::orderByDesc('updated_at')->take(5)->get();
+        $services   = Service::orderByDesc('updated_at')->take(5)->get();
+        $teams      = Team::orderByDesc('updated_at')->take(5)->get();
+
+        return view("admin.admin", compact('categories','posts','services','teams'));
     }
 
     function handleRoute(string $model , ?string $action = null, ?int $target = null) {
