@@ -1,13 +1,39 @@
 /* =====================================================
    PALETA DE COLORES PARA ALTO CONTRASTE - BLANCO SOBRE ROJO (7:1)
+   Y VARIABLES ADICIONALES
    ===================================================== */
 :root {
-    --primario: #009830; /* Verde principal - Color institucional */
+    /* Variables Originales */
+    --primario: #009830; /* Verde principal - Color institucional (Usado en Top Bar) */
     --secundario: #c83600; /* Naranja - Color complementario para acentos */
     --acento: #054f26; /* Verde oscuro - Para botones y elementos interactivos */
     --claro: #ecf0f1; /* Gris muy claro - Para fondos de secciones */
     --oscuro: #2c3e50; /* Azul muy oscuro - Para textos y pie de página */
     --exito: #27ae60; /* Verde claro - Para mensajes de éxito */
+
+    /* --- Nuevas Variables --- */
+
+    /* Colores Base */
+    --blanco: #FFFFFF;          /* Blanco puro (Usado en fondo body, texto hover enlaces p, texto top bar) */
+    --negro: #000000;           /* Negro puro (Usado en enlaces navbar) */
+    --gris-texto-base: #a5a5a5; /* Gris medio (Color por defecto del body) */
+    --gris-parrafo: #76777a;    /* Gris oscuro (Color texto párrafos) */
+
+    /* Colores Acento/Interfaz */
+    --salmon-claro-enlace: #ffa07f; /* Salmón claro (Borde/fondo hover enlaces p) */
+    --tomate-enlace-activo: #FF6347; /* Rojo tomate (Color active enlaces p) */
+    --azul-noche-titulos: #384158; /* Azul oscuro/grisáceo (Títulos h1-h6, texto botón login, texto nav, texto logo) */
+    --rojo-ladrillo-form: #db5246; /* Rojo ladrillo (Color texto form-control) */
+
+    /* Colores Header/Nav */
+    --gris-muy-claro-boton: #f3f3f3; /* Gris muy pálido (Fondo botón login) */
+    --verde-muy-claro-nav: #e2f3eb; /* Verde muy pálido (Fondo Navbar) */
+    --verde-menta-nav-hover: #75c891; /* Verde menta (Hover enlaces Navbar) */
+    --verde-palido-nav-activo: #c5e8d1; /* Verde pálido (Hover/Active enlaces y borde Navbar) */
+
+	/* Colores Transparencias */
+	--negro-1pp: rgba(0,0,0,.01); /* Negro con transparencia de 1 porciento */
+	--negro-5pp: rgba(0,0,0,.05); /* Negro con transparencia de 5 porciento */
 }
 
 text-gray-900,
@@ -15,4 +41,135 @@ text-gray-800,
 text-gray-200,
 text-gray-100 {
     color: var(--claro);
+}
+
+*
+{
+	-webkit-text-shadow: var(--negro-1pp) 0 0 1px;
+	text-shadow: var(--negro-1pp) 0 0 1px;
+}
+body
+{
+	background: var(--blanco); /* Modificado */
+	color: var(--gris-texto-base); /* Modificado */
+}
+p
+{
+	-webkit-text-shadow: var(--negro-1pp) 0 0 1px;
+	text-shadow: var(--negro-1pp) 0 0 1px;
+}
+p a
+{
+	border-bottom: solid 1px var(--salmon-claro-enlace); /* Modificado */
+}
+a, a:hover, a:visited, a:active, a:link
+{
+	-webkit-text-shadow: var(--negro-1pp) 0 0 1px;
+	text-shadow: var(--negro-1pp) 0 0 1px;
+}
+p a:active
+{
+	color: var(--tomate-enlace-activo); /* Modificado */
+}
+p a:hover
+{
+	color: var(--blanco); /* Modificado */
+	background: var(--salmon-claro-enlace); /* Modificado */
+}
+
+h1, h2, h3, h4, h5, h6
+{
+	-webkit-text-shadow: var(--negro-1pp) 0 0 1px;
+	text-shadow: var(--negro-1pp) 0 0 1px;
+	color: var(--azul-noche-titulos); /* Modificado */
+}
+.form-control
+{
+	color: var(--rojo-ladrillo-form); /* Modificado */
+}
+
+/*********************************
+3. Header
+*********************************/
+
+.header
+{
+	box-shadow: 0px 5px 20px var(--negro-5pp); /* Mantener rgba o crear variable --sombra-header */
+}
+
+/*********************************
+3.1 Top Bar
+*********************************/
+
+.top_bar
+{
+	background: var(--primario); /* Modificado */
+}
+.question
+{
+	color: var(--blanco); /* Modificado */
+}
+.top_bar_contact_list li i,
+.top_bar_contact_list li > div
+{
+	color: var(--blanco); /* Modificado */
+}
+.login_button
+{
+	background: var(--gris-muy-claro-boton); /* Modificado */
+}
+.login_button a
+{
+	color: var(--azul-noche-titulos); /* Modificado */
+}
+
+/*********************************
+3.2 Navbar
+*********************************/
+
+.navbar_container
+{
+	background: var(--verde-muy-claro-nav); /* Modificado */
+}
+
+.navbar {
+	background-color: var(--verde-muy-claro-nav); /* Modificado */
+}
+
+.navbar-nav .nav-link {
+	color: var(--negro); /* Modificado */
+}
+
+.navbar-nav .nav-link:hover {
+	color: var(--verde-menta-nav-hover); /* Modificado */
+}
+
+.navbar-nav li a {
+    color: var(--azul-noche-titulos); /* Modificado */
+}
+
+.navbar-nav li a:hover,
+.navbar-nav li.active a {
+    color: var(--verde-palido-nav-activo); /* Modificado */
+}
+
+.navbar-nav li.active::after {
+    background: var(--verde-palido-nav-activo); /* Modificado */
+}
+
+.navbar-nav .dropdown-menu a {
+    color: var(--azul-noche-titulos); /* Modificado */
+}
+
+.navbar-nav .dropdown-menu a:hover {
+    color: var(--verde-palido-nav-activo); /* Modificado */
+}
+
+/*********************************
+3.3 Logo
+*********************************/
+
+.logo_text
+{
+	color: var(--azul-noche-titulos); /* Modificado */
 }
