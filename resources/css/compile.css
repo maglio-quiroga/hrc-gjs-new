@@ -8,6 +8,23 @@
     --claro: #ecf0f1; /* Gris muy claro - Para fondos de secciones */
     --oscuro: #2c3e50; /* Azul muy oscuro - Para textos y pie de página */
     --exito: #27ae60; /* Verde claro - Para mensajes de éxito */
+
+/* ====================================================
+    PALETA DE COLORES INTERVALO DE CÓDIGO [1275 , 1685]  
+   ==================================================== */
+
+    --superficieTransparente: rgba(29, 34, 47, 0.1); /* Transparente oscuro */
+    --azulCielo: #14bdee; /* Azul brillante */
+    --blancoPuro: #FFFFFF; /* Blanco puro */
+    --grisAzulOscuro: #384158; /* Gris azulado oscuro */
+    --grisClaro: #b5b8be; /* Gris claro suave */
+    --verdeHoja: #38a735; /* Verde intenso */
+    --verdeTransparente: rgba(36, 171, 47, 0.5); /* Verde semitransparente */
+    --superficieTransparenteLeve: rgba(29, 34, 47, 0.15); /* Transparente más oscuro */
+    --verdeMenta: #b6e3c5; /* Verde menta claro */
+    --grisMedio: #76777a; /* Gris medio */
+    --negroPuro: #000000; /* Negro puro */
+
 }
 
 text-gray-900,
@@ -15,4 +32,115 @@ text-gray-800,
 text-gray-200,
 text-gray-100 {
     color: var(--claro);
+}
+
+.noticia_date
+{
+	box-shadow: 0px 1px 10px var(--superficieTransparente);
+}
+.noticia_day
+{
+	color: var(--azulCielo);
+}
+.noticia_month
+{
+	color: var(--azulCielo);
+}
+.noticia:hover .event_date > div
+{
+	background: var(--azulCielo);
+}
+.noticia:hover .event_day,
+.noticia:hover .event_month
+{
+	color: var(--blancoPuro);
+}
+.noticia_title a
+{
+	color: var(--grisAzulOscuro);
+}
+.noticia_title a:hover
+{
+	color: var(--azulCielo);
+}
+.noticia_info
+{
+	color: var(--grisClaro);
+}
+.btn-secondary
+{
+	background-color: var(--verdeHoja);
+}
+.custom-carousel-control 
+{
+    background-color: var(--verdeTransparente);
+}
+.team_body
+{
+	background: var(--blancoPuro);
+	box-shadow: 0px 1px 10px var(--superficieTransparente);
+}
+.team_item:hover .team_body
+{
+	box-shadow: 0px 5px 40px var(--superficieTransparenteLeve);
+}
+.team_title a
+{
+	color: var(--grisAzulOscuro);
+}
+.team_title a:hover
+{
+	color:var(--verdeMenta);
+}
+.team_subtitle
+{
+	color: var(--grisMedio);
+}
+.social_list ul li a i
+{
+	color: var(--grisMedio);
+}
+.social_list ul li:hover a i
+{
+	color: var(--verdeMenta);
+}
+.mapa_container
+{
+	background: var(--blancoPuro);
+}
+.mapa
+{
+	background: var(--blancoPuro);
+}
+.mapa_post_large_title a
+{
+	color: var(--negroPuro);
+}
+.mapa_post_large_title a:hover
+{
+	color: var(--azulCielo);
+}
+.mapa_post_meta ul li a
+{
+	color: var(--grisClaro);
+}
+.mapa_post_meta ul li a:hover
+{
+	color: var(--azulCielo);
+}
+.mapa_post_link a
+{
+	color: var(--grisAzulOscuro);
+}
+.mapa_post_link a:hover
+{
+	color: var(--azulCielo);
+}
+.mapa_post_small_title a
+{
+	color: var(--grisAzulOscuro);
+}
+.mapa_post_small_title a:hover
+{
+	color: var(--verdeMenta);
 }
