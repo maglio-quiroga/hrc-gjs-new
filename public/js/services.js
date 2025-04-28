@@ -46,14 +46,14 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    let currentItems = 10;
+    let currentItems = 5;
 
     loadMoreBtn.addEventListener("click", function () {
         const rows = tableBody.querySelectorAll("tr");
         let hiddenRows = Array.from(rows).filter(row => row.style.display === "none");
 
         let visibleCount = 0;
-        for (let i = 0; i < hiddenRows.length && visibleCount < 10; i++) {
+        for (let i = 0; i < hiddenRows.length && visibleCount < 5; i++) {
             hiddenRows[i].style.display = "";
             visibleCount++;
         }
