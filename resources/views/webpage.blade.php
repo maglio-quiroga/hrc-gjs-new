@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Hospital Regional de Copiapó</title>
-    <!--iconos (redes sociales, iniciar secion-->
+    <!--iconos (redes sociales, iniciar secion)-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/v4-shims.css">
     <!--barra navegador -->
@@ -18,9 +18,6 @@
     <link rel="stylesheet" type="text/css" href="styles/main_styles.css">
     <!-- accesibilidad -->
     <link rel="stylesheet" href="styles/accesibilidad.css">
-    <!-- JS -->
-    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </head>
 <body>
@@ -49,6 +46,11 @@
         <button id="reducirBtn">Reducir Texto</button>
         <button id="lecturaBtn">Lectura de Pantalla</button>
     </div>
+
+    
+    <!-- JS -->
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
