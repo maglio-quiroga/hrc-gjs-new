@@ -11,7 +11,8 @@
 	3.1 Top Bar
 	3.2 Navbar
 	3.3 Logo
-	3.4 Main Nav
+	3.4 Main Nav 
+		No tiene nada
 	3.5 Hamburger
 4. Menu
 5. Section
@@ -68,7 +69,7 @@ ul
 	list-style: none;
 	margin-bottom: 0px;
 }
-p
+p 
 {
 	font-family: 'Museo Sans 500','Roboto', sans-serif;
 	font-size: 14px;
