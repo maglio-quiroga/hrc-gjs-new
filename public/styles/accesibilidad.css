@@ -231,7 +231,7 @@ section
 }
 .prlx
 {
-	height: 130% !important;
+	height: 130%;
 }
 .parallax-window
 {
@@ -240,7 +240,7 @@ section
 }
 .nopadding
 {
-	padding: 0px !important;
+	padding: 0px;
 }
 
 /*********************************
