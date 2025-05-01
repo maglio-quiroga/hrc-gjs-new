@@ -10,14 +10,20 @@ document.addEventListener('DOMContentLoaded', function () {
         document.body.classList.toggle('modo-alto-contraste');
     });
 
+    // Aumentar texto de la pagina
     document.getElementById('aumentarBtn').addEventListener('click', function () {
+        //CREANDO la lista para agregar la etiqueta "creo"
         document.body.classList.add('texto-grande');
+        //AGREGAR etieueta fontSize a body
+        document.body.style.fontSize = fontSize + "em"
     });
 
+    //Reducir texto de la pagina
     document.getElementById('reducirBtn').addEventListener('click', function () {
         document.body.classList.remove('texto-grande');
     });
 
+    // lectura de la paguina
     document.getElementById('lecturaBtn').addEventListener('click', function () {
         const texto = document.body.innerText;
         const speech = new SpeechSynthesisUtterance(texto);
