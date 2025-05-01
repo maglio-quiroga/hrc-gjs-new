@@ -2,7 +2,8 @@
    PALETA DE COLORES
    =============================================== */
 :root {
-    --primario: #009830; /* Verde principal - Color institucional */
+    /* Variables Originales */
+    --primario: #009830; /* Verde principal - Color institucional (Usado en Top Bar) */
     --secundario: #c83600; /* Naranja - Color complementario para acentos */
     --acento: #054f26; /* Verde oscuro - Para botones y elementos interactivos */
     --claro: #ecf0f1; /* Gris muy claro - Para fondos de secciones */
@@ -10,15 +11,23 @@
     --exito: #27ae60; /* Verde claro - Para mensajes de éxito */
 
     /* Colores Simples */
+    --dark-red: #db5246; /* Rojo ladrillo (Color texto form-control) */
     --primary-blue: #14bdee; // Color de logo y enlaces hover
-    --primary-green: #38a735;
+    --dark-blue: #384158; /* Azul oscuro/grisáceo (Títulos h1-h6, texto botón login, texto nav, texto logo) */
     --light-green: #b6e3c5;
+    --lighter-green: #e2f3eb; /* Verde muy pálido (Fondo Navbar) */
+    --primary-green: #38a735;
+    --pale-green: #75c891; /* Verde menta (Hover enlaces Navbar) */
+    --paler-green: #c5e8d1; /* Verde pálido (Hover/Active enlaces y borde Navbar) */
     --primary-yellow: #ffc80a;
     --primary-beige: #937c6f; /* Hover línea menú */
+    --primary-salmon: #ffa07f; /* Salmón claro (Borde/fondo hover enlaces p) */
+    --dark-salmon: #FF6347; /* Rojo tomate (Color active enlaces p) */
 
     /* Tonos Simples */
-    --white: #ffffff;
-    --black: #000000;
+    --white: #ffffff; // Negro puro (Usado en enlaces navbar)
+    --black: #000000; // Blanco puro (Usado en fondo body, texto hover enlaces p, texto top bar)
+    --primary-gray: #a5a5a5; // Gris medio (Color por defecto del body)
     --dark-gray: #384158;
     --darker-gray: #353535; // Color de hamburguesa
     --medium-gray: #4b505d;
@@ -26,6 +35,7 @@
     --light-gray: #b5b8be;
     --lighter-gray: #e5e5e5;
     --pale-gray: #76777a;
+    --paler-gray: #f3f3f3; /* Gris muy pálido (Fondo botón login) */
     --dark-blue-gray: #3a4857;
     --darker-blue-gray: #1e2434;
     --dark-blue-black: #353a49;
@@ -54,8 +64,139 @@ text-gray-100 {
 }
 
 /*********************************
-              JUAN
+             JOSE
 *********************************/
+
+*
+{
+	-webkit-text-shadow: var(--black-a-10) 0 0 1px;
+	text-shadow: var(--black-a-10) 0 0 1px;
+}
+body
+{
+	background: var(--white); /* Modificado */
+	color: var(--primary-gray); /* Modificado */
+}
+p
+{
+	-webkit-text-shadow: var(--black-a-10) 0 0 1px;
+	text-shadow: var(--black-a-10) 0 0 1px;
+}
+p a
+{
+	border-bottom: solid 1px var(--primary-salmon); /* Modificado */
+}
+a, a:hover, a:visited, a:active, a:link
+{
+	-webkit-text-shadow: var(--black-a-10) 0 0 1px;
+	text-shadow: var(--black-a-10) 0 0 1px;
+}
+p a:active
+{
+	color: var(--dark-salmon); /* Modificado */
+}
+p a:hover
+{
+	color: var(--white); /* Modificado */
+	background: var(--primary-salmon); /* Modificado */
+}
+
+h1, h2, h3, h4, h5, h6
+{
+	-webkit-text-shadow: var(--black-a-10) 0 0 1px;
+	text-shadow: var(--black-a-10) 0 0 1px;
+	color: var(--dark-blue); /* Modificado */
+}
+.form-control
+{
+	color: var(--dark-red); /* Modificado */
+}
+
+/*********************************
+3. Header
+*********************************/
+
+.header
+{
+	box-shadow: 0px 5px 20px var(--black-a-10); /* Mantener rgba o crear variable --sombra-header */
+}
+
+/*********************************
+3.1 Top Bar
+*********************************/
+
+.top_bar
+{
+	background: var(--primario); /* Modificado */
+}
+.question
+{
+	color: var(--white); /* Modificado */
+}
+.top_bar_contact_list li i,
+.top_bar_contact_list li > div
+{
+	color: var(--white); /* Modificado */
+}
+.login_button
+{
+	background: var(--paler-gray); /* Modificado */
+}
+.login_button a
+{
+	color: var(--dark-blue); /* Modificado */
+}
+
+/*********************************
+3.2 Navbar
+*********************************/
+
+.navbar_container
+{
+	background: var(--lighter-green); /* Modificado */
+}
+
+.navbar {
+	background-color: var(--lighter-green); /* Modificado */
+}
+
+.navbar-nav .nav-link {
+	color: var(--black); /* Modificado */
+}
+
+.navbar-nav .nav-link:hover {
+	color: var(--pale-green); /* Modificado */
+}
+
+.navbar-nav li a {
+    color: var(--dark-blue); /* Modificado */
+}
+
+.navbar-nav li a:hover,
+.navbar-nav li.active a {
+    color: var(--paler-green); /* Modificado */
+}
+
+.navbar-nav li.active::after {
+    background: var(--paler-green); /* Modificado */
+}
+
+.navbar-nav .dropdown-menu a {
+    color: var(--dark-blue); /* Modificado */
+}
+
+.navbar-nav .dropdown-menu a:hover {
+    color: var(--paler-green); /* Modificado */
+}
+
+/*********************************
+3.3 Logo
+*********************************/
+
+.logo_text
+{
+	color: var(--dark-blue); /* Modificado */
+}
 
 /*} línea 453 */
 .logo_text span
