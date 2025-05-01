@@ -14,9 +14,7 @@
     <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
     <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
     <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
-    <!-- bloques de separaciones (div) MAIN_STYLES.CSS-->
-    <link rel="stylesheet" type="text/css" href="styles/main_styles.css">
-    <!-- accesibilidad -->
+    <!-- accesibilidad y bloques de separaciones (div) con sus estilos-->
     <link rel="stylesheet" href="styles/accesibilidad.css">
 
 </head>
