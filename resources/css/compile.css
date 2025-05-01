@@ -10,15 +10,17 @@
     --exito: #27ae60; /* Verde claro - Para mensajes de éxito */
 
     /* Colores Simples */
-    --primary-blue: #14bdee;
+    --primary-blue: #14bdee; // Color de logo y enlaces hover
     --primary-green: #38a735;
     --light-green: #b6e3c5;
     --primary-yellow: #ffc80a;
+    --primary-beige: #937c6f; /* Hover línea menú */
 
     /* Tonos Simples */
     --white: #ffffff;
     --black: #000000;
     --dark-gray: #384158;
+    --darker-gray: #353535; // Color de hamburguesa
     --medium-gray: #4b505d;
     --mediumer-gray: #55555a;
     --light-gray: #b5b8be;
@@ -29,13 +31,17 @@
     --dark-blue-black: #353a49;
     --off-white-1: #f8fcf9;
     --off-white-2: #f8f9f3;
+    --off-black: #232323; /* Línea menú */
 
     /* Translúcidos */
     --green-a-50: rgba(36, 171, 47, 0.5); // Verde semitransparente
+    --black-a-0: rgba(0,0,0,0); /* Negro completamente transparente */
     --black-a-10: rgba(29, 34, 47, 0.1);
     --black-a-12-5: rgba(0, 0, 0, 0.125);
     --black-a-15: rgba(29, 34, 47, 0.15); // Transparente más oscuro
+    --black-a-40: rgba(0,0,0,0.4); /* Placeholder */
     --black-a-45: rgba(29, 34, 47, 0.45);
+    --black-a-50: rgba(0,0,0,0.5); /* Placeholder alt */
     --white-a-40: rgba(255, 255, 255, 0.4);
     --white-a-20: rgba(255, 255, 255, 0.2);
 }
@@ -46,6 +52,123 @@ text-gray-200,
 text-gray-100 {
     color: var(--claro);
 }
+
+/*********************************
+              JUAN
+*********************************/
+
+/*} línea 453 */
+.logo_text span
+{
+	color: var(--primary-blue);
+}
+.hamburger i
+{
+	color: var(--darker-gray);
+}
+.hamburger:hover i
+{
+	color: var(--primary-blue);
+}
+.menu
+{
+	background: var(--white);
+}
+.menu .logo a
+{
+	color: var(--black);
+}
+.menu_close div
+{
+	background: var(--off-black);
+}
+.menu_close:hover div/*aquí*/
+{
+	background: var(--primary-beige);
+}
+.menu_nav ul li a
+{
+	color: var(--black);
+}
+.menu_nav ul li a:hover
+{
+	color: var(--primary-blue);
+}
+.menu .search_input
+{
+	background: var(--black-a-10);
+	color: var(--black-a-50);
+}
+.menu .search_input::-webkit-input-placeholder
+{
+	color: var(--black-a-40) !important;
+}
+.menu .search_input:-moz-placeholder
+{
+	color: var(--black-a-40) !important;
+}
+.menu .search_input::-moz-placeholder
+{
+	color: var(--black-a-40) !important;
+}
+.menu .search_input:-ms-input-placeholder
+{
+	color: var(--black-a-40) !important;
+}
+.menu .search_input::input-placeholder
+{
+	color: var(--black-a-40) !important;
+}
+.home_slider_title
+{
+	color: var(--dark-gray);
+}
+.home_slider_subtitle
+{
+	color: var(--pale-gray);
+}
+.home_search_form div
+{
+	background: var(--white);
+}
+.home_search_input:not(:last-child)
+{
+	border-right: solid 1px var(--lighter-gray);
+}
+.home_search_input::-webkit-input-placeholder
+{
+	color: var(--light-gray) !important;
+}
+.home_search_input:-moz-placeholder
+{
+	color: var(--light-gray) !important;
+}
+.home_search_input::-moz-placeholder
+{
+	color: var(--light-gray) !important;
+}
+.home_search_input:-ms-input-placeholder
+{
+	color: var(--light-gray) !important;
+}
+.home_search_input::input-placeholder
+{
+	color: var(--light-gray) !important;
+}
+.dropdown_item_select
+{
+    -webkit-box-shadow: 0px 0px 0px var(--black-a-0);
+}
+.home_search_button
+{
+	background: var(--light-green);
+	color: var(--white);
+}
+.home_slider_nav
+{
+	background: var(--light-gray);
+}
+/*No quedan más clases con cambio de colores hasta la linea 863*/
 
 /*********************************
               SEBA
