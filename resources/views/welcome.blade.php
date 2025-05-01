@@ -3,12 +3,19 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+    
 
         <title>Hospital Regional de Copiapó</title>
+        <title>Botón de Accesibilidad</title>
 
+        @vite(['resources/css/app.css', 'resources/css/accesibilidad.css', 'resources/js/app.js', 'resources/js/accesibilidad.js'])
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+        
+        <!-- Accesibilidad CSS -->
+        <link rel="stylesheet" href="{{ asset('css/accesibilidad.css') }}">
+
 
         <!-- Styles / Scripts -->
         @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
@@ -20,6 +27,10 @@
         @endif
     </head>
     <body class="font-sans antialiased dark:bg-black dark:text-white/50">
+       
+
+            
+       
         <div class="bg-gray-50 text-black/50 dark:bg-black dark:text-white/50">
             <img id="background" class="absolute -left-20 top-0 max-w-[877px]" src="https://laravel.com/assets/img/welcome/background.svg" alt="Laravel background" />
             <div class="relative min-h-screen flex flex-col items-center justify-center selection:bg-[#FF2D20] selection:text-white">
@@ -172,5 +183,25 @@
                 </div>
             </div>
         </div>
+     
+
+
+
+
+                                            
+    <!-- Botón de Accesibilidad ♿ -->
+    <button id="btnAccesibilidad" aria-label="Menú de Accesibilidad">♿</button>
+
+    <!-- Menú Flotante Accesibilidad -->
+    <div id="menuAccesibilidad">
+        <button id="contrasteBtn">Cambiar Contraste</button>
+        <button id="aumentarBtn">Aumentar Texto</button>
+        <button id="reducirBtn">Reducir Texto</button>
+        <button id="lecturaBtn">Lectura de Pantalla</button>
+    </div>
+
+    <!-- Accesibilidad JS -->
+    <script src="{{ asset('js/accesibilidad.js') }}"></script>
+
     </body>
 </html>
