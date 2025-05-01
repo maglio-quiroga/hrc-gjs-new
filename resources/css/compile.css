@@ -16,6 +16,8 @@
     --green-200: #c5e8d1; /* Verde pálido (Hover/Active enlaces y borde Navbar) */
     --green-300: #b6e3c5;
     --green-400: #75c891; /* Verde menta (Hover enlaces Navbar) */
+    --green-500: #4b9011; /* Verde oscuro */
+    --green-600: #3a9f6f; /* Verde lima */
 
     /*=== Grises y Azules ===*/
     --gray-100: #f8fcf9;
@@ -596,6 +598,9 @@ h6 {
 11. Team
 *********************************/
 
+.card-title {
+    color: var(--gray-1000);
+}
 .team_body {
     background: var(--white);
     box-shadow: 0px 1px 10px var(--black-a10);
@@ -760,4 +765,17 @@ h6 {
 }
 .cr_list li a:hover {
     color: var(--primary-blue);
+}
+
+/*********************************
+             EXTRAS
+*********************************/
+
+.card-button:hover {
+    background-color: var(--green-600);
+}
+
+/* nav */
+.bg-primary {
+    background-color: var(--green-500);
 }
