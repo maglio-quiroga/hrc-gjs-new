@@ -34,6 +34,7 @@
         </div>
         
     </div>
-
+    <!--SCRIPT-->
+    <script src="js/custom.js"></script>
 </body>
 </html>

@@ -63,6 +63,7 @@
     <script src="plugins/parallax-js-master/parallax.min.js"></script>
     <script src="plugins/easing/easing.js"></script>
     <script src="js/courses.js"></script>
+    <script ser="js/custom.js"></script>
     
     
 </body>

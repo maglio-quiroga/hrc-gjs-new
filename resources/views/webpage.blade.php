@@ -17,9 +17,6 @@
     <!-- accesibilidad y bloques de separaciones (div) con sus estilos-->
     <link rel="stylesheet" href="styles/accesibilidad.css">
 
-    @vite(['resources/css/app.css', 'resources/css/accesibilidad.css', 'resources/js/app.js', 'resources/js/accesibilidad.js'])
-    
-
 
 </head>
 <body>
@@ -64,5 +61,6 @@
     <script src="plugins/parallax-js-master/parallax.min.js"></script>
     <script src="plugins/easing/easing.js"></script>
     <script src="js/accesibilidad.js"></script>
+    <script ser="js/custom.js"></script>
 </body>
 </html>
