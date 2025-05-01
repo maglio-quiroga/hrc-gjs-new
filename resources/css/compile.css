@@ -3,42 +3,43 @@
    =============================================== */
 :root {
     /*=== Colores Base ===*/
-    --primary-blue: #14bdee; // Color de logo y enlaces hover
+    --primary-blue: #14bdee; /* Color de logo y enlaces hover */
     --primary-green: #38a735;
     --primary-yellow: #ffc80a;
-    --primary-beige: #937c6f; // Hover línea menú
-    --primary-salmon: #FF6347; // Rojo tomate (Color active enlaces p)
-    --error-red: #db5246; // Rojo ladrillo (Color texto form-control)
+    --primary-beige: #937c6f; /* Hover línea menú */
+    --primary-salmon: #ff6347; /* Rojo tomate (Color active enlaces p) */
+    --error-red: #db5246; /* Rojo ladrillo (Color texto form-control) */
 
     /*=== VERDES ===*/
-    --green-a50: rgba(36, 171, 47, 0.5); // Verde semitransparente
-    --green-100: #e2f3eb; // Verde muy pálido (Fondo Navbar)
-    --green-200: #c5e8d1; // Verde pálido (Hover/Active enlaces y borde Navbar)
+    --green-a50: rgba(36, 171, 47, 0.5); /* Verde semitransparente */
+    --green-100: #e2f3eb; /* Verde muy pálido (Fondo Navbar) */
+    --green-200: #c5e8d1; /* Verde pálido (Hover/Active enlaces y borde Navbar) */
     --green-300: #b6e3c5;
-    --green-400: #75c891; // Verde menta (Hover enlaces Navbar)
+    --green-400: #75c891; /* Verde menta (Hover enlaces Navbar) */
 
     /*=== Grises y Azules ===*/
     --gray-100: #f8fcf9;
     --gray-200: #f8f9f3;
-    --gray-300: #f3f3f3; // Gris muy pálido (Fondo botón login)
+    --gray-300: #f3f3f3; /* Gris muy pálido (Fondo botón login) */
     --gray-400: #e5e5e5;
     --gray-500: #b5b8be;
-    --gray-600: #a5a5a5; // Gris medio (Color por defecto del body)
+    --gray-600: #a5a5a5; /* Gris medio (Color por defecto del body) */
     --gray-700: #76777a;
     --gray-800: #4b505d;
-    --gray-900: #384158; // Azul oscuro/grisáceo (Títulos h1-h6, texto botón login, texto nav, texto logo)
+    --gray-900: #384158; /* Azul oscuro/grisáceo (Títulos h1-h6, texto botón login, texto nav, texto logo) */
     --gray-1000: #353a49;
 
     /*=== Tonos ===*/
-    --white: #ffffff; // Negro puro (Usado en enlaces navbar)
-    --black: #000000; // Blanco puro (Usado en fondo body, texto hover enlaces p, texto top bar)
-    --off-black: #232323; // Línea menú
+    --white: #ffffff; /* Negro puro (Usado en enlaces navbar) */
+    --black: #000000; /* Blanco puro (Usado en fondo body, texto hover enlaces p, texto top bar) */
+    --off-black: #232323; /* Línea menú */
 
     /*=== Translúcidos ===*/
-    --black-a0: rgba(0,0,0,0); // Negro completamente transparente
-    --black-a10: rgba(29, 34, 47, 0.1); // Transparente más oscuro
-    --black-a40: rgba(0,0,0,0.4); // Placeholder
-    --black-a50: rgba(29, 34, 47, 0.5); // Placeholder alt
+    --black-a0: rgba(0, 0, 0, 0); /* Negro completamente transparente */
+    --black-a10: rgba(29, 34, 47, 0.1); /* Transparente más oscuro */
+    --black-a20: rgba(29, 34, 47, 0.2); /* Transparente más oscuro */
+    --black-a40: rgba(0, 0, 0, 0.4); /* Placeholder */
+    --black-a50: rgba(29, 34, 47, 0.5); /* Placeholder alt */
     --white-a40: rgba(255, 255, 255, 0.4);
     --white-a20: rgba(255, 255, 255, 0.2);
 }
@@ -54,105 +55,98 @@ text-gray-100 {
              JOSE
 *********************************/
 
-*
-{
-	-webkit-text-shadow: var(--black-a10) 0 0 1px;
-	text-shadow: var(--black-a10) 0 0 1px;
+* {
+    -webkit-text-shadow: var(--black-a10) 0 0 1px;
+    text-shadow: var(--black-a10) 0 0 1px;
 }
-body
-{
-	background: var(--white); /* Modificado */
-	color: var(--gray-600); /* Modificado */
+body {
+    background: var(--white); /* Modificado */
+    color: var(--gray-600); /* Modificado */
 }
-p
-{
-	-webkit-text-shadow: var(--black-a10) 0 0 1px;
-	text-shadow: var(--black-a10) 0 0 1px;
+p {
+    -webkit-text-shadow: var(--black-a10) 0 0 1px;
+    text-shadow: var(--black-a10) 0 0 1px;
 }
-p a
-{
-	border-bottom: solid 1px var(--primary-salmon); /* Modificado */
+p a {
+    border-bottom: solid 1px var(--primary-salmon); /* Modificado */
 }
-a, a:hover, a:visited, a:active, a:link
-{
-	-webkit-text-shadow: var(--black-a10) 0 0 1px;
-	text-shadow: var(--black-a10) 0 0 1px;
+a,
+a:hover,
+a:visited,
+a:active,
+a:link {
+    -webkit-text-shadow: var(--black-a10) 0 0 1px;
+    text-shadow: var(--black-a10) 0 0 1px;
 }
-p a:active
-{
-	color: var(--primary-salmon); /* Modificado */
+p a:active {
+    color: var(--primary-salmon); /* Modificado */
 }
-p a:hover
-{
-	color: var(--white); /* Modificado */
-	background: var(--primary-salmon); /* Modificado */
+p a:hover {
+    color: var(--white); /* Modificado */
+    background: var(--primary-salmon); /* Modificado */
 }
 
-h1, h2, h3, h4, h5, h6
-{
-	-webkit-text-shadow: var(--black-a10) 0 0 1px;
-	text-shadow: var(--black-a10) 0 0 1px;
-	color: var(--gray-900); /* Modificado */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    -webkit-text-shadow: var(--black-a10) 0 0 1px;
+    text-shadow: var(--black-a10) 0 0 1px;
+    color: var(--gray-900); /* Modificado */
 }
-.form-control
-{
-	color: var(--error-red); /* Modificado */
+.form-control {
+    color: var(--error-red); /* Modificado */
 }
 
 /*********************************
 3. Header
 *********************************/
 
-.header
-{
-	box-shadow: 0px 5px 20px var(--black-a10); /* Mantener rgba o crear variable --sombra-header */
+.header {
+    box-shadow: 0px 5px 20px var(--black-a10); /* Mantener rgba o crear variable --sombra-header */
 }
 
 /*********************************
 3.1 Top Bar
 *********************************/
 
-.top_bar
-{
-	background: var(--primario); /* Modificado */
+.top_bar {
+    background: var(--primario); /* Modificado */
 }
-.question
-{
-	color: var(--white); /* Modificado */
+.question {
+    color: var(--white); /* Modificado */
 }
 .top_bar_contact_list li i,
-.top_bar_contact_list li > div
-{
-	color: var(--white); /* Modificado */
+.top_bar_contact_list li > div {
+    color: var(--white); /* Modificado */
 }
-.login_button
-{
-	background: var(--gray-300); /* Modificado */
+.login_button {
+    background: var(--gray-300); /* Modificado */
 }
-.login_button a
-{
-	color: var(--gray-900); /* Modificado */
+.login_button a {
+    color: var(--gray-900); /* Modificado */
 }
 
 /*********************************
 3.2 Navbar
 *********************************/
 
-.navbar_container
-{
-	background: var(--green-100); /* Modificado */
+.navbar_container {
+    background: var(--green-100); /* Modificado */
 }
 
 .navbar {
-	background-color: var(--green-100); /* Modificado */
+    background-color: var(--green-100); /* Modificado */
 }
 
 .navbar-nav .nav-link {
-	color: var(--black); /* Modificado */
+    color: var(--black); /* Modificado */
 }
 
 .navbar-nav .nav-link:hover {
-	color: var(--green-400); /* Modificado */
+    color: var(--green-400); /* Modificado */
 }
 
 .navbar-nav li a {
@@ -180,121 +174,93 @@ h1, h2, h3, h4, h5, h6
 3.3 Logo
 *********************************/
 
-.logo_text
-{
-	color: var(--gray-900); /* Modificado */
+.logo_text {
+    color: var(--gray-900); /* Modificado */
 }
 
 /*} línea 453 */
-.logo_text span
-{
-	color: var(--primary-blue);
+.logo_text span {
+    color: var(--primary-blue);
 }
-.hamburger i
-{
-	color: var(--gray-1000);
+.hamburger i {
+    color: var(--gray-1000);
 }
-.hamburger:hover i
-{
-	color: var(--primary-blue);
+.hamburger:hover i {
+    color: var(--primary-blue);
 }
-.menu
-{
-	background: var(--white);
+.menu {
+    background: var(--white);
 }
-.menu .logo a
-{
-	color: var(--black);
+.menu .logo a {
+    color: var(--black);
 }
-.menu_close div
-{
-	background: var(--off-black);
+.menu_close div {
+    background: var(--off-black);
 }
-.menu_close:hover div/*aquí*/
-{
-	background: var(--primary-beige);
+.menu_close:hover div/*aquí*/ {
+    background: var(--primary-beige);
 }
-.menu_nav ul li a
-{
-	color: var(--black);
+.menu_nav ul li a {
+    color: var(--black);
 }
-.menu_nav ul li a:hover
-{
-	color: var(--primary-blue);
+.menu_nav ul li a:hover {
+    color: var(--primary-blue);
 }
-.menu .search_input
-{
-	background: var(--black-a10);
-	color: var(--black-a50);
+.menu .search_input {
+    background: var(--black-a10);
+    color: var(--black-a50);
 }
-.menu .search_input::-webkit-input-placeholder
-{
-	color: var(--black-a40) !important;
+.menu .search_input::-webkit-input-placeholder {
+    color: var(--black-a40) !important;
 }
-.menu .search_input:-moz-placeholder
-{
-	color: var(--black-a40) !important;
+.menu .search_input:-moz-placeholder {
+    color: var(--black-a40) !important;
 }
-.menu .search_input::-moz-placeholder
-{
-	color: var(--black-a40) !important;
+.menu .search_input::-moz-placeholder {
+    color: var(--black-a40) !important;
 }
-.menu .search_input:-ms-input-placeholder
-{
-	color: var(--black-a40) !important;
+.menu .search_input:-ms-input-placeholder {
+    color: var(--black-a40) !important;
 }
-.menu .search_input::input-placeholder
-{
-	color: var(--black-a40) !important;
+.menu .search_input::input-placeholder {
+    color: var(--black-a40) !important;
 }
-.home_slider_title
-{
-	color: var(--gray-900);
+.home_slider_title {
+    color: var(--gray-900);
 }
-.home_slider_subtitle
-{
-	color: var(--gray-700);
+.home_slider_subtitle {
+    color: var(--gray-700);
 }
-.home_search_form div
-{
-	background: var(--white);
+.home_search_form div {
+    background: var(--white);
 }
-.home_search_input:not(:last-child)
-{
-	border-right: solid 1px var(--gray-400);
+.home_search_input:not(:last-child) {
+    border-right: solid 1px var(--gray-400);
 }
-.home_search_input::-webkit-input-placeholder
-{
-	color: var(--gray-500) !important;
+.home_search_input::-webkit-input-placeholder {
+    color: var(--gray-500) !important;
 }
-.home_search_input:-moz-placeholder
-{
-	color: var(--gray-500) !important;
+.home_search_input:-moz-placeholder {
+    color: var(--gray-500) !important;
 }
-.home_search_input::-moz-placeholder
-{
-	color: var(--gray-500) !important;
+.home_search_input::-moz-placeholder {
+    color: var(--gray-500) !important;
 }
-.home_search_input:-ms-input-placeholder
-{
-	color: var(--gray-500) !important;
+.home_search_input:-ms-input-placeholder {
+    color: var(--gray-500) !important;
 }
-.home_search_input::input-placeholder
-{
-	color: var(--gray-500) !important;
+.home_search_input::input-placeholder {
+    color: var(--gray-500) !important;
 }
-.dropdown_item_select
-{
+.dropdown_item_select {
     -webkit-box-shadow: 0px 0px 0px var(--black-a0);
 }
-.home_search_button
-{
-	background: var(--green-300);
-	color: var(--white);
+.home_search_button {
+    background: var(--green-300);
+    color: var(--white);
 }
-.home_slider_nav
-{
-	background: var(--gray-500);
+.home_slider_nav {
+    background: var(--gray-500);
 }
 /*No quedan más clases con cambio de colores hasta la linea 863*/
 
