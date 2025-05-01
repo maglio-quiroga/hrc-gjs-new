@@ -2,14 +2,6 @@
    PALETA DE COLORES
    =============================================== */
 :root {
-    /* Variables Originales */
-    --primario: #009830; /* Verde principal - Color institucional (Usado en Top Bar) */
-    --secundario: #c83600; /* Naranja - Color complementario para acentos */
-    --acento: #054f26; /* Verde oscuro - Para botones y elementos interactivos */
-    --claro: #ecf0f1; /* Gris muy claro - Para fondos de secciones */
-    --oscuro: #2c3e50; /* Azul muy oscuro - Para textos y pie de página */
-    --exito: #27ae60; /* Verde claro - Para mensajes de éxito */
-
     /* Colores Simples */
     --dark-red: #db5246; /* Rojo ladrillo (Color texto form-control) */
     --primary-blue: #14bdee; // Color de logo y enlaces hover
@@ -60,7 +52,7 @@ text-gray-900,
 text-gray-800,
 text-gray-200,
 text-gray-100 {
-    color: var(--claro);
+    color: var(--pale-gray);
 }
 
 /*********************************
