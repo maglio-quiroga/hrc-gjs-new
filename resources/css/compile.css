@@ -8,6 +8,35 @@
     --claro: #ecf0f1; /* Gris muy claro - Para fondos de secciones */
     --oscuro: #2c3e50; /* Azul muy oscuro - Para textos y pie de página */
     --exito: #27ae60; /* Verde claro - Para mensajes de éxito */
+
+    /* Primary colors */
+    --primary-blue: #14bdee;
+    --primary-green: #38a735;
+
+    /* Neutral colors */
+    --white: #ffffff;
+    --black: #000000;
+    --dark-gray: #384158;
+    --medium-gray: #4b505d;
+    --light-gray: #b5b8be;
+    --pale-gray: #76777a;
+    --dark-blue-gray: #3a4857;
+    --darker-blue-gray: #1e2434;
+    --dark-blue-black: #353a49;
+
+    /* Green tints */
+    --light-green: #b6e3c5;
+    --green-transparent-50: rgba(36, 171, 47, 0.5);
+
+    /* Background tints */
+    --off-white-1: #f8fcf9;
+    --off-white-2: #f8f9f3;
+
+    /* Transparent colors */
+    --black-transparent-10: rgba(29, 34, 47, 0.1);
+    --black-transparent-12-5: rgba(0, 0, 0, 0.125);
+    --black-transparent-15: rgba(29, 34, 47, 0.15);
+    --white-transparent-40: rgba(255, 255, 255, 0.4);
 }
 
 text-gray-900,
@@ -15,4 +44,208 @@ text-gray-800,
 text-gray-200,
 text-gray-100 {
     color: var(--claro);
+}
+
+.noticia_date {
+    box-shadow: 0px 1px 10px var(--black-transparent-10);
+}
+.noticia_day {
+    color: var(--primary-green);
+}
+.noticia_month {
+    color: var(--primary-green);
+}
+.noticia:hover .event_date > div {
+    background: var(--primary-green);
+}
+.noticia:hover .event_day,
+.noticia:hover .event_month {
+    color: var(--white);
+}
+.noticia_title a {
+    color: var(--dark-gray);
+}
+.noticia_title a:hover {
+    color: var(--primary-blue);
+}
+.noticia_info {
+    color: var(--light-gray);
+}
+
+.btn-secondary {
+    background-color: var(--dark-gray);
+}
+
+.custom-carousel-control {
+    background-color: var(--green-transparent-50);
+}
+
+/*********************************
+11. Team
+*********************************/
+
+.team_body {
+    background: var(--white);
+    box-shadow: 0px 1px 10px var(--black-transparent-10);
+}
+.team_item:hover .team_body {
+    box-shadow: 0px 5px 40px var(--black-transparent-15);
+}
+.team_title a {
+    color: var(--dark-gray);
+}
+.team_title a:hover {
+    color: var(--light-green);
+}
+.team_subtitle {
+    color: var(--pale-gray);
+}
+.social_list ul li a i {
+    color: var(--pale-gray);
+}
+.social_list ul li:hover a i {
+    color: var(--light-green);
+}
+
+/*********************************
+12. Mapa
+*********************************/
+.mapa_container {
+    background: var(--white);
+}
+.mapa {
+    background: var(--white);
+}
+.mapa_post_large_title a {
+    color: var(--black);
+}
+.mapa_post_large_title a:hover {
+    color: var(--primary-blue);
+}
+.mapa_post_meta ul li a {
+    color: var(--light-gray);
+}
+.mapa_post_meta ul li a:hover {
+    color: var(--primary-blue);
+}
+.mapa_post_link a {
+    color: var(--dark-gray);
+}
+.mapa_post_link a:hover {
+    color: var(--primary-blue);
+}
+.mapa_post_small_title a {
+    color: var(--dark-gray);
+}
+.mapa_post_small_title a:hover {
+    color: var(--light-green);
+}
+
+.accordion-item {
+    color: var(--darker-blue-gray);
+    background-color: var(--off-white-1);
+    border: var(--bs-accordion-border-width) solid var(--white);
+}
+
+.accordion-button {
+    background-color: var(--off-white-2);
+}
+.accordion-button:not(.collapsed) {
+    color: var(--black);
+    background-color: var(--light-green);
+    box-shadow: inset 0 -1px 0 var(--black-transparent-12-5);
+}
+
+.accordion-header {
+    background-color: var(--off-white-2);
+}
+
+/*********************************
+13. Newsletter
+*********************************/
+
+.newsletter_title {
+    color: var(--white);
+}
+.newsletter_subtitle {
+    color: var(--white);
+}
+.newsletter_input {
+    background: rgba(255, 255, 255, 0.4);
+    color: var(--white);
+}
+.newsletter_input::-webkit-input-placeholder {
+    color: var(--white) !important;
+}
+.newsletter_input:-moz-placeholder {
+    color: var(--white) !important;
+}
+.newsletter_input::-moz-placeholder {
+    color: var(--white) !important;
+}
+.newsletter_input:-ms-input-placeholder {
+    color: var(--white) !important;
+}
+.newsletter_input::input-placeholder {
+    color: var(--white) !important;
+}
+.newsletter_button {
+    background: var(--white);
+    color: var(--primary-blue);
+}
+
+/*********************************
+16. Footer
+*********************************/
+
+.footer {
+    background: var(--darker-blue-gray);
+}
+.footer_logo_text {
+    color: var(--white);
+}
+.footer_logo_text span {
+    color: var(--primary-blue);
+}
+.footer_title {
+    color: var(--white);
+}
+.footer_about_text p {
+    color: var(--white);
+}
+.footer_social ul li {
+    background: var(--medium-gray);
+}
+.footer_social ul li a i {
+    color: var(--white);
+}
+.footer_social ul li:hover {
+    background: var(--primary-blue);
+}
+.footer_contact_info ul li {
+    color: var(--light-gray);
+}
+.footer_links_container ul li a {
+    color: var(--light-gray);
+}
+.footer_links_container ul li a:hover {
+    color: var(--primary-blue);
+}
+.copyright {
+    border-top: solid 1px var(--dark-blue-black);
+}
+.copyright div {
+    color: var(--light-gray);
+}
+.cr_text a {
+    color: var(--white);
+}
+.cr_text a:hover {
+    color: var(--primary-blue);
+}
+.cr_list li a {
+    color: var(--light-gray);
+}
+.cr_list li a:hover {
+    color: var(--primary-blue);
 }
