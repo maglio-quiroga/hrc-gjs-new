@@ -1,7 +1,7 @@
 /* ===============================================
    PALETA DE COLORES
    =============================================== */
-:root {
+   :root {
     /*=== Colores Base ===*/
     --primary-blue: #14bdee; /* Color de logo y enlaces hover */
     --primary-green: #38a735;
@@ -30,7 +30,7 @@
     --gray-800: #4b505d;
     --gray-900: #384158; /* Azul oscuro/grisáceo (Títulos h1-h6, texto botón login, texto nav, texto logo) */
     --gray-1000: #353a49;
-
+    
     /*=== Tonos ===*/
     --white: #ffffff; /* Negro puro (Usado en enlaces navbar) */
     --black: #000000; /* Blanco puro (Usado en fondo body, texto hover enlaces p, texto top bar) */
@@ -44,6 +44,18 @@
     --black-a50: rgba(29, 34, 47, 0.5); /* Placeholder alt */
     --white-a40: rgba(255, 255, 255, 0.4);
     --white-a20: rgba(255, 255, 255, 0.2);
+
+    /*Nuevos*/
+    --black-b: #181818;
+    --white-f: #f2f4f5;
+    --white-e: #edeff0;
+    --white-e2: #ebebeb;
+    --white-d: #d9d9d9;
+    --gray-a: #2c3145;
+    --gray-b: #5e6271;
+    --gray-c: #383749;
+    --black-box: rgba(0,0,0,0.25);
+    --blue-a: rgba(20,189,238,0.7);
 }
 
 text-gray-900,
@@ -115,7 +127,7 @@ h6 {
 *********************************/
 
 .top_bar {
-    background: var(--primario); /* Modificado */
+    background: var(--primary-blue); /* Modificado */
 }
 .question {
     color: var(--white); /* Modificado */
@@ -779,3 +791,274 @@ h6 {
 .bg-primary {
     background-color: var(--green-500);
 }
+
+
+/*Desde aquí*/
+.header_container
+{
+	background: var(--white);
+}
+.main_nav li a
+{
+	color: var(--gray-900);
+}
+.main_nav li a:hover,
+.main_nav li.active a
+{
+	color: var(--primary-blue);
+}
+.main_nav li.active::after
+{
+	background: var(--primary-blue);
+}
+.search_button i,
+.shopping_cart i
+{
+	color: var(--black-b);
+}
+.search_button:hover i,
+.shopping_cart:hover i
+{
+	color: var(--primary-blue);
+}
+.header_search_container
+{
+	background: var(--primary-blue);
+}
+.home
+{
+	background: var(--white-f);
+	border-bottom: solid 1px var(--white-e);
+}
+.breadcrumbs ul li:not(:last-child)::after
+{
+	color: var(--gray-900);
+}
+.breadcrumbs ul li a
+{
+	color: var(--gray-900);
+}
+.breadcrumbs ul li a:hover
+{
+	color: var(--primary-blue);
+}
+.blog
+{
+	background: var(--white);
+}
+.blog_title
+{
+	color: var(--gray-900);
+}
+.blog_meta ul li
+{
+	color: var(--gray-500);
+}
+.blog_meta ul li a
+{
+	color: var(--gray-500);
+}
+.blog_meta ul li a:hover
+{
+	color: var(--primary-blue);
+}
+.blog_content p
+{
+	color: var(--gray-700);
+}
+.blog_quote i
+{
+	color: var(--primary-blue);
+}
+.blog_quote div
+{
+	color: var(--gray-900);
+}
+.blog_subtitle
+{
+	color: var(--gray-900);
+}
+.blog_extra
+{
+	border-bottom: solid 1px var(--white-e2);
+}
+.blog_tags span
+{
+	color: var(--gray-900);
+}
+.blog_tags ul li a
+{
+	color: var(--gray-500);
+}
+.blog_tags ul li a:hover
+{
+	color: var(--primary-blue);
+}
+.blog_social span
+{
+	color: var(--gray-900);
+}
+.blog_social ul li i
+{
+	color: var(--gray-500);
+}
+.blog_social ul li:hover i
+{
+	color: var(--primary-blue);
+}
+.comments_title
+{
+	color: var(--gray-a);
+}
+.comments_list li:not(:last-child) .comment_item
+{
+	border-bottom: solid 1px var(--gray-400);
+}
+.comment_author a
+{
+	color: var(--gray-900);
+}
+.comment_author a:hover
+{
+	color: var(--primary-blue);
+}
+.comments_container .rating_r i::before
+{
+	color: var(--primary-yellow);
+}
+.comment_extra a
+{
+	color: var(--gray-b);
+}
+.comment_extra a:hover
+{
+	color: var(--primary-blue);
+}
+.add_comment_title
+{
+	color: var(--gray-900);
+}
+.comment_input
+{
+	border: solid 1px var(--white-d);
+	color: var(--gray-a);
+}
+.comment_input:focus
+{
+	border: solid 1px var(--primary-blue);
+}
+.form_title
+{
+	color: var(--gray-900);
+}
+.regular_checkbox + label
+{
+	background: var(--primary-blue);
+}
+.regular_checkbox + label i
+{
+	color: var(--white);
+}
+.comment_notify span
+{
+	color: var(--gray-a);
+}
+.comment_button
+{
+	background: var(--primary-blue);
+	color: var(--white);
+}
+.comment_button:hover
+{
+	box-shadow: 0px 5px 40px var(--black-box);
+}
+.sidebar_section_title
+{
+	color: var(--gray-900);
+}
+.sidebar_categories ul li:not(:last-of-type)
+{
+	border-bottom: solid 1px var(--gray-400);
+}
+.sidebar_categories ul li a
+{
+	color: var(--gray-500);
+}
+.sidebar_categories ul li:hover a,
+.sidebar_categories ul li:hover a::before
+{
+	color: var(--primary-blue);
+}
+.latest_title a
+{
+	color: var(--gray-c);
+}
+.latest_title a:hover
+{
+	color: var(--primary-blue);
+}
+.latest_date
+{
+	color: var(--gray-500);
+}
+.gallery_item_overlay
+{
+	background: var(--blue-a);
+	color: var(--white);
+}
+.tags_list li
+{
+	background: var(--white-f);
+}
+.tags_list li:hover
+{
+	background: var(--primary-blue);
+}
+.tags_list li:hover a
+{
+	color: var(--white);
+}
+.tags_list li a
+{
+	color: var(--gray-700);
+}
+.sidebar_banner_overlay
+{
+	background: var(--primary-blue);
+}
+.banner_title
+{
+	color: var(--white);
+}
+.banner_button
+{
+	background: var(--white);
+	border-radius: 3px;
+}
+.banner_button a
+{
+	color: var(--primary-blue);
+}
+.banner_button:hover
+{
+	background: var(--primary-blue);
+}
+.banner_button:hover a
+{
+	color: var(--white);
+}
+
+/* Mismas clases pero con variaciones
+
+p
+{
+	color: var(--gray-700);
+	-webkit-text-shadow: var(--black-a0) 0 0 1px;
+	text-shadow: var(--black-a0) 0 0 1px;
+}
+p a
+{
+	color: inherit;
+	border-bottom: solid 1px var(--primary-salmon);
+
+*/
