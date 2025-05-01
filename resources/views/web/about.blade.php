@@ -1,5 +1,8 @@
 @extends('web.master')
 @section('content')
+<!--PAGINA
+        QUIENES SOMOS 
+            NOSOTROS -->
 <div class="container" style="margin-top: 150px">
     <link rel="stylesheet" type="text/css" href="styles/about.css">
     <div class="super_container">

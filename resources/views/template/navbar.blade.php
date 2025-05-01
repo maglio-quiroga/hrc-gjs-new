@@ -1,3 +1,5 @@
+<!--PAGINA
+        INICIO -->
 <div class="header_container">
   <div class="navbar_container d-flex flex-row align-items-center justify-content-center">
     <nav class="navbar navbar-expand-lg navbar-light">

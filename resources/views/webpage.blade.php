@@ -17,6 +17,10 @@
     <!-- accesibilidad y bloques de separaciones (div) con sus estilos-->
     <link rel="stylesheet" href="styles/accesibilidad.css">
 
+    @vite(['resources/css/app.css', 'resources/css/accesibilidad.css', 'resources/js/app.js', 'resources/js/accesibilidad.js'])
+    
+
+
 </head>
 <body>
     
@@ -57,9 +61,8 @@
     <script src="plugins/greensock/animation.gsap.min.js"></script>
     <script src="plugins/greensock/ScrollToPlugin.min.js"></script>
     <script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
-    <script src="plugins/easing/easing.js"></script>
     <script src="plugins/parallax-js-master/parallax.min.js"></script>
-    <script src="js/custom.js"></script>
+    <script src="plugins/easing/easing.js"></script>
     <script src="js/accesibilidad.js"></script>
 </body>
 </html>
