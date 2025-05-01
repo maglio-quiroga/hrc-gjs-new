@@ -2,57 +2,52 @@
    PALETA DE COLORES
    =============================================== */
 :root {
-    /* Colores Simples */
-    --dark-red: #db5246; /* Rojo ladrillo (Color texto form-control) */
+    /*=== Colores Base ===*/
     --primary-blue: #14bdee; // Color de logo y enlaces hover
-    --dark-blue: #384158; /* Azul oscuro/grisáceo (Títulos h1-h6, texto botón login, texto nav, texto logo) */
-    --light-green: #b6e3c5;
-    --lighter-green: #e2f3eb; /* Verde muy pálido (Fondo Navbar) */
     --primary-green: #38a735;
-    --pale-green: #75c891; /* Verde menta (Hover enlaces Navbar) */
-    --paler-green: #c5e8d1; /* Verde pálido (Hover/Active enlaces y borde Navbar) */
     --primary-yellow: #ffc80a;
-    --primary-beige: #937c6f; /* Hover línea menú */
-    --primary-salmon: #ffa07f; /* Salmón claro (Borde/fondo hover enlaces p) */
-    --dark-salmon: #FF6347; /* Rojo tomate (Color active enlaces p) */
+    --primary-beige: #937c6f; // Hover línea menú
+    --primary-salmon: #FF6347; // Rojo tomate (Color active enlaces p)
+    --error-red: #db5246; // Rojo ladrillo (Color texto form-control)
 
-    /* Tonos Simples */
+    /*=== VERDES ===*/
+    --green-a50: rgba(36, 171, 47, 0.5); // Verde semitransparente
+    --green-100: #e2f3eb; // Verde muy pálido (Fondo Navbar)
+    --green-200: #c5e8d1; // Verde pálido (Hover/Active enlaces y borde Navbar)
+    --green-300: #b6e3c5;
+    --green-400: #75c891; // Verde menta (Hover enlaces Navbar)
+
+    /*=== Grises y Azules ===*/
+    --gray-100: #f8fcf9;
+    --gray-200: #f8f9f3;
+    --gray-300: #f3f3f3; // Gris muy pálido (Fondo botón login)
+    --gray-400: #e5e5e5;
+    --gray-500: #b5b8be;
+    --gray-600: #a5a5a5; // Gris medio (Color por defecto del body)
+    --gray-700: #76777a;
+    --gray-800: #4b505d;
+    --gray-900: #384158; // Azul oscuro/grisáceo (Títulos h1-h6, texto botón login, texto nav, texto logo)
+    --gray-1000: #353a49;
+
+    /*=== Tonos ===*/
     --white: #ffffff; // Negro puro (Usado en enlaces navbar)
     --black: #000000; // Blanco puro (Usado en fondo body, texto hover enlaces p, texto top bar)
-    --primary-gray: #a5a5a5; // Gris medio (Color por defecto del body)
-    --dark-gray: #384158;
-    --darker-gray: #353535; // Color de hamburguesa
-    --medium-gray: #4b505d;
-    --mediumer-gray: #55555a;
-    --light-gray: #b5b8be;
-    --lighter-gray: #e5e5e5;
-    --pale-gray: #76777a;
-    --paler-gray: #f3f3f3; /* Gris muy pálido (Fondo botón login) */
-    --dark-blue-gray: #3a4857;
-    --darker-blue-gray: #1e2434;
-    --dark-blue-black: #353a49;
-    --off-white-1: #f8fcf9;
-    --off-white-2: #f8f9f3;
-    --off-black: #232323; /* Línea menú */
+    --off-black: #232323; // Línea menú
 
-    /* Translúcidos */
-    --green-a-50: rgba(36, 171, 47, 0.5); // Verde semitransparente
-    --black-a-0: rgba(0,0,0,0); /* Negro completamente transparente */
-    --black-a-10: rgba(29, 34, 47, 0.1);
-    --black-a-12-5: rgba(0, 0, 0, 0.125);
-    --black-a-15: rgba(29, 34, 47, 0.15); // Transparente más oscuro
-    --black-a-40: rgba(0,0,0,0.4); /* Placeholder */
-    --black-a-45: rgba(29, 34, 47, 0.45);
-    --black-a-50: rgba(0,0,0,0.5); /* Placeholder alt */
-    --white-a-40: rgba(255, 255, 255, 0.4);
-    --white-a-20: rgba(255, 255, 255, 0.2);
+    /*=== Translúcidos ===*/
+    --black-a0: rgba(0,0,0,0); // Negro completamente transparente
+    --black-a10: rgba(29, 34, 47, 0.1); // Transparente más oscuro
+    --black-a40: rgba(0,0,0,0.4); // Placeholder
+    --black-a50: rgba(29, 34, 47, 0.5); // Placeholder alt
+    --white-a40: rgba(255, 255, 255, 0.4);
+    --white-a20: rgba(255, 255, 255, 0.2);
 }
 
 text-gray-900,
 text-gray-800,
 text-gray-200,
 text-gray-100 {
-    color: var(--pale-gray);
+    color: var(--gray-700);
 }
 
 /*********************************
@@ -61,18 +56,18 @@ text-gray-100 {
 
 *
 {
-	-webkit-text-shadow: var(--black-a-10) 0 0 1px;
-	text-shadow: var(--black-a-10) 0 0 1px;
+	-webkit-text-shadow: var(--black-a10) 0 0 1px;
+	text-shadow: var(--black-a10) 0 0 1px;
 }
 body
 {
 	background: var(--white); /* Modificado */
-	color: var(--primary-gray); /* Modificado */
+	color: var(--gray-600); /* Modificado */
 }
 p
 {
-	-webkit-text-shadow: var(--black-a-10) 0 0 1px;
-	text-shadow: var(--black-a-10) 0 0 1px;
+	-webkit-text-shadow: var(--black-a10) 0 0 1px;
+	text-shadow: var(--black-a10) 0 0 1px;
 }
 p a
 {
@@ -80,12 +75,12 @@ p a
 }
 a, a:hover, a:visited, a:active, a:link
 {
-	-webkit-text-shadow: var(--black-a-10) 0 0 1px;
-	text-shadow: var(--black-a-10) 0 0 1px;
+	-webkit-text-shadow: var(--black-a10) 0 0 1px;
+	text-shadow: var(--black-a10) 0 0 1px;
 }
 p a:active
 {
-	color: var(--dark-salmon); /* Modificado */
+	color: var(--primary-salmon); /* Modificado */
 }
 p a:hover
 {
@@ -95,13 +90,13 @@ p a:hover
 
 h1, h2, h3, h4, h5, h6
 {
-	-webkit-text-shadow: var(--black-a-10) 0 0 1px;
-	text-shadow: var(--black-a-10) 0 0 1px;
-	color: var(--dark-blue); /* Modificado */
+	-webkit-text-shadow: var(--black-a10) 0 0 1px;
+	text-shadow: var(--black-a10) 0 0 1px;
+	color: var(--gray-900); /* Modificado */
 }
 .form-control
 {
-	color: var(--dark-red); /* Modificado */
+	color: var(--error-red); /* Modificado */
 }
 
 /*********************************
@@ -110,7 +105,7 @@ h1, h2, h3, h4, h5, h6
 
 .header
 {
-	box-shadow: 0px 5px 20px var(--black-a-10); /* Mantener rgba o crear variable --sombra-header */
+	box-shadow: 0px 5px 20px var(--black-a10); /* Mantener rgba o crear variable --sombra-header */
 }
 
 /*********************************
@@ -132,11 +127,11 @@ h1, h2, h3, h4, h5, h6
 }
 .login_button
 {
-	background: var(--paler-gray); /* Modificado */
+	background: var(--gray-300); /* Modificado */
 }
 .login_button a
 {
-	color: var(--dark-blue); /* Modificado */
+	color: var(--gray-900); /* Modificado */
 }
 
 /*********************************
@@ -145,11 +140,11 @@ h1, h2, h3, h4, h5, h6
 
 .navbar_container
 {
-	background: var(--lighter-green); /* Modificado */
+	background: var(--green-100); /* Modificado */
 }
 
 .navbar {
-	background-color: var(--lighter-green); /* Modificado */
+	background-color: var(--green-100); /* Modificado */
 }
 
 .navbar-nav .nav-link {
@@ -157,28 +152,28 @@ h1, h2, h3, h4, h5, h6
 }
 
 .navbar-nav .nav-link:hover {
-	color: var(--pale-green); /* Modificado */
+	color: var(--green-400); /* Modificado */
 }
 
 .navbar-nav li a {
-    color: var(--dark-blue); /* Modificado */
+    color: var(--gray-900); /* Modificado */
 }
 
 .navbar-nav li a:hover,
 .navbar-nav li.active a {
-    color: var(--paler-green); /* Modificado */
+    color: var(--green-200); /* Modificado */
 }
 
 .navbar-nav li.active::after {
-    background: var(--paler-green); /* Modificado */
+    background: var(--green-200); /* Modificado */
 }
 
 .navbar-nav .dropdown-menu a {
-    color: var(--dark-blue); /* Modificado */
+    color: var(--gray-900); /* Modificado */
 }
 
 .navbar-nav .dropdown-menu a:hover {
-    color: var(--paler-green); /* Modificado */
+    color: var(--green-200); /* Modificado */
 }
 
 /*********************************
@@ -187,7 +182,7 @@ h1, h2, h3, h4, h5, h6
 
 .logo_text
 {
-	color: var(--dark-blue); /* Modificado */
+	color: var(--gray-900); /* Modificado */
 }
 
 /*} línea 453 */
@@ -197,7 +192,7 @@ h1, h2, h3, h4, h5, h6
 }
 .hamburger i
 {
-	color: var(--darker-gray);
+	color: var(--gray-1000);
 }
 .hamburger:hover i
 {
@@ -229,36 +224,36 @@ h1, h2, h3, h4, h5, h6
 }
 .menu .search_input
 {
-	background: var(--black-a-10);
-	color: var(--black-a-50);
+	background: var(--black-a10);
+	color: var(--black-a50);
 }
 .menu .search_input::-webkit-input-placeholder
 {
-	color: var(--black-a-40) !important;
+	color: var(--black-a40) !important;
 }
 .menu .search_input:-moz-placeholder
 {
-	color: var(--black-a-40) !important;
+	color: var(--black-a40) !important;
 }
 .menu .search_input::-moz-placeholder
 {
-	color: var(--black-a-40) !important;
+	color: var(--black-a40) !important;
 }
 .menu .search_input:-ms-input-placeholder
 {
-	color: var(--black-a-40) !important;
+	color: var(--black-a40) !important;
 }
 .menu .search_input::input-placeholder
 {
-	color: var(--black-a-40) !important;
+	color: var(--black-a40) !important;
 }
 .home_slider_title
 {
-	color: var(--dark-gray);
+	color: var(--gray-900);
 }
 .home_slider_subtitle
 {
-	color: var(--pale-gray);
+	color: var(--gray-700);
 }
 .home_search_form div
 {
@@ -266,40 +261,40 @@ h1, h2, h3, h4, h5, h6
 }
 .home_search_input:not(:last-child)
 {
-	border-right: solid 1px var(--lighter-gray);
+	border-right: solid 1px var(--gray-400);
 }
 .home_search_input::-webkit-input-placeholder
 {
-	color: var(--light-gray) !important;
+	color: var(--gray-500) !important;
 }
 .home_search_input:-moz-placeholder
 {
-	color: var(--light-gray) !important;
+	color: var(--gray-500) !important;
 }
 .home_search_input::-moz-placeholder
 {
-	color: var(--light-gray) !important;
+	color: var(--gray-500) !important;
 }
 .home_search_input:-ms-input-placeholder
 {
-	color: var(--light-gray) !important;
+	color: var(--gray-500) !important;
 }
 .home_search_input::input-placeholder
 {
-	color: var(--light-gray) !important;
+	color: var(--gray-500) !important;
 }
 .dropdown_item_select
 {
-    -webkit-box-shadow: 0px 0px 0px var(--black-a-0);
+    -webkit-box-shadow: 0px 0px 0px var(--black-a0);
 }
 .home_search_button
 {
-	background: var(--light-green);
+	background: var(--green-300);
 	color: var(--white);
 }
 .home_slider_nav
 {
-	background: var(--light-gray);
+	background: var(--gray-500);
 }
 /*No quedan más clases con cambio de colores hasta la linea 863*/
 
@@ -312,7 +307,7 @@ h1, h2, h3, h4, h5, h6
     color: var(--white);
 }
 .home_slider_nav:hover {
-    background: var(--light-green);
+    background: var(--green-300);
 }
 
 /* FEATURES */
@@ -323,7 +318,7 @@ h1, h2, h3, h4, h5, h6
     background: var(--white);
 }
 .feature:hover {
-    box-shadow: 0px 5px 40px var(--black-a-15);
+    box-shadow: 0px 5px 40px var(--black-a10);
 }
 
 /* COURSES */
@@ -332,19 +327,19 @@ h1, h2, h3, h4, h5, h6
 }
 .course {
     background: var(--white);
-    box-shadow: 0px 1px 10px var(--black-a-15);
+    box-shadow: 0px 1px 10px var(--black-a10);
 }
 .course_title a {
-    color: var(--dark-gray);
+    color: var(--gray-900);
 }
 .course_title a:hover {
     color: var(--primary-blue);
 }
 .course_teacher {
-    color: var(--dark-gray);
+    color: var(--gray-900);
 }
 .course_info {
-    color: var(--mediumer-gray);
+    color: var(--gray-700);
 }
 .course_info i {
     color: var(--primary-yellow);
@@ -353,14 +348,14 @@ h1, h2, h3, h4, h5, h6
     color: var(--primary-blue);
 }
 .course_price span {
-    color: var(--light-gray);
+    color: var(--gray-500);
 }
 .courses_button {
     background: var(--primary-blue);
-    box-shadow: 0px 5px 40px var(--black-a-15);
+    box-shadow: 0px 5px 40px var(--black-a10);
 }
 .courses_button:hover {
-    box-shadow: 0px 5px 40px var(--black-a-45);
+    box-shadow: 0px 5px 40px var(--black-a50);
 }
 .courses_button a {
     color: var(--white);
@@ -377,7 +372,7 @@ h1, h2, h3, h4, h5, h6
     color: var(--white);
 }
 .milestone:not(:last-child)::after {
-    background: var(--white-a-20);
+    background: var(--white-a20);
 }
 .milestone_counter {
     color: var(--primary-blue);
@@ -387,14 +382,14 @@ h1, h2, h3, h4, h5, h6
 }
 .counter_form {
     background: var(--white);
-    box-shadow: 0px 5px 40px var(--black-a-15);
+    box-shadow: 0px 5px 40px var(--black-a10);
 }
 .counter_form_title {
-    color: var(--dark-gray);
+    color: var(--gray-900);
 }
 .counter_input {
-    border: solid 1px var(--lighter-gray);
-    color: var(--dark-gray);
+    border: solid 1px var(--gray-400);
+    color: var(--gray-900);
 }
 .counter_input::-webkit-input-placeholder,
 .counter_text_input::-webkit-input-placeholder,
@@ -406,15 +401,15 @@ h1, h2, h3, h4, h5, h6
 .counter_text_input:-ms-input-placeholder,
 .counter_input::input-placeholder,
 .counter_text_input::input-placeholder {
-    color: var(--light-gray) !important;
+    color: var(--gray-500) !important;
 }
 .counter_form_button {
     color: var(--white);
     background: var(--primary-blue);
-    box-shadow: 0px 5px 40px var(--black-a-15);
+    box-shadow: 0px 5px 40px var(--black-a10);
 }
 .counter_form_button:hover {
-    box-shadow: 0px 5px 40px var(--black-a-45);
+    box-shadow: 0px 5px 40px var(--black-a50);
 }
 
 /* NOTICIAS */
@@ -427,7 +422,7 @@ h1, h2, h3, h4, h5, h6
 *********************************/
 
 .noticia_date {
-    box-shadow: 0px 1px 10px var(--black-a-10);
+    box-shadow: 0px 1px 10px var(--black-a10);
 }
 .noticia_day {
     color: var(--primary-blue);
@@ -443,41 +438,41 @@ h1, h2, h3, h4, h5, h6
     color: var(--white);
 }
 .noticia_title a {
-    color: var(--dark-gray);
+    color: var(--gray-900);
 }
 .noticia_title a:hover {
     color: var(--primary-blue);
 }
 .noticia_info {
-    color: var(--light-gray);
+    color: var(--gray-500);
 }
 .btn-secondary {
     background-color: var(--primary-green);
 }
 .custom-carousel-control {
-    background-color: var(--green-a-50);
+    background-color: var(--green-a50);
 }
 .team_body {
     background: var(--white);
-    box-shadow: 0px 1px 10px var(--black-a-10);
+    box-shadow: 0px 1px 10px var(--black-a10);
 }
 .team_item:hover .team_body {
-    box-shadow: 0px 5px 40px var(--black-a-15);
+    box-shadow: 0px 5px 40px var(--black-a10);
 }
 .team_title a {
-    color: var(--dark-gray);
+    color: var(--gray-900);
 }
 .team_title a:hover {
-    color: var(--light-green);
+    color: var(--green-300);
 }
 .team_subtitle {
-    color: var(--pale-gray);
+    color: var(--gray-700);
 }
 .social_list ul li a i {
-    color: var(--pale-gray);
+    color: var(--gray-700);
 }
 .social_list ul li:hover a i {
-    color: var(--light-green);
+    color: var(--green-300);
 }
 .mapa_container {
     background: var(--white);
@@ -492,25 +487,25 @@ h1, h2, h3, h4, h5, h6
     color: var(--primary-blue);
 }
 .mapa_post_meta ul li a {
-    color: var(--light-gray);
+    color: var(--gray-500);
 }
 .mapa_post_meta ul li a:hover {
     color: var(--primary-blue);
 }
 .mapa_post_link a {
-    color: var(--dark-gray);
+    color: var(--gray-900);
 }
 .mapa_post_link a:hover {
     color: var(--primary-blue);
 }
 .mapa_post_small_title a {
-    color: var(--dark-gray);
+    color: var(--gray-900);
 }
 .mapa_post_small_title a:hover {
-    color: var(--light-green);
+    color: var(--green-300);
 }
 .noticia_date {
-    box-shadow: 0px 1px 10px var(--black-a-10);
+    box-shadow: 0px 1px 10px var(--black-a10);
 }
 .noticia_day {
     color: var(--primary-blue);
@@ -526,41 +521,41 @@ h1, h2, h3, h4, h5, h6
     color: var(--white);
 }
 .noticia_title a {
-    color: var(--dark-gray);
+    color: var(--gray-900);
 }
 .noticia_title a:hover {
     color: var(--primary-blue);
 }
 .noticia_info {
-    color: var(--light-gray);
+    color: var(--gray-500);
 }
 .btn-secondary {
     background-color: var(--primary-green);
 }
 .custom-carousel-control {
-    background-color: var(--green-a-50);
+    background-color: var(--green-a50);
 }
 .team_body {
     background: var(--white);
-    box-shadow: 0px 1px 10px var(--black-a-10);
+    box-shadow: 0px 1px 10px var(--black-a10);
 }
 .team_item:hover .team_body {
-    box-shadow: 0px 5px 40px var(--black-a-15);
+    box-shadow: 0px 5px 40px var(--black-a10);
 }
 .team_title a {
-    color: var(--dark-gray);
+    color: var(--gray-900);
 }
 .team_title a:hover {
-    color: var(--light-green);
+    color: var(--green-300);
 }
 .team_subtitle {
-    color: var(--pale-gray);
+    color: var(--gray-700);
 }
 .social_list ul li a i {
-    color: var(--pale-gray);
+    color: var(--gray-700);
 }
 .social_list ul li:hover a i {
-    color: var(--light-green);
+    color: var(--green-300);
 }
 .mapa_container {
     background: var(--white);
@@ -575,22 +570,22 @@ h1, h2, h3, h4, h5, h6
     color: var(--primary-blue);
 }
 .mapa_post_meta ul li a {
-    color: var(--light-gray);
+    color: var(--gray-500);
 }
 .mapa_post_meta ul li a:hover {
     color: var(--primary-blue);
 }
 .mapa_post_link a {
-    color: var(--dark-gray);
+    color: var(--gray-900);
 }
 .mapa_post_link a:hover {
     color: var(--primary-blue);
 }
 .mapa_post_small_title a {
-    color: var(--dark-gray);
+    color: var(--gray-900);
 }
 .mapa_post_small_title a:hover {
-    color: var(--light-green);
+    color: var(--green-300);
 }
 
 /*********************************
@@ -598,7 +593,7 @@ h1, h2, h3, h4, h5, h6
 *********************************/
 
 .noticia_date {
-    box-shadow: 0px 1px 10px var(--black-a-10);
+    box-shadow: 0px 1px 10px var(--black-a10);
 }
 .noticia_day {
     color: var(--primary-green);
@@ -614,21 +609,21 @@ h1, h2, h3, h4, h5, h6
     color: var(--white);
 }
 .noticia_title a {
-    color: var(--dark-gray);
+    color: var(--gray-900);
 }
 .noticia_title a:hover {
     color: var(--primary-blue);
 }
 .noticia_info {
-    color: var(--light-gray);
+    color: var(--gray-500);
 }
 
 .btn-secondary {
-    background-color: var(--dark-gray);
+    background-color: var(--gray-900);
 }
 
 .custom-carousel-control {
-    background-color: var(--green-a-50);
+    background-color: var(--green-a50);
 }
 
 /*********************************
@@ -637,25 +632,25 @@ h1, h2, h3, h4, h5, h6
 
 .team_body {
     background: var(--white);
-    box-shadow: 0px 1px 10px var(--black-a-10);
+    box-shadow: 0px 1px 10px var(--black-a10);
 }
 .team_item:hover .team_body {
-    box-shadow: 0px 5px 40px var(--black-a-15);
+    box-shadow: 0px 5px 40px var(--black-a10);
 }
 .team_title a {
-    color: var(--dark-gray);
+    color: var(--gray-900);
 }
 .team_title a:hover {
-    color: var(--light-green);
+    color: var(--green-300);
 }
 .team_subtitle {
-    color: var(--pale-gray);
+    color: var(--gray-700);
 }
 .social_list ul li a i {
-    color: var(--pale-gray);
+    color: var(--gray-700);
 }
 .social_list ul li:hover a i {
-    color: var(--light-green);
+    color: var(--green-300);
 }
 
 /*********************************
@@ -674,41 +669,41 @@ h1, h2, h3, h4, h5, h6
     color: var(--primary-blue);
 }
 .mapa_post_meta ul li a {
-    color: var(--light-gray);
+    color: var(--gray-500);
 }
 .mapa_post_meta ul li a:hover {
     color: var(--primary-blue);
 }
 .mapa_post_link a {
-    color: var(--dark-gray);
+    color: var(--gray-900);
 }
 .mapa_post_link a:hover {
     color: var(--primary-blue);
 }
 .mapa_post_small_title a {
-    color: var(--dark-gray);
+    color: var(--gray-900);
 }
 .mapa_post_small_title a:hover {
-    color: var(--light-green);
+    color: var(--green-300);
 }
 
 .accordion-item {
-    color: var(--darker-blue-gray);
-    background-color: var(--off-white-1);
+    color: var(--gray-1000);
+    background-color: var(--gray-100);
     border: var(--bs-accordion-border-width) solid var(--white);
 }
 
 .accordion-button {
-    background-color: var(--off-white-2);
+    background-color: var(--gray-200);
 }
 .accordion-button:not(.collapsed) {
     color: var(--black);
-    background-color: var(--light-green);
-    box-shadow: inset 0 -1px 0 var(--black-a-12-5);
+    background-color: var(--green-300);
+    box-shadow: inset 0 -1px 0 var(--black-a10);
 }
 
 .accordion-header {
-    background-color: var(--off-white-2);
+    background-color: var(--gray-200);
 }
 
 /*********************************
@@ -722,7 +717,7 @@ h1, h2, h3, h4, h5, h6
     color: var(--white);
 }
 .newsletter_input {
-    background: rgba(255, 255, 255, 0.4);
+    background: var(--white-a40);
     color: var(--white);
 }
 .newsletter_input::-webkit-input-placeholder {
@@ -750,7 +745,7 @@ h1, h2, h3, h4, h5, h6
 *********************************/
 
 .footer {
-    background: var(--darker-blue-gray);
+    background: var(--gray-1000);
 }
 .footer_logo_text {
     color: var(--white);
@@ -765,7 +760,7 @@ h1, h2, h3, h4, h5, h6
     color: var(--white);
 }
 .footer_social ul li {
-    background: var(--medium-gray);
+    background: var(--gray-800);
 }
 .footer_social ul li a i {
     color: var(--white);
@@ -774,19 +769,19 @@ h1, h2, h3, h4, h5, h6
     background: var(--primary-blue);
 }
 .footer_contact_info ul li {
-    color: var(--light-gray);
+    color: var(--gray-500);
 }
 .footer_links_container ul li a {
-    color: var(--light-gray);
+    color: var(--gray-500);
 }
 .footer_links_container ul li a:hover {
     color: var(--primary-blue);
 }
 .copyright {
-    border-top: solid 1px var(--dark-blue-black);
+    border-top: solid 1px var(--gray-1000);
 }
 .copyright div {
-    color: var(--light-gray);
+    color: var(--gray-500);
 }
 .cr_text a {
     color: var(--white);
@@ -795,7 +790,7 @@ h1, h2, h3, h4, h5, h6
     color: var(--primary-blue);
 }
 .cr_list li a {
-    color: var(--light-gray);
+    color: var(--gray-500);
 }
 .cr_list li a:hover {
     color: var(--primary-blue);
