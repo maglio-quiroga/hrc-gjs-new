@@ -1,109 +1,107 @@
-<nav x-data="{ open: false }" class="bg-primary text-white shadow-md">
-    <!-- Primary Navigation Menu -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between h-16">
-            <div class="flex">
-                <!-- Logo -->
-                <div class=" flex items-center">
+{{-- resources/views/layouts/navigation.blade.php (VERSIÓN CON BOOTSTRAP 5) --}}
+{{-- Asume que 'bg-primary' es un color oscuro. Si es claro, cambia 'navbar-dark' por 'navbar-light' --}}
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+    <div class="container-fluid"> {{-- O usa 'container' si prefieres ancho limitado --}}
 
-                        <x-application-logo class="block h-9 w-auto fill-current text-gray-800 dark:text-gray-200" />
+        {{-- Logo / Marca --}}
+        <a class="navbar-brand" href="{{ route('inicio') }}">
+            {{-- Reemplaza esto con tu logo real si <x-application-logo> ya no funciona --}}
+            {{-- Ejemplo: <img src="/path/to/your/logo.png" alt="Logo HRC" style="height: 30px;"> --}}
+             <x-application-logo class="block h-9 w-auto" /> {{-- Intenta mantener el componente si funciona --}}
+        </a>
 
-                </div>
+        {{-- Botón Hamburguesa para móvil --}}
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbarCollapse" aria-controls="mainNavbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-                <!-- Navigation Links
-                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                        {{ __('Dashboard') }}
-                    </x-nav-link>
-                </div>-->
-                <!-- Navigation Links -->
-                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                        @include('dashboard.partials.nav-header-main')
-                </div>
-            </div>
+        {{-- Contenido Colapsable (Enlaces y Menús) --}}
+        <div class="collapse navbar-collapse" id="mainNavbarCollapse">
 
-            <!-- Settings Dropdown -->
-            <div class="hidden sm:flex sm:items-center sm:ms-6">
-                <x-dropdown align="right" width="48">
-                    <x-slot name="trigger">
-                        <button class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-800 hover:text-gray-700 dark:hover:text-gray-300 focus:outline-none transition ease-in-out duration-150">
-                            <div class="ms-1">
-                                <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                                </svg>
-                            </div>
-                        </button>
-                    </x-slot>
+            {{-- Enlaces Principales (Alineados a la izquierda por defecto) --}}
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                @auth
+                    {{-- Menú Administrador para usuarios autenticados --}}
+                    {{-- El include necesita estar dentro de un <li> o generar <li> apropiados --}}
+                    {{-- Opción 1: Si el include genera <li> --}}
+                     {{-- @include('dashboard.partials.nav-header-main') --}}
 
-                    <x-slot name="content">
-                        <!-- Opción Perfil -->
-                        <x-dropdown-link :href="route('profile.edit')" style="display: flex; align-items: center;">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width: 24px; height: 24px; margin-right: 8px; color: #4EA8DE;">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
-                            </svg>
-                            {{ __('Perfil') }}
-                        </x-dropdown-link>
+                    {{-- Opción 2: Si el include genera solo <a> (necesita un dropdown wrapper) --}}
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="adminDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            {{-- Icono + Texto Administrador (Ajusta según necesites) --}}
+                            <i class="fas fa-user-cog"></i> Administrador
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="adminDropdown">
+                            {{-- Aquí irían las opciones del @include, adaptadas a <li><a class="dropdown-item">...</a></li> --}}
+                            {{-- Necesitarías ver 'nav-header-main.blade.php' y sus hijos para adaptarlo --}}
+                            <li><a class="dropdown-item" href="#">Opción Admin Placeholder 1</a></li>
+                            <li><a class="dropdown-item" href="#">Opción Admin Placeholder 2</a></li>
+                            {{-- @include('dashboard.partials.nav-header-main') --}} {{-- Esto probablemente NO funcione directamente aquí --}}
+                        </ul>
+                    </li>
+                     {{-- Podrías añadir aquí otros links visibles solo para usuarios logueados si los hubiera --}}
 
-                        <!-- Opción Salir -->
-                        <form method="POST" action="{{ route('logout') }}">
-                            @csrf
-                            <x-dropdown-link :href="route('logout')"
-                                onclick="event.preventDefault(); this.closest('form').submit();"
-                                style="display: flex; align-items: center;">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width: 24px; height: 24px; margin-right: 8px; color: #E57373;">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15m3 0 3-3m0 0-3-3m3 3H9" />
-                                </svg>
-                                {{ __('Salir') }}
-                            </x-dropdown-link>
-                        </form>
-                    </x-slot>
-                </x-dropdown>
-            </div>
+                @else
+                    {{-- Links Públicos para invitados --}}
+                    {{-- ****** EDITA ESTOS ENLACES SEGÚN TUS NECESIDADES ****** --}}
+                    <li class="nav-item">
+                        <a class="nav-link {{ request()->routeIs('inicio') ? 'active' : '' }}" aria-current="page" href="{{ route('inicio') }}">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {{ request()->routeIs('servicios') ? 'active' : '' }}" href="{{ route('servicios') }}">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {{ request()->routeIs('about') ? 'active' : '' }}" href="{{ route('about') }}">Nosotros</a>
+                    </li>
+                    {{-- ****** Agrega aquí otros enlaces públicos como <li class="nav-item"><a class="nav-link">...</a></li> ****** --}}
+                @endauth
+            </ul>
 
-            <!-- Hamburger -->
-            <div class="-me-2 flex items-center sm:hidden">
-                <button @click="open = ! open" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 dark:text-gray-500 hover:text-gray-500 dark:hover:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-900 focus:outline-none focus:bg-gray-100 dark:focus:bg-gray-900 focus:text-gray-500 dark:focus:text-gray-400 transition duration-150 ease-in-out">
-                    <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-                        <path :class="{'hidden': open, 'inline-flex': ! open }" class="inline-flex" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                        <path :class="{'hidden': ! open, 'inline-flex': open }" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                </button>
-            </div>
-        </div>
-    </div>
+            {{-- Lado Derecho de la Navbar --}}
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                @auth
+                    {{-- Menú Usuario (Perfil/Salir) para usuarios autenticados --}}
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            {{-- Nombre de Usuario --}}
+                            {{ Auth::user()->name }}
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                             {{-- Enlace a Perfil --}}
+                            <li><a class="dropdown-item" href="{{ route('profile.edit') }}">
+                                <i class="fas fa-user me-2"></i>{{ __('Perfil') }}
+                            </a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            {{-- Botón/Enlace Salir --}}
+                            <li>
+                                <form method="POST" action="{{ route('logout') }}" id="logout-form-nav">
+                                    @csrf
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault(); document.getElementById('logout-form-nav').submit();">
+                                       <i class="fas fa-sign-out-alt me-2"></i>{{ __('Salir') }}
+                                    </a>
+                                </form>
+                            </li>
+                        </ul>
+                    </li>
+                @else
+                    {{-- Botones Login/Registro para invitados --}}
+                    @if (Route::has('login'))
+                        <li class="nav-item">
+                            <a href="{{ route('login') }}" class="nav-link">Iniciar Sesión</a>
+                        </li>
+                    @endif
+                    {{--
+                    @if (Route::has('register'))
+                        <li class="nav-item">
+                            <a href="{{ route('register') }}" class="nav-link">Registrarse</a>
+                        </li>
+                    @endif
+                     --}}
+                @endguest
+            </ul>
 
-    <!-- Responsive Navigation Menu -->
-    <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
-        <div class="pt-2 pb-3 space-y-1">
-            <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                {{ __('Dashboard') }}
-            </x-responsive-nav-link>
-        </div>
-
-        <!-- Responsive Settings Options -->
-        <div class="pt-4 pb-1 border-t border-gray-200 dark:border-gray-600">
-            <div class="mt-3 space-y-1">
-                <!-- Opción Perfil -->
-                <x-dropdown-link :href="route('profile.edit')" style="display: flex; align-items: center;">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width: 24px; height: 24px; margin-right: 8px; color: #4EA8DE;">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
-                    </svg>
-                    {{ __('Perfil') }}
-                </x-dropdown-link>
-
-                <!-- Opción Salir -->
-                <form method="POST" action="{{ route('logout') }}">
-                    @csrf
-                    <x-dropdown-link :href="route('logout')"
-                        onclick="event.preventDefault(); this.closest('form').submit();"
-                        style="display: flex; align-items: center;">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width: 24px; height: 24px; margin-right: 8px; color: #E57373;">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15m3 0 3-3m0 0-3-3m3 3H9" />
-                        </svg>
-                        {{ __('Salir') }}
-                    </x-dropdown-link>
-                </form>
-            </div>
-        </div>
-    </div>
+        </div> {{-- Fin navbar-collapse --}}
+    </div> {{-- Fin container-fluid --}}
 </nav>

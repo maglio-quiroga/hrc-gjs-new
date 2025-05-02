@@ -7,7 +7,12 @@
     <title>Dirección de Formación Continua</title>
     <!--<script src="{{asset("js/app.js")}}"></script>-->
     <!-- <link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css"> -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    {{-- 1. Eliminar o comentar CDN Bootstrap CSS --}}
+    {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"> --}}
+
+    {{-- 2. Añadir directiva @vite --}}
+    @vite(['resources/scss/app.scss', 'resources/js/app.js'])
+
     <link rel="stylesheet" type="text/css" href="{{ asset('styles/main_styles.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('styles/custom_styles.css') }}">
     <link rel="stylesheet" type="text/css" href="styles/course.css">
@@ -47,8 +52,10 @@
     </div>
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="styles/bootstrap4/popper.js"></script>
-    <!-- <script src="styles/bootstrap4/bootstrap.min.js"></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    {{-- 3. Eliminar o comentar CDN Bootstrap JS (Vite lo carga desde app.js) --}}
+    {{-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script> --}}
+    
     <script src="plugins/greensock/TweenMax.min.js"></script>
     <script src="plugins/greensock/TimelineMax.min.js"></script>
     <script src="plugins/scrollmagic/ScrollMagic.min.js"></script>
@@ -61,6 +68,7 @@
     <script src="js/course.js"></script>
     <script src="js/courses.js"></script>
     
-    
+    {{-- El componente de accesibilidad --}}
+    <x-accesibilidad/>
 </body>
 </html>

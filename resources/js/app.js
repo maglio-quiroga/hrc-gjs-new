@@ -1,8 +1,12 @@
-import "./bootstrap";
-import { accesibilidad } from "./accesibilidad";
+// resources/js/app.js
+
+import './bootstrap'; // Importa Axios
+import 'bootstrap';   // Importa Bootstrap JS
+
+import { accesibilidad } from "./accesibilidad"; // Tu script personalizado
 accesibilidad();
 
-import Alpine from "alpinejs";
+import Alpine from "alpinejs"; // Alpine.js
 
 window.Alpine = Alpine;
 

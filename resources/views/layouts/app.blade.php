@@ -22,7 +22,7 @@
         <link rel="stylesheet" type="text/css" href="styles/main.css">
 
         <!-- Scripts -->
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
+        @vite(['resources/scss/app.scss', 'resources/js/app.js'])
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
         <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     </head>
