@@ -46,16 +46,21 @@
     --white-a20: rgba(255, 255, 255, 0.2);
 
     /*Nuevos*/
-    --black-b: #181818;
-    --white-f: #f2f4f5;
-    --white-e: #edeff0;
-    --white-e2: #ebebeb;
-    --white-d: #d9d9d9;
-    --gray-a: #2c3145;
-    --gray-b: #5e6271;
-    --gray-c: #383749;
-    --black-box: rgba(0,0,0,0.25);
-    --blue-a: rgba(20,189,238,0.7);
+    /*blog_single.css*/
+    --gray-1100: #181818;
+    --gray-250: #f2f4f5;
+    --gray-260: #edeff0;
+    --gray-270: #ebebeb;
+    --gray-450: #d9d9d9;
+    --gray-950: #2c3145;
+    --gray-750: #5e6271;
+    --gray-960: #383749;
+    --black-a25: rgba(0, 0, 0, 0.25);
+    --primary-blue-a70: rgba(20, 189, 238, 0.7);
+    /*blog.css*/
+    --black-a5: rgba(0, 0, 0, 0.05);
+    --light-salmon: #ffa07f;
+    --salmon-200: #ffa07f;
 }
 
 text-gray-900,
@@ -794,6 +799,8 @@ h6 {
 
 
 /*Desde aquí*/
+
+/*-> de blog_single.css*/
 .header_container
 {
 	background: var(--white);
@@ -814,7 +821,7 @@ h6 {
 .search_button i,
 .shopping_cart i
 {
-	color: var(--black-b);
+	color: var(--gray-1100);
 }
 .search_button:hover i,
 .shopping_cart:hover i
@@ -827,8 +834,8 @@ h6 {
 }
 .home
 {
-	background: var(--white-f);
-	border-bottom: solid 1px var(--white-e);
+	background: var(--gray-250);
+	border-bottom: solid 1px var(--gray-260);
 }
 .breadcrumbs ul li:not(:last-child)::after
 {
@@ -880,7 +887,7 @@ h6 {
 }
 .blog_extra
 {
-	border-bottom: solid 1px var(--white-e2);
+	border-bottom: solid 1px var(--gray-270);
 }
 .blog_tags span
 {
@@ -908,7 +915,7 @@ h6 {
 }
 .comments_title
 {
-	color: var(--gray-a);
+	color: var(--gray-950);
 }
 .comments_list li:not(:last-child) .comment_item
 {
@@ -928,7 +935,7 @@ h6 {
 }
 .comment_extra a
 {
-	color: var(--gray-b);
+	color: var(--gray-750);
 }
 .comment_extra a:hover
 {
@@ -940,8 +947,8 @@ h6 {
 }
 .comment_input
 {
-	border: solid 1px var(--white-d);
-	color: var(--gray-a);
+	border: solid 1px var(--gray-450);
+	color: var(--gray-950);
 }
 .comment_input:focus
 {
@@ -961,7 +968,7 @@ h6 {
 }
 .comment_notify span
 {
-	color: var(--gray-a);
+	color: var(--gray-950);
 }
 .comment_button
 {
@@ -970,7 +977,7 @@ h6 {
 }
 .comment_button:hover
 {
-	box-shadow: 0px 5px 40px var(--black-box);
+	box-shadow: 0px 5px 40px var(--black-a25);
 }
 .sidebar_section_title
 {
@@ -991,7 +998,7 @@ h6 {
 }
 .latest_title a
 {
-	color: var(--gray-c);
+	color: var(--gray-960);
 }
 .latest_title a:hover
 {
@@ -1003,12 +1010,12 @@ h6 {
 }
 .gallery_item_overlay
 {
-	background: var(--blue-a);
+	background: var(--primary-blue-a70);
 	color: var(--white);
 }
 .tags_list li
 {
-	background: var(--white-f);
+	background: var(--gray-250);
 }
 .tags_list li:hover
 {
@@ -1048,7 +1055,52 @@ h6 {
 	color: var(--white);
 }
 
+/*-> de blog.css*/
+.blog_post
+{
+	box-shadow: 0px 1px 10px var(--black-a10);
+}
+.blog_post:hover
+{
+	box-shadow: 0px 5px 40px var(--black-a15);
+}
+.blog_post_title a
+{
+	color: var(--gray-900);
+}
+.blog_post_title a:hover
+{
+	color: var(--primary-blue);
+}
+.blog_post_meta ul li a
+{
+	color: var(--gray-500);
+}
+.blog_post_meta ul li a:hover
+{
+	color: var(--primary-blue);
+}
+.blog_post_text p
+{
+	color: var(--gray-700);
+}
+.load_more
+{
+	background: var(--primary-blue);
+}
+.load_more:hover
+{
+	box-shadow: 0px 5px 40px var(--black-a25);
+}
+.load_more a
+{
+	color: var(--white);
+}
+
+
 /* Mismas clases pero con variaciones
+
+-> de blog_single.css
 
 p
 {
@@ -1056,9 +1108,53 @@ p
 	-webkit-text-shadow: var(--black-a0) 0 0 1px;
 	text-shadow: var(--black-a0) 0 0 1px;
 }
+
 p a
 {
 	color: inherit;
 	border-bottom: solid 1px var(--primary-salmon);
+}
+
+-> de blog.css
+
+p a
+{
+	color: inherit;
+	border-bottom: solid 1px var(--light-salmon);
+}
+
+a, a:hover, a:visited, a:active, a:link
+{
+	-webkit-text-shadow: var(--black-a0) 0 0 1px;
+	text-shadow: var(--black-a0) 0 0 1px;
+}
+
+p a:hover
+{
+	color: var(--white);
+	background: var(--light-salmon);
+}
+
+h1, h2, h3, h4, h5, h6
+{
+	-webkit-text-shadow: var(--black-a0) 0 0 1px;
+	text-shadow: var(--black-a0) 0 0 1px;
+	color: var(--gray-900);
+}
+
+.header
+{
+	box-shadow: 0px 5px 20px var(--black-a5);
+}
+
+.hamburger i
+{
+	color: var(--gray-d);
+}
+
+.footer
+{
+	background: var(--gray-950);
+}
 
 */
