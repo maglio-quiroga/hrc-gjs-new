@@ -20,7 +20,7 @@
 
 </head>
 <body>
-    
+
     <div id="app">
         <div class="super_container">
             @include('template.header')
@@ -46,7 +46,7 @@
         <button id="lecturaBtn">Lectura de Pantalla</button>
     </div>
 
-    
+
     <!-- JS -->
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -61,6 +61,6 @@
     <script src="plugins/parallax-js-master/parallax.min.js"></script>
     <script src="plugins/easing/easing.js"></script>
     <script src="js/accesibilidad.js"></script>
-    <script ser="js/custom.js"></script>
+    <script src="js/custom.js"></script>
 </body>
 </html>
