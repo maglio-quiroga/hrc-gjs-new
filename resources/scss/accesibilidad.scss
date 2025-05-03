@@ -44,15 +44,11 @@
     margin: 0;
     padding: 0;
     -webkit-font-smoothing: antialiased;
-    -webkit-text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
-    text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
 }
 body {
     font-family: "Museo Sans 500", "Roboto", sans-serif;
     font-size: 14px;
     font-weight: 400;
-    background: #ffffff;
-    color: #a5a5a5;
 }
 div {
     display: block;
@@ -70,16 +66,12 @@ p {
     font-size: 14px;
     line-height: 1.85;
     font-weight: 400;
-    color: #76777a;
     -webkit-font-smoothing: antialiased;
-    -webkit-text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
-    text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
 }
 p a {
     display: inline;
     position: relative;
     color: inherit;
-    border-bottom: solid 1px #ffa07f;
     -webkit-transition: all 200ms ease;
     -moz-transition: all 200ms ease;
     -ms-transition: all 200ms ease;
@@ -96,16 +88,9 @@ a:active,
 a:link {
     text-decoration: none;
     -webkit-font-smoothing: antialiased;
-    -webkit-text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
-    text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
 }
 p a:active {
     position: relative;
-    color: #ff6347;
-}
-p a:hover {
-    color: #ffffff;
-    background: #ffa07f;
 }
 p a:hover::after {
     opacity: 0.2;
@@ -138,9 +123,6 @@ h6 {
     font-family: "Museo Sans 500", "Roboto Slab", serif;
     font-weight: 700;
     -webkit-font-smoothing: antialiased;
-    -webkit-text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
-    text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
-    color: #384158;
     margin-bottom: 0;
 }
 h1::selection,
@@ -149,9 +131,6 @@ h3::selection,
 h4::selection,
 h5::selection,
 h6::selection {
-}
-.form-control {
-    color: #db5246;
 }
 section {
     display: block;
@@ -237,7 +216,6 @@ section {
     left: 0;
     width: 100%;
     z-index: 100;
-    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.05);
     -webkit-transition: all 200ms ease;
     -moz-transition: all 200ms ease;
     -ms-transition: all 200ms ease;
@@ -254,7 +232,6 @@ section {
 /*BARRA VERDE ARRIBA DEL VANAER*/
 .top_bar {
     width: 100%;
-    background: #029834;
 }
 .header.scrolled .top_bar {
 }
@@ -272,14 +249,12 @@ section {
 .question {
     font-family: "Museo Sans 500", "Roboto Slab", serif;
     font-size: 14px;
-    color: #ffffff;
     margin-left: 0px;
 }
 .top_bar_contact_list li i,
 .top_bar_contact_list li > div {
     display: inline-block;
     font-size: 14px;
-    color: #ffffff;
 }
 .top_bar_contact_list li > div {
     margin-left: 1px;
@@ -293,7 +268,6 @@ section {
 .login_button {
     width: 160px;
     height: 100%;
-    background: #f3f3f3;
     text-align: center;
 }
 .login_button a {
@@ -301,7 +275,6 @@ section {
     font-size: 14px;
     font-weight: 500;
     line-height: 40px;
-    color: #384158;
 }
 
 /*********************************
@@ -310,12 +283,8 @@ section {
 /*VANER PRINCIPAL (INICIO, QUIENES SOMOS, INFORMACION PACIENTE, ETC*/
 .navbar_container {
     width: 100%;
-    background: #e2f3eb;
 }
 
-.navbar {
-    background-color: #e2f3eb;
-}
 @media only screen and (max-width: 991px) {
     .navbar {
         width: 100%;
@@ -323,12 +292,7 @@ section {
 }
 
 .navbar-nav .nav-link {
-    color: #000000;
     transition: color 0.2s ease-in-out;
-}
-
-.navbar-nav .nav-link:hover {
-    color: #029834;
 }
 
 .navbar-brand img {
@@ -344,17 +308,11 @@ section {
 }
 
 .navbar-nav li a {
-    color: #384158;
     -webkit-transition: all 200ms ease;
     -moz-transition: all 200ms ease;
     -ms-transition: all 200ms ease;
     -o-transition: all 200ms ease;
     transition: all 200ms ease;
-}
-
-.navbar-nav li a:hover,
-.navbar-nav li.active a {
-    color: #980202;
 }
 
 .navbar-nav li.active::after {
@@ -364,17 +322,11 @@ section {
     left: 0;
     width: 100%;
     height: 2px;
-    background: #029834;
     content: "";
 }
 
 .navbar-nav .dropdown-menu a {
-    color: #384158;
     font-size: 16px;
-}
-
-.navbar-nav .dropdown-menu a:hover {
-    color: #029834;
 }
 
 /*********************************
@@ -402,7 +354,6 @@ section {
     font-size: 36px;
     font-weight: 700;
     line-height: 0.75;
-    color: #348803;
     vertical-align: middle;
     margin-left: 7px;
     -webkit-transition: all 200ms ease;
@@ -410,9 +361,6 @@ section {
     -ms-transition: all 200ms ease;
     -o-transition: all 200ms ease;
     transition: all 200ms ease;
-}
-.logo_text span {
-    color: #82037a;
 }
 .header.scrolled .logo {
     width: 40px;
@@ -484,11 +432,9 @@ section {
     font-size: 60px;
     font-weight: 700;
     line-height: 1.2;
-    color: #384158;
 }
 .home_slider_subtitle {
     font-size: 24px;
-    color: #76777a;
     margin-top: 9px;
 }
 .home_slider_form_container {
@@ -499,7 +445,6 @@ section {
 .home_search_form div {
     width: calc(100% - 140px);
     height: 46px;
-    background: #ffffff;
     border-radius: 3px;
 }
 .home_search_input {
@@ -509,38 +454,30 @@ section {
     height: 25px;
     padding-left: 20px;
 }
-.home_search_input:not(:last-child) {
-    border-right: solid 1px #e5e5e5;
-}
 .home_search_input::-webkit-input-placeholder {
     font-family: "Museo Sans 500", "Roboto", sans-serif;
     font-size: 14px !important;
     font-weight: 400 !important;
-    color: #b5b8be !important;
 }
 .home_search_input:-moz-placeholder {
     font-family: "Museo Sans 500", "Roboto", sans-serif;
     font-size: 14px !important;
     font-weight: 400 !important;
-    color: #b5b8be !important;
 }
 .home_search_input::-moz-placeholder {
     font-family: "Museo Sans 500", "Roboto", sans-serif;
     font-size: 14px !important;
     font-weight: 400 !important;
-    color: #b5b8be !important;
 }
 .home_search_input:-ms-input-placeholder {
     font-family: "Museo Sans 500", "Roboto", sans-serif;
     font-size: 14px !important;
     font-weight: 400 !important;
-    color: #b5b8be !important;
 }
 .home_search_input::input-placeholder {
     font-family: "Museo Sans 500", "Roboto", sans-serif;
     font-size: 14px !important;
     font-weight: 400 !important;
-    color: #b5b8be !important;
 }
 .dropdown_item_select {
     position: relative;
@@ -549,7 +486,6 @@ section {
     -ms-appearance: none;
     -o-appearance: none;
     appearance: none;
-    -webkit-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
     -webkit-user-select: none;
     background-image: url(../images/down.png);
     background-position: center right;
@@ -560,13 +496,11 @@ section {
 .home_search_button {
     width: 120px;
     height: 46px;
-    background: #b6e2c5;
     border: none;
     outline: none;
     border-radius: 3px;
     font-size: 14px;
     font-weight: 500;
-    color: #ffffff;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     cursor: pointer;
@@ -575,7 +509,6 @@ section {
     position: absolute;
     top: 55.8%;
     width: 50px;
-    background: #b6b7bd;
     border-radius: 50%;
     text-align: center;
     z-index: 10;
@@ -594,11 +527,7 @@ section {
 }
 .home_slider_nav i {
     line-height: 50px;
-    color: #ffffff;
     font-size: 22px;
-}
-.home_slider_nav:hover {
-    background: #b6e2c5;
 }
 
 /*********************************
@@ -627,7 +556,6 @@ section {
     width: 100%;
     padding-top: 93px;
     padding-bottom: 70px;
-    background: #ffffff;
 }
 .noticias_row {
     margin-top: 47px;
@@ -654,9 +582,6 @@ section {
     padding-top: 30px;
     padding-bottom: 30px;
 }
-.noticia_date {
-    box-shadow: 0px 1px 10px rgba(29, 34, 47, 0.1);
-}
 .noticia_date > div {
     width: 60px;
     height: 60px;
@@ -664,24 +589,15 @@ section {
 .noticia_day {
     font-family: "Museo Sans 500", "Roboto Slab", serif;
     font-size: 24px;
-    color: #14bdee;
     font-weight: 700;
     line-height: 0.75;
 }
 .noticia_month {
     font-family: "Museo Sans 500", "Roboto Slab", serif;
     font-size: 14px;
-    color: #14bdee;
     font-weight: 400;
     line-height: 0.75;
     margin-top: 9px;
-}
-.noticia:hover .event_date > div {
-    background: #14bdee;
-}
-.noticia:hover .event_day,
-.noticia:hover .event_month {
-    color: #ffffff;
 }
 .noticia_content {
     padding-left: 20px;
@@ -691,22 +607,17 @@ section {
     font-size: 20px;
     font-weight: 700;
     line-height: 1.4;
-    color: #384158;
     -webkit-transition: all 200ms ease;
     -moz-transition: all 200ms ease;
     -ms-transition: all 200ms ease;
     -o-transition: all 200ms ease;
     transition: all 200ms ease;
 }
-.noticia_title a:hover {
-    color: #14bdee;
-}
 .noticia_info_container {
     margin-top: 11px;
 }
 .noticia_info {
     display: inline-block;
-    color: #b5b8be;
     font-size: 14px;
 }
 .noticia_info:not(:last-child) {
@@ -719,17 +630,12 @@ section {
     margin-top: 12px;
 }
 
-.btn-secondary {
-    background-color: #38a735;
-}
-
 .custom-carousel-control {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     width: 60px;
     height: 60px;
-    background-color: rgba(36, 171, 47, 0.5);
     border-radius: 50%;
     z-index: 10;
     display: flex;
@@ -780,9 +686,7 @@ section {
     height: 180px;
     padding-top: 108px;
     padding-bottom: 24px;
-    background: #ffffff;
     border-radius: 15px;
-    box-shadow: 0px 1px 10px rgba(29, 34, 47, 0.1);
     text-align: center;
     -webkit-transition: all 200ms ease;
     -moz-transition: all 200ms ease;
@@ -790,17 +694,10 @@ section {
     -o-transition: all 200ms ease;
     transition: all 200ms ease;
 }
-.team_item:hover .team_body {
-    box-shadow: 0px 5px 40px rgba(29, 34, 47, 0.15);
-}
 
-.team_title a:hover {
-    color: #b6e3c5;
-}
 .team_subtitle {
     font-size: 14px;
     font-weight: 400;
-    color: #76777a;
     margin-top: 6px;
     padding-left: 10px;
     padding-right: 10px;
@@ -816,15 +713,11 @@ section {
 }
 .social_list ul li a i {
     font-size: 18px;
-    color: #76777a;
     -webkit-transition: all 200ms ease;
     -moz-transition: all 200ms ease;
     -ms-transition: all 200ms ease;
     -o-transition: all 200ms ease;
     transition: all 200ms ease;
-}
-.social_list ul li:hover a i {
-    color: #b6e3c5;
 }
 .team_col .team_item {
     padding-left: 6px;
@@ -848,13 +741,11 @@ section {
 .mapa_container {
     width: 100%;
     padding-top: 50px;
-    background: #ffffff;
 }
 .mapa {
     width: 100%;
     padding-top: 93px;
     padding-bottom: 100px;
-    background: #ffffff;
 }
 .mapa_row {
     /*margin-top: 55px;*/
@@ -880,16 +771,12 @@ section {
     font-family: "Museo Sans 500", "Roboto Slab", serif;
     font-size: 20px;
     font-weight: 700;
-    color: #000000;
     line-height: 1.4;
     -webkit-transition: all 200ms ease;
     -moz-transition: all 200ms ease;
     -ms-transition: all 200ms ease;
     -o-transition: all 200ms ease;
     transition: all 200ms ease;
-}
-.mapa_post_large_title a:hover {
-    color: #14bdee;
 }
 .mapa_post_meta {
     margin-top: 11px;
@@ -908,16 +795,12 @@ section {
 .mapa_post_meta ul li a {
     font-size: 14px;
     font-weight: 400;
-    color: #b5b8be;
     text-transform: uppercase;
     -webkit-transition: all 200ms ease;
     -moz-transition: all 200ms ease;
     -ms-transition: all 200ms ease;
     -o-transition: all 200ms ease;
     transition: all 200ms ease;
-}
-.mapa_post_meta ul li a:hover {
-    color: #14bdee;
 }
 .mapa_post_text {
     margin-top: 13px;
@@ -929,16 +812,12 @@ section {
     font-size: 14px;
     font-weight: 400;
     text-transform: uppercase;
-    color: #384158;
     text-decoration: underline;
     -webkit-transition: all 200ms ease;
     -moz-transition: all 200ms ease;
     -ms-transition: all 200ms ease;
     -o-transition: all 200ms ease;
     transition: all 200ms ease;
-}
-.mapa_post_link a:hover {
-    color: #14bdee;
 }
 .mapa_posts_small {
     padding-top: 20px;
@@ -955,34 +834,11 @@ section {
     font-size: 25px;
     font-weight: 700;
     line-height: 1.55;
-    color: #384158;
     -webkit-transition: all 200ms ease;
     -moz-transition: all 200ms ease;
     -ms-transition: all 200ms ease;
     -o-transition: all 200ms ease;
     transition: all 200ms ease;
-}
-.mapa_post_small_title a:hover {
-    color: #b6e3c5;
-}
-
-.accordion-item {
-    color: #3a4857;
-    background-color: #f8fcf9;
-    border: var(--bs-accordion-border-width) solid #ffffff;
-}
-
-.accordion-button {
-    background-color: #f8f9f3;
-}
-.accordion-button:not(.collapsed) {
-    color: #000000; /* Color de texto azul */
-    background-color: #b6e3c5; /* Fondo azul claro */
-    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.125);
-}
-
-.accordion-header {
-    background-color: #f8f9f3;
 }
 
 /*********************************
@@ -1008,12 +864,10 @@ section {
     font-size: 20px;
     font-weight: 700;
     text-transform: uppercase;
-    color: #ffffff;
 }
 .newsletter_subtitle {
     font-size: 14px;
     font-weight: 400;
-    color: #ffffff;
     margin-top: 6px;
 }
 .newsletter_form_container {
@@ -1028,50 +882,41 @@ section {
 .newsletter_input {
     width: calc(100% - 136px);
     height: 40px;
-    background: rgba(255, 255, 255, 0.4);
     border: none;
     outline: none;
     padding-left: 20px;
-    color: #ffffff;
     border-top-left-radius: 3px;
     border-bottom-left-radius: 3px;
 }
 .newsletter_input::-webkit-input-placeholder {
     font-size: 14px !important;
     font-weight: 400 !important;
-    color: #ffffff !important;
 }
 .newsletter_input:-moz-placeholder {
     font-size: 14px !important;
     font-weight: 400 !important;
-    color: #ffffff !important;
 }
 .newsletter_input::-moz-placeholder {
     font-size: 14px !important;
     font-weight: 400 !important;
-    color: #ffffff !important;
 }
 .newsletter_input:-ms-input-placeholder {
     font-size: 14px !important;
     font-weight: 400 !important;
-    color: #ffffff !important;
 }
 .newsletter_input::input-placeholder {
     font-size: 14px !important;
     font-weight: 400 !important;
-    color: #ffffff !important;
 }
 .newsletter_button {
     width: 136px;
     height: 40px;
-    background: #ffffff;
     border-radius: 3px;
     border: none;
     outline: none;
     cursor: pointer;
     font-size: 14px;
     text-transform: uppercase;
-    color: #14bdee;
     font-weight: 500;
     letter-spacing: 0.1em;
 }
@@ -1156,7 +1001,6 @@ section {
     display: block;
     position: relative;
     width: 100%;
-    background: #1e2434;
     padding-top: 94px;
 }
 .footer_background {
@@ -1177,20 +1021,15 @@ section {
     font-size: 36px;
     font-weight: 700;
     line-height: 0.75;
-    color: #ffffff;
     -webkit-transition: all 200ms ease;
     -moz-transition: all 200ms ease;
     -ms-transition: all 200ms ease;
     -o-transition: all 200ms ease;
     transition: all 200ms ease;
 }
-.footer_logo_text span {
-    color: #14bdee;
-}
 .footer_title {
     font-family: "Museo Sans 500", "Roboto Slab", serif;
     font-weight: 700;
-    color: #ffffff;
     line-height: 0.75;
 }
 .footer_logo_container {
@@ -1198,9 +1037,6 @@ section {
 }
 .footer_about_text {
     margin-top: 31px;
-}
-.footer_about_text p {
-    color: #ffffff;
 }
 .footer_social {
     margin-top: 5px;
@@ -1210,7 +1046,6 @@ section {
     display: inline-block;
     width: 25px;
     height: 25px;
-    background: #4b505d;
     border-radius: 50%;
     -webkit-transition: all 200ms ease;
     -moz-transition: all 200ms ease;
@@ -1227,20 +1062,13 @@ section {
     text-align: center;
 }
 .footer_social ul li a i {
-    color: #ffffff;
     line-height: 25px;
-}
-.footer_social ul li:hover {
-    background: #14bdee;
 }
 .footer_contact {
     padding-left: 36px;
 }
 .footer_contact_info {
     margin-top: 33px;
-}
-.footer_contact_info ul li {
-    color: #d2dcf0;
 }
 .footer_contact_info ul li:not(:last-child) {
     margin-bottom: 15px;
@@ -1258,7 +1086,6 @@ section {
 }
 .footer_links_container ul li a {
     font-size: 14px;
-    color: #b5b8be;
     -webkit-transition: all 200ms ease;
     -moz-transition: all 200ms ease;
     -ms-transition: all 200ms ease;
@@ -1267,9 +1094,6 @@ section {
 }
 .footer_links_container ul li:not(:last-child) {
     margin-bottom: 15px;
-}
-.footer_links_container ul li a:hover {
-    color: #14bdee;
 }
 .footer_mobile {
     display: inline-block;
@@ -1283,39 +1107,27 @@ section {
 }
 .copyright {
     height: 54px;
-    border-top: solid 1px #353a49;
 }
 .cr_list li {
     display: inline-block;
 }
-.copyright div {
-    color: #b5b8be;
-}
 .cr_text a {
-    color: #ffffff;
     -webkit-transition: all 200ms ease;
     -moz-transition: all 200ms ease;
     -ms-transition: all 200ms ease;
     -o-transition: all 200ms ease;
     transition: all 200ms ease;
-}
-.cr_text a:hover {
-    color: #14bdee;
 }
 .cr_list li:not(:last-child) {
     margin-right: 50px;
 }
 .cr_list li a {
     font-size: 14px;
-    color: #b5b8be;
     -webkit-transition: all 200ms ease;
     -moz-transition: all 200ms ease;
     -ms-transition: all 200ms ease;
     -o-transition: all 200ms ease;
     transition: all 200ms ease;
-}
-.cr_list li a:hover {
-    color: #14bdee;
 }
 
 /**************************
