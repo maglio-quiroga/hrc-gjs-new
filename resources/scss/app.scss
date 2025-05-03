@@ -1,7 +1,7 @@
 // resources/scss/app.scss - OPCIÓN A
 
 // 1. Importar Bootstrap SCSS (Completo)
-@import 'bootstrap/scss/bootstrap';
+@import "bootstrap/scss/bootstrap";
 
 // 2. Estilos personalizados ESPECÍFICOS que NO son reemplazados por Bootstrap.
 //    (Hemos eliminado las definiciones de .table, .btn, .btn-*, .form-control, .card, .alert, .alert-*
@@ -17,11 +17,15 @@
     border-right: none; // Mantener si es necesario
 }
 // Si quieres el redondeo específico en las esquinas de la tabla (Bootstrap puede hacerlo diferente)
-.table th:first-child, .table td:first-child {
-    border-top-left-radius: var(--bs-border-radius-lg); // O var(--bs-border-radius) si prefieres el normal
+.table th:first-child,
+.table td:first-child {
+    border-top-left-radius: var(
+        --bs-border-radius-lg
+    ); // O var(--bs-border-radius) si prefieres el normal
     border-bottom-left-radius: var(--bs-border-radius-lg);
 }
-.table th:last-child, .table td:last-child {
+.table th:last-child,
+.table td:last-child {
     border-top-right-radius: var(--bs-border-radius-lg);
     border-bottom-right-radius: var(--bs-border-radius-lg);
 }
@@ -86,19 +90,19 @@
 .icon-menu-hover-blue {
     // @apply hover:border-indigo-700;
     &:hover {
-      border-right-color: #4338ca; // Color aproximado para indigo-700
+        border-right-color: #4338ca; // Color aproximado para indigo-700
     }
 }
 .icon-menu-hover-yellow {
     // @apply hover:border-yellow-700;
     &:hover {
-      border-right-color: #b45309; // Color aproximado para yellow-700
+        border-right-color: #b45309; // Color aproximado para yellow-700
     }
 }
 .icon-menu-hover-green {
     // @apply hover:border-green-700;
     &:hover {
-      border-right-color: #047857; // Color aproximado para green-700
+        border-right-color: #047857; // Color aproximado para green-700
     }
 }
 
@@ -116,7 +120,9 @@
     object-fit: cover;
     max-height: 300px;
     width: 100%;
-    border-radius: var(--bs-border-radius-lg); // Usar variable Bootstrap para consistencia
+    border-radius: var(
+        --bs-border-radius-lg
+    ); // Usar variable Bootstrap para consistencia
 }
 .modal-body p {
     text-align: justify;

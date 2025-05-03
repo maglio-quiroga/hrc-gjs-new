@@ -1,7 +1,7 @@
 import "./bootstrap"; // Importa Axios
+import "bootstrap"; // Importa Bootstrap JS
 import "../scss/accesibilidad.scss";
 //import "../scss/compile.scss";
-import "bootstrap"; // Importa Bootstrap JS
 
 import { accesibilidad } from "./accesibilidad"; // Componente de accesibilidad
 accesibilidad();
