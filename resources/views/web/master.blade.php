@@ -37,25 +37,25 @@
         <div class="super_container">
             @include('template.header')
             <div>
-            
-                <div class="container">
-                    
-                    <main class="mt-4">
+
+                <div>
+
+                    <main>
                         @yield('content')
                     </main>
-                    
+
                 </div>
-                
+
             </div>
             @include('template.footer')
         </div>
     </div>
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="styles/bootstrap4/popper.js"></script>
-    
+
     {{-- 3. Eliminar o comentar CDN Bootstrap JS (Vite lo carga desde app.js) --}}
     {{-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script> --}}
-    
+
     <script src="plugins/greensock/TweenMax.min.js"></script>
     <script src="plugins/greensock/TimelineMax.min.js"></script>
     <script src="plugins/scrollmagic/ScrollMagic.min.js"></script>
@@ -67,7 +67,7 @@
     <script src="js/custom.js"></script>
     <script src="js/course.js"></script>
     <script src="js/courses.js"></script>
-    
+
     {{-- El componente de accesibilidad --}}
     <x-accesibilidad/>
 </body>
