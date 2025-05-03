@@ -1,4 +1,28 @@
+@php
+    $titles = [
+        'Transparencia Activa',
+        'Plan Estratégico',
+        'Cuenta Pública',
+        'Participación Ciudadana',
+        'Empleos Públicos',
+        'Seguridad de la Información',
+        'Servicio de Salud Atacama',
+        'Sistema OIRS',
+        'Farmacia de Turno'
+    ];
 
+    $links = [
+        '/plan-estrategico',
+        '/proyectos',
+        '/documentos',
+        '/reportes',
+        '/estadisticas',
+        '/calendario',
+        '/contactos',
+        '/configuracion',
+        '/ayuda'
+    ];
+@endphp
 
 <div class="pagespublic" style="background-color: #FAFAFA">
     <div class="container">
@@ -11,12 +35,13 @@
         </div>
         <div class="row pagespublic_row">
             <!-- Features Item -->
-            @foreach($enlaces_interes as $enlace)
-                <div class="col-lg-4 col-sm-6 pagepublic_col">
-                    <x-enlace :enlace="$enlace"/>
+            @foreach(array_combine($titles, $links) as $title => $link)
+                <div class="col-md-4 mb-4">
+                    <x-card-gobierno href="{{ $link }}">
+                        {{ $title }}
+                    </x-card-gobierno>
                 </div>
             @endforeach
-
         </div>
     </div>
 </div>

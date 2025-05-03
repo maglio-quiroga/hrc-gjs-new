@@ -9,3 +9,48 @@
 .smaller-text {
     font-size: 0.9em;
 }
+
+/* Estilos personalizados para las tarjetas */
+.card {
+    border: none; /* Remueve el borde por defecto de la tarjeta */
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); /* Sombra suave */
+    margin-bottom: 1.5rem; /* Espacio inferior entre tarjetas */
+    border-radius: 0.375rem; /* Esquinas redondeadas */
+    overflow: hidden; /* Asegura que la barra superior no se salga */
+    background-color: #f8f9fa; /* Color de fondo gris claro */
+    flex-grow: 1; /* Permite que la tarjeta crezca para llenar el espacio */
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-top-border {
+    height: 5px; /* Altura de la barra superior */
+    display: flex; /* Usa flexbox para alinear los colores */
+}
+
+.border-color-1 {
+    flex-basis: 50%; /* Ocupa el 50% del ancho */
+    background-color: #3372b5; /* Color azul de Bootstrap (puedes cambiarlo) */
+}
+
+.border-color-2 {
+    flex-basis: 50%; /* Ocupa el 50% del ancho */
+    background-color: #dd5d54; /* Color rojo de Bootstrap (puedes cambiarlo) */
+}
+
+.card-link {
+    text-decoration: none;
+}
+.card-body {
+    padding: 1.25rem; /* Relleno interno del cuerpo de la tarjeta */
+    text-align: center; /* Centra el texto */
+    font-weight: 500; /* Peso de la fuente */
+    color: #416fc4;
+    font-size: 25px;
+}
