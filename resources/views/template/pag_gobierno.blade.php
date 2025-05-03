@@ -12,15 +12,15 @@
     ];
 
     $links = [
-        '/plan-estrategico',
-        '/proyectos',
-        '/documentos',
-        '/reportes',
-        '/estadisticas',
-        '/calendario',
-        '/contactos',
-        '/configuracion',
-        '/ayuda'
+        'https://www.portaltransparencia.cl/PortalPdT/',
+        'https://hospitalcopiapo.cl/docs/PlanificacionEstrategica2021_2025.pdf',
+        '#',
+        'http://ssat.redsalud.gob.cl/usuarios/proyectos-de-participacion-ciudadana-aps-2/proyectos-de-participacion-ciudadana-aps-2020/participacion-ciudadana-en-la-formulacion-de-la-estrategia-nacional-de-salud-2021-2030-en-chile/',
+        'https://www.empleospublicos.cl/',
+        'https://www.minsal.cl/seguridad_de_la_informacion/',
+        'https://www.saludatacama.cl/',
+        'https://oirs.minsal.cl/',
+        'https://seremienlinea.minsal.cl/asdigital/index.php?mfarmacias'
     ];
 @endphp
 
