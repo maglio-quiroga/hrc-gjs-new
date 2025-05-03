@@ -1,170 +1,781 @@
-/* =====================================================
-   PALETA DE COLORES PARA ALTO CONTRASTE - BLANCO SOBRE ROJO (7:1)
-   ===================================================== */
+/* ===============================================
+   PALETA DE COLORES
+   =============================================== */
 :root {
-    --primario: #009830; /* Verde principal - Color institucional */
-    --secundario: #c83600; /* Naranja - Color complementario para acentos */
-    --acento: #054f26; /* Verde oscuro - Para botones y elementos interactivos */
-    --claro: #ecf0f1; /* Gris muy claro - Para fondos de secciones */
-    --oscuro: #2c3e50; /* Azul muy oscuro - Para textos y pie de página */
-    --exito: #27ae60; /* Verde claro - Para mensajes de éxito */
+    /*=== Colores Base ===*/
+    --primary-blue: #14bdee; /* Color de logo y enlaces hover */
+    --primary-green: #38a735;
+    --primary-yellow: #ffc80a;
+    --primary-beige: #937c6f; /* Hover línea menú */
+    --primary-salmon: #ff6347; /* Rojo tomate (Color active enlaces p) */
+    --error-red: #db5246; /* Rojo ladrillo (Color texto form-control) */
 
-/* ========================================================================
-    PALETA DE COLORES INTERVALO DE CÓDIGO [1275 , 1685] DE main_styles.css
-   ======================================================================== */
+    /*=== VERDES ===*/
+    --green-a50: rgba(36, 171, 47, 0.5); /* Verde semitransparente */
+    --green-100: #e2f3eb; /* Verde muy pálido (Fondo Navbar) */
+    --green-200: #c5e8d1; /* Verde pálido (Hover/Active enlaces y borde Navbar) */
+    --green-300: #b6e3c5;
+    --green-400: #75c891; /* Verde menta (Hover enlaces Navbar) */
+    --green-500: #4b9011; /* Verde oscuro */
+    --green-600: #3a9f6f; /* Verde lima */
 
-    --superficieTransparente: rgba(29, 34, 47, 0.1); /* Transparente oscuro */
-    --azulCielo: #14bdee; /* Azul brillante */
-    --blancoPuro: #FFFFFF; /* Blanco puro */
-    --grisAzulOscuro: #384158; /* Gris azulado oscuro */
-    --grisClaro: #b5b8be; /* Gris claro suave */
-    --verdeHoja: #38a735; /* Verde intenso */
-    --verdeTransparente: rgba(36, 171, 47, 0.5); /* Verde semitransparente */
-    --superficieTransparenteLeve: rgba(29, 34, 47, 0.15); /* Transparente más oscuro */
-    --verdeMenta: #b6e3c5; /* Verde menta claro */
-    --grisMedio: #76777a; /* Gris medio */
-    --negroPuro: #000000; /* Negro puro */
+    /*=== Grises y Azules ===*/
+    --gray-100: #f8fcf9;
+    --gray-200: #f8f9f3;
+    --gray-300: #f3f3f3; /* Gris muy pálido (Fondo botón login) */
+    --gray-400: #e5e5e5;
+    --gray-500: #b5b8be;
+    --gray-600: #a5a5a5; /* Gris medio (Color por defecto del body) */
+    --gray-700: #76777a;
+    --gray-800: #4b505d;
+    --gray-900: #384158; /* Azul oscuro/grisáceo (Títulos h1-h6, texto botón login, texto nav, texto logo) */
+    --gray-1000: #353a49;
 
-/* =========================================
-	PALETA DE COLORES USADOS EN courses.css
-   ========================================= */
+    /*=== Tonos ===*/
+    --white: #ffffff; /* Negro puro (Usado en enlaces navbar) */
+    --black: #000000; /* Blanco puro (Usado en fondo body, texto hover enlaces p, texto top bar) */
+    --off-black: #232323; /* Línea menú */
 
-
-
-/* =========================================
-	PALETA DE COLORES USADOS EN directivo.css
-   ========================================= */
-
-
-
-/* =========================================
-	PALETA DE COLORES USADOS EN flexslider.css
-   ========================================= */
-
-
-
-/* =========================================
-	PALETA DE COLORES USADOS EN lightbox.css
-   ========================================= */
-
-	
-
+    /*=== Translúcidos ===*/
+    --black-a0: rgba(0, 0, 0, 0); /* Negro completamente transparente */
+    --black-a10: rgba(29, 34, 47, 0.1); /* Transparente más oscuro */
+    --black-a20: rgba(29, 34, 47, 0.2); /* Transparente más oscuro */
+    --black-a40: rgba(0, 0, 0, 0.4); /* Placeholder */
+    --black-a50: rgba(29, 34, 47, 0.5); /* Placeholder alt */
+    --white-a40: rgba(255, 255, 255, 0.4);
+    --white-a20: rgba(255, 255, 255, 0.2);
 }
 
 text-gray-900,
 text-gray-800,
 text-gray-200,
 text-gray-100 {
-    color: var(--claro);
+    color: var(--gray-700);
 }
 
-.noticia_date
-{
-	box-shadow: 0px 1px 10px var(--superficieTransparente);
+/*********************************
+             JOSE
+*********************************/
+
+* {
+    -webkit-text-shadow: var(--black-a10) 0 0 1px;
+    text-shadow: var(--black-a10) 0 0 1px;
 }
-.noticia_day
-{
-	color: var(--azulCielo);
+body {
+    background: var(--white); /* Modificado */
+    color: var(--gray-600); /* Modificado */
 }
-.noticia_month
-{
-	color: var(--azulCielo);
+p {
+    -webkit-text-shadow: var(--black-a10) 0 0 1px;
+    text-shadow: var(--black-a10) 0 0 1px;
 }
-.noticia:hover .event_date > div
-{
-	background: var(--azulCielo);
+p a {
+    border-bottom: solid 1px var(--primary-salmon); /* Modificado */
+}
+a,
+a:hover,
+a:visited,
+a:active,
+a:link {
+    -webkit-text-shadow: var(--black-a10) 0 0 1px;
+    text-shadow: var(--black-a10) 0 0 1px;
+}
+p a:active {
+    color: var(--primary-salmon); /* Modificado */
+}
+p a:hover {
+    color: var(--white); /* Modificado */
+    background: var(--primary-salmon); /* Modificado */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    -webkit-text-shadow: var(--black-a10) 0 0 1px;
+    text-shadow: var(--black-a10) 0 0 1px;
+    color: var(--gray-900); /* Modificado */
+}
+.form-control {
+    color: var(--error-red); /* Modificado */
+}
+
+/*********************************
+3. Header
+*********************************/
+
+.header {
+    box-shadow: 0px 5px 20px var(--black-a10); /* Mantener rgba o crear variable --sombra-header */
+}
+
+/*********************************
+3.1 Top Bar
+*********************************/
+
+.top_bar {
+    background: var(--primario); /* Modificado */
+}
+.question {
+    color: var(--white); /* Modificado */
+}
+.top_bar_contact_list li i,
+.top_bar_contact_list li > div {
+    color: var(--white); /* Modificado */
+}
+.login_button {
+    background: var(--gray-300); /* Modificado */
+}
+.login_button a {
+    color: var(--gray-900); /* Modificado */
+}
+
+/*********************************
+3.2 Navbar
+*********************************/
+
+.navbar_container {
+    background: var(--green-100); /* Modificado */
+}
+
+.navbar {
+    background-color: var(--green-100); /* Modificado */
+}
+
+.navbar-nav .nav-link {
+    color: var(--black); /* Modificado */
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--green-400); /* Modificado */
+}
+
+.navbar-nav li a {
+    color: var(--gray-900); /* Modificado */
+}
+
+.navbar-nav li a:hover,
+.navbar-nav li.active a {
+    color: var(--green-200); /* Modificado */
+}
+
+.navbar-nav li.active::after {
+    background: var(--green-200); /* Modificado */
+}
+
+.navbar-nav .dropdown-menu a {
+    color: var(--gray-900); /* Modificado */
+}
+
+.navbar-nav .dropdown-menu a:hover {
+    color: var(--green-200); /* Modificado */
+}
+
+/*********************************
+3.3 Logo
+*********************************/
+
+.logo_text {
+    color: var(--gray-900); /* Modificado */
+}
+
+/*} línea 453 */
+.logo_text span {
+    color: var(--primary-blue);
+}
+.hamburger i {
+    color: var(--gray-1000);
+}
+.hamburger:hover i {
+    color: var(--primary-blue);
+}
+.menu {
+    background: var(--white);
+}
+.menu .logo a {
+    color: var(--black);
+}
+.menu_close div {
+    background: var(--off-black);
+}
+.menu_close:hover div/*aquí*/ {
+    background: var(--primary-beige);
+}
+.menu_nav ul li a {
+    color: var(--black);
+}
+.menu_nav ul li a:hover {
+    color: var(--primary-blue);
+}
+.menu .search_input {
+    background: var(--black-a10);
+    color: var(--black-a50);
+}
+.menu .search_input::-webkit-input-placeholder {
+    color: var(--black-a40) !important;
+}
+.menu .search_input:-moz-placeholder {
+    color: var(--black-a40) !important;
+}
+.menu .search_input::-moz-placeholder {
+    color: var(--black-a40) !important;
+}
+.menu .search_input:-ms-input-placeholder {
+    color: var(--black-a40) !important;
+}
+.menu .search_input::input-placeholder {
+    color: var(--black-a40) !important;
+}
+.home_slider_title {
+    color: var(--gray-900);
+}
+.home_slider_subtitle {
+    color: var(--gray-700);
+}
+.home_search_form div {
+    background: var(--white);
+}
+.home_search_input:not(:last-child) {
+    border-right: solid 1px var(--gray-400);
+}
+.home_search_input::-webkit-input-placeholder {
+    color: var(--gray-500) !important;
+}
+.home_search_input:-moz-placeholder {
+    color: var(--gray-500) !important;
+}
+.home_search_input::-moz-placeholder {
+    color: var(--gray-500) !important;
+}
+.home_search_input:-ms-input-placeholder {
+    color: var(--gray-500) !important;
+}
+.home_search_input::input-placeholder {
+    color: var(--gray-500) !important;
+}
+.dropdown_item_select {
+    -webkit-box-shadow: 0px 0px 0px var(--black-a0);
+}
+.home_search_button {
+    background: var(--green-300);
+    color: var(--white);
+}
+.home_slider_nav {
+    background: var(--gray-500);
+}
+/*No quedan más clases con cambio de colores hasta la linea 863*/
+
+/*********************************
+              SEBA
+*********************************/
+
+/* HOME SLIDER NAV */
+.home_slider_nav i {
+    color: var(--white);
+}
+.home_slider_nav:hover {
+    background: var(--green-300);
+}
+
+/* FEATURES */
+.features {
+    background: var(--white);
+}
+.feature {
+    background: var(--white);
+}
+.feature:hover {
+    box-shadow: 0px 5px 40px var(--black-a10);
+}
+
+/* COURSES */
+.courses {
+    background: var(--white);
+}
+.course {
+    background: var(--white);
+    box-shadow: 0px 1px 10px var(--black-a10);
+}
+.course_title a {
+    color: var(--gray-900);
+}
+.course_title a:hover {
+    color: var(--primary-blue);
+}
+.course_teacher {
+    color: var(--gray-900);
+}
+.course_info {
+    color: var(--gray-700);
+}
+.course_info i {
+    color: var(--primary-yellow);
+}
+.course_price {
+    color: var(--primary-blue);
+}
+.course_price span {
+    color: var(--gray-500);
+}
+.courses_button {
+    background: var(--primary-blue);
+    box-shadow: 0px 5px 40px var(--black-a10);
+}
+.courses_button:hover {
+    box-shadow: 0px 5px 40px var(--black-a50);
+}
+.courses_button a {
+    color: var(--white);
+}
+
+/* COUNTER */
+.counter {
+    background: var(--white);
+}
+.counter_title {
+    color: var(--white);
+}
+.counter_text p {
+    color: var(--white);
+}
+.milestone:not(:last-child)::after {
+    background: var(--white-a20);
+}
+.milestone_counter {
+    color: var(--primary-blue);
+}
+.milestone_text {
+    color: var(--white);
+}
+.counter_form {
+    background: var(--white);
+    box-shadow: 0px 5px 40px var(--black-a10);
+}
+.counter_form_title {
+    color: var(--gray-900);
+}
+.counter_input {
+    border: solid 1px var(--gray-400);
+    color: var(--gray-900);
+}
+.counter_input::-webkit-input-placeholder,
+.counter_text_input::-webkit-input-placeholder,
+.counter_input:-moz-placeholder,
+.counter_text_input:-moz-placeholder,
+.counter_input::-moz-placeholder,
+.counter_text_input::-moz-placeholder,
+.counter_input:-ms-input-placeholder,
+.counter_text_input:-ms-input-placeholder,
+.counter_input::input-placeholder,
+.counter_text_input::input-placeholder {
+    color: var(--gray-500) !important;
+}
+.counter_form_button {
+    color: var(--white);
+    background: var(--primary-blue);
+    box-shadow: 0px 5px 40px var(--black-a10);
+}
+.counter_form_button:hover {
+    box-shadow: 0px 5px 40px var(--black-a50);
+}
+
+/* NOTICIAS */
+.noticias {
+    background: var(--white);
+}
+
+/*********************************
+             DIEGO
+*********************************/
+
+.noticia_date {
+    box-shadow: 0px 1px 10px var(--black-a10);
+}
+.noticia_day {
+    color: var(--primary-blue);
+}
+.noticia_month {
+    color: var(--primary-blue);
+}
+.noticia:hover .event_date > div {
+    background: var(--primary-blue);
 }
 .noticia:hover .event_day,
-.noticia:hover .event_month
-{
-	color: var(--blancoPuro);
+.noticia:hover .event_month {
+    color: var(--white);
 }
-.noticia_title a
-{
-	color: var(--grisAzulOscuro);
+.noticia_title a {
+    color: var(--gray-900);
 }
-.noticia_title a:hover
-{
-	color: var(--azulCielo);
+.noticia_title a:hover {
+    color: var(--primary-blue);
 }
-.noticia_info
-{
-	color: var(--grisClaro);
+.noticia_info {
+    color: var(--gray-500);
 }
-.btn-secondary
-{
-	background-color: var(--verdeHoja);
+.btn-secondary {
+    background-color: var(--primary-green);
 }
-.custom-carousel-control 
-{
-    background-color: var(--verdeTransparente);
+.custom-carousel-control {
+    background-color: var(--green-a50);
 }
-.team_body
-{
-	background: var(--blancoPuro);
-	box-shadow: 0px 1px 10px var(--superficieTransparente);
+.team_body {
+    background: var(--white);
+    box-shadow: 0px 1px 10px var(--black-a10);
 }
-.team_item:hover .team_body
-{
-	box-shadow: 0px 5px 40px var(--superficieTransparenteLeve);
+.team_item:hover .team_body {
+    box-shadow: 0px 5px 40px var(--black-a10);
 }
-.team_title a
-{
-	color: var(--grisAzulOscuro);
+.team_title a {
+    color: var(--gray-900);
 }
-.team_title a:hover
-{
-	color:var(--verdeMenta);
+.team_title a:hover {
+    color: var(--green-300);
 }
-.team_subtitle
-{
-	color: var(--grisMedio);
+.team_subtitle {
+    color: var(--gray-700);
 }
-.social_list ul li a i
-{
-	color: var(--grisMedio);
+.social_list ul li a i {
+    color: var(--gray-700);
 }
-.social_list ul li:hover a i
-{
-	color: var(--verdeMenta);
+.social_list ul li:hover a i {
+    color: var(--green-300);
 }
-.mapa_container
-{
-	background: var(--blancoPuro);
+.mapa_container {
+    background: var(--white);
 }
-.mapa
-{
-	background: var(--blancoPuro);
+.mapa {
+    background: var(--white);
 }
-.mapa_post_large_title a
-{
-	color: var(--negroPuro);
+.mapa_post_large_title a {
+    color: var(--black);
 }
-.mapa_post_large_title a:hover
-{
-	color: var(--azulCielo);
+.mapa_post_large_title a:hover {
+    color: var(--primary-blue);
 }
-.mapa_post_meta ul li a
-{
-	color: var(--grisClaro);
+.mapa_post_meta ul li a {
+    color: var(--gray-500);
 }
-.mapa_post_meta ul li a:hover
-{
-	color: var(--azulCielo);
+.mapa_post_meta ul li a:hover {
+    color: var(--primary-blue);
 }
-.mapa_post_link a
-{
-	color: var(--grisAzulOscuro);
+.mapa_post_link a {
+    color: var(--gray-900);
 }
-.mapa_post_link a:hover
-{
-	color: var(--azulCielo);
+.mapa_post_link a:hover {
+    color: var(--primary-blue);
 }
-.mapa_post_small_title a
-{
-	color: var(--grisAzulOscuro);
+.mapa_post_small_title a {
+    color: var(--gray-900);
 }
-.mapa_post_small_title a:hover
-{
-	color: var(--verdeMenta);
+.mapa_post_small_title a:hover {
+    color: var(--green-300);
+}
+.noticia_date {
+    box-shadow: 0px 1px 10px var(--black-a10);
+}
+.noticia_day {
+    color: var(--primary-blue);
+}
+.noticia_month {
+    color: var(--primary-blue);
+}
+.noticia:hover .event_date > div {
+    background: var(--primary-blue);
+}
+.noticia:hover .event_day,
+.noticia:hover .event_month {
+    color: var(--white);
+}
+.noticia_title a {
+    color: var(--gray-900);
+}
+.noticia_title a:hover {
+    color: var(--primary-blue);
+}
+.noticia_info {
+    color: var(--gray-500);
+}
+.btn-secondary {
+    background-color: var(--primary-green);
+}
+.custom-carousel-control {
+    background-color: var(--green-a50);
+}
+.team_body {
+    background: var(--white);
+    box-shadow: 0px 1px 10px var(--black-a10);
+}
+.team_item:hover .team_body {
+    box-shadow: 0px 5px 40px var(--black-a10);
+}
+.team_title a {
+    color: var(--gray-900);
+}
+.team_title a:hover {
+    color: var(--green-300);
+}
+.team_subtitle {
+    color: var(--gray-700);
+}
+.social_list ul li a i {
+    color: var(--gray-700);
+}
+.social_list ul li:hover a i {
+    color: var(--green-300);
+}
+.mapa_container {
+    background: var(--white);
+}
+.mapa {
+    background: var(--white);
+}
+.mapa_post_large_title a {
+    color: var(--black);
+}
+.mapa_post_large_title a:hover {
+    color: var(--primary-blue);
+}
+.mapa_post_meta ul li a {
+    color: var(--gray-500);
+}
+.mapa_post_meta ul li a:hover {
+    color: var(--primary-blue);
+}
+.mapa_post_link a {
+    color: var(--gray-900);
+}
+.mapa_post_link a:hover {
+    color: var(--primary-blue);
+}
+.mapa_post_small_title a {
+    color: var(--gray-900);
+}
+.mapa_post_small_title a:hover {
+    color: var(--green-300);
+}
+
+/*********************************
+             CELES
+*********************************/
+
+.noticia_date {
+    box-shadow: 0px 1px 10px var(--black-a10);
+}
+.noticia_day {
+    color: var(--primary-green);
+}
+.noticia_month {
+    color: var(--primary-green);
+}
+.noticia:hover .event_date > div {
+    background: var(--primary-green);
+}
+.noticia:hover .event_day,
+.noticia:hover .event_month {
+    color: var(--white);
+}
+.noticia_title a {
+    color: var(--gray-900);
+}
+.noticia_title a:hover {
+    color: var(--primary-blue);
+}
+.noticia_info {
+    color: var(--gray-500);
+}
+
+.btn-secondary {
+    background-color: var(--gray-900);
+}
+
+.custom-carousel-control {
+    background-color: var(--green-a50);
+}
+
+/*********************************
+11. Team
+*********************************/
+
+.card-title {
+    color: var(--gray-1000);
+}
+.team_body {
+    background: var(--white);
+    box-shadow: 0px 1px 10px var(--black-a10);
+}
+.team_item:hover .team_body {
+    box-shadow: 0px 5px 40px var(--black-a10);
+}
+.team_title a {
+    color: var(--gray-900);
+}
+.team_title a:hover {
+    color: var(--green-300);
+}
+.team_subtitle {
+    color: var(--gray-700);
+}
+.social_list ul li a i {
+    color: var(--gray-700);
+}
+.social_list ul li:hover a i {
+    color: var(--green-300);
+}
+
+/*********************************
+12. Mapa
+*********************************/
+.mapa_container {
+    background: var(--white);
+}
+.mapa {
+    background: var(--white);
+}
+.mapa_post_large_title a {
+    color: var(--black);
+}
+.mapa_post_large_title a:hover {
+    color: var(--primary-blue);
+}
+.mapa_post_meta ul li a {
+    color: var(--gray-500);
+}
+.mapa_post_meta ul li a:hover {
+    color: var(--primary-blue);
+}
+.mapa_post_link a {
+    color: var(--gray-900);
+}
+.mapa_post_link a:hover {
+    color: var(--primary-blue);
+}
+.mapa_post_small_title a {
+    color: var(--gray-900);
+}
+.mapa_post_small_title a:hover {
+    color: var(--green-300);
+}
+
+.accordion-item {
+    color: var(--gray-1000);
+    background-color: var(--gray-100);
+    border: var(--bs-accordion-border-width) solid var(--white);
+}
+
+.accordion-button {
+    background-color: var(--gray-200);
+}
+.accordion-button:not(.collapsed) {
+    color: var(--black);
+    background-color: var(--green-300);
+    box-shadow: inset 0 -1px 0 var(--black-a10);
+}
+
+.accordion-header {
+    background-color: var(--gray-200);
+}
+
+/*********************************
+13. Newsletter
+*********************************/
+
+.newsletter_title {
+    color: var(--white);
+}
+.newsletter_subtitle {
+    color: var(--white);
+}
+.newsletter_input {
+    background: var(--white-a40);
+    color: var(--white);
+}
+.newsletter_input::-webkit-input-placeholder {
+    color: var(--white) !important;
+}
+.newsletter_input:-moz-placeholder {
+    color: var(--white) !important;
+}
+.newsletter_input::-moz-placeholder {
+    color: var(--white) !important;
+}
+.newsletter_input:-ms-input-placeholder {
+    color: var(--white) !important;
+}
+.newsletter_input::input-placeholder {
+    color: var(--white) !important;
+}
+.newsletter_button {
+    background: var(--white);
+    color: var(--primary-blue);
+}
+
+/*********************************
+16. Footer
+*********************************/
+
+.footer {
+    background: var(--gray-1000);
+}
+.footer_logo_text {
+    color: var(--white);
+}
+.footer_logo_text span {
+    color: var(--primary-blue);
+}
+.footer_title {
+    color: var(--white);
+}
+.footer_about_text p {
+    color: var(--white);
+}
+.footer_social ul li {
+    background: var(--gray-800);
+}
+.footer_social ul li a i {
+    color: var(--white);
+}
+.footer_social ul li:hover {
+    background: var(--primary-blue);
+}
+.footer_contact_info ul li {
+    color: var(--gray-500);
+}
+.footer_links_container ul li a {
+    color: var(--gray-500);
+}
+.footer_links_container ul li a:hover {
+    color: var(--primary-blue);
+}
+.copyright {
+    border-top: solid 1px var(--gray-1000);
+}
+.copyright div {
+    color: var(--gray-500);
+}
+.cr_text a {
+    color: var(--white);
+}
+.cr_text a:hover {
+    color: var(--primary-blue);
+}
+.cr_list li a {
+    color: var(--gray-500);
+}
+.cr_list li a:hover {
+    color: var(--primary-blue);
+}
+
+/*********************************
+             EXTRAS
+*********************************/
+
+.card-button:hover {
+    background-color: var(--green-600);
+}
+
+/* nav */
+.bg-primary {
+    background-color: var(--green-500);
 }
