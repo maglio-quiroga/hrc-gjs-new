@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
         <title>Hospital Regional de Copiapó</title>
 
@@ -21,14 +22,14 @@
 
         <!-- Page Heading -->
         @isset($header)
-            <header class="bg-white bg-gray-800 shadow">
-                    {{ $header }}
+            <header>
+                {{ $header }}
             </header>
         @endisset
 
         <!-- Page Content -->
         <main>
-            @include('dashboard.partials.session-flash-status')
+            {{ $slot ?? '' }}
             @yield('content')
         </main>
     </body>
