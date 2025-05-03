@@ -9,9 +9,9 @@
     --oscuro: #2c3e50; /* Azul muy oscuro - Para textos y pie de página */
     --exito: #27ae60; /* Verde claro - Para mensajes de éxito */
 
-/* ====================================================
-    PALETA DE COLORES INTERVALO DE CÓDIGO [1275 , 1685]  
-   ==================================================== */
+/* ========================================================================
+    PALETA DE COLORES INTERVALO DE CÓDIGO [1275 , 1685] DE main_styles.css
+   ======================================================================== */
 
     --superficieTransparente: rgba(29, 34, 47, 0.1); /* Transparente oscuro */
     --azulCielo: #14bdee; /* Azul brillante */
@@ -24,6 +24,30 @@
     --verdeMenta: #b6e3c5; /* Verde menta claro */
     --grisMedio: #76777a; /* Gris medio */
     --negroPuro: #000000; /* Negro puro */
+
+/* =========================================
+	PALETA DE COLORES USADOS EN courses.css
+   ========================================= */
+
+
+
+/* =========================================
+	PALETA DE COLORES USADOS EN directivo.css
+   ========================================= */
+
+
+
+/* =========================================
+	PALETA DE COLORES USADOS EN flexslider.css
+   ========================================= */
+
+
+
+/* =========================================
+	PALETA DE COLORES USADOS EN lightbox.css
+   ========================================= */
+
+	
 
 }
 
