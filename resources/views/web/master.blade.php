@@ -8,7 +8,6 @@
     <!--<script src="{{asset("js/app.js")}}"></script>-->
     <!-- <link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css"> -->
     {{-- 1. Eliminar o comentar CDN Bootstrap CSS --}}
-    {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"> --}}
 
     {{-- 2. Añadir directiva @vite --}}
     @vite(['resources/scss/app.scss', 'resources/js/app.js'])
@@ -52,8 +51,9 @@
     <script src="styles/bootstrap4/popper.js"></script>
 
     {{-- 3. Eliminar o comentar CDN Bootstrap JS (Vite lo carga desde app.js) --}}
-    {{-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script> --}}
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="plugins/greensock/TweenMax.min.js"></script>
     <script src="plugins/greensock/TimelineMax.min.js"></script>
     <script src="plugins/scrollmagic/ScrollMagic.min.js"></script>

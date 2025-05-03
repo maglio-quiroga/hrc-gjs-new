@@ -1,9 +1,9 @@
 import "./bootstrap"; // Importa Axios
 import "../scss/accesibilidad.scss";
 //import "../scss/compile.scss";
-//import 'bootstrap';   // Importa Bootstrap JS
+import "bootstrap"; // Importa Bootstrap JS
 
-import { accesibilidad } from "./accesibilidad"; // Tu script personalizado
+import { accesibilidad } from "./accesibilidad"; // Componente de accesibilidad
 accesibilidad();
 
 import Alpine from "alpinejs"; // Alpine.js
