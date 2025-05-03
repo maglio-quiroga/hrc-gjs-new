@@ -30,22 +30,20 @@
     <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
     <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
     <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
-
 </head>
 <body>
     <div id="app">
         <div class="super_container">
             @include('template.header')
             <div>
-
                 <div>
-
                     <main>
+                        {{-- El componente de accesibilidad --}}
+                        <x-accesibilidad/>
+                        {{ $slot ?? '' }}
                         @yield('content')
                     </main>
-
                 </div>
-
             </div>
             @include('template.footer')
         </div>
@@ -67,8 +65,5 @@
     <script src="js/custom.js"></script>
     <script src="js/course.js"></script>
     <script src="js/courses.js"></script>
-
-    {{-- El componente de accesibilidad --}}
-    <x-accesibilidad/>
 </body>
 </html>
