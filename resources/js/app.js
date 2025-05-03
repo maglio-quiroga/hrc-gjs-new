@@ -1,6 +1,6 @@
-// resources/js/app.js
-
 import "./bootstrap"; // Importa Axios
+import "../scss/accesibilidad.scss";
+//import "../scss/compile.scss";
 //import 'bootstrap';   // Importa Bootstrap JS
 
 import { accesibilidad } from "./accesibilidad"; // Tu script personalizado
