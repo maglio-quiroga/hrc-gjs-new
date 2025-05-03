@@ -44,16 +44,9 @@
         </div>
     </div>
     <!--SCRIPT-->
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="styles/bootstrap4/popper.js"></script>
-
-    {{-- 2. Eliminar o comentar CDN Bootstrap JS (Vite lo carga desde app.js) --}}
-
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+
     <script src="plugins/greensock/TweenMax.min.js"></script>
     <script src="plugins/greensock/TimelineMax.min.js"></script>
     <script src="plugins/scrollmagic/ScrollMagic.min.js"></script>
