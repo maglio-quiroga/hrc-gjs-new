@@ -1,6 +1,9 @@
 @extends('web.master')
 
 @section('content')
+<!--PAGINA
+        QUIENES SOMOS
+            EQUIPO DIRECTIVO -->
 <div class="container" style="margin-top: 150px">
     <div class="super_container">
         <div class="about">

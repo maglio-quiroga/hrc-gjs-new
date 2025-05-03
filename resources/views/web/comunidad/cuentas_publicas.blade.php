@@ -1,5 +1,8 @@
 @extends('web.master')
 @section('content')
+<!--PAGINA
+        QUIENES SOMOS
+            CUENTAS PUBLICAS -->
 <div class="container" style="margin-top: 200px; margin-bottom: 50px;">
     <h2 class="text-center mb-5">Cuentas Públicas</h2>
 

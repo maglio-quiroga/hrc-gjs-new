@@ -1,6 +1,7 @@
 @extends('web.master')
 
 @section('content')
+
 <div class="container" style="margin-top: 200px; margin-bottom: 50px;">
 
     <div class="text-center mb-5">
