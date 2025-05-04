@@ -1188,7 +1188,9 @@ section {
     font-size: 0.9em;
 }
 
-/* Estilos personalizados para las tarjetas */
+/*********************************************
+*  Estilos personalizados para las tarjetas  *
+**********************************************/
 .card {
     border: none; /* Remueve el borde por defecto de la tarjeta */
     margin-bottom: 1.5rem; /* Espacio inferior entre tarjetas */
@@ -1236,34 +1238,12 @@ section {
 15 Service Card
 *********************************/
 
-/* General container for cards */
-.card-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-/* Card styling */
-.card {
-    width: 18rem;
-    display: flex;
-    flex-direction: column;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    position: relative;
-    transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease;
-}
-
 /* Make all cards the same height */
 .card-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+    justify-content: center;
+    gap: 20px;
     align-items: stretch;
 }
 
@@ -1335,4 +1315,249 @@ section {
     .service-card {
         flex: 0 0 calc(50% - 20px);
     }
+}
+
+/*******************************
+*            Main              *
+*******************************/
+
+.ih-item img {
+    width: 100%;
+    height: 100%;
+}
+
+.ih-item.circle {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+}
+
+.ih-item.circle .img img {
+    border-radius: 100%;
+}
+
+.ih-item.circle .info {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    border-radius: 50%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.ih-item.circle.effect1 .spinner {
+    width: 230px;
+    height: 230px;
+    border: 15px solid #536063;
+
+    border-right-color: #90a8ad;
+    border-bottom-color: #90a8ad;
+    opacity: 0.5;
+    border-radius: 50%;
+    -webkit-transition: all 0.8s ease-in-out;
+    -moz-transition: all 0.8s ease-in-out;
+    transition: all 0.8s ease-in-out;
+}
+
+.ih-item.circle.effect1 .img {
+    position: absolute;
+    top: 10px;
+    bottom: 0;
+    left: 10px;
+    right: 0;
+    width: auto;
+    height: auto;
+}
+
+.ih-item.circle.effect1.colored .info {
+    background: #1a4a72;
+    background: rgba(26, 74, 114, 0.6);
+}
+
+.ih-item.circle.effect1 .info {
+    top: 10px;
+    bottom: 0;
+    left: 10px;
+    right: 0;
+    background: #333333;
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    -webkit-transition: all 0.8s ease-in-out;
+    -moz-transition: all 0.8s ease-in-out;
+    transition: all 0.8s ease-in-out;
+}
+
+.ih-item.circle.effect1 .info h3 {
+    color: #fff;
+    text-transform: uppercase;
+    position: relative;
+    letter-spacing: 2px;
+    font-size: 22px;
+    margin: 0 30px;
+    padding: 55px 0 0 0;
+    height: 110px;
+    text-shadow:
+        0 0 1px white,
+        0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.ih-item.circle.effect1 a:hover .spinner {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.ih-item.circle.effect1 a:hover .info {
+    opacity: 1;
+}
+
+/*! #######################################################################
+
+	MeanMenu 2.0.7
+	--------
+
+	To be used with jquery.meanmenu.js by Chris Wharton (http://www.meanthemes.com/plugins/meanmenu/)
+
+####################################################################### */
+a.meanmenu-reveal {
+    display: none;
+}
+.mean-container .mean-bar {
+    float: left;
+    width: 100%;
+    position: relative;
+    background: #0c1923;
+    padding: 4px 0;
+    min-height: 42px;
+    z-index: 999999;
+}
+.mean-container a.meanmenu-reveal {
+    width: 22px;
+    height: 22px;
+    padding: 13px 13px 11px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    text-indent: -9999em;
+    line-height: 22px;
+    font-size: 1px;
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+}
+.mean-container a.meanmenu-reveal span {
+    display: block;
+    background: #fff;
+    height: 3px;
+    margin-top: 3px;
+}
+.mean-container .mean-nav {
+    float: left;
+    width: 100%;
+    background: #0c1923;
+    margin-top: 44px;
+}
+.mean-container .mean-nav ul {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    list-style-type: none;
+}
+.mean-container .mean-nav ul li {
+    position: relative;
+    float: left;
+    width: 100%;
+}
+.mean-container .mean-nav ul li a {
+    display: block;
+    float: left;
+    width: 90%;
+    padding: 1em 5%;
+    margin: 0;
+    text-align: left;
+    color: #fff;
+    border-top: 1px solid #383838;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.mean-container .mean-nav ul li li a {
+    width: 80%;
+    padding: 1em 10%;
+    border-top: 1px solid #f1f1f1;
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+    opacity: 0.75;
+    filter: alpha(opacity=75);
+    text-shadow: none !important;
+    visibility: visible;
+}
+.mean-container .mean-nav ul li.mean-last a {
+    border-bottom: 0;
+    margin-bottom: 0;
+}
+.mean-container .mean-nav ul li li li a {
+    width: 70%;
+    padding: 1em 15%;
+}
+.mean-container .mean-nav ul li li li li a {
+    width: 60%;
+    padding: 1em 20%;
+}
+.mean-container .mean-nav ul li li li li li a {
+    width: 50%;
+    padding: 1em 25%;
+}
+.mean-container .mean-nav ul li a:hover {
+    background: #252525;
+    background: rgba(255, 255, 255, 0.1);
+}
+.mean-container .mean-nav ul li a.mean-expand {
+    margin-top: 1px;
+    width: 26px;
+    height: 32px;
+    padding: 12px !important;
+    text-align: center;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 2;
+    font-weight: 700;
+    background: rgba(255, 255, 255, 0.1);
+    border: 0 !important;
+    border-left: 1px solid rgba(255, 255, 255, 0.4) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+.mean-container .mean-nav ul li a.mean-expand:hover {
+    background: rgba(0, 0, 0, 0.9);
+}
+.mean-container .mean-push {
+    float: left;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    clear: both;
+}
+.mean-nav .wrapper {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+.mean-container .mean-bar,
+.mean-container .mean-bar * {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+.mean-remove {
+    display: none !important;
 }
