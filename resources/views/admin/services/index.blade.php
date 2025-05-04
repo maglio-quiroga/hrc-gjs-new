@@ -18,15 +18,15 @@
         </div>
     <div class="placeholder4 container mt-5">
     
-    <div class="d-flex justify-content-between mb-4 align-items-center">
+    <div class="d-flex justify-content-between  align-items-center">
     <h2>Servicios</h2>
-    <a href="{{ route('admin.handle.view', ['model' => 'services', 'action' => 'create']) }}" class="btn btn-success mb-3"><i class="bi bi-plus-circle me-1"></i> Agregar nuevo servicio</a>
+    <a href="{{ route('admin.handle.view', ['model' => 'services', 'action' => 'create']) }}" class="btn btn-success "><i class="bi bi-plus-circle me-1"></i> Agregar nuevo servicio</a>
     </div>
     
     @include('admin.templates.alerts')
 
-    <div class="d-flex justify-content-end mt-3 py-3">
-        <input type="text" id="searchInput" class="form-control w-25" placeholder="Buscar servicio...">
+    <div class="d-flex justify-content-end mt-3 my-4">
+        <input type="text" id="searchInput" class="form-control" placeholder="Buscar servicio...">
     </div>
 
     <div class="table-responsive">
