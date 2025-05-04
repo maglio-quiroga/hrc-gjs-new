@@ -7,11 +7,17 @@
     --primary-green: #38a735;
     --primary-beige: #937c6f; /* Hover línea menú */
     --primary-salmon: #ff6347; /* Rojo tomate (Color active enlaces p) */
-    --error-red: #db5246; /* Rojo ladrillo (Color texto form-control) */
+
+    /*=== Rojos ===*/
+    --red-400: #dd5d54; /* Rojo ladrillo (Color texto form-control) */
 
     /*=== Azules ===*/
     --blue-400: #60a5fa;
+    --blue-600: #416fc4;
     --blue-700: #4338ca;
+    --blue-800: #3372b5;
+    --blue-900: #1a4a72;
+    --blue-1000: #0c1923;
     --yellow-400: #ffc80a;
     --yellow-700: #b45309;
 
@@ -48,6 +54,7 @@
     --black-a20: rgba(29, 34, 47, 0.2); /* Transparente más oscuro */
     --black-a40: rgba(0, 0, 0, 0.4); /* Placeholder */
     --black-a50: rgba(29, 34, 47, 0.5); /* Placeholder alt */
+    --black-a60: rgba(26, 74, 114, 0.6);
     --white-a40: rgba(255, 255, 255, 0.4);
     --white-a20: rgba(255, 255, 255, 0.2);
 }
@@ -105,7 +112,7 @@ h6 {
     color: var(--gray-900); /* Modificado */
 }
 .form-control {
-    color: var(--error-red); /* Modificado */
+    color: var(--red-400); /* Modificado */
 }
 
 /*********************************
@@ -780,17 +787,14 @@ h6 {
 .card-button:hover {
     background-color: var(--green-600);
 }
-
 /* nav */
 .bg-primary {
     background-color: var(--green-500) !important;
 }
-
 /* menu color */
 .menu-color {
     color: var(--blue-400);
 }
-
 .icon-menu-hover-blue {
     &:hover {
         border-right-color: var(--blue-700);
@@ -806,12 +810,9 @@ h6 {
         border-right-color: var(--green-700);
     }
 }
-
-/* text */
 .text-color {
     color: var(--gray-600); /* Ajusta este color si es necesario */
 }
-
 .card-white {
     background-color: var(--white);
 }
@@ -821,25 +822,21 @@ h6 {
     background-color: var(--primary-blue);
     box-shadow: 2px 2px 10px var(--black-a40);
 }
-
 #menuAccesibilidad {
     background: var(--white);
     border: 1px solid var(--gray-500);
     box-shadow: 2px 2px 10px var(--black-a20);
 }
-
 #menuAccesibilidad button {
-    background-color: #28a745;
+    background-color: var(--primary-green);
     color: white;
 }
-
 #menuAccesibilidad button:hover {
-    background-color: #218838;
+    background-color: var(--green-700);
 }
-
 .modo-alto-contraste {
-    background-color: black;
-    color: white;
+    background-color: var(--black);
+    color: var(--white);
 }
 
 /*******************************************
@@ -848,27 +845,97 @@ h6 {
 
 /* Estilos personalizados para las tarjetas */
 .card {
-    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); /* Sombra suave */
-    background-color: #f8f9fa; /* Color de fondo gris claro */
+    box-shadow: 0 0.125rem 0.25rem var(--black-a10);
+    background-color: var(--gray-300);
 }
-
 .card:hover {
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 20px var(--black-a10);
 }
-
 .border-color-1 {
-    background-color: #3372b5;
+    background-color: var(--blue-800);
 }
-
 .border-color-2 {
-    background-color: #dd5d54;
+    background-color: var(--red-400);
 }
-
 .card-body {
-    color: #416fc4;
+    color: var(--blue-600);
+}
+.card-header {
+    background-color: var(--green-700);
+    color: var(--white);
+}
+.card-button:hover {
+    background-color: var(--green-700);
+}
+.card-title {
+    color: var(--gray-1000);
+}
+.card-text {
+    color: var(--gray-800);
+}
+.card-button {
+    background-color: var(--green-600);
+    color: var(--white);
 }
 
-.card .card-header {
-    background-color: #244c5a;
+/*******************************
+*            Main              *
+*******************************/
+
+.ih-item.circle.effect1 .spinner {
+    border: 15px solid var(--gray-800);
+    border-right-color: var(--gray-700);
+    border-bottom-color: var(--gray-700);
+}
+.ih-item.circle.effect1.colored .info {
+    background: var(--blue-900);
+    background: var(--black-a60);
+}
+.ih-item.circle.effect1 .info {
+    background: var(--blue-900);
+    background: var(--black-a60);
+}
+.ih-item.circle.effect1 .info h3 {
     color: #fff;
+    text-shadow:
+        0 0 1px var(--white),
+        0 1px 2px var(--black-a10);
+}
+
+/*! #######################################################################
+	MeanMenu 2.0.7
+	--------
+	To be used with jquery.meanmenu.js by Chris Wharton (http://www.meanthemes.com/plugins/meanmenu/)
+####################################################################### */
+
+.mean-container .mean-bar {
+    background: var(--blue-1000);
+}
+.mean-container a.meanmenu-reveal {
+    color: var(--white);
+}
+.mean-container a.meanmenu-reveal span {
+    background: var(--white);
+}
+.mean-container .mean-nav {
+    background: var(--blue-1000);
+}
+.mean-container .mean-nav ul li a {
+    color: var(--white);
+    border-top: 1px solid var(--white-a40);
+}
+.mean-container .mean-nav ul li li a {
+    border-top: 1px solid var(--white-a20);
+}
+.mean-container .mean-nav ul li a:hover {
+    background: var(--off-black);
+    background: var(--white-a20);
+}
+.mean-container .mean-nav ul li a.mean-expand {
+    background: var(--white-a20);
+    border-left: 1px solid var(--white-a40) !important;
+    border-bottom: 1px solid var(--white-a20) !important;
+}
+.mean-container .mean-nav ul li a.mean-expand:hover {
+    background: var(--black-a60);
 }
