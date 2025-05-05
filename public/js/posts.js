@@ -2,29 +2,17 @@ document.addEventListener('DOMContentLoaded', function () {
     const rows = document.querySelectorAll('table tbody tr');
     const loadMoreBtn = document.getElementById('loadMore');
     const rowsPerPage = 5;
-    let visibleRows = rowsPerPage;
 
-    function updateVisibility() {
+    function ocultarFilasIniciales() {
         let visibles = 0;
         rows.forEach((row) => {
-            if (row.style.display !== 'none') {
-                if (visibles < visibleRows) {
-                    row.classList.remove('d-none');
-                    visibles++;
-                } else {
-                    row.classList.add('d-none');
-                }
+            if (visibles < rowsPerPage) {
+                row.style.display = "";
+                visibles++;
             } else {
-                row.classList.add('d-none');
+                row.style.display = "none";
             }
         });
-
-        const totalVisibles = Array.from(rows).filter(r => r.style.display !== 'none');
-        if (visibleRows >= totalVisibles.length) {
-            loadMoreBtn.classList.add('d-none');
-        } else {
-            loadMoreBtn.classList.remove('d-none');
-        }
     }
 
     function buscarTabla() {
@@ -37,6 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
             filtroEstado !== '' ||
             filtroCategoria !== '';
 
+        let visibles = 0;
         rows.forEach(function (row) {
             const titulo = row.children[1].textContent.toLowerCase();
             const estado = row.children[4].textContent.trim();
@@ -48,23 +37,42 @@ document.addEventListener('DOMContentLoaded', function () {
 
             if (coincideTitulo && coincideEstado && coincideCategoria) {
                 row.style.display = "";
+                visibles++;
             } else {
                 row.style.display = "none";
             }
         });
 
+        // Ocultar el botón si hay filtros activos
         if (hayFiltro) {
             loadMoreBtn.classList.add('d-none');
         } else {
-            updateVisibility();
+            loadMoreBtn.classList.remove('d-none');
+            verificarFinFilas();
         }
     }
 
-    // Eventos
+    function verificarFinFilas() {
+        const hiddenRows = Array.from(rows).filter(row => row.style.display === "none");
+        if (hiddenRows.length === 0) {
+            loadMoreBtn.disabled = true;
+            loadMoreBtn.textContent = "No hay más noticias";
+        } else {
+            loadMoreBtn.disabled = false;
+            loadMoreBtn.textContent = "Cargar más";
+        }
+    }
+
     if (loadMoreBtn) {
-        loadMoreBtn.addEventListener('click', function () {
-            visibleRows += rowsPerPage;
-            updateVisibility();
+        loadMoreBtn.addEventListener("click", function () {
+            const hiddenRows = Array.from(rows).filter(row => row.style.display === "none");
+            let count = 0;
+            for (let i = 0; i < hiddenRows.length && count < rowsPerPage; i++) {
+                hiddenRows[i].style.display = "";
+                count++;
+            }
+
+            verificarFinFilas();
         });
     }
 
@@ -76,5 +84,6 @@ document.addEventListener('DOMContentLoaded', function () {
     if (selectEstado) selectEstado.addEventListener('change', buscarTabla);
     if (selectCategoria) selectCategoria.addEventListener('change', buscarTabla);
 
-    updateVisibility();
+    ocultarFilasIniciales();
+    verificarFinFilas();
 });

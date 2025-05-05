@@ -92,10 +92,10 @@
                     @endif
                     <td>{{ $post->category->title ?? 'Sin categoría' }}</td>
                     <td class="d-flex gap-2">
-                        <a href="{{ route('admin.handle.view', ['model' => 'posts', 'action' => 'edit', 'target' => $post->id]) }}" class="btn btn-sm btn-primary">Editar</a>
+                        <a href="{{ route('admin.handle.view', ['model' => 'posts', 'action' => 'edit', 'target' => $post->id]) }}" class="btn btn-warning"><i class="bi bi-pencil-square"></i> Editar</a>
                         <form action="{{ route('admin.handle.delete', ['model' => 'posts', 'target' => $post->id]) }}" method="POST">
                             @csrf
-                            <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('¿Estás seguro de eliminar este posteo?')">Eliminar</button>
+                            <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('¿Estás seguro de eliminar este posteo?')"><i class="bi bi-trash"></i> Eliminar</button>
                         </form>
                     </td>
                 </tr>

@@ -69,82 +69,13 @@
                 </table>
             </div>
 
-            @if ($records->count() > 0)
-                <div class="d-flex justify-content-center mt-4">
-                    <button id="toggle-btn" class="btn btn-outline-primary btn-sm rounded-pill px-4 py-2 d-flex align-items-center gap-2">
-                        <i id="toggle-icon" class="bi bi-arrow-down-circle"></i> 
-                        <span id="toggle-text">Ver más</span>
-                    </button>
-                </div>
-            @endif
+            <div class="text-center my-3">
+                <button id="loadMore" class="btn btn-primary">Cargar más</button>
+            </div>
         </div>
     </div>
 
-    <script>
-        const toggleBtn = document.getElementById('toggle-btn');
-        const toggleIcon = document.getElementById('toggle-icon');
-        const toggleText = document.getElementById('toggle-text');
-        const tableRows = document.querySelectorAll('.category-row');
-        const searchInput = document.getElementById('searchInput');
-        let showingAll = false;
-
-        function updateTable() {
-            tableRows.forEach((row, index) => {
-                if (!showingAll && index >= 5) {
-                    row.style.display = 'none';
-                } else {
-                    row.style.display = '';
-                }
-            });
-        }
-
-        toggleBtn.addEventListener('click', () => {
-            showingAll = !showingAll;
-            updateTable();
-
-            if (showingAll) {
-                toggleBtn.classList.remove('btn-outline-primary');
-                toggleBtn.classList.add('btn-outline-secondary');
-                toggleIcon.className = 'bi bi-arrow-up-circle';
-                toggleText.textContent = 'Ver menos';
-            } else {
-                toggleBtn.classList.remove('btn-outline-secondary');
-                toggleBtn.classList.add('btn-outline-primary');
-                toggleIcon.className = 'bi bi-arrow-down-circle';
-                toggleText.textContent = 'Ver más';
-            }
-        });
-
-        // Buscador dinámico
-        searchInput.addEventListener('keyup', function() {
-            const filter = this.value.toLowerCase();
-
-            let found = false;
-
-            tableRows.forEach(row => {
-                const id = row.querySelector('td:nth-child(1)').innerText.toLowerCase();
-                const title = row.querySelector('td:nth-child(2)').innerText.toLowerCase();
-
-                if (id.includes(filter) || title.includes(filter)) {
-                    row.style.display = '';
-                    found = true;
-                } else {
-                    row.style.display = 'none';
-                }
-            });
-
-            // Si estás buscando, oculta el botón "Ver más"
-            if (filter.length > 0) {
-                toggleBtn.style.display = 'none';
-            } else {
-                toggleBtn.style.display = 'flex';
-                showingAll = false;
-                updateTable();
-            }
-        });
-
-        // Inicializar
-        updateTable();
+    <script src="{{ asset('js/categories.js') }}">
     </script>
 </body>
 </html>

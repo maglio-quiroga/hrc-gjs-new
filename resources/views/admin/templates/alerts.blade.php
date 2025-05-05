@@ -13,3 +13,24 @@
 </div>
 
 @endif
+
+<script>
+
+    const alerts = document.querySelectorAll('.alert');
+
+    function dismisibleAlert() {
+        alerts.forEach(alert => alert.remove());
+    };
+
+    function delaySet(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+    };
+
+    async function exec() {
+        await delaySet(2500);
+        dismisibleAlert();
+    }
+
+    exec();
+
+</script>
