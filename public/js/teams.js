@@ -14,9 +14,11 @@ document.addEventListener("DOMContentLoaded", function() {
         });
 
         if (visibleRows >= rows.length) {
-            loadMoreBtn.classList.add('d-none');
+            loadMoreBtn.textContent = "No hay más miembros del equipo";
+            loadMoreBtn.disabled = true; // se mantiene el color original
         } else {
-            loadMoreBtn.classList.remove('d-none');
+            loadMoreBtn.textContent = "Cargar más";
+            loadMoreBtn.disabled = false;
         }
     }
 
@@ -30,18 +32,18 @@ document.addEventListener("DOMContentLoaded", function() {
     updateVisibility();
 
     window.buscarTabla = function() {
-        var inputNombre = document.getElementById("inputBuscarNombre").value.toUpperCase();
-        var inputPosicion = document.getElementById("inputBuscarPosicion").value.toUpperCase();
-        var isFiltering = inputNombre.length > 0 || inputPosicion.length > 0;
+        const inputNombre = document.getElementById("inputBuscarNombre").value.toUpperCase();
+        const inputPosicion = document.getElementById("inputBuscarPosicion").value.toUpperCase();
+        const isFiltering = inputNombre.length > 0 || inputPosicion.length > 0;
 
         rows.forEach((row, index) => {
-            var tdNombre = row.getElementsByTagName("td")[1];
-            var tdPosicion = row.getElementsByTagName("td")[2];
+            const tdNombre = row.getElementsByTagName("td")[1];
+            const tdPosicion = row.getElementsByTagName("td")[2];
 
             if (isFiltering) {
                 if (
-                    (tdNombre && tdNombre.textContent.toUpperCase().indexOf(inputNombre) > -1) &&
-                    (tdPosicion && tdPosicion.textContent.toUpperCase().indexOf(inputPosicion) > -1)
+                    (tdNombre && tdNombre.textContent.toUpperCase().includes(inputNombre)) &&
+                    (tdPosicion && tdPosicion.textContent.toUpperCase().includes(inputPosicion))
                 ) {
                     row.classList.remove('d-none');
                 } else {
@@ -57,12 +59,15 @@ document.addEventListener("DOMContentLoaded", function() {
         });
 
         if (isFiltering) {
-            loadMoreBtn.classList.add('d-none');
+            loadMoreBtn.textContent = "Cargar más";
+            loadMoreBtn.disabled = true;
         } else {
             if (visibleRows >= rows.length) {
-                loadMoreBtn.classList.add('d-none');
+                loadMoreBtn.textContent = "No hay más miembros del equipo";
+                loadMoreBtn.disabled = true;
             } else {
-                loadMoreBtn.classList.remove('d-none');
+                loadMoreBtn.textContent = "Cargar más";
+                loadMoreBtn.disabled = false;
             }
         }
     };
