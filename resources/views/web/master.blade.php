@@ -9,19 +9,15 @@
     {{-- 1. Añadir directiva @vite --}}
     @vite(['resources/scss/app.scss', 'resources/js/app.js'])
 
-    <link rel="stylesheet" type="text/css" href="{{ asset('styles/main_styles.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('styles/custom_styles.css') }}">
     <link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/v4-shims.css">
     <!--CSS-->
     <link rel="stylesheet" type="text/css" href="styles/course.css">
     <link rel="stylesheet" type="text/css" href="styles/course_responsive.css">
-    <link rel="stylesheet" type="text/css" href="styles/courses.css">
     <link rel="stylesheet" type="text/css" href="styles/courses_responsive.css">
     <link rel="stylesheet" type="text/css" href="styles/responsive.css">
-    <link rel="stylesheet" type="text/css" href="styles/main.css">
-    <!-- carrusel -->
+    <!--Carrusel-->
     <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
     <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
     <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
