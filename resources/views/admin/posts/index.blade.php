@@ -61,7 +61,11 @@
                             <em>No imagen</em>
                         @endif
                     </td>
-                    <td>{{ $post->published ? 'Publicado' : 'Borrador' }}</td>
+                    @if($post->posted !== "yes")
+                    <td>Borrador</td>
+                    @else
+                    <td>Publicado</td>
+                    @endif
                     <td>{{ $post->category->title ?? 'Sin categoría' }}</td>
                     <td class="d-flex gap-2">
                         <a href="{{ route('admin.handle.view', ['model' => 'posts', 'action' => 'edit', 'target' => $post->id]) }}" class="btn btn-sm btn-primary">Editar</a>
