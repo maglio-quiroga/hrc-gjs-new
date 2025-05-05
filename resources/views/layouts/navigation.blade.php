@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 {{-- resources/views/layouts/navigation.blade.php (VERSIÓN CON BOOTSTRAP 5) --}}
 {{-- Asume que 'bg-primary' es un color oscuro. Si es claro, cambia 'navbar-dark' por 'navbar-light' --}}
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">

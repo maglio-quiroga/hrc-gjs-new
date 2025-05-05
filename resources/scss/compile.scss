@@ -66,19 +66,6 @@
     --white-a40: rgba(255, 255, 255, 0.4);
     --white-a30: rgba(255, 255, 255, 0.3);
     --white-a20: rgba(255, 255, 255, 0.2);
-
-    /*Nuevos*/
-    /*blog_single.css*/
-    --gray-250: #f2f4f5;
-    --gray-260: #edeff0;
-    --gray-270: #ebebeb;
-    --gray-450: #d9d9d9;
-    --gray-950: #2c3145;
-    --gray-750: #5e6271;
-    --gray-960: #383749;
-    /*course.css*/
-    --gray-280: #efefef;
-    --gray-350: #d9dbdc;
 }
 
 text-gray-900,
@@ -1209,8 +1196,8 @@ h6 {
     background: var(--primary-blue);
 }
 .home {
-    background: var(--gray-250);
-    border-bottom: solid 1px var(--gray-260);
+    background: var(--gray-300);
+    border-bottom: solid 1px var(--gray-400);
 }
 .breadcrumbs ul li:not(:last-child)::after {
     color: var(--gray-900);
@@ -1249,7 +1236,7 @@ h6 {
     color: var(--gray-900);
 }
 .blog_extra {
-    border-bottom: solid 1px var(--gray-270);
+    border-bottom: solid 1px var(--gray-400);
 }
 .blog_tags span {
     color: var(--gray-900);
@@ -1270,7 +1257,7 @@ h6 {
     color: var(--primary-blue);
 }
 .comments_title {
-    color: var(--gray-950);
+    color: var(--off-black-2);
 }
 .comments_list li:not(:last-child) .comment_item {
     border-bottom: solid 1px var(--gray-400);
@@ -1285,7 +1272,7 @@ h6 {
     color: var(--primary-yellow);
 }
 .comment_extra a {
-    color: var(--gray-750);
+    color: var(--gray-800);
 }
 .comment_extra a:hover {
     color: var(--primary-blue);
@@ -1294,8 +1281,8 @@ h6 {
     color: var(--gray-900);
 }
 .comment_input {
-    border: solid 1px var(--gray-450);
-    color: var(--gray-950);
+    border: solid 1px var(--gray-500);
+    color: var(--off-black-2);
 }
 .comment_input:focus {
     border: solid 1px var(--primary-blue);
@@ -1310,7 +1297,7 @@ h6 {
     color: var(--white);
 }
 .comment_notify span {
-    color: var(--gray-950);
+    color: var(--off-black-2);
 }
 .comment_button {
     background: var(--primary-blue);
@@ -1333,7 +1320,7 @@ h6 {
     color: var(--primary-blue);
 }
 .latest_title a {
-    color: var(--gray-960);
+    color: var(--gray-1000);
 }
 .latest_title a:hover {
     color: var(--primary-blue);
@@ -1346,7 +1333,7 @@ h6 {
     color: var(--white);
 }
 .tags_list li {
-    background: var(--gray-250);
+    background: var(--gray-300);
 }
 .tags_list li:hover {
     background: var(--primary-blue);
@@ -1420,7 +1407,7 @@ h6 {
     color: var(--gray-900);
 }
 .location_list li {
-    color: var(--gray-750);
+    color: var(--gray-800);
 }
 
 /*-> de course.css*/
@@ -1428,7 +1415,7 @@ h6 {
     color: var(--gray-900);
 }
 .course_info_item:not(:last-child)::after {
-    background: var(--gray-350);
+    background: var(--gray-400);
 }
 .course_info_title {
     color: var(--gray-900);
@@ -1443,7 +1430,7 @@ h6 {
     color: var(--primary-blue);
 }
 .tab {
-    background: var(--gray-250);
+    background: var(--gray-300);
     color: var(--gray-900);
 }
 .tab.active,
@@ -1452,7 +1439,7 @@ h6 {
     color: var(--white);
 }
 .tab_panel {
-    border: solid 1px var(--gray-270);
+    border: solid 1px var(--gray-400);
 }
 .tab_panel_title {
     color: var(--gray-900);
@@ -1509,7 +1496,7 @@ h6 {
     color: var(--gray-900);
 }
 .review_rating_bar {
-    background: var(--gray-280);
+    background: var(--gray-400);
 }
 .review_rating_bar > div {
     background: var(--primary-blue);
