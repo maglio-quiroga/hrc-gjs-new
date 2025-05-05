@@ -17,6 +17,7 @@
     <link rel="stylesheet" type="text/css" href="styles/course_responsive.css">
     <link rel="stylesheet" type="text/css" href="styles/courses_responsive.css">
     <link rel="stylesheet" type="text/css" href="styles/responsive.css">
+
     <!--Carrusel-->
     <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
     <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">

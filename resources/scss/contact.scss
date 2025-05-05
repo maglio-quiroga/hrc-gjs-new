@@ -9,16 +9,22 @@
 2. Body and some general stuff
 3. Header
 	3.1 Top Bar
-	3.2 Header Content
+	3.2 Navbar
 	3.3 Logo
 	3.4 Main Nav
+		No tiene nada
 	3.5 Hamburger
 4. Menu
 5. Section
 6. Home
-7. Course
-8. Newsletter
-9. Footer
+7. Features
+8. Courses
+9. Counter
+10. Events
+11. Team
+12. News
+13. Newsletter
+14. Footer
 
 ******************************/
 
@@ -28,17 +34,21 @@
 
 @import url("https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:300,400,500,700,900");
 
+/*TODOS LOS CAMBIOS DE ESTE CSS
+    FUERON REALIZADO SOLO VIENDO
+    LA PAGINA PRINCIPAL DE INICIO*/
+
 /*********************************
 2. Body and some general stuff
 *********************************/
-
+/*MAPA DEL GOOGLE FIN DE LA PAGINA*/
 * {
     margin: 0;
     padding: 0;
     -webkit-font-smoothing: antialiased;
 }
 body {
-    font-family: "Roboto", sans-serif;
+    font-family: "Museo Sans 500", "Roboto", sans-serif;
     font-size: 14px;
     font-weight: 400;
 }
@@ -54,7 +64,7 @@ ul {
     margin-bottom: 0px;
 }
 p {
-    font-family: "Roboto", sans-serif;
+    font-family: "Museo Sans 500", "Roboto", sans-serif;
     font-size: 14px;
     line-height: 1.85;
     font-weight: 400;
@@ -111,7 +121,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Roboto Slab", serif;
+    font-family: "Museo Sans 500", "Roboto Slab", serif;
     font-weight: 700;
     -webkit-font-smoothing: antialiased;
     margin-bottom: 0;
@@ -187,20 +197,20 @@ section {
     overflow: hidden;
 }
 .prlx {
-    height: 130% !important;
+    height: 130%;
 }
 .parallax-window {
     min-height: 400px;
     background: transparent;
 }
 .nopadding {
-    padding: 0px !important;
+    padding: 0px;
 }
 
 /*********************************
 3. Header
 *********************************/
-
+/*VANER ARRIBA DEL PRINCIPAL (VERDE)*/
 .header {
     position: fixed;
     top: 0;
@@ -220,7 +230,7 @@ section {
 /*********************************
 3.1 Top Bar
 *********************************/
-
+/*BARRA VERDE ARRIBA DEL VANAER*/
 .top_bar {
     width: 100%;
 }
@@ -238,7 +248,7 @@ section {
     display: inline-block;
 }
 .question {
-    font-family: "Roboto Slab", serif;
+    font-family: "Museo Sans 500", "Roboto Slab", serif;
     font-size: 14px;
     margin-left: 0px;
 }
@@ -269,28 +279,51 @@ section {
 }
 
 /*********************************
-3.2 Header Content
+3.2 Navbar
 *********************************/
-
-.header_container {
-    width: 100%;
+/*VANER PRINCIPAL (INICIO, QUIENES SOMOS, INFORMACION PACIENTE, ETC*/
+@media only screen and (max-width: 991px) {
+    .navbar {
+        width: 100%;
+    }
 }
-.header_content {
-    height: 90px;
+.navbar-nav .nav-link {
+    transition: color 0.2s ease-in-out;
+}
+.navbar-brand img {
+    max-width: 80px;
+    height: auto;
+}
+@media (max-width: 768px) {
+    .navbar-brand img {
+        width: 150px;
+        height: auto;
+    }
+}
+.navbar-nav li a {
     -webkit-transition: all 200ms ease;
     -moz-transition: all 200ms ease;
     -ms-transition: all 200ms ease;
     -o-transition: all 200ms ease;
     transition: all 200ms ease;
 }
-.header.scrolled .header_content {
-    height: 80px;
+.navbar-nav li.active::after {
+    display: block;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    content: "";
+}
+.navbar-nav .dropdown-menu a {
+    font-size: 16px;
 }
 
 /*********************************
 3.3 Logo
 *********************************/
-
+/*IMAGEN DEL VANER PRINCIPAL*/
 .logo,
 .logo_text {
     display: inline-block;
@@ -308,12 +341,12 @@ section {
     max-width: 100%;
 }
 .logo_text {
-    font-family: "Roboto Slab", serif;
+    font-family: "Museo Sans 500", "Roboto Slab", serif;
     font-size: 36px;
     font-weight: 700;
     line-height: 0.75;
     vertical-align: middle;
-    margin-left: 4px;
+    margin-left: 7px;
     -webkit-transition: all 200ms ease;
     -moz-transition: all 200ms ease;
     -ms-transition: all 200ms ease;
@@ -428,7 +461,6 @@ section {
 /*********************************
 3.5 Hamburger
 *********************************/
-
 .hamburger_container {
 }
 .hamburger {
@@ -437,7 +469,6 @@ section {
 }
 .hamburger i {
     font-size: 20px;
-
     -webkit-transition: all 200ms ease;
     -moz-transition: all 200ms ease;
     -ms-transition: all 200ms ease;
@@ -575,673 +606,432 @@ section {
 5. Section
 *********************************/
 
-.section_title_container {
-    max-width: 600px;
-    margin: 0 auto;
-}
-.section_title {
-    line-height: 1.2;
-}
-.section_subtitle {
-    line-height: 1.85;
-    margin-top: 14px;
-}
-.section_background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
+/*SIN CAMBIOS*/
 
 /*********************************
 6. Home
 *********************************/
-
-.home {
-    width: 100%;
-    height: 182px;
-}
-.breadcrumbs_container {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    padding-bottom: 13px;
-    padding-left: 3px;
-}
-.breadcrumbs ul li {
-    display: inline-block;
+.dropdown_item_select {
     position: relative;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    -webkit-user-select: none;
+    background-image: url(../images/down.png);
+    background-position: center right;
+    background-repeat: no-repeat;
+    padding-right: 20px;
+    padding-left: 20px;
 }
-.breadcrumbs ul li:not(:last-child)::after {
-    display: inline-block;
-    font-family: "FontAwesome";
-    content: "\f105";
-    margin-left: 7px;
-    margin-right: 4px;
-}
-.breadcrumbs ul li a {
+.home_search_button {
+    width: 120px;
+    height: 46px;
+    border: none;
+    outline: none;
+    border-radius: 3px;
     font-size: 14px;
-    font-weight: 400;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+}
+.home_slider_nav {
+    position: absolute;
+    top: 55.8%;
+    width: 50px;
+    border-radius: 50%;
+    text-align: center;
+    z-index: 10;
+    cursor: pointer;
     -webkit-transition: all 200ms ease;
     -moz-transition: all 200ms ease;
     -ms-transition: all 200ms ease;
     -o-transition: all 200ms ease;
     transition: all 200ms ease;
 }
+.home_slider_prev {
+    left: 75px;
+}
+.home_slider_next {
+    right: 75px;
+}
+.home_slider_nav i {
+    line-height: 50px;
+    font-size: 22px;
+}
 
 /*********************************
-7. Course
+7. Features
 *********************************/
 
-.course {
+/*SIN CAMBIOS*/
+
+/*********************************
+8. Courses
+*********************************/
+
+/*SIN CAMBIOS*/
+
+/*********************************
+9. Counter
+*********************************/
+
+/*SIN CAMBIOS*/
+
+/*********************************
+10. noticias
+*********************************/
+
+.noticias {
     width: 100%;
-    /*padding-top: 0px;*/
+    padding-top: 93px;
+    padding-bottom: 70px;
 }
-.course_container {
+.noticias_row {
+    margin-top: 47px;
+}
+.noticia_left {
+    padding-right: 20px;
+}
+.noticia_mid {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.noticia_right {
+    padding-left: 20px;
+}
+.noticia_image {
+    width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.noticia_image img {
+    max-width: 100%;
+}
+.noticia_body {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: inline-block;
+    font-family: "FontAwesome";
+    margin-left: 7px;
+    margin-right: 4px;
+}
+.noticia_date > div {
+    width: 60px;
+    height: 60px;
+}
+.noticia_day {
+    font-family: "Museo Sans 500", "Roboto Slab", serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 0.75;
+}
+.noticia_month {
+    font-family: "Museo Sans 500", "Roboto Slab", serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 0.75;
+    margin-top: 9px;
+}
+.noticia_content {
+    padding-left: 20px;
+}
+.noticia_title a {
+    font-family: "Museo Sans 500", "Roboto Slab", serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.4;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+.noticia_info_container {
+    margin-top: 11px;
+}
+.noticia_info {
+    display: inline-block;
+    font-size: 14px;
+}
+.noticia_info:not(:last-child) {
+    margin-right: 17px;
+}
+.noticia_info span {
+    margin-left: 4px;
+}
+.noticia_text {
+    margin-top: 12px;
+}
+.custom-carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*********************************
+11. Team
+*********************************/
+/*INSTAGRAM*/
+.team {
+    width: 100%;
+    padding-top: 93px;
+    padding-bottom: 60px;
+}
+.team_background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.team_row {
+    margin-top: 43px;
+}
+.team_col {
+    margin-bottom: 40px;
+}
+.team_item {
     width: 100%;
 }
-.course_title {
+.team_image {
+    width: 70%;
+    height: 185px;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: -86px;
+    z-index: 5;
+}
+.team_image img {
+    max-width: 100%;
+}
+.team_body {
+    width: 100%;
+    height: 180px;
+    padding-top: 108px;
+    padding-bottom: 24px;
+    border-radius: 15px;
+    text-align: center;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+.team_subtitle {
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 6px;
+    padding-left: 10px;
+    line-height: 1.71;
+}
+.contact_info_container {
+    margin-top: 100px;
+}
+.contact_info_title {
     font-family: "Roboto Slab", serif;
     font-size: 36px;
     font-weight: 700;
 }
-.course_info {
+.contact_form {
+    padding-right: 10px;
+}
+.social_list {
+    margin-top: 16px;
+}
+.social_list ul li {
+    display: inline-block;
     width: 100%;
-    height: 92px;
-    margin-top: 68px;
-}
-.course_info_item {
-    width: 33.33333333%;
-    padding-left: 30px;
-}
-.course_info_item:not(:last-child)::after {
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 1px;
-    height: 100%;
-    content: "";
-}
-.course_info_title {
-    font-family: "Roboto Slab", serif;
-    font-size: 18px;
-    font-weight: 700;
-}
-.course_info_text {
-    margin-top: 8px;
-}
-.course_info_text a {
-    font-size: 14px;
-    -webkit-transition: all 200ms ease;
-    -moz-transition: all 200ms ease;
-    -ms-transition: all 200ms ease;
-    -o-transition: all 200ms ease;
-    transition: all 200ms ease;
-}
-.rating_r {
-    margin-top: 7px;
-}
-.rating_r i::before {
-    font-family: "FontAwesome";
-    content: "\f006";
-    font-style: normal;
-    font-size: 14px;
-    margin-right: 4px;
-}
-.rating_r_1 i:first-child::before {
-    content: "\f005";
-}
-.rating_r_2 i:first-child::before {
-    content: "\f005";
-}
-.rating_r_2 i:nth-child(2)::before {
-    content: "\f005";
-}
-.rating_r_3 i:first-child::before {
-    content: "\f005";
-}
-.rating_r_3 i:nth-child(2)::before {
-    content: "\f005";
-}
-.rating_r_3 i:nth-child(3)::before {
-    content: "\f005";
-}
-.rating_r_4 i:first-child::before {
-    content: "\f005";
-}
-.rating_r_4 i:nth-child(2)::before {
-    content: "\f005";
-}
-.rating_r_4 i:nth-child(3)::before {
-    content: "\f005";
-}
-.rating_r_4 i:nth-child(4)::before {
-    content: "\f005";
-}
-.rating_r_5 i:first-child::before {
-    content: "\f005";
-}
-.rating_r_5 i:nth-child(2)::before {
-    content: "\f005";
-}
-.rating_r_5 i:nth-child(3)::before {
-    content: "\f005";
-}
-.rating_r_5 i:nth-child(4)::before {
-    content: "\f005";
-}
-.rating_r_5 i:nth-child(5)::before {
-    content: "\f005";
-}
-.course_image {
-    margin-top: 21px;
-    width: 100%;
-}
-.course_image img {
-    max-width: 100%;
-}
-.course_tabs_container {
-    width: 100%;
-    margin-top: 30px;
-}
-.tab {
-    height: 40px;
+    height: 46px;
+    border-radius: 3px;
+    padding-left: 19px;
     font-size: 16px;
-    font-weight: 500;
-    line-height: 40px;
-    text-align: center;
-    text-transform: uppercase;
-    cursor: pointer;
+    font-weight: 400;
+}
+.social_list ul li:not(:last-child) {
     margin-right: 10px;
-    padding-left: 21px;
-    padding-right: 20px;
+}
+.social_list ul li a i {
+    font-size: 18px;
     -webkit-transition: all 200ms ease;
     -moz-transition: all 200ms ease;
     -ms-transition: all 200ms ease;
     -o-transition: all 200ms ease;
     transition: all 200ms ease;
+    outline: none;
 }
-.tab_panels {
-}
-.tab_panel {
-    display: none !important;
+.comment_textarea {
     width: 100%;
-    height: 100%;
-    -webkit-animation: fadeEffect 1s;
-    animation: fadeEffect 1s;
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-top: 30px;
-    padding-bottom: 25px;
+    height: 150px;
+    padding-top: 15px;
 }
-/* Fade in tabs */
-@-webkit-keyframes fadeEffect {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes fadeEffect {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-.tab_panel.active {
-    display: block !important;
-}
-.tab_panel_title {
-    font-family: "Roboto Slab", serif;
-    font-size: 20px;
-    font-weight: 700;
-}
-.tab_panel_text {
-    margin-top: 10px;
-}
-.tab_panel_text p {
+.form_title {
     font-size: 16px;
     font-weight: 400;
-    line-height: 1.75;
-}
-.tab_panel_section {
-    margin-top: 17px;
-}
-.tab_panel_subtitle {
-    font-size: 18px;
-    font-weight: 400;
-}
-.tab_panel_bullets {
-    margin-top: 9px;
-}
-.tab_panel_bullets li {
-    position: relative;
-    padding-left: 27px;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.75;
-}
-.tab_panel_bullets li:not(:last-child) {
-    margin-bottom: 2px;
-}
-.tab_panel_bullets li::before {
-    display: block;
-    position: absolute;
-    top: 9px;
-    left: 1px;
-    width: 7px;
-    height: 7px;
-    content: "";
-    border-radius: 50%;
-}
-.tab_panel_faq {
-    margin-top: 51px;
-}
-.elements_accordions {
-    margin-top: 34px;
-}
-.accordion_container:not(:last-child) {
     margin-bottom: 12px;
 }
-.accordion {
-    width: 100%;
-    padding-left: 38px;
-    cursor: pointer;
+.comment_button {
+    width: 150px;
+    height: 46px;
+    text-transform: uppercase;
     font-size: 14px;
     font-weight: 500;
-    -webkit-transition: all 200ms ease;
-    -moz-transition: all 200ms ease;
-    -ms-transition: all 200ms ease;
-    -o-transition: all 200ms ease;
-    transition: all 200ms ease;
-}
-.accordion div {
-    max-width: 90%;
-    overflow: hidden;
-    white-space: nowrap;
-    font-size: 18px;
-    font-weight: 400;
-}
-.accordion::before {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: -1px;
-    left: 0;
-    height: 100%;
-    font-family: "FontAwesome";
-    content: "\f105";
-    font-size: 30px;
-    font-weight: 400;
-    -webkit-transition: all 200ms ease;
-    -moz-transition: all 200ms ease;
-    -ms-transition: all 200ms ease;
-    -o-transition: all 200ms ease;
-    transition: all 200ms ease;
-}
-.accordion.active::before {
-    content: "\f107";
-}
-.accordion_panel {
-    padding-right: 8px;
-    padding-left: 38px;
-    padding-top: 9px;
-    max-height: 0px;
-    overflow: hidden;
-    -webkit-transition: all 500ms ease;
-    -moz-transition: all 500ms ease;
-    -ms-transition: all 500ms ease;
-    -o-transition: all 500ms ease;
-    transition: all 500ms ease;
-}
-.accordion.active + .accordion_panel {
-    margin-bottom: 20px;
-}
-.accordion_panel p {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.75;
-}
-.tab_panel_2 {
-    padding-bottom: 10px;
-}
-.dropdowns {
-    margin-top: 17px;
-}
-.dropdowns li ul {
-    max-height: 0;
-    padding-left: 30px;
-    overflow: hidden;
-    -webkit-transition: all 500ms ease;
-    -moz-transition: all 500ms ease;
-    -ms-transition: all 500ms ease;
-    -o-transition: all 500ms ease;
-    transition: all 500ms ease;
-}
-.dropdowns li {
-    position: relative;
-}
-.dropdowns li.has_children > .dropdown_item {
     cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    margin-top: 15px;
 }
-.dropdown_item {
-    padding-top: 26px;
-    padding-bottom: 25px;
+.contact_info {
+    padding-left: 45px;
 }
-.dropdown_item_title {
-    font-family: "Roboto Slab", serif;
-    font-size: 16px;
-    font-weight: 700;
-    padding-left: 24px;
-}
-.dropdown_item_title span {
-    font-size: 18px;
-}
-.dropdown_item_title::before {
-    position: absolute;
-    top: 1px;
-    left: 0;
-    font-family: "FontAwesome";
-    content: "\f0f6";
-    font-size: 18px;
-    opacity: 0.65;
-}
-.has_children > .dropdown_item > .dropdown_item_title::after {
-    position: absolute;
-    top: -10px;
-    right: 0;
-    font-family: "FontAwesome";
-    content: "\f105";
-    font-size: 30px;
-    font-weight: 400;
-}
-.has_children.active > .dropdown_item > .dropdown_item_title::after {
-    content: "\f107";
-}
-.dropdown_item_text {
-    margin-top: 10px;
-}
-.dropdown_item_text p {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.75;
-}
-.tab_panel_3 {
-    padding-bottom: 42px;
-}
-.review_rating_container {
-    margin-top: 43px;
-}
-.review_rating {
-    display: inline-block;
-    text-align: center;
-    padding-left: 35px;
-    padding-top: 28px;
-    vertical-align: top;
-}
-.review_rating_num {
-    font-size: 72px;
-    line-height: 0.75;
-    font-weight: 900;
-}
-.review_rating_stars {
+.contact_info_text {
     margin-top: 27px;
-    margin-left: 3px;
 }
-.review_rating_stars .rating_r i::before {
+.contact_info_location {
+    margin-top: 28px;
+}
+.contact_info_location_title {
+    font-family: "Roboto Slab", serif;
     font-size: 18px;
+    font-weight: 700;
 }
-.review_rating_text {
-    font-size: 16px;
-    margin-top: 12px;
+.team_col .team_item {
+    padding-left: 6px;
+    padding-right: 6px;
+    font-size: 14px;
 }
-.review_rating_bars {
-    display: inline-block;
-    padding-left: 134px;
+.team_col:first-child .team_item {
+    padding-left: 0;
+    padding-right: 6px;
 }
-.review_rating_bars ul li:not(:last-child) {
-    margin-bottom: 10px;
+.team_col:nth-child(4n) .team_item {
+    padding-left: 6px;
+    padding-right: 0;
 }
-.review_rating_bars ul li span {
-    font-size: 16px;
-    font-weight: 400;
-    vertical-align: middle;
+.team .section_title {
+    padding-bottom: 50px;
 }
-.review_rating_bar {
-    display: inline-block;
-    vertical-align: middle;
-    width: 300px;
-    height: 30px;
-    margin-left: 22px;
+
+/*********************************
+12. Mapa
+*********************************/
+.mapa_container {
+    width: 100%;
+    padding-top: 50px;
 }
-.review_rating_bar > div {
-    height: 100%;
+.mapa {
+    width: 100%;
+    padding-top: 93px;
+    padding-bottom: 100px;
 }
-.comments_container {
-    margin-top: 80px;
+.mapa_row {
+    /*margin-top: 55px;*/
 }
-.comment_item {
-    padding-top: 31px;
-    padding-bottom: 16px;
+.mapa_post_large_container {
+    padding-right: 30px;
 }
-.comment_image div {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
+.mapa_post_large {
+    width: 100%;
+}
+.mapa_post_image {
+    width: 100%;
+    border-radius: 6px;
     overflow: hidden;
 }
-.comment_image div img {
+.mapa_post_image img {
     max-width: 100%;
 }
-.comment_content {
-    width: 100%;
-    padding-left: 20px;
-    margin-top: -7px;
+.mapa_post_large_title {
+    margin-top: 23px;
 }
-.comment_author::after {
-    display: inline-block;
-    content: "-";
-    margin-left: 6px;
-}
-.comment_author a {
-    font-family: "Roboto Slab", serif;
-    font-size: 18px;
-    font-weight: 700;
-    -webkit-transition: all 200ms ease;
-    -moz-transition: all 200ms ease;
-    -ms-transition: all 200ms ease;
-    -o-transition: all 200ms ease;
-    transition: all 200ms ease;
-}
-.comments_container .rating_r {
-    margin-top: 3px;
-    margin-left: 5px;
-}
-.comment_text {
-    margin-top: 12px;
-}
-.comment_extras {
-    margin-top: 13px;
-}
-.comment_reply {
-    margin-left: 35px;
-}
-.comment_extra a {
-    font-size: 14px;
-    font-weight: 400;
-    -webkit-transition: all 200ms ease;
-    -moz-transition: all 200ms ease;
-    -ms-transition: all 200ms ease;
-    -o-transition: all 200ms ease;
-    transition: all 200ms ease;
-}
-.comment_extra a span {
-    margin-left: 3px;
-}
-.comments_list li ul {
-    padding-left: 99px;
-}
-.add_comment_container {
-    margin-top: 24px;
-}
-.add_comment_title {
-    font-family: "Roboto Slab", serif;
+.mapa_post_large_title a {
+    font-family: "Museo Sans 500", "Roboto Slab", serif;
     font-size: 20px;
     font-weight: 700;
+    line-height: 1.4;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
 }
-.add_comment_text {
-    margin-top: 14px;
+.mapa_post_meta {
+    margin-top: 11px;
 }
-.add_comment_text a {
+.mapa_post_meta ul li {
+    display: inline-block;
+    position: relative;
+}
+.mapa_post_meta ul li:not(:last-of-type)::after {
+    display: inline-block;
+    position: relative;
+    content: "|";
+    margin-left: 14px;
+    margin-right: 11px;
+}
+.mapa_post_meta ul li a {
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+.mapa_post_text {
+    margin-top: 13px;
+}
+.mapa_post_link {
+    margin-top: 19px;
+}
+.mapa_post_link a {
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
     text-decoration: underline;
-}
-
-/*********************************
-8. Sidebar
-*********************************/
-
-.sidebar {
-    width: 100%;
-    padding-left: 40px;
-    padding-top: 120px;
-}
-.sidebar_section:not(:last-child) {
-    margin-bottom: 60px;
-}
-.sidebar_section_title {
-    font-family: "Roboto Slab", serif;
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 0.75;
-}
-.sidebar_feature {
-    margin-top: 33px;
-}
-.course_price {
-    font-family: "Roboto Slab", serif;
-    font-size: 24px;
-    font-weight: 400;
-}
-.feature_list {
-    margin-top: 16px;
-}
-.feature:not(:last-child) {
-    margin-bottom: 21px;
-}
-.feature_title {
-    padding-left: 31px;
-}
-.feature_title i {
-    position: absolute;
-    top: calc(50% - 1px);
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
-    transform: translateY(-50%);
-    left: 0;
-    font-size: 18px;
-}
-.sidebar_teacher {
-    margin-top: 40px;
-}
-.teacher_image {
-    width: 102px;
-    height: 102px;
-}
-.teacher_image img {
-    max-width: 100%;
-}
-.teacher_title {
-    padding-left: 35px;
-}
-.teacher_position {
-    font-size: 14px;
-    margin-top: 4px;
-}
-.teacher_name a {
-    font-family: "Roboto Slab", serif;
-    font-size: 24px;
-    font-weight: 700;
     -webkit-transition: all 200ms ease;
     -moz-transition: all 200ms ease;
     -ms-transition: all 200ms ease;
     -o-transition: all 200ms ease;
     transition: all 200ms ease;
 }
-.teacher_meta_container {
-    margin-top: 27px;
+.mapa_posts_small {
+    padding-top: 20px;
 }
-.teacher_meta:not(:last-child) {
-    margin-bottom: 9px;
+.mapa_post_small:not(:last-child) {
+    padding-bottom: 15px;
+    /* border-bottom: solid 1px #e5e5e5; */
 }
-.teacher_meta_title,
-.teacher_meta_text span {
-    font-size: 14px;
-    font-weight: 400;
+.mapa_post_small:not(:first-child) {
+    padding-top: 29px;
 }
-.teacher_meta_text span {
-    margin-right: 4px;
-}
-.teacher_info {
-    margin-top: 17px;
-}
-.teacher_info p {
-    line-height: 2;
-}
-.sidebar_latest {
-    margin-top: 31px;
-}
-.latest:not(:last-child) {
-    margin-bottom: 20px;
-}
-.latest_image div {
-    width: 90px;
-    height: 74px;
-    border-radius: 3px;
-    overflow: hidden;
-}
-.latest_image div img {
-    max-width: 100%;
-}
-.latest_content {
-    padding-left: 21px;
-    margin-top: -4px;
-}
-.latest_title a {
-    font-family: "Roboto Slab", serif;
-    font-size: 16px;
+.mapa_post_small_title a {
+    font-family: "Museo Sans 500", "Roboto Slab", serif;
+    font-size: 25px;
     font-weight: 700;
-    line-height: 1.625;
+    line-height: 1.55;
     -webkit-transition: all 200ms ease;
     -moz-transition: all 200ms ease;
     -ms-transition: all 200ms ease;
     -o-transition: all 200ms ease;
     transition: all 200ms ease;
 }
-.latest_price {
-    font-family: "Roboto Slab", serif;
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 0.75;
-    margin-top: 16px;
-}
 
 /*********************************
-8. Newsletter
+13. Newsletter
 *********************************/
 
 .newsletter {
@@ -1253,16 +1043,13 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
 }
 .newsletter_container {
     width: 100%;
     height: 120px;
 }
 .newsletter_title {
-    font-family: "Roboto Slab", serif;
+    font-family: "Museo Sans 500", "Roboto Slab", serif;
     font-size: 20px;
     font-weight: 700;
     text-transform: uppercase;
@@ -1324,9 +1111,81 @@ section {
 }
 
 /*********************************
-9. Footer
+14. Paginas del gobierno
 *********************************/
 
+.pagespublic {
+    padding: 40px 0;
+}
+.pagespublic .pagepublic {
+    margin-bottom: 30px;
+    transition: transform 0.3s;
+}
+.pagespublic .pagepublic:hover {
+    transform: scale(1.05);
+}
+.pagespublic .pagepublic_icon img {
+    max-width: 100%;
+    height: auto;
+    padding-bottom: 30px;
+}
+.pagespublic .section_title {
+    padding-bottom: 50px;
+}
+
+@media (max-width: 991px) {
+    .pagespublic .pagepublic_col {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 767px) {
+    .pagespublic .pagepublic_col {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+/*********************************
+15. Campañas
+*********************************/
+.campañas {
+    padding: 40px 0;
+}
+.campañas .campaña {
+    margin-bottom: 15px;
+    transition: transform 0.3s;
+}
+.campañas .campaña:hover {
+    transform: scale(1.05);
+}
+.campañas .campaña_icon img {
+    max-width: 100%;
+    height: auto;
+    padding-bottom: 10px;
+}
+.campañas .section_title {
+    padding-bottom: 50px;
+}
+@media (max-width: 991px) {
+    .campañas .campaña_col {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 767px) {
+    .campañas .campaña_col {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+/*********************************
+16. Footer
+*********************************/
+/*FIN DE LA PAGINA FOOTER*/
 .footer {
     display: block;
     position: relative;
@@ -1347,7 +1206,7 @@ section {
     padding-bottom: 53px;
 }
 .footer_logo_text {
-    font-family: "Roboto Slab", serif;
+    font-family: "Museo Sans 500", "Roboto Slab", serif;
     font-size: 36px;
     font-weight: 700;
     line-height: 0.75;
@@ -1358,8 +1217,7 @@ section {
     transition: all 200ms ease;
 }
 .footer_title {
-    font-family: "Roboto Slab", serif;
-    font-size: 18px;
+    font-family: "Museo Sans 500", "Roboto Slab", serif;
     font-weight: 700;
     line-height: 0.75;
 }
@@ -1368,31 +1226,6 @@ section {
 }
 .footer_about_text {
     margin-top: 31px;
-}
-.footer_social {
-    margin-top: 23px;
-}
-.footer_social ul li {
-    display: inline-block;
-    width: 35px;
-    height: 45px;
-    border-radius: 50%;
-    -webkit-transition: all 200ms ease;
-    -moz-transition: all 200ms ease;
-    -ms-transition: all 200ms ease;
-    -o-transition: all 200ms ease;
-    transition: all 200ms ease;
-}
-.footer_social ul li:not(:last-child) {
-    margin-right: 6px;
-}
-.footer_social ul li a {
-    display: block;
-    position: relative;
-    text-align: center;
-}
-.footer_social ul li a i {
-    line-height: 45px;
 }
 .footer_contact {
     padding-left: 36px;

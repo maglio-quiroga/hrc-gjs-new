@@ -15,7 +15,7 @@
 
                             </div>
                         </div>
-                        
+
                         <div class="col-lg-3 footer_col">
                             <div class="row d-flex flex-row justify-content-around">
                                 <div class="footer_section footer_contact">
@@ -30,7 +30,7 @@
                                 </div>
                             </div>
                             <div class="row d-flex flex-row justify-content-around">
-                                <div class="footer_social" style="padding-top: 25px">
+                                <div class="footer_social">
                                     <div class="footer_title mb-3" style="font-family:Montserrat">Redes Sociales</div>
                                     <ul >
                                         <!-- <li style="background-color: #1e2434"><a href="https://www.facebook.com/eco.uda.cl"><i class="fa fa-facebook" aria-hidden="false"></i></a></li> -->

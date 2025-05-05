@@ -9,22 +9,18 @@
 2. Body and some general stuff
 3. Header
 	3.1 Top Bar
-	3.2 Navbar
+	3.2 Header Content
 	3.3 Logo
 	3.4 Main Nav
-		No tiene nada
 	3.5 Hamburger
 4. Menu
 5. Section
 6. Home
-7. Features
-8. Courses
-9. Counter
-10. Events
-11. Team
-12. News
-13. Newsletter
-14. Footer
+7. Blog
+8. Newsletter
+9. Footer
+
+
 
 ******************************/
 
@@ -34,21 +30,17 @@
 
 @import url("https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:300,400,500,700,900");
 
-/*TODOS LOS CAMBIOS DE ESTE CSS
-    FUERON REALIZADO SOLO VIENDO
-    LA PAGINA PRINCIPAL DE INICIO*/
-
 /*********************************
 2. Body and some general stuff
 *********************************/
-/*MAPA DEL GOOGLE FIN DE LA PAGINA*/
+
 * {
     margin: 0;
     padding: 0;
     -webkit-font-smoothing: antialiased;
 }
 body {
-    font-family: "Museo Sans 500", "Roboto", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 14px;
     font-weight: 400;
 }
@@ -64,7 +56,7 @@ ul {
     margin-bottom: 0px;
 }
 p {
-    font-family: "Museo Sans 500", "Roboto", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 14px;
     line-height: 1.85;
     font-weight: 400;
@@ -121,7 +113,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Museo Sans 500", "Roboto Slab", serif;
+    font-family: "Roboto Slab", serif;
     font-weight: 700;
     -webkit-font-smoothing: antialiased;
     margin-bottom: 0;
@@ -197,20 +189,20 @@ section {
     overflow: hidden;
 }
 .prlx {
-    height: 130%;
+    height: 130% !important;
 }
 .parallax-window {
     min-height: 400px;
     background: transparent;
 }
 .nopadding {
-    padding: 0px;
+    padding: 0px !important;
 }
 
 /*********************************
 3. Header
 *********************************/
-/*VANER ARRIBA DEL PRINCIPAL (VERDE)*/
+
 .header {
     position: fixed;
     top: 0;
@@ -230,7 +222,7 @@ section {
 /*********************************
 3.1 Top Bar
 *********************************/
-/*BARRA VERDE ARRIBA DEL VANAER*/
+
 .top_bar {
     width: 100%;
 }
@@ -248,7 +240,7 @@ section {
     display: inline-block;
 }
 .question {
-    font-family: "Museo Sans 500", "Roboto Slab", serif;
+    font-family: "Roboto Slab", serif;
     font-size: 14px;
     margin-left: 0px;
 }
@@ -279,54 +271,28 @@ section {
 }
 
 /*********************************
-3.2 Navbar
+3.2 Header Content
 *********************************/
-/*VANER PRINCIPAL (INICIO, QUIENES SOMOS, INFORMACION PACIENTE, ETC*/
-.navbar_container {
+
+.header_container {
     width: 100%;
 }
-@media only screen and (max-width: 991px) {
-    .navbar {
-        width: 100%;
-    }
-}
-.navbar-nav .nav-link {
-    transition: color 0.2s ease-in-out;
-}
-.navbar-brand img {
-    max-width: 80px;
-    height: auto;
-}
-@media (max-width: 768px) {
-    .navbar-brand img {
-        width: 150px;
-        height: auto;
-    }
-}
-.navbar-nav li a {
+.header_content {
+    height: 90px;
     -webkit-transition: all 200ms ease;
     -moz-transition: all 200ms ease;
     -ms-transition: all 200ms ease;
     -o-transition: all 200ms ease;
     transition: all 200ms ease;
 }
-.navbar-nav li.active::after {
-    display: block;
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    content: "";
-}
-.navbar-nav .dropdown-menu a {
-    font-size: 16px;
+.header.scrolled .header_content {
+    height: 80px;
 }
 
 /*********************************
 3.3 Logo
 *********************************/
-/*IMAGEN DEL VANER PRINCIPAL*/
+
 .logo,
 .logo_text {
     display: inline-block;
@@ -344,12 +310,12 @@ section {
     max-width: 100%;
 }
 .logo_text {
-    font-family: "Museo Sans 500", "Roboto Slab", serif;
+    font-family: "Roboto Slab", serif;
     font-size: 36px;
     font-weight: 700;
     line-height: 0.75;
     vertical-align: middle;
-    margin-left: 7px;
+    margin-left: 4px;
     -webkit-transition: all 200ms ease;
     -moz-transition: all 200ms ease;
     -ms-transition: all 200ms ease;
@@ -464,6 +430,7 @@ section {
 /*********************************
 3.5 Hamburger
 *********************************/
+
 .hamburger_container {
 }
 .hamburger {
@@ -609,467 +576,129 @@ section {
 5. Section
 *********************************/
 
-/*SIN CAMBIOS*/
+.section_title_container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+.section_title {
+    line-height: 1.2;
+}
+.section_subtitle {
+    line-height: 1.85;
+    margin-top: 14px;
+}
+.section_background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
 
 /*********************************
 6. Home
 *********************************/
-/*CARRUSEL*/
-.home {
-    width: 100%;
-    height: 800px;
-}
-.home_slider_container {
-    width: 100%;
-    height: 100%;
-}
-.home_slider {
-    width: 100%;
-    height: 100%;
-}
-.home_slider_background {
+
+.breadcrumbs_container {
     position: absolute;
-    top: 0;
     left: 0;
+    bottom: 0;
     width: 100%;
-    height: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
+    padding-bottom: 13px;
+    padding-left: 3px;
 }
-.home_slider_content {
-    position: absolute;
-    top: 41%;
-    left: 0;
-    width: 100%;
-    height: auto;
-}
-.home_slider_title {
-    font-family: "Museo Sans 500", "Roboto Slab", serif;
-    font-size: 60px;
-    font-weight: 700;
-    line-height: 1.2;
-}
-.home_slider_subtitle {
-    font-size: 24px;
-    margin-top: 9px;
-}
-.home_slider_form_container {
-    width: 832px;
-    margin: 0 auto;
-    margin-top: 35px;
-}
-.home_search_form div {
-    width: calc(100% - 140px);
-    height: 46px;
-    border-radius: 3px;
-}
-.home_search_input {
-    width: 33.33333333%;
-    border: none;
-    outline: none;
-    height: 25px;
-    padding-left: 20px;
-}
-.home_search_input:not(:last-child) {
-    border-right: solid 1px #e5e5e5;
-}
-.home_search_input::-webkit-input-placeholder {
-    font-family: "Museo Sans 500", "Roboto", sans-serif;
-    font-size: 14px !important;
-    font-weight: 400 !important;
-}
-.home_search_input:-moz-placeholder {
-    font-family: "Museo Sans 500", "Roboto", sans-serif;
-    font-size: 14px !important;
-    font-weight: 400 !important;
-}
-.home_search_input::-moz-placeholder {
-    font-family: "Museo Sans 500", "Roboto", sans-serif;
-    font-size: 14px !important;
-    font-weight: 400 !important;
-}
-.home_search_input:-ms-input-placeholder {
-    font-family: "Museo Sans 500", "Roboto", sans-serif;
-    font-size: 14px !important;
-    font-weight: 400 !important;
-}
-.home_search_input::input-placeholder {
-    font-family: "Museo Sans 500", "Roboto", sans-serif;
-    font-size: 14px !important;
-    font-weight: 400 !important;
-}
-.dropdown_item_select {
+.breadcrumbs ul li {
+    display: inline-block;
     position: relative;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    -ms-appearance: none;
-    -o-appearance: none;
-    appearance: none;
-    -webkit-user-select: none;
-    background-image: url(../images/down.png);
-    background-position: center right;
-    background-repeat: no-repeat;
-    padding-right: 20px;
-    padding-left: 20px;
 }
-.home_search_button {
-    width: 120px;
-    height: 46px;
-    border: none;
-    outline: none;
-    border-radius: 3px;
-    font-size: 14px;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    cursor: pointer;
-}
-.home_slider_nav {
-    position: absolute;
-    top: 55.8%;
-    width: 50px;
-    border-radius: 50%;
-    text-align: center;
-    z-index: 10;
-    cursor: pointer;
-    -webkit-transition: all 200ms ease;
-    -moz-transition: all 200ms ease;
-    -ms-transition: all 200ms ease;
-    -o-transition: all 200ms ease;
-    transition: all 200ms ease;
-}
-.home_slider_prev {
-    left: 75px;
-}
-.home_slider_next {
-    right: 75px;
-}
-.home_slider_nav i {
-    line-height: 50px;
-    font-size: 22px;
-}
-
-/*********************************
-7. Features
-*********************************/
-
-/*SIN CAMBIOS*/
-
-/*********************************
-8. Courses
-*********************************/
-
-/*SIN CAMBIOS*/
-
-/*********************************
-9. Counter
-*********************************/
-
-/*SIN CAMBIOS*/
-
-/*********************************
-10. noticias
-*********************************/
-
-.noticias {
-    width: 100%;
-    padding-top: 93px;
-    padding-bottom: 70px;
-}
-.noticias_row {
-    margin-top: 47px;
-}
-.noticia_left {
-    padding-right: 20px;
-}
-.noticia_mid {
-    padding-left: 10px;
-    padding-right: 10px;
-}
-.noticia_right {
-    padding-left: 20px;
-}
-.noticia_image {
-    width: 100%;
-    border-radius: 5px;
-    overflow: hidden;
-}
-.noticia_image img {
-    max-width: 100%;
-}
-.noticia_body {
-    padding-top: 30px;
-    padding-bottom: 30px;
+.breadcrumbs ul li:not(:last-child)::after {
     display: inline-block;
     font-family: "FontAwesome";
+    content: "\f105";
     margin-left: 7px;
     margin-right: 4px;
 }
-.noticia_date > div {
-    width: 60px;
-    height: 60px;
-}
-.noticia_day {
-    font-family: "Museo Sans 500", "Roboto Slab", serif;
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 0.75;
-}
-.noticia_month {
-    font-family: "Museo Sans 500", "Roboto Slab", serif;
+.breadcrumbs ul li a {
     font-size: 14px;
     font-weight: 400;
-    line-height: 0.75;
-    margin-top: 9px;
-}
-.noticia_content {
-    padding-left: 20px;
-}
-.noticia_title a {
-    font-family: "Museo Sans 500", "Roboto Slab", serif;
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 1.4;
     -webkit-transition: all 200ms ease;
     -moz-transition: all 200ms ease;
     -ms-transition: all 200ms ease;
     -o-transition: all 200ms ease;
     transition: all 200ms ease;
-}
-.noticia_info_container {
-    margin-top: 11px;
-}
-.noticia_info {
-    display: inline-block;
-    font-size: 14px;
-}
-.noticia_info:not(:last-child) {
-    margin-right: 17px;
-}
-.noticia_info span {
-    margin-left: 4px;
-}
-.noticia_text {
-    margin-top: 12px;
-}
-.custom-carousel-control {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    z-index: 10;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 /*********************************
-11. Team
+7. Blog
 *********************************/
-/*INSTAGRAM*/
-.team {
-    width: 100%;
-    padding-top: 93px;
-    padding-bottom: 60px;
-}
-.team_background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-.team_row {
-    margin-top: 43px;
-}
-.team_col {
-    margin-bottom: 40px;
-}
-.team_item {
-    width: 100%;
-}
-.team_image {
-    width: 70%;
-    height: 185px;
-    border-radius: 6px;
-    overflow: hidden;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: -86px;
-    z-index: 5;
-}
-.team_image img {
-    max-width: 100%;
-}
-.team_body {
-    width: 100%;
-    height: 180px;
-    padding-top: 108px;
-    padding-bottom: 24px;
-    border-radius: 15px;
-    text-align: center;
-    -webkit-transition: all 200ms ease;
-    -moz-transition: all 200ms ease;
-    -ms-transition: all 200ms ease;
-    -o-transition: all 200ms ease;
-    transition: all 200ms ease;
-}
-.team_subtitle {
-    font-size: 14px;
-    font-weight: 400;
-    margin-top: 6px;
-    padding-left: 10px;
-    line-height: 1.71;
-}
-.contact_info_container {
-    margin-top: 100px;
-}
-.contact_info_title {
-    font-family: "Roboto Slab", serif;
-    font-size: 36px;
-    font-weight: 700;
-}
-.contact_form {
-    padding-right: 10px;
-}
-.social_list {
-    margin-top: 16px;
-}
-.social_list ul li {
-    display: inline-block;
-    width: 100%;
-    height: 46px;
-    border-radius: 3px;
-    padding-left: 19px;
-    font-size: 16px;
-    font-weight: 400;
-}
-.social_list ul li:not(:last-child) {
-    margin-right: 10px;
-}
-.social_list ul li a i {
-    font-size: 18px;
-    -webkit-transition: all 200ms ease;
-    -moz-transition: all 200ms ease;
-    -ms-transition: all 200ms ease;
-    -o-transition: all 200ms ease;
-    transition: all 200ms ease;
-    outline: none;
-}
-.comment_textarea {
-    width: 100%;
-    height: 150px;
-    padding-top: 15px;
-}
-.form_title {
-    font-size: 16px;
-    font-weight: 400;
-    margin-bottom: 12px;
-}
-.comment_button {
-    width: 150px;
-    height: 46px;
-    text-transform: uppercase;
-    font-size: 14px;
-    font-weight: 500;
-    cursor: pointer;
-    border: none;
-    outline: none;
-    border-radius: 3px;
-    margin-top: 15px;
-}
-.contact_info {
-    padding-left: 45px;
-}
-.contact_info_text {
-    margin-top: 27px;
-}
-.contact_info_location {
-    margin-top: 28px;
-}
-.contact_info_location_title {
-    font-family: "Roboto Slab", serif;
-    font-size: 18px;
-    font-weight: 700;
-}
-.team_col .team_item {
-    padding-left: 6px;
-    padding-right: 6px;
-    font-size: 14px;
-}
-.team_col:first-child .team_item {
-    padding-left: 0;
-    padding-right: 6px;
-}
-.team_col:nth-child(4n) .team_item {
-    padding-left: 6px;
-    padding-right: 0;
-}
-.team .section_title {
-    padding-bottom: 50px;
-}
 
-/*********************************
-12. Mapa
-*********************************/
-.mapa_container {
+.blog {
     width: 100%;
-    padding-top: 50px;
-}
-.mapa {
-    width: 100%;
-    padding-top: 93px;
+    padding-top: 100px;
     padding-bottom: 100px;
 }
-.mapa_row {
-    /*margin-top: 55px;*/
-}
-.mapa_post_large_container {
-    padding-right: 30px;
-}
-.mapa_post_large {
+.blog_post_container {
     width: 100%;
 }
-.mapa_post_image {
-    width: 100%;
+.blog_post {
+    width: calc((100% - 60px) / 3);
     border-radius: 6px;
     overflow: hidden;
+    margin-bottom: 30px;
 }
-.mapa_post_image img {
+.blog_post_image {
+    width: 100%;
+}
+.blog_post_image img {
     max-width: 100%;
 }
-.mapa_post_large_title {
-    margin-top: 23px;
+.blog_post_video_container {
+    width: 100%;
 }
-.mapa_post_large_title a {
-    font-family: "Museo Sans 500", "Roboto Slab", serif;
+.video-js {
+    width: 100%;
+}
+.video-js .vjs-big-play-button {
+}
+.vjs-control-bar {
+    display: -webkit-box !important;
+    display: -moz-box !important;
+    display: -ms-flexbox !important;
+    display: -webkit-flex !important;
+    display: flex !important;
+}
+.blog_post_body {
+    padding-left: 32px;
+    padding-right: 30px;
+    padding-top: 23px;
+    padding-bottom: 23px;
+}
+.blog_post_title a {
+    font-family: "Roboto Slab", serif;
     font-size: 20px;
-    font-weight: 700;
     line-height: 1.4;
+    font-weight: 700;
     -webkit-transition: all 200ms ease;
     -moz-transition: all 200ms ease;
     -ms-transition: all 200ms ease;
     -o-transition: all 200ms ease;
     transition: all 200ms ease;
 }
-.mapa_post_meta {
+.blog_post_meta {
     margin-top: 11px;
 }
-.mapa_post_meta ul li {
+.blog_post_meta ul li {
     display: inline-block;
     position: relative;
 }
-.mapa_post_meta ul li:not(:last-of-type)::after {
+.blog_post_meta ul li:not(:last-of-type)::after {
     display: inline-block;
     position: relative;
     content: "|";
     margin-left: 14px;
     margin-right: 11px;
 }
-.mapa_post_meta ul li a {
+.blog_post_meta ul li a {
     font-size: 14px;
     font-weight: 400;
     text-transform: uppercase;
@@ -1079,47 +708,32 @@ section {
     -o-transition: all 200ms ease;
     transition: all 200ms ease;
 }
-.mapa_post_text {
-    margin-top: 13px;
+.blog_post_text {
+    margin-top: 12px;
 }
-.mapa_post_link {
-    margin-top: 19px;
-}
-.mapa_post_link a {
+.blog_post_text p {
     font-size: 14px;
     font-weight: 400;
+    line-height: 2;
+}
+.load_more {
+    width: 150px;
+    height: 46px;
+    border-radius: 3px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+}
+.load_more a {
+    display: block;
+    line-height: 46px;
+    font-size: 14px;
     text-transform: uppercase;
-    text-decoration: underline;
-    -webkit-transition: all 200ms ease;
-    -moz-transition: all 200ms ease;
-    -ms-transition: all 200ms ease;
-    -o-transition: all 200ms ease;
-    transition: all 200ms ease;
-}
-.mapa_posts_small {
-    padding-top: 20px;
-}
-.mapa_post_small:not(:last-child) {
-    padding-bottom: 15px;
-    /* border-bottom: solid 1px #e5e5e5; */
-}
-.mapa_post_small:not(:first-child) {
-    padding-top: 29px;
-}
-.mapa_post_small_title a {
-    font-family: "Museo Sans 500", "Roboto Slab", serif;
-    font-size: 25px;
-    font-weight: 700;
-    line-height: 1.55;
-    -webkit-transition: all 200ms ease;
-    -moz-transition: all 200ms ease;
-    -ms-transition: all 200ms ease;
-    -o-transition: all 200ms ease;
-    transition: all 200ms ease;
+    font-weight: 500;
 }
 
 /*********************************
-13. Newsletter
+8. Newsletter
 *********************************/
 
 .newsletter {
@@ -1131,13 +745,16 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
 }
 .newsletter_container {
     width: 100%;
     height: 120px;
 }
 .newsletter_title {
-    font-family: "Museo Sans 500", "Roboto Slab", serif;
+    font-family: "Roboto Slab", serif;
     font-size: 20px;
     font-weight: 700;
     text-transform: uppercase;
@@ -1199,81 +816,9 @@ section {
 }
 
 /*********************************
-14. Paginas del gobierno
+9. Footer
 *********************************/
 
-.pagespublic {
-    padding: 40px 0;
-}
-.pagespublic .pagepublic {
-    margin-bottom: 30px;
-    transition: transform 0.3s;
-}
-.pagespublic .pagepublic:hover {
-    transform: scale(1.05);
-}
-.pagespublic .pagepublic_icon img {
-    max-width: 100%;
-    height: auto;
-    padding-bottom: 30px;
-}
-.pagespublic .section_title {
-    padding-bottom: 50px;
-}
-
-@media (max-width: 991px) {
-    .pagespublic .pagepublic_col {
-        flex: 0 0 50%;
-        max-width: 50%;
-    }
-}
-
-@media (max-width: 767px) {
-    .pagespublic .pagepublic_col {
-        flex: 0 0 100%;
-        max-width: 100%;
-    }
-}
-
-/*********************************
-15. Campañas
-*********************************/
-.campañas {
-    padding: 40px 0;
-}
-.campañas .campaña {
-    margin-bottom: 15px;
-    transition: transform 0.3s;
-}
-.campañas .campaña:hover {
-    transform: scale(1.05);
-}
-.campañas .campaña_icon img {
-    max-width: 100%;
-    height: auto;
-    padding-bottom: 10px;
-}
-.campañas .section_title {
-    padding-bottom: 50px;
-}
-@media (max-width: 991px) {
-    .campañas .campaña_col {
-        flex: 0 0 50%;
-        max-width: 50%;
-    }
-}
-
-@media (max-width: 767px) {
-    .campañas .campaña_col {
-        flex: 0 0 100%;
-        max-width: 100%;
-    }
-}
-
-/*********************************
-16. Footer
-*********************************/
-/*FIN DE LA PAGINA FOOTER*/
 .footer {
     display: block;
     position: relative;
@@ -1294,7 +839,7 @@ section {
     padding-bottom: 53px;
 }
 .footer_logo_text {
-    font-family: "Museo Sans 500", "Roboto Slab", serif;
+    font-family: "Roboto Slab", serif;
     font-size: 36px;
     font-weight: 700;
     line-height: 0.75;
@@ -1305,7 +850,8 @@ section {
     transition: all 200ms ease;
 }
 .footer_title {
-    font-family: "Museo Sans 500", "Roboto Slab", serif;
+    font-family: "Roboto Slab", serif;
+    font-size: 18px;
     font-weight: 700;
     line-height: 0.75;
 }
@@ -1314,32 +860,6 @@ section {
 }
 .footer_about_text {
     margin-top: 31px;
-}
-.footer_social {
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-.footer_social ul li {
-    display: inline-block;
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    -webkit-transition: all 200ms ease;
-    -moz-transition: all 200ms ease;
-    -ms-transition: all 200ms ease;
-    -o-transition: all 200ms ease;
-    transition: all 200ms ease;
-}
-.footer_social ul li:not(:last-child) {
-    margin-right: 10px;
-}
-.footer_social ul li a {
-    display: block;
-    position: relative;
-    text-align: center;
-}
-.footer_social ul li a i {
-    line-height: 25px;
 }
 .footer_contact {
     padding-left: 36px;
