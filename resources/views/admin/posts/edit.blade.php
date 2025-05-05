@@ -17,7 +17,6 @@
 
         <form action="{{ route('admin.handle.update', ['model' => 'posts', 'target' => $record->id]) }}" method="POST" enctype="multipart/form-data" class="card p-4 shadow-sm bg-white">
             @csrf
-            <!-- NO USAMOS @method('PUT') ya que el servidor sólo acepta POST -->
 
             <div class="mb-3">
                 <label class="form-label">Título:</label>
@@ -38,7 +37,7 @@
                 @endif
                 <input type="file" name="image" class="form-control mt-2">
             </div>
-
+            
             <div class="mb-3">
                 <label class="form-label">Categoría:</label>
                 <select name="category_id" class="form-select" required>
@@ -54,8 +53,8 @@
             <div class="mb-3">
                 <label class="form-label">Estado de publicación:</label>
                 <select name="posted" class="form-select" required>
-                    <option value="1" {{ old('posted', $record->posted) == '1' ? 'selected' : '' }}>Publicado</option>
-                    <option value="0" {{ old('posted', $record->posted) == '0' ? 'selected' : '' }}>Borrador</option>
+                    <option value="1" {{ old('posted', $record->published) == '1' ? 'selected' : '' }}>Publicado</option>
+                    <option value="0" {{ old('posted', $record->published) == '0' ? 'selected' : '' }}>Borrador</option>
                 </select>
             </div>
 

@@ -30,8 +30,32 @@
         @include('admin.templates.alerts')
     
         <div class="row mb-3">
+        @php
+            use App\Models\Category;
+            $categories = Category::all();
+        @endphp
             <div class="col">
                 <input type="text" id="inputBuscarNombre" class="form-control" placeholder="Buscar por titulo" onkeyup="buscarTabla()">
+            </div>
+
+            <div class="col">
+                <select id="selectEstado" class="form-select" onchange="buscarTabla()">
+                    <option value="">Todos los estados</option>
+                    <option value="Publicado">Publicado</option>
+                    <option value="Borrador">Borrador</option>
+                </select>
+            </div>
+
+            <div class="col">
+            <select id="selectCategoria" class="form-select" onchange="buscarTabla()">
+                <option value="">Todas las categorías</option>
+                @foreach ($categories as $category)
+                        <!-- <option value="{{ $category->id }}" {{ old('category_id') == $category->id ? 'selected' : '' }}> -->
+                        <option value="{{ $category->title }}">{{ $category->title }}</option>
+                            {{ $category->title }}
+                        <!-- </option> -->
+                @endforeach
+            </select>
             </div>
         </div>
 
