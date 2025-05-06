@@ -1224,6 +1224,11 @@ section {
     text-align: center; /* Centra el texto */
     font-weight: 500; /* Peso de la fuente */
     font-size: 1.5em;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
 }
 
 /*********************************
