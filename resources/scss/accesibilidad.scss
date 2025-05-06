@@ -1166,25 +1166,21 @@ section {
 
 #menuAccesibilidad button:hover {
 }
-
+/*aumentar tamaño del texto*/
 .texto-grande {
-    font-size: 1.5em !important;
+    font-size: 1.5em !important; 
 }
-
-/*******************************************
-*           Detalles Nuevos                *
-*******************************************/
 
 .high-contrast {
     filter: contrast(120%);
 }
 
 .larger-text {
-    font-size: 1.2em;
+    font-size: 0.05em;
 }
-
+/*reducir el tamaño del texto*/
 .smaller-text {
-    font-size: 0.9em;
+    font-size: 0.5em!important;
 }
 
 /*********************************************

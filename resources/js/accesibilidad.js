@@ -35,15 +35,36 @@ export function accesibilidad() {
                     body.classList.toggle("high-contrast");
                     document.body.classList.toggle("modo-alto-contraste");
                     break;
+                //AUMENTA EL TAÑO DEL TEXTO
                 case "increase-font":
-                    //CREANDO la lista para agregar la etiqueta "creo"
-                    document.body.classList.add("texto-grande");
-                    //AGREGAR etieueta fontSize a body
-                    document.body.style.fontSize = fontSize + "em";
-                    break;
+                    //si "smaller-text" SI existe
+                    if(document.body.classList.contains("smaller-text")){
+                        //remueve la clase "smaller-text"
+                        document.body.classList.remove("smaller-text");
+                        break;
+                    }
+                    //si "smaller-text" NO existe
+                    else{
+                        //CREANDO la lista para agregar la etiqueta
+                        document.body.classList.add("texto-grande");
+                        //AGREGAR etieueta fontSize a body
+                        document.body.style.fontSize = fontSize + "em";
+                        break;
+                    }
+                //REDUCIR TAMAÑO DEL TEXTO
                 case "decrease-font":
-                    body.classList.toggle("smaller-text");
-                    break;
+                    //si "texto-grande" SI existe
+                    if (document.body.classList.contains("texto-grande")) {
+                        //remueve la clase "texto-grande" mostrando el tamaño originañ 
+                        document.body.classList.remove("texto-grande");
+                        break;
+                    }
+                    //si "texto-grande" NO existe 
+                    else {
+                        //AGrege la clase para reducir texto
+                        document.body.classList.add("smaller-text");
+                        break;
+                    }
                 case "screen-reader":
                     const texto = document.body.innerText;
                     const speech = new SpeechSynthesisUtterance(texto);
