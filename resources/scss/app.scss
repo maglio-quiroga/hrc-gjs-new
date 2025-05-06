@@ -1,7 +1,17 @@
 // resources/scss/app.scss - OPCIÓN A
 
 // 1. Importar Bootstrap SCSS (Completo)
-@import 'bootstrap/scss/bootstrap';
+@import "bootstrap/scss/bootstrap";
+@import "./accesibilidad";
+@import "./meanMenu";
+@import "./courses";
+@import "./lightbox";
+@import "./directivo";
+@import "./flexslider";
+@import "./blog";
+@import "./blog_single";
+@import "./contact";
+@import "./course";
 
 // 2. Estilos personalizados ESPECÍFICOS que NO son reemplazados por Bootstrap.
 //    (Hemos eliminado las definiciones de .table, .btn, .btn-*, .form-control, .card, .alert, .alert-*
@@ -17,30 +27,21 @@
     border-right: none; // Mantener si es necesario
 }
 // Si quieres el redondeo específico en las esquinas de la tabla (Bootstrap puede hacerlo diferente)
-.table th:first-child, .table td:first-child {
-    border-top-left-radius: var(--bs-border-radius-lg); // O var(--bs-border-radius) si prefieres el normal
+.table th:first-child,
+.table td:first-child {
+    border-top-left-radius: var(
+        --bs-border-radius-lg
+    ); // O var(--bs-border-radius) si prefieres el normal
     border-bottom-left-radius: var(--bs-border-radius-lg);
 }
-.table th:last-child, .table td:last-child {
+.table th:last-child,
+.table td:last-child {
     border-top-right-radius: var(--bs-border-radius-lg);
     border-bottom-right-radius: var(--bs-border-radius-lg);
 }
 // NOTA: Los estilos de hover, zebra-striping (nth-child(even)) ya vienen con Bootstrap (.table-striped, .table-hover)
 //       y los padding/colores base también. Elimina los @apply correspondientes.
 
-/* text */
-.text-color {
-    // @apply text-gray-400; // Equivalente:
-    color: #9ca3af; /* Ajusta este color si es necesario */
-}
-
-/* card */
-// La clase .card base, .card-title, .card-body, .card-img-top se asume que usarás las de Bootstrap.
-// Mantenemos solo ajustes adicionales o clases únicas como .card-white.
-.card-white {
-    // @apply bg-white; // Equivalente:
-    background-color: var(--bs-white);
-}
 // Ajustes adicionales a .card-title si son necesarios además de la clase de Bootstrap
 .card-title {
     white-space: normal;
@@ -70,10 +71,6 @@
     object-fit: cover;
     height: 200px; // Ajuste específico
 }
-// Estilo para un botón personalizado dentro de la card (si no es un btn estándar)
-.card-button:hover {
-    background-color: #3a9f6f; // Mantener si es un botón específico.
-}
 
 /* icon menu */
 .icon-menu {
@@ -82,30 +79,6 @@
     align-items: center;
     border-right: 4px solid transparent;
     transition: border-color 0.2s ease-in-out; // transition-colors
-}
-.icon-menu-hover-blue {
-    // @apply hover:border-indigo-700;
-    &:hover {
-      border-right-color: #4338ca; // Color aproximado para indigo-700
-    }
-}
-.icon-menu-hover-yellow {
-    // @apply hover:border-yellow-700;
-    &:hover {
-      border-right-color: #b45309; // Color aproximado para yellow-700
-    }
-}
-.icon-menu-hover-green {
-    // @apply hover:border-green-700;
-    &:hover {
-      border-right-color: #047857; // Color aproximado para green-700
-    }
-}
-
-/* menu color */
-.menu-color {
-    // @apply text-blue-400;
-    color: #60a5fa; // Color aproximado para blue-400
 }
 
 /* Modal Adjustments */
@@ -116,19 +89,13 @@
     object-fit: cover;
     max-height: 300px;
     width: 100%;
-    border-radius: var(--bs-border-radius-lg); // Usar variable Bootstrap para consistencia
+    border-radius: var(
+        --bs-border-radius-lg
+    ); // Usar variable Bootstrap para consistencia
 }
 .modal-body p {
     text-align: justify;
     font-size: 0.95rem;
-}
-
-/* nav */
-.bg-primary {
-    // Este estilo es para la clase .bg-primary de Bootstrap.
-    // Puedes sobreescribir la variable $primary de Bootstrap antes de importar
-    // o dejar esta regla si quieres forzar este color específico.
-    background-color: #4b9011 !important; // Usar !important puede ser necesario para sobreescribir.
 }
 
 // --- FIN Opción A ---

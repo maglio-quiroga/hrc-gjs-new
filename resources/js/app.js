@@ -1,13 +1,14 @@
-// resources/js/app.js
+import "bootstrap"; // Importa Bootstrap JS
+import "../scss/compile.scss";
+import './focus-style.js'; /* Import de los estilos de la funcionalidad de recuadro de enfoque */
 
-import './bootstrap'; // Importa Axios
-import 'bootstrap';   // Importa Bootstrap JS
-
-import { accesibilidad } from "./accesibilidad"; // Tu script personalizado
+import { accesibilidad } from "./accesibilidad"; // Componente de accesibilidad
 accesibilidad();
 
 import Alpine from "alpinejs"; // Alpine.js
-
 window.Alpine = Alpine;
-
 Alpine.start();
+
+import axios from "axios";
+window.axios = axios;
+window.axios.defaults.headers.common["X-Requested-With"] = "XMLHttpRequest";

@@ -1,0 +1,1567 @@
+@import './focus-style.scss'; /* Import de los estilos de la funcionalidad de recuadro de enfoque */
+
+/* ===============================================
+   PALETA DE COLORES
+   =============================================== */
+:root {
+    /*=== Colores Base ===*/
+    --primary-blue: #14bdee; /* Color de logo y enlaces hover */
+    --primary-green: #38a735;
+    --primary-beige: #937c6f; /* Hover línea menú */
+    --primary-salmon: #ff6347; /* Rojo tomate (Color active enlaces p) */
+
+    /*=== Rojos ===*/
+    --red-100: #ffa07f;
+    --red-400: #dd5d54; /* Rojo ladrillo (Color texto form-control) */
+
+    /*=== Azules ===*/
+    --blue-a70: rgba(20, 189, 238, 0.7); /*--primary-blue semi-transparente */
+    --blue-400: #60a5fa;
+    --blue-600: #416fc4;
+    --blue-700: #4338ca;
+    --blue-800: #3372b5;
+    --blue-900: #1a4a72;
+    --blue-1000: #0c1923;
+
+    --yellow-400: #ffc80a;
+    --yellow-700: #b45309;
+
+    /*=== Verdes ===*/
+    --green-a50: rgba(36, 171, 47, 0.5); /* Verde semitransparente */
+    --green-100: #e2f3eb; /* Verde muy pálido (Fondo Navbar) */
+    --green-200: #c5e8d1; /* Verde pálido (Hover/Active enlaces y borde Navbar) */
+    --green-300: #b6e3c5;
+    --green-400: #75c891; /* Verde menta (Hover enlaces Navbar) */
+    --green-500: #4b9011; /* Verde oscuro */
+    --green-600: #3a9f6f; /* Verde lima */
+    --green-700: #047857; /* Verde oscuro */
+
+    /*=== Grises ===*/
+    --gray-100: #f8fcf9;
+    --gray-200: #f8f9f3;
+    --gray-300: #f3f3f3; /* Gris muy pálido (Fondo botón login) */
+    --gray-400: #e5e5e5;
+    --gray-500: #b5b8be;
+    --gray-600: #a5a5a5; /* Gris medio (Color por defecto del body) */
+    --gray-700: #76777a;
+    --gray-800: #4b505d;
+    --gray-900: #384158; /* Azul oscuro/grisáceo (Títulos h1-h6, texto botón login, texto nav, texto logo) */
+    --gray-1000: #353a49;
+
+    /*=== Tonos ===*/
+    --white: #ffffff; /* Negro puro (Usado en enlaces navbar) */
+    --black: #000000; /* Blanco puro (Usado en fondo body, texto hover enlaces p, texto top bar) */
+    --off-black-1: #232323; /* Línea menú */
+    --off-black-2: #181818;
+
+    /*=== Translúcidos ===*/
+    --black-a0: rgba(0, 0, 0, 0); /* Negro completamente transparente */
+    --black-a10: rgba(29, 34, 47, 0.1); /* Transparente más oscuro */
+    --black-a20: rgba(29, 34, 47, 0.2); /* Transparente más oscuro */
+    --black-a30: rgba(0, 0, 0, 0.3);
+    --black-a40: rgba(0, 0, 0, 0.4); /* Placeholder */
+    --black-a100: rgba(29, 34, 47, 0.5); /* Placeholder alt */
+    --black-a60: rgba(26, 74, 114, 0.6);
+    --black-a70: rgba(0, 0, 0, 0.7);
+    --black-a80: rgba(0, 0, 0, 0.8);
+    --black-a90: rgba(0, 0, 0, 0.9);
+    --white-a40: rgba(255, 255, 255, 0.4);
+    --white-a30: rgba(255, 255, 255, 0.3);
+    --white-a20: rgba(255, 255, 255, 0.2);
+}
+
+text-gray-900,
+text-gray-800,
+text-gray-200,
+text-gray-100 {
+    color: var(--gray-700);
+}
+
+/*********************************
+             JOSE
+*********************************/
+
+* {
+    -webkit-text-shadow: var(--black-a10) 0 0 1px;
+    text-shadow: var(--black-a10) 0 0 1px;
+}
+body {
+    background: var(--white); /* Modificado */
+    color: var(--gray-600); /* Modificado */
+}
+p {
+    color: var(--gray-700);
+    -webkit-text-shadow: var(--black-a10) 0 0 1px;
+    text-shadow: var(--black-a10) 0 0 1px;
+}
+p a {
+    color: inherit;
+    border-bottom: solid 1px var(--primary-salmon); /* Modificado */
+}
+a,
+a:hover,
+a:visited,
+a:active,
+a:link {
+    -webkit-text-shadow: var(--black-a10) 0 0 1px;
+    text-shadow: var(--black-a10) 0 0 1px;
+}
+p a:active {
+    color: var(--primary-salmon); /* Modificado */
+}
+p a:hover {
+    color: var(--white); /* Modificado */
+    background: var(--primary-salmon); /* Modificado */
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    -webkit-text-shadow: var(--black-a10) 0 0 1px;
+    text-shadow: var(--black-a10) 0 0 1px;
+    color: var(--gray-900); /* Modificado */
+}
+.form-control {
+    color: var(--red-400); /* Modificado */
+}
+
+/*********************************
+3. Header
+*********************************/
+
+.header {
+    box-shadow: 0px 5px 20px var(--black-a10);
+}
+
+/*********************************
+3.1 Top Bar
+*********************************/
+
+.top_bar {
+    background: var(--primary-green); /* Modificado */
+}
+.question {
+    color: var(--white); /* Modificado */
+}
+.top_bar_contact_list li i,
+.top_bar_contact_list li > div {
+    color: var(--white); /* Modificado */
+}
+.login_button {
+    background: var(--gray-300); /* Modificado */
+}
+.login_button a {
+    color: var(--gray-900); /* Modificado */
+}
+
+/*********************************
+3.2 Navbar
+*********************************/
+
+.navbar_container {
+    background: var(--green-100); /* Modificado */
+}
+.navbar {
+    background-color: var(--green-100); /* Modificado */
+}
+.navbar-nav .nav-link {
+    color: var(--black); /* Modificado */
+}
+.navbar-nav .nav-link:hover {
+    color: var(--green-400); /* Modificado */
+}
+.navbar-nav li a {
+    color: var(--gray-900); /* Modificado */
+}
+.navbar-nav li a:hover,
+.navbar-nav li.active a {
+    color: var(--green-200); /* Modificado */
+}
+.navbar-nav li.active::after {
+    background: var(--green-200); /* Modificado */
+}
+.navbar-nav .dropdown-menu a {
+    color: var(--gray-900); /* Modificado */
+}
+.navbar-nav .dropdown-menu a:hover {
+    color: var(--green-200); /* Modificado */
+}
+
+/*********************************
+3.3 Logo
+*********************************/
+
+.logo_text {
+    color: var(--gray-900); /* Modificado */
+}
+/*} línea 453 */
+.logo_text span {
+    color: var(--primary-blue);
+}
+.hamburger i {
+    color: var(--gray-1000);
+}
+.hamburger:hover i {
+    color: var(--primary-blue);
+}
+.menu {
+    background: var(--white);
+}
+.menu .logo a {
+    color: var(--black);
+}
+.menu_close div {
+    background: var(--off-black-1);
+}
+.menu_close:hover div/*aquí*/ {
+    background: var(--primary-beige);
+}
+.menu_nav ul li a {
+    color: var(--black);
+}
+.menu_nav ul li a:hover {
+    color: var(--primary-blue);
+}
+.menu .search_input {
+    background: var(--black-a10);
+    color: var(--black-a100);
+}
+.menu .search_input::-webkit-input-placeholder,
+.menu .search_input:-moz-placeholder,
+.menu .search_input::-moz-placeholder,
+.menu .search_input:-ms-input-placeholder,
+.menu .search_input::input-placeholder {
+    color: var(--black-a40) !important;
+}
+.home_slider_title {
+    color: var(--gray-900);
+}
+.home_slider_subtitle {
+    color: var(--gray-700);
+}
+.home_search_form div {
+    background: var(--white);
+}
+.home_search_input:not(:last-child) {
+    border-right: solid 1px var(--gray-400);
+}
+.home_search_input::-webkit-input-placeholder {
+    color: var(--gray-500) !important;
+}
+.home_search_input:-moz-placeholder {
+    color: var(--gray-500) !important;
+}
+.home_search_input::-moz-placeholder {
+    color: var(--gray-500) !important;
+}
+.home_search_input:-ms-input-placeholder {
+    color: var(--gray-500) !important;
+}
+.home_search_input::input-placeholder {
+    color: var(--gray-500) !important;
+}
+.dropdown_item_select {
+    -webkit-box-shadow: 0px 0px 0px var(--black-a0);
+}
+.home_search_button {
+    background: var(--green-300);
+    color: var(--white);
+}
+.home_slider_nav {
+    background: var(--gray-500);
+}
+/*No quedan más clases con cambio de colores hasta la linea 863*/
+
+/*********************************
+              SEBA
+*********************************/
+
+/* HOME SLIDER NAV */
+.home_slider_nav i {
+    color: var(--white);
+}
+.home_slider_nav:hover {
+    background: var(--green-300);
+}
+/* FEATURES */
+.features {
+    background: var(--white);
+}
+.feature {
+    background: var(--white);
+}
+.feature:hover {
+    box-shadow: 0px 5px 40px var(--black-a10);
+}
+/* COURSES */
+.courses {
+    background: var(--white);
+}
+.course {
+    background: var(--white);
+    box-shadow: 0px 1px 10px var(--black-a10);
+}
+.course_title a {
+    color: var(--gray-900);
+}
+.course_title a:hover {
+    color: var(--primary-blue);
+}
+.course_teacher {
+    color: var(--gray-900);
+}
+.course_info {
+    color: var(--gray-700);
+}
+.course_info i {
+    color: var(--yellow-400);
+}
+.course_price {
+    color: var(--primary-blue);
+}
+.course_price span {
+    color: var(--gray-500);
+}
+.courses_button {
+    background: var(--primary-blue);
+    box-shadow: 0px 5px 40px var(--black-a10);
+}
+.courses_button:hover {
+    box-shadow: 0px 5px 40px var(--black-a100);
+}
+.courses_button a {
+    color: var(--white);
+}
+/* COUNTER */
+.counter {
+    background: var(--white);
+}
+.counter_title {
+    color: var(--white);
+}
+.counter_text p {
+    color: var(--white);
+}
+.milestone:not(:last-child)::after {
+    background: var(--white-a20);
+}
+.milestone_counter {
+    color: var(--primary-blue);
+}
+.milestone_text {
+    color: var(--white);
+}
+.counter_form {
+    background: var(--white);
+    box-shadow: 0px 5px 40px var(--black-a10);
+}
+.counter_form_title {
+    color: var(--gray-900);
+}
+.counter_input {
+    border: solid 1px var(--gray-400);
+    color: var(--gray-900);
+}
+.counter_input::-webkit-input-placeholder,
+.counter_text_input::-webkit-input-placeholder,
+.counter_input:-moz-placeholder,
+.counter_text_input:-moz-placeholder,
+.counter_input::-moz-placeholder,
+.counter_text_input::-moz-placeholder,
+.counter_input:-ms-input-placeholder,
+.counter_text_input:-ms-input-placeholder,
+.counter_input::input-placeholder,
+.counter_text_input::input-placeholder {
+    color: var(--gray-500) !important;
+}
+.counter_form_button {
+    color: var(--white);
+    background: var(--primary-blue);
+    box-shadow: 0px 5px 40px var(--black-a10);
+}
+.counter_form_button:hover {
+    box-shadow: 0px 5px 40px var(--black-a100);
+}
+/* NOTICIAS */
+.noticias {
+    background: var(--white);
+}
+
+/*********************************
+             DIEGO
+*********************************/
+
+/* SECCIÓN DE CÓDIGO USADA EN courses.css */
+
+/*********************************
+3.2 Header Content
+*********************************/
+
+.header_container {
+    background: var(--white);
+}
+
+/*********************************
+3.4 Main Nav
+*********************************/
+
+.main_nav li a {
+    color: var(--gray-900);
+}
+.main_nav li a:hover,
+.main_nav li.active a {
+    color: var(--primary-blue);
+}
+.main_nav li.active::after {
+    background: var(--primary-blue);
+}
+.shopping_cart i {
+    color: var(--off-black-1);
+}
+.search_button:hover i,
+.shopping_cart:hover i {
+    color: var(--primary-blue);
+}
+.header_search_container {
+    background: var(--primary-blue);
+}
+
+/*********************************
+6. Home
+*********************************/
+
+.home {
+    background: var(--white);
+    border-bottom: solid 1px var(--white);
+}
+.breadcrumbs ul li:not(:last-child)::after {
+    color: var(--gray-900);
+}
+.breadcrumbs ul li a {
+    color: var(--gray-900);
+}
+.breadcrumbs ul li a:hover {
+    color: var(--primary-blue);
+}
+
+/*********************************
+7. Courses
+*********************************/
+
+.courses_search_container {
+    background: var(--white);
+}
+.courses_search_input {
+    border: solid 1px var(--gray-400);
+    background: var(--white);
+}
+.courses_search_input:focus {
+    outline: solid 1px var(--primary-blue);
+}
+.courses_search_select {
+    -webkit-box-shadow: 0px 0px 0px var(--black-a0);
+}
+.courses_search_button {
+    background: var(--primary-blue);
+    color: var(--white);
+}
+.course_footer_content {
+    border-top: solid 1px var(--gray-400);
+}
+.courses_show_content {
+    border: solid 1px var(--white);
+}
+.courses_show_content span {
+    color: var(--gray-900);
+}
+.courses_show_text {
+    color: var(--gray-900);
+}
+.courses_show_select {
+    -webkit-box-shadow: 0px 0px 0px var(--black-a0);
+    color: var(--gray-900);
+}
+
+/*********************************
+7.1 Pagination
+*********************************/
+
+.pagination_list li {
+    background: var(--white);
+    border: solid 1px var(--white);
+}
+.pagination_list li:hover,
+.pagination_list li.active {
+    background: var(--primary-blue);
+}
+.pagination_list li a {
+    color: var(--gray-700);
+}
+.pagination_list li:hover a,
+.pagination_list li.active a {
+    color: var(--white);
+}
+
+/*********************************
+8. Sidebar
+*********************************/
+
+.sidebar_section_title {
+    color: var(--gray-900);
+}
+.sidebar_categories ul li:not(:last-of-type) {
+    border-bottom: solid 1px var(--gray-400);
+}
+.sidebar_categories ul li a {
+    color: var(--gray-700);
+}
+.sidebar_categories ul li:hover a,
+.sidebar_categories ul li:hover a::before {
+    color: var(--primary-blue);
+}
+.sidebar_banner_overlay {
+    background: var(--primary-blue);
+}
+.latest_title a {
+    color: var(--gray-1000);
+}
+.latest_title a:hover {
+    color: var(--primary-blue);
+}
+.latest_price {
+    color: var(--primary-blue);
+}
+.tags_list li {
+    background: var(--white);
+}
+.tags_list li:hover {
+    background: var(--primary-blue);
+}
+.tags_list li:hover a {
+    color: var(--white);
+}
+.tags_list li a {
+    color: var(--gray-700);
+}
+.banner_title {
+    color: var(--white);
+}
+.banner_button {
+    background: var(--white);
+}
+.banner_button a {
+    color: var(--primary-blue);
+}
+.banner_button:hover {
+    background: var(--primary-blue);
+}
+.banner_button:hover a {
+    color: var(--white);
+}
+.gallery_item_overlay {
+    background: var(--blue-a70);
+    color: var(--white);
+}
+
+/* FIN DE LA SECCIÓN DE CÓDIGO USADA EN courses.css */
+
+/* SECCIÓN DE CÓDIGO USADA EN directivo.css */
+
+/*********************************
+ Equipo Directivo
+*********************************/
+
+.directivo_body {
+    background: var(--white);
+    box-shadow: 0px 1px 10px var(--black-a10);
+}
+.directivo_item:hover .directivo_body {
+    box-shadow: 0px 5px 40px var(--black-a20);
+}
+.directivo_title a {
+    color: var(--gray-900);
+}
+.directivo_title a:hover {
+    color: var(--primary-blue);
+}
+.directivo_subtitle {
+    color: var(--gray-700);
+}
+
+/* FIN DE LA SECCIÓN DE CÓDIGO USADA EN directivo.css */
+
+/* SECCIÓN DE CÓDIGO USADA EN flexslider.css */
+
+/*  ==============
+    DEFAULT THEME
+    ==============  */
+
+.flexslider {
+    background: var(--white);
+    border: 4px solid var(--white);
+    -webkit-box-shadow: "" 0 1px 4px var(--black-a20);
+    -moz-box-shadow: "" 0 1px 4px var(--black-a20);
+    -o-box-shadow: "" 0 1px 4px var(--black-a20);
+    box-shadow: "" 0 1px 4px var(--black-a20);
+}
+.flex-direction-nav a {
+    color: var(--black-a80);
+    text-shadow: 1px 1px 0 var(--white-a30);
+}
+.flex-direction-nav a:before {
+    color: var(--black-a80);
+    text-shadow: 1px 1px 0 var(--white-a30);
+}
+.flex-pauseplay a {
+    color: var(--black);
+}
+.flex-control-paging li a {
+    /* background: var(--gray-700); */
+    background: var(--black-a100);
+    -webkit-box-shadow: inset 0 0 3px var(--black-a30);
+    -moz-box-shadow: inset 0 0 3px var(--black-a30);
+    -o-box-shadow: inset 0 0 3px var(--black-a30);
+    box-shadow: inset 0 0 3px var(--black-a30);
+}
+.flex-control-paging li a:hover {
+    background: var(--gray-1000);
+    background: var(--black-a70);
+}
+.flex-control-paging li a.flex-active {
+    background: var(--black);
+    background: var(--black-a90);
+}
+
+/* FIN DE LA SECCIÓN DE CÓDIGO USADA EN flexslider.css */
+
+/* SECCIÓN DE CÓDIGO USADA EN lightbox.css */
+
+.lightboxOverlay {
+    background-color: var(--black);
+}
+.lightbox .lb-image {
+    /* Image border */
+    border: 4px solid var(--white);
+}
+.lb-outerContainer {
+    /* Background color behind image.
+    This is visible during transitions. */
+    background-color: var(--white);
+}
+.lb-data {
+    color: var(--gray-400);
+}
+.lb-data .lb-caption a {
+    color: var(--primary-blue);
+}
+.lb-data .lb-number {
+    color: var(--gray-600);
+}
+.noticia_date {
+    box-shadow: 0px 1px 10px var(--black-a10);
+}
+.noticia_day {
+    color: var(--primary-blue);
+}
+.noticia_month {
+    color: var(--primary-blue);
+}
+.noticia:hover .event_date > div {
+    background: var(--primary-blue);
+}
+.noticia:hover .event_day,
+.noticia:hover .event_month {
+    color: var(--white);
+}
+.noticia_title a {
+    color: var(--gray-900);
+}
+.noticia_title a:hover {
+    color: var(--primary-blue);
+}
+.noticia_info {
+    color: var(--gray-500);
+}
+.btn-secondary {
+    background-color: var(--primary-green);
+}
+.custom-carousel-control {
+    background-color: var(--green-a50);
+}
+.team_body {
+    background: var(--white);
+    box-shadow: 0px 1px 10px var(--black-a10);
+}
+.team_item:hover .team_body {
+    box-shadow: 0px 5px 40px var(--black-a10);
+}
+.team_title a {
+    color: var(--gray-900);
+}
+.team_title a:hover {
+    color: var(--green-300);
+}
+.team_subtitle {
+    color: var(--gray-700);
+}
+.social_list ul li a i {
+    color: var(--gray-700);
+}
+.social_list ul li:hover a i {
+    color: var(--green-300);
+}
+.mapa_container {
+    background: var(--white);
+}
+.mapa {
+    background: var(--white);
+}
+.mapa_post_large_title a {
+    color: var(--black);
+}
+.mapa_post_large_title a:hover {
+    color: var(--primary-blue);
+}
+.mapa_post_meta ul li a {
+    color: var(--gray-500);
+}
+.mapa_post_meta ul li a:hover {
+    color: var(--primary-blue);
+}
+.mapa_post_link a {
+    color: var(--gray-900);
+}
+.mapa_post_link a:hover {
+    color: var(--primary-blue);
+}
+.mapa_post_small_title a {
+    color: var(--gray-900);
+}
+.mapa_post_small_title a:hover {
+    color: var(--green-300);
+}
+.noticia_date {
+    box-shadow: 0px 1px 10px var(--black-a10);
+}
+.noticia_day {
+    color: var(--primary-blue);
+}
+.noticia_month {
+    color: var(--primary-blue);
+}
+.noticia:hover .event_date > div {
+    background: var(--primary-blue);
+}
+.noticia:hover .event_day,
+.noticia:hover .event_month {
+    color: var(--white);
+}
+.noticia_title a {
+    color: var(--gray-900);
+}
+.noticia_title a:hover {
+    color: var(--primary-blue);
+}
+.noticia_info {
+    color: var(--gray-500);
+}
+.btn-secondary {
+    background-color: var(--primary-green);
+}
+.custom-carousel-control {
+    background-color: var(--green-a50);
+}
+.team_body {
+    background: var(--white);
+    box-shadow: 0px 1px 10px var(--black-a10);
+}
+.team_item:hover .team_body {
+    box-shadow: 0px 5px 40px var(--black-a10);
+}
+.team_title a {
+    color: var(--gray-900);
+}
+.team_title a:hover {
+    color: var(--green-300);
+}
+.team_subtitle {
+    color: var(--gray-700);
+}
+.mapa_container {
+    background: var(--white);
+}
+.mapa {
+    background: var(--white);
+}
+.mapa_post_large_title a {
+    color: var(--black);
+}
+.mapa_post_large_title a:hover {
+    color: var(--primary-blue);
+}
+.mapa_post_meta ul li a {
+    color: var(--gray-500);
+}
+.mapa_post_meta ul li a:hover {
+    color: var(--primary-blue);
+}
+.mapa_post_link a {
+    color: var(--gray-900);
+}
+.mapa_post_link a:hover {
+    color: var(--primary-blue);
+}
+.mapa_post_small_title a {
+    color: var(--gray-900);
+}
+.mapa_post_small_title a:hover {
+    color: var(--green-300);
+}
+
+/*********************************
+             CELES
+*********************************/
+
+.noticia_date {
+    box-shadow: 0px 1px 10px var(--black-a10);
+}
+.noticia_day {
+    color: var(--primary-green);
+}
+.noticia_month {
+    color: var(--primary-green);
+}
+.noticia:hover .event_date > div {
+    background: var(--primary-green);
+}
+.noticia:hover .event_day,
+.noticia:hover .event_month {
+    color: var(--white);
+}
+.noticia_title a {
+    color: var(--gray-900);
+}
+.noticia_title a:hover {
+    color: var(--primary-blue);
+}
+.noticia_info {
+    color: var(--gray-500);
+}
+.btn-secondary {
+    background-color: var(--gray-900);
+}
+.custom-carousel-control {
+    background-color: var(--green-a50);
+}
+
+/*********************************
+11. Team
+*********************************/
+
+.card-title {
+    color: var(--gray-1000);
+}
+.team_body {
+    background: var(--white);
+    box-shadow: 0px 1px 10px var(--black-a10);
+}
+.team_item:hover .team_body {
+    box-shadow: 0px 5px 40px var(--black-a10);
+}
+.team_title a {
+    color: var(--gray-900);
+}
+.team_title a:hover {
+    color: var(--green-300);
+}
+.team_subtitle {
+    color: var(--gray-700);
+}
+
+/*********************************
+12. Mapa
+*********************************/
+
+.mapa_container {
+    background: var(--white);
+}
+.mapa {
+    background: var(--white);
+}
+.mapa_post_large_title a {
+    color: var(--black);
+}
+.mapa_post_large_title a:hover {
+    color: var(--primary-blue);
+}
+.mapa_post_meta ul li a {
+    color: var(--gray-500);
+}
+.mapa_post_meta ul li a:hover {
+    color: var(--primary-blue);
+}
+.mapa_post_link a {
+    color: var(--gray-900);
+}
+.mapa_post_link a:hover {
+    color: var(--primary-blue);
+}
+.mapa_post_small_title a {
+    color: var(--gray-900);
+}
+.mapa_post_small_title a:hover {
+    color: var(--green-300);
+}
+.accordion-item {
+    color: var(--gray-1000);
+    background-color: var(--gray-100);
+    border: var(--bs-accordion-border-width) solid var(--white);
+}
+.accordion-button {
+    background-color: var(--gray-200);
+}
+.accordion-button:not(.collapsed) {
+    color: var(--black);
+    background-color: var(--green-300);
+    box-shadow: inset 0 -1px 0 var(--black-a10);
+}
+.accordion-header {
+    background-color: var(--gray-200);
+}
+
+/*********************************
+13. Newsletter
+*********************************/
+
+.newsletter_title {
+    color: var(--white);
+}
+.newsletter_subtitle {
+    color: var(--white);
+}
+.newsletter_input {
+    background: var(--white-a40);
+    color: var(--white);
+}
+.newsletter_input::-webkit-input-placeholder,
+.newsletter_input:-moz-placeholder,
+.newsletter_input::-moz-placeholder,
+.newsletter_input:-ms-input-placeholder,
+.newsletter_input::input-placeholder {
+    color: var(--white) !important;
+}
+.newsletter_button {
+    background: var(--white);
+    color: var(--primary-blue);
+}
+
+/*********************************
+16. Footer
+*********************************/
+
+.footer {
+    background: var(--gray-1000);
+}
+.footer_logo_text {
+    color: var(--white);
+}
+.footer_logo_text span {
+    color: var(--primary-blue);
+}
+.footer_title {
+    color: var(--white);
+}
+.footer_about_text p {
+    color: var(--white);
+}
+.footer_social ul li {
+    background: var(--gray-800);
+}
+.footer_social ul li a i {
+    color: var(--white);
+}
+.footer_social ul li:hover {
+    background: var(--primary-blue);
+}
+.footer_contact_info ul li {
+    color: var(--gray-500);
+}
+.footer_links_container ul li a {
+    color: var(--gray-500);
+}
+.footer_links_container ul li a:hover {
+    color: var(--primary-blue);
+}
+.copyright {
+    border-top: solid 1px var(--gray-1000);
+}
+.copyright div {
+    color: var(--gray-500);
+}
+.cr_text a {
+    color: var(--white);
+}
+.cr_text a:hover {
+    color: var(--primary-blue);
+}
+.cr_list li a {
+    color: var(--gray-500);
+}
+.cr_list li a:hover {
+    color: var(--primary-blue);
+}
+
+/*********************************
+             EXTRAS
+*********************************/
+
+.card-button:hover {
+    background-color: var(--green-600);
+}
+/* nav */
+.bg-primary {
+    background-color: var(--green-500) !important;
+}
+/* menu color */
+.menu-color {
+    color: var(--blue-400);
+}
+.icon-menu-hover-blue {
+    &:hover {
+        border-right-color: var(--blue-700);
+    }
+}
+.icon-menu-hover-yellow {
+    &:hover {
+        border-right-color: var(--yellow-700);
+    }
+}
+.icon-menu-hover-green {
+    &:hover {
+        border-right-color: var(--green-700);
+    }
+}
+.text-color {
+    color: var(--gray-600); /* Ajusta este color si es necesario */
+}
+.card-white {
+    background-color: var(--white);
+}
+
+#btnAccesibilidad {
+    color: var(--white);
+    background-color: var(--primary-blue);
+    box-shadow: 2px 2px 10px var(--black-a40);
+}
+#menuAccesibilidad {
+    background: var(--white);
+    border: 1px solid var(--gray-500);
+    box-shadow: 2px 2px 10px var(--black-a20);
+}
+#menuAccesibilidad button {
+    background-color: var(--primary-green);
+    color: white;
+}
+#menuAccesibilidad button:hover {
+    background-color: var(--green-700);
+}
+.modo-alto-contraste {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+/*******************************************
+*           Detalles Nuevos                *
+*******************************************/
+
+/* Estilos personalizados para las tarjetas */
+.card {
+    box-shadow: 0 0.125rem 0.25rem var(--black-a10);
+    background-color: var(--gray-300);
+}
+.card:hover {
+    box-shadow: 0 10px 20px var(--black-a10);
+}
+.border-color-1 {
+    background-color: var(--blue-800);
+}
+.border-color-2 {
+    background-color: var(--red-400);
+}
+.card-body {
+    color: var(--blue-600);
+}
+.card-header {
+    background-color: var(--green-700);
+    color: var(--white);
+}
+.card-button:hover {
+    background-color: var(--green-700);
+}
+.card-title {
+    color: var(--gray-1000);
+}
+.card-text {
+    color: var(--gray-800);
+}
+.card-button {
+    background-color: var(--green-600);
+    color: var(--white);
+}
+
+/*******************************
+*            Main              *
+*******************************/
+
+.ih-item.circle.effect1 .spinner {
+    border: 15px solid var(--gray-800);
+    border-right-color: var(--gray-700);
+    border-bottom-color: var(--gray-700);
+}
+.ih-item.circle.effect1.colored .info {
+    background: var(--blue-900);
+    background: var(--black-a60);
+}
+.ih-item.circle.effect1 .info {
+    background: var(--blue-900);
+    background: var(--black-a60);
+}
+.ih-item.circle.effect1 .info h3 {
+    color: #fff;
+    text-shadow:
+        0 0 1px var(--white),
+        0 1px 2px var(--black-a10);
+}
+
+/*! #######################################################################
+	MeanMenu 2.0.7
+	--------
+	To be used with jquery.meanmenu.js by Chris Wharton (http://www.meanthemes.com/plugins/meanmenu/)
+####################################################################### */
+
+.mean-container .mean-bar {
+    background: var(--blue-1000);
+}
+.mean-container a.meanmenu-reveal {
+    color: var(--white);
+}
+.mean-container a.meanmenu-reveal span {
+    background: var(--white);
+}
+.mean-container .mean-nav {
+    background: var(--blue-1000);
+}
+.mean-container .mean-nav ul li a {
+    color: var(--white);
+    border-top: 1px solid var(--white-a40);
+}
+.mean-container .mean-nav ul li li a {
+    border-top: 1px solid var(--white-a20);
+}
+.mean-container .mean-nav ul li a:hover {
+    background: var(--off-black-1);
+    background: var(--white-a20);
+}
+.mean-container .mean-nav ul li a.mean-expand {
+    background: var(--white-a20);
+    border-left: 1px solid var(--white-a40) !important;
+    border-bottom: 1px solid var(--white-a20) !important;
+}
+.mean-container .mean-nav ul li a.mean-expand:hover {
+    background: var(--black-a60);
+}
+
+/*Desde aquí*/
+
+/*-> de blog_single.css*/
+.main_nav li a {
+    color: var(--gray-900);
+}
+.main_nav li a:hover,
+.main_nav li.active a {
+    color: var(--primary-blue);
+}
+.main_nav li.active::after {
+    background: var(--primary-blue);
+}
+.search_button i,
+.shopping_cart i {
+    color: var(--off-black-2);
+}
+.search_button:hover i,
+.shopping_cart:hover i {
+    color: var(--primary-blue);
+}
+.header_search_container {
+    background: var(--primary-blue);
+}
+.home {
+    background: var(--gray-300);
+    border-bottom: solid 1px var(--gray-400);
+}
+.breadcrumbs ul li:not(:last-child)::after {
+    color: var(--gray-900);
+}
+.breadcrumbs ul li a {
+    color: var(--gray-900);
+}
+.breadcrumbs ul li a:hover {
+    color: var(--primary-blue);
+}
+.blog {
+    background: var(--white);
+}
+.blog_title {
+    color: var(--gray-900);
+}
+.blog_meta ul li {
+    color: var(--gray-500);
+}
+.blog_meta ul li a {
+    color: var(--gray-500);
+}
+.blog_meta ul li a:hover {
+    color: var(--primary-blue);
+}
+.blog_content p {
+    color: var(--gray-700);
+}
+.blog_quote i {
+    color: var(--primary-blue);
+}
+.blog_quote div {
+    color: var(--gray-900);
+}
+.blog_subtitle {
+    color: var(--gray-900);
+}
+.blog_extra {
+    border-bottom: solid 1px var(--gray-400);
+}
+.blog_tags span {
+    color: var(--gray-900);
+}
+.blog_tags ul li a {
+    color: var(--gray-500);
+}
+.blog_tags ul li a:hover {
+    color: var(--primary-blue);
+}
+.blog_social span {
+    color: var(--gray-900);
+}
+.blog_social ul li i {
+    color: var(--gray-500);
+}
+.blog_social ul li:hover i {
+    color: var(--primary-blue);
+}
+.comments_title {
+    color: var(--off-black-2);
+}
+.comments_list li:not(:last-child) .comment_item {
+    border-bottom: solid 1px var(--gray-400);
+}
+.comment_author a {
+    color: var(--gray-900);
+}
+.comment_author a:hover {
+    color: var(--primary-blue);
+}
+.comments_container .rating_r i::before {
+    color: var(--primary-yellow);
+}
+.comment_extra a {
+    color: var(--gray-800);
+}
+.comment_extra a:hover {
+    color: var(--primary-blue);
+}
+.add_comment_title {
+    color: var(--gray-900);
+}
+.comment_input {
+    border: solid 1px var(--gray-500);
+    color: var(--off-black-2);
+}
+.comment_input:focus {
+    border: solid 1px var(--primary-blue);
+}
+.form_title {
+    color: var(--gray-900);
+}
+.regular_checkbox + label {
+    background: var(--primary-blue);
+}
+.regular_checkbox + label i {
+    color: var(--white);
+}
+.comment_notify span {
+    color: var(--off-black-2);
+}
+.comment_button {
+    background: var(--primary-blue);
+    color: var(--white);
+}
+.comment_button:hover {
+    box-shadow: 0px 5px 40px var(--black-a30);
+}
+.sidebar_section_title {
+    color: var(--gray-900);
+}
+.sidebar_categories ul li:not(:last-of-type) {
+    border-bottom: solid 1px var(--gray-400);
+}
+.sidebar_categories ul li a {
+    color: var(--gray-500);
+}
+.sidebar_categories ul li:hover a,
+.sidebar_categories ul li:hover a::before {
+    color: var(--primary-blue);
+}
+.latest_title a {
+    color: var(--gray-1000);
+}
+.latest_title a:hover {
+    color: var(--primary-blue);
+}
+.latest_date {
+    color: var(--gray-500);
+}
+.gallery_item_overlay {
+    background: var(--blue-a70);
+    color: var(--white);
+}
+.tags_list li {
+    background: var(--gray-300);
+}
+.tags_list li:hover {
+    background: var(--primary-blue);
+}
+.tags_list li:hover a {
+    color: var(--white);
+}
+.tags_list li a {
+    color: var(--gray-700);
+}
+.sidebar_banner_overlay {
+    background: var(--primary-blue);
+}
+.banner_title {
+    color: var(--white);
+}
+.banner_button {
+    background: var(--white);
+    border-radius: 3px;
+}
+.banner_button a {
+    color: var(--primary-blue);
+}
+.banner_button:hover {
+    background: var(--primary-blue);
+}
+.banner_button:hover a {
+    color: var(--white);
+}
+
+/*-> de blog.css*/
+.blog_post {
+    box-shadow: 0px 1px 10px var(--black-a10);
+}
+.blog_post:hover {
+    box-shadow: 0px 5px 40px var(--black-a15);
+}
+.blog_post_title a {
+    color: var(--gray-900);
+}
+.blog_post_title a:hover {
+    color: var(--primary-blue);
+}
+.blog_post_meta ul li a {
+    color: var(--gray-500);
+}
+.blog_post_meta ul li a:hover {
+    color: var(--primary-blue);
+}
+.blog_post_text p {
+    color: var(--gray-700);
+}
+.load_more {
+    background: var(--primary-blue);
+}
+.load_more:hover {
+    box-shadow: 0px 5px 40px var(--black-a30);
+}
+.load_more a {
+    color: var(--white);
+}
+
+/*-> de contact.css*/
+#content {
+    color: var(--gray-700);
+}
+.contact_info_title {
+    color: var(--gray-900);
+}
+.contact_info_location_title {
+    color: var(--gray-900);
+}
+.location_list li {
+    color: var(--gray-800);
+}
+
+/*-> de course.css*/
+.course_title {
+    color: var(--gray-900);
+}
+.course_info_item:not(:last-child)::after {
+    background: var(--gray-400);
+}
+.course_info_title {
+    color: var(--gray-900);
+}
+.course_info_text a {
+    color: var(--gray-900);
+}
+.course_info_text a:hover {
+    color: var(--primary-blue);
+}
+.rating_r i::before/*Hay uno en 936 .comments_container .rating_r i::before*/ {
+    color: var(--primary-blue);
+}
+.tab {
+    background: var(--gray-300);
+    color: var(--gray-900);
+}
+.tab.active,
+.tab:hover {
+    background: var(--primary-blue);
+    color: var(--white);
+}
+.tab_panel {
+    border: solid 1px var(--gray-400);
+}
+.tab_panel_title {
+    color: var(--gray-900);
+}
+.tab_panel_text p {
+    color: var(--gray-700);
+}
+.tab_panel_subtitle {
+    color: var(--gray-900);
+}
+.tab_panel_bullets li {
+    color: var(--gray-700);
+}
+.tab_panel_bullets li::before {
+    background: var(--gray-700);
+}
+.accordion {
+    color: var(--black);
+}
+.accordion div {
+    color: var(--gray-900);
+}
+.accordion::before {
+    color: var(--gray-900);
+}
+.accordion_panel p {
+    color: var(--gray-700);
+}
+.dropdowns li:not(:last-child) .dropdown_item {
+    border-bottom: solid 1px var(--gray-400);
+}
+.dropdown_item_title {
+    color: var(--gray-900);
+}
+.dropdown_item_title::before {
+    color: var(--gray-900);
+}
+.has_children > .dropdown_item > .dropdown_item_title::after {
+    color: var(--gray-900);
+}
+.dropdown_item_text p {
+    color: var(--gray-700);
+}
+.review_rating_num {
+    color: var(--gray-900);
+}
+.review_rating_stars .rating_r i::before {
+    color: var(--primary-yellow);
+}
+.review_rating_text {
+    color: var(--gray-500);
+}
+.review_rating_bars ul li span {
+    color: var(--gray-900);
+}
+.review_rating_bar {
+    background: var(--gray-400);
+}
+.review_rating_bar > div {
+    background: var(--primary-blue);
+}
+.comment_item {
+    border-bottom: solid 1px var(--gray-400);
+}
+.comment_reply a i {
+    color: var(--primary-blue);
+}
+.add_comment_text a {
+    color: var(--primary-blue);
+}
+.feature_title i {
+    color: var(--primary-blue);
+}
+.teacher_position {
+    color: var(--gray-700);
+}
+.teacher_name a {
+    color: var(--gray-900);
+}
+.teacher_name a:hover {
+    color: var(--primary-blue);
+}
+.teacher_meta_title,
+.teacher_meta_text span {
+    color: var(--gray-700);
+}
+.teacher_meta_text i {
+    color: var(--primary-blue);
+}
+.latest_price {
+    color: var(--primary-blue);
+}
+
+/* Mismas clases pero con variaciones
+-> de blog_single.css
+p
+{
+	color: var(--gray-700);
+	-webkit-text-shadow: var(--black-a0) 0 0 1px;
+	text-shadow: var(--black-a0) 0 0 1px;
+}
+p a
+{
+	color: inherit;
+	border-bottom: solid 1px var(--primary-salmon);
+}
+-> de blog.css
+p a
+{
+	color: inherit;
+	border-bottom: solid 1px var(--red-100);
+}
+a, a:hover, a:visited, a:active, a:link
+{
+	-webkit-text-shadow: var(--black-a0) 0 0 1px;
+	text-shadow: var(--black-a0) 0 0 1px;
+}
+p a:hover
+{
+	color: var(--white);
+	background: var(--red-100);
+}
+*/

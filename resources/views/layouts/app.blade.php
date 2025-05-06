@@ -7,23 +7,18 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Hospital Regional de Copiapó</title>
 
-        <!-- Fonts -->
-        <link rel="stylesheet"  href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" type="text/css">
+        <!-- Styles -->
+        <link rel="stylesheet" href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" type="text/css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/v4-shims.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
         <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
         <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
-        <link rel="stylesheet" type="text/css" href="styles/main_styles.css">
-        <link rel="stylesheet" type="text/css" href="styles/responsive.css">
-        <link rel="stylesheet" type="text/css" href="styles/main.css">
 
         <!-- Scripts -->
         @vite(['resources/scss/app.scss', 'resources/js/app.js'])
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
         <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     </head>
     <body class="font-sans antialiased">
@@ -31,11 +26,11 @@
             @include('layouts.navigation')
 
             @isset($header)
-                <header class="bg-white dark:bg-gray-800 shadow">
-                    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                        {{ $header }}
-                    </div>
-                </header>
+            <header class="bg-white dark:bg-gray-800 shadow">
+                <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+                    {{ $header }}
+                </div>
+            </header>
             @endisset
             <x-accesibilidad/>
             <main>

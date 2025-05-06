@@ -5,5 +5,6 @@
         <button data-action="increase-font" class="btn btn-outline-secondary">Aumentar Texto</button>
         <button data-action="decrease-font" class="btn btn-outline-secondary">Reducir Texto</button>
         <button data-action="screen-reader" class="btn btn-outline-secondary">Lectura de Pantalla</button>
+        <button id="focus-toggle-button" data-action="toggle-focus" class="btn btn-outline-secondary">Recuadro de Enfoque</button>
     </div>
 </div>

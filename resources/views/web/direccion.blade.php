@@ -1,5 +1,6 @@
 @extends('web.master')
 @section('content')
+
 <div class="container" style="margin-top: 150px">
     <div class="super_container">
         <div class="about">
@@ -8,7 +9,7 @@
                     <div class="col">
                         <div class="container text-center">
                         </br></br>
-                            <h2 class="section_title">Equipo de la Unidad de Formación Continua</h2>
+                            <h2 class="section_title">HOLA PUTOS</h2>
                             </br></br>
                             <div class="section_subtitle"><p></p></div>
                         </div>

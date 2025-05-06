@@ -33,9 +33,13 @@ export function accesibilidad() {
             switch (action) {
                 case "contrast":
                     body.classList.toggle("high-contrast");
+                    document.body.classList.toggle("modo-alto-contraste");
                     break;
                 case "increase-font":
-                    body.classList.toggle("larger-text");
+                    //CREANDO la lista para agregar la etiqueta "creo"
+                    document.body.classList.add("texto-grande");
+                    //AGREGAR etieueta fontSize a body
+                    document.body.style.fontSize = fontSize + "em";
                     break;
                 case "decrease-font":
                     body.classList.toggle("smaller-text");

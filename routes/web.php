@@ -90,10 +90,6 @@ Route::get("/consejo_consultivo", [
     "consejo_consultivo",
 ])->name("consejo_consultivo");
 
-Route::get("/test-component", function () {
-    return view("test-component");
-});
-
 Route::group(
     [
         "prefix" => "dashboard",

@@ -1,19 +1,8 @@
 @extends('web.master')
 @section('content')
-
-<style>
-    p{
-        font-size: 16px;
-        line-height: 20px;
-    }
-    ul{
-        list-style: circle;
-        line-height: 25px;
-    }
-    ol{
-        line-height: 25px;
-    }
-</style>
+<!--PAGINA
+        COMUNIDAD
+            HOSPITAL AMIGOS -->
 
 <div class="container" style="margin-top: 200px; margin-bottom: 50px;">
     <h2 class="text-center mb-5">Hospital Amigo</h2>
