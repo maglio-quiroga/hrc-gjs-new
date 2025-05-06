@@ -31,6 +31,7 @@ export function accesibilidad() {
             const body = document.body;
 
             switch (action) {
+                //cambiar constraste
                 case "contrast":
                     body.classList.toggle("high-contrast");
                     document.body.classList.toggle("modo-alto-contraste");
