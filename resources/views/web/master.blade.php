@@ -24,6 +24,7 @@
     <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
 </head>
 <body>
+    <div id="focus-overlay"></div> {{-- Recuadro de enfoque --}}
     <div id="app">
         <div class="super_container">
             @include('template.header')

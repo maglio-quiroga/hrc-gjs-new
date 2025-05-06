@@ -39,13 +39,13 @@ export function accesibilidad() {
                 //AUMENTA EL TAÑO DEL TEXTO
                 case "increase-font":
                     //si "smaller-text" SI existe
-                    if(document.body.classList.contains("smaller-text")){
+                    if (document.body.classList.contains("smaller-text")) {
                         //remueve la clase "smaller-text"
                         document.body.classList.remove("smaller-text");
                         break;
                     }
                     //si "smaller-text" NO existe
-                    else{
+                    else {
                         //CREANDO la lista para agregar la etiqueta
                         document.body.classList.add("texto-grande");
                         //AGREGAR etieueta fontSize a body
@@ -56,11 +56,11 @@ export function accesibilidad() {
                 case "decrease-font":
                     //si "texto-grande" SI existe
                     if (document.body.classList.contains("texto-grande")) {
-                        //remueve la clase "texto-grande" mostrando el tamaño originañ 
+                        //remueve la clase "texto-grande" mostrando el tamaño originañ
                         document.body.classList.remove("texto-grande");
                         break;
                     }
-                    //si "texto-grande" NO existe 
+                    //si "texto-grande" NO existe
                     else {
                         //AGrege la clase para reducir texto
                         document.body.classList.add("smaller-text");
