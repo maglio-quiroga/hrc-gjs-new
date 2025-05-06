@@ -45,18 +45,22 @@
     color: #438509;
     cursor: pointer;
 }
+.sidebtn.selected{
+    background-color: #f1fde7;
+    color: #438509;
+}
 .icon-svg {
     min-width: 45px;
     width: 45px;
     height: 45px;
 }
 
-@media (max-width: 768px) { /* o el tamaño que tú quieras */
+@media (max-width: 768px) {
     .sidebtn span {
         display: none;
     }
     
     .sidebtn {
-        justify-content: center; /* centra el ícono cuando no haya texto */
+        justify-content: center;
     }
 }
