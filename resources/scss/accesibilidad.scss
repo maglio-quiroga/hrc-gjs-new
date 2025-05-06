@@ -2,6 +2,7 @@
 /* CSS Document */
 
 /******************************
+
 [Table of Contents]
 
 1. Fonts
@@ -10,7 +11,7 @@
 	3.1 Top Bar
 	3.2 Navbar
 	3.3 Logo
-	3.4 Main Nav
+	3.4 Main Nav 
 		No tiene nada
 	3.5 Hamburger
 4. Menu
@@ -24,16 +25,19 @@
 12. News
 13. Newsletter
 14. Footer
+
+
+
 ******************************/
 
 /***********
 1. Fonts
 ***********/
 
-@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:300,400,500,700,900");
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:300,400,500,700,900');
 
-/*TODOS LOS CAMBIOS DE ESTE CSS
-    FUERON REALIZADO SOLO VIENDO
+    /*TODOS LOS CAMBIOS DE ESTE CSS 
+    FUERON REALIZADO SOLO VIENDO 
     LA PAGINA PRINCIPAL DE INICIO*/
 
 /*********************************
@@ -1434,7 +1438,6 @@ section
 }
 .footer_links_container ul li a
 {
-	font-size: 14px;
 	color: #b5b8be;
 	-webkit-transition: all 200ms ease;
 	-moz-transition: all 200ms ease;
@@ -1495,7 +1498,6 @@ section
 }
 .cr_list li a
 {
-	font-size: 14px;
 	color: #b5b8be;
 	-webkit-transition: all 200ms ease;
 	-moz-transition: all 200ms ease;
@@ -1613,7 +1615,7 @@ section
     padding: 1.25rem; /* Relleno interno del cuerpo de la tarjeta */
     text-align: center; /* Centra el texto */
     font-weight: 500; /* Peso de la fuente */
-    font-size: 25px;
+    font-size: 1.5em;
 }
 
 /*********************************
@@ -1639,21 +1641,19 @@ section
     flex-direction: column;
     justify-content: space-between;
 }
+/*BLBBLBLBLBLBLBLBBLBLLBLBL*/
 .card-title {
-    font-size: 1.25rem;
     font-weight: bold;
     margin-bottom: 10px;
     text-align: center;
 }
 .card-text {
-    font-size: 0.9rem;
     text-align: justify;
     margin-bottom: 50px; /* Space for the button */
 }
 .card-button {
     border: none;
     padding: 10px;
-    font-size: 1rem;
     text-align: center;
     cursor: pointer;
     width: 100%;
@@ -1739,7 +1739,6 @@ section
     text-transform: uppercase;
     position: relative;
     letter-spacing: 2px;
-    font-size: 22px;
     margin: 0 30px;
     padding: 55px 0 0 0;
     height: 110px;
