@@ -32,14 +32,14 @@ class AdminController extends Controller
         $modelClass = $this->resolveModelClass($model);
 
         if (! class_exists($modelClass)) {
-            abort(404, "Modelo '{$model}' no encontrado.");
+            return redirect()->route('admin.resume')->with('error', 'El modelo no esta registrado.');
         }
 
         $action = $action ?: 'index'; // valores de $action son [index , create , edit]
         $viewName = "admin.{$model}.{$action}";
 
         if (! view()->exists($viewName)) {
-            abort(404, "Vista '{$viewName}' no encontrada.");
+            return redirect()->route('admin.resume')->with('error', 'No se ha podido encontrar la ruta.');
         }
       
         if ($action === 'edit' && $target === null) {
@@ -67,7 +67,7 @@ class AdminController extends Controller
         $modelClass = $this->resolveModelClass($model);
 
         if (! class_exists($modelClass)) {
-            abort(404, "Modelo '{$model}' no encontrado.");
+            return redirect()->route('admin.resume')->with('error', 'El modelo no esta registrado.');
         }
 
         try {
@@ -110,7 +110,7 @@ class AdminController extends Controller
         $modelClass = $this->resolveModelClass($model);
 
         if (! class_exists($modelClass)) {
-            abort(404, "Modelo '{$model}' no encontrado.");
+            return redirect()->route('admin.resume')->with('error', 'El modelo no esta registrado.');
         }
 
         try {
@@ -159,7 +159,7 @@ class AdminController extends Controller
         $modelClass = $this->resolveModelClass($model);
 
         if (! class_exists($modelClass)) {
-            abort(404, "Modelo '{$model}' no encontrado.");
+            return redirect()->route('admin.resume')->with('error', 'El modelo no esta registrado.');
         }
 
         try {
