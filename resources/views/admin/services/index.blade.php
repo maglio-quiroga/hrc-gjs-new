@@ -41,7 +41,7 @@
             </tr>
         </thead>
         <tbody>
-            @foreach ($records as $service)
+            @forelse ($records as $service)
                 <tr>
                     <td>{{ $service->id }}</td>
                     <td>{{ $service->name }}</td>
@@ -61,7 +61,11 @@
                         </form>
                     </td>
                 </tr>
-            @endforeach
+                @empty
+                        <tr>
+                            <td colspan="6" class="text-muted text-center">No hay miembros registrados.</td>
+                        </tr>
+            @endforelse
         </tbody>
     </table>
             <div class="d-flex justify-content-center">
