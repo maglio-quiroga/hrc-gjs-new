@@ -1,6 +1,5 @@
 @extends('web.master')
 @section('content')
-<link rel="stylesheet" href="{{ asset('styles/servicios.css') }}">
 <div class="container" style="margin-top: 150px">
     <div class="super_container d-flex flex-wrap justify-content-center">
         <div class="about">

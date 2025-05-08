@@ -1,18 +1,10 @@
 @extends('web.master')
 
 @section('content')
-
-<style>
-    p{
-        font-size: 16px;
-        line-height: 20px;
-    }
-
-    ul{
-        list-style: circle;
-    }
-</style>
-
+<!--PAGINA
+        INFORMACION DE PACIENTES 
+            ASPECTO LEGAL
+                Interrupción Voluntaria del Embarazo -->
 <div class="container" style="margin-top: 200px; margin-bottom: 50px;">
 
     <div class="text-center mb-5">

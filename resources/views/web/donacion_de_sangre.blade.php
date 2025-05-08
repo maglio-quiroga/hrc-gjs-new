@@ -1,6 +1,9 @@
 @extends('web.master')
 
 @section('content')
+<!--PAGINA
+        INFORMACION DE PACIENTES 
+            DONACION DE SANGRE -->
 <div class="container" style="margin-top: 150px; margin-bottom: 50px;">
 
     <!-- Título Principal -->

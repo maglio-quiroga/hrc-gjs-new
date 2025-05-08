@@ -13,6 +13,8 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <!-- accesibilidad y bloques de separaciones (div) con sus estilos-->
+    <link rel="stylesheet" href="styles/accesibilidad.css">
     
     
 </head>
@@ -32,6 +34,7 @@
         </div>
         
     </div>
-
+    <!--SCRIPT-->
+    <script src="js/custom.js"></script>
 </body>
 </html>
