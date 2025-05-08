@@ -4,7 +4,6 @@
 /******************************
 [Table of Contents]
 
-1. Fonts
 2. Body and some general stuff
 3. Header
 	3.1 Top Bar
@@ -16,25 +15,12 @@
 4. Menu
 5. Section
 6. Home
-7. Features
-8. Courses
-9. Counter
 10. Events
 11. Team
 12. News
 13. Newsletter
 14. Footer
 ******************************/
-
-/***********
-1. Fonts
-***********/
-
-@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:300,400,500,700,900");
-
-/*TODOS LOS CAMBIOS DE ESTE CSS
-    FUERON REALIZADO SOLO VIENDO
-    LA PAGINA PRINCIPAL DE INICIO*/
 
 /*********************************
 2. Body and some general stuff
@@ -529,24 +515,6 @@ section {
     line-height: 50px;
     font-size: 22px;
 }
-
-/*********************************
-7. Features
-*********************************/
-
-/*SIN CAMBIOS*/
-
-/*********************************
-8. Courses
-*********************************/
-
-/*SIN CAMBIOS*/
-
-/*********************************
-9. Counter
-*********************************/
-
-/*SIN CAMBIOS*/
 
 /*********************************
 10. noticias
@@ -1131,8 +1099,8 @@ section {
 
 /**************************
     blablablablablabla
+    --HACCECIBILIDAD--
 **************************/
-/*--ACCECIBILIDAD--*/
 #btnAccesibilidad {
     position: fixed;
     bottom: 20px;
@@ -1170,10 +1138,6 @@ section {
 .texto-grande {
     font-size: 1.5em !important;
 }
-
-/*******************************************
-*           Detalles Nuevos                *
-*******************************************/
 
 .high-contrast {
     filter: contrast(120%);
