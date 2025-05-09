@@ -59,6 +59,8 @@
 //       y los padding/colores base también. Elimina los @apply correspondientes.
 
 // Ajustes adicionales a .card-title si son necesarios además de la clase de Bootstrap
+
+/* Omitidos por repetición
 .card-title {
     white-space: normal;
     word-wrap: break-word;
@@ -82,20 +84,8 @@
     // El padding, border, shadow, etc., vendrán de la clase .card de Bootstrap.
     // Los márgenes ml-6 mr-6 deberían aplicarse con clases de utilidad de Bootstrap en el HTML (ej: mx-3 o mx-sm-5)
 }
-// Ajustes adicionales a .card-img-top
-.card-img-top {
-    object-fit: cover;
-    height: 200px; // Ajuste específico
-}
+    */
 
-/* icon menu */
-.icon-menu {
-    // @apply flex items-center transform transition-colors duration-200 border-r-4 border-transparent;
-    display: flex;
-    align-items: center;
-    border-right: 4px solid transparent;
-    transition: border-color 0.2s ease-in-out; // transition-colors
-}
 
 /* Modal Adjustments */
 .modal-dialog {
