@@ -17,6 +17,7 @@
 @import "./service_card";
 @import "./main";
 @import "./table";
+@import "./modal";
 @import "./meanMenu";
 @import "./courses";
 @import "./lightbox";
@@ -65,22 +66,5 @@
 }
     */
 
-
-/* Modal Adjustments */
-.modal-dialog {
-    max-width: 700px; // Mantener ajuste específico.
-}
-.modal-body img {
-    object-fit: cover;
-    max-height: 300px;
-    width: 100%;
-    border-radius: var(
-        --bs-border-radius-lg
-    ); // Usar variable Bootstrap para consistencia
-}
-.modal-body p {
-    text-align: justify;
-    font-size: 0.95rem;
-}
 
 // --- FIN Opción A ---
