@@ -1,0 +1,91 @@
+/*********************************
+11. Team
+*********************************/
+/*INSTAGRAM*/
+.team {
+    width: 100%;
+    padding-top: 93px;
+    padding-bottom: 60px;
+}
+.team_background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.team_row {
+    margin-top: 43px;
+}
+.team_col {
+    margin-bottom: 40px;
+}
+.team_item {
+    width: 100%;
+}
+.team_image {
+    width: 70%;
+    height: 185px;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: -86px;
+    z-index: 5;
+}
+.team_image img {
+    max-width: 100%;
+}
+.team_body {
+    width: 100%;
+    height: 180px;
+    padding-top: 108px;
+    padding-bottom: 24px;
+    border-radius: 15px;
+    text-align: center;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+
+.team_subtitle {
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 6px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.social_list {
+    margin-top: 16px;
+}
+.social_list ul li {
+    display: inline-block;
+}
+.social_list ul li:not(:last-child) {
+    margin-right: 10px;
+}
+.social_list ul li a i {
+    font-size: 18px;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+.team_col .team_item {
+    padding-left: 6px;
+    padding-right: 6px;
+}
+.team_col:first-child .team_item {
+    padding-left: 0;
+    padding-right: 6px;
+}
+.team_col:nth-child(4n) .team_item {
+    padding-left: 6px;
+    padding-right: 0;
+}
+.team .section_title {
+    padding-bottom: 50px;
+}
