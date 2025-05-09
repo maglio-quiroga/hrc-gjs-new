@@ -16,6 +16,7 @@
 @import "./card_style";
 @import "./service_card";
 @import "./main";
+@import "./table";
 @import "./meanMenu";
 @import "./courses";
 @import "./lightbox";
@@ -33,28 +34,6 @@
 //    (Hemos eliminado las definiciones de .table, .btn, .btn-*, .form-control, .card, .alert, .alert-*
 //     porque se asume que usarás las clases de Bootstrap directamente en el HTML)
 
-/* Ajustes específicos a la tabla si Bootstrap por sí solo no es suficiente */
-// Si necesitas el borde derecho blanco entre cabeceras y quitar el último:
-.table th {
-    text-align: center; // Mantener si es necesario
-    border-right: 2px solid white; // Mantener si es necesario
-}
-.table th:last-child {
-    border-right: none; // Mantener si es necesario
-}
-// Si quieres el redondeo específico en las esquinas de la tabla (Bootstrap puede hacerlo diferente)
-.table th:first-child,
-.table td:first-child {
-    border-top-left-radius: var(
-        --bs-border-radius-lg
-    ); // O var(--bs-border-radius) si prefieres el normal
-    border-bottom-left-radius: var(--bs-border-radius-lg);
-}
-.table th:last-child,
-.table td:last-child {
-    border-top-right-radius: var(--bs-border-radius-lg);
-    border-bottom-right-radius: var(--bs-border-radius-lg);
-}
 // NOTA: Los estilos de hover, zebra-striping (nth-child(even)) ya vienen con Bootstrap (.table-striped, .table-hover)
 //       y los padding/colores base también. Elimina los @apply correspondientes.
 
