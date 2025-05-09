@@ -9,43 +9,6 @@
 
 
 /*********************************
-14. Paginas del gobierno
-*********************************/
-
-.pagespublic {
-    padding: 40px 0;
-}
-.pagespublic .pagepublic {
-    margin-bottom: 30px;
-    transition: transform 0.3s;
-}
-.pagespublic .pagepublic:hover {
-    transform: scale(1.05);
-}
-.pagespublic .pagepublic_icon img {
-    max-width: 100%;
-    height: auto;
-    padding-bottom: 30px;
-}
-.pagespublic .section_title {
-    padding-bottom: 50px;
-}
-
-@media (max-width: 991px) {
-    .pagespublic .pagepublic_col {
-        flex: 0 0 50%;
-        max-width: 50%;
-    }
-}
-
-@media (max-width: 767px) {
-    .pagespublic .pagepublic_col {
-        flex: 0 0 100%;
-        max-width: 100%;
-    }
-}
-
-/*********************************
 15. Campañas
 *********************************/
 .campañas {
