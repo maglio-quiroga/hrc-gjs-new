@@ -1,0 +1,175 @@
+/*********************************
+3. Header
+*********************************/
+/*VANER ARRIBA DEL PRINCIPAL (VERDE)*/
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+.header.scrolled {
+    top: -40px;
+}
+
+/*********************************
+3.1 Top Bar
+*********************************/
+/*BARRA VERDE ARRIBA DEL VANAER*/
+.top_bar {
+    width: 100%;
+}
+.header.scrolled .top_bar {
+}
+.top_bar_container {
+    width: 100%;
+    height: 100%;
+}
+.top_bar_content {
+    width: 100%;
+    height: 40px;
+}
+.top_bar_contact_list li {
+    display: inline-block;
+}
+.question {
+    font-family: "Museo Sans 500", "Roboto Slab", serif;
+    font-size: 14px;
+    margin-left: 0px;
+}
+.top_bar_contact_list li i,
+.top_bar_contact_list li > div {
+    display: inline-block;
+    font-size: 14px;
+}
+.top_bar_contact_list li > div {
+    margin-left: 1px;
+}
+.top_bar_contact_list li:not(:last-child) {
+    margin-right: 21px;
+}
+.top_bar_login {
+    height: 100%;
+}
+.login_button {
+    width: 160px;
+    height: 100%;
+    text-align: center;
+}
+.login_button a {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 40px;
+}
+
+/*********************************
+3.2 Navbar
+*********************************/
+/*VANER PRINCIPAL (INICIO, QUIENES SOMOS, INFORMACION PACIENTE, ETC*/
+.navbar_container {
+    width: 100%;
+}
+
+@media only screen and (max-width: 991px) {
+    .navbar {
+        width: 100%;
+    }
+}
+
+.navbar-nav .nav-link {
+    transition: color 0.2s ease-in-out;
+}
+
+.navbar-brand img {
+    max-width: 80px;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .navbar-brand img {
+        width: 150px;
+        height: auto;
+    }
+}
+
+.navbar-nav li a {
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+
+.navbar-nav li.active::after {
+    display: block;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    content: "";
+}
+
+.navbar-nav .dropdown-menu a {
+    font-size: 16px;
+}
+
+/*********************************
+3.3 Logo
+*********************************/
+/*IMAGEN DEL VANER PRINCIPAL*/
+.logo,
+.logo_text {
+    display: inline-block;
+}
+.logo {
+    width: 60px;
+    height: 60px;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+.logo img {
+    max-width: 100%;
+}
+.logo_text {
+    font-family: "Museo Sans 500", "Roboto Slab", serif;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 0.75;
+    vertical-align: middle;
+    margin-left: 7px;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+.header.scrolled .logo {
+    width: 40px;
+    height: 40px;
+}
+.header.scrolled .logo_text {
+    font-size: 24px;
+}
+
+/*********************************
+3.4 Main Nav
+*********************************/
+
+/*ESTA VACIO*/
+
+/*********************************
+3.5 Hamburger
+
+*********************************/
+/*NO HACE NADA, ERA PARA MOVIL*/
