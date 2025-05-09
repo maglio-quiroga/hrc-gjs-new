@@ -1,0 +1,5 @@
+1. Revisar carrusel de "Inicio"
+2. Revisar la imagen de "Danary Vera Moreta" de "Equipo Directivo"
+3. Revisar las cartas de "Servicios y unidades"
+4. Posiblemente eliminar o modificar el boton de "Ir a OIRS Minsal" de "OIRS"
+5. Arreglar el ALING!!!!!!!!!!! del footer del nuevo master /resources/views/template/footer.blade.php.

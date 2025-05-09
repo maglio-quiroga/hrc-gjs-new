@@ -1,4 +1,4 @@
-@extends('web.master')
+@extends('layouts.web')
 @section('content')
 
 @include('template.homes')

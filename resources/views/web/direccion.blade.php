@@ -1,4 +1,4 @@
-@extends('web.master')
+@extends('layouts.web')
 @section('content')
 
 <div class="container" style="margin-top: 150px">

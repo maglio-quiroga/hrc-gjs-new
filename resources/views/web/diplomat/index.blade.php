@@ -1,4 +1,4 @@
-@extends('web.master')
+@extends('layouts.web')
 @section('content')
 	<div class="container h-full" style="margin-top:130px">
 		<x-web.diplomaed.diplomat.index :programs="$programs" >

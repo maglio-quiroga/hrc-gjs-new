@@ -104,6 +104,7 @@ Route::group(
     }
 );
 
+/* Funciona con resources/views/web/master2.blade.php */
 Route::group(["prefix" => "posted"], function () {
     Route::controller(WebPostController::class)->group(function () {
         Route::get("/", "index")->name("web.post.index");

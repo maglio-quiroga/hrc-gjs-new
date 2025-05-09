@@ -1,4 +1,4 @@
-@extends('web.master2')
+@extends('web.master')
 @section('content')
 
 	<div class="container" style="margin-top: 150px">
@@ -14,4 +14,3 @@
 	
 
 @endsection
-
