@@ -1,0 +1,1660 @@
+@charset "utf-8";
+
+
+/* LA TABLA DE CONTENIDOS REFERENCIA LOS CAMBIOS REALIZADOS. USARLA DE GUÍA CON Ctrl+F
+/******************************
+[Table of Contents]
+
+3. Header
+	3.4 Main Nav
+	3.5 Hamburger
+4. Menu
+5. Section
+6. Home
+7. Blog
+    7.1 Blog Single
+8. Course
+    8.1 Courses
+9. Sidebar
+13. Newsletter
+16. Footer
+******************************/
+
+/*  ========================================================
+    ARCHIVO TEMPORAL. USAR SOLO DE GUÍA.
+    AÑADIR ESTAS CLASES A SUS RESPECTIVOS ARCHIVOS.
+    ORDENAR CADA CLASE EN SU SECCIÓN PARTICULAR DEL CÓDIGO.
+    USAR Ctrl+F PARA SIMPLIFICAR TRABAJO.
+    ======================================================== */
+
+/*********************************
+3. Header
+*********************************/
+
+.header_container {
+    width: 100%;
+}
+.header_content {
+    height: 90px;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+.header.scrolled .header_content {
+    height: 80px;
+}
+
+/********************************
+3.4 Main Nav
+*********************************/
+
+.main_nav,
+.search_button,
+.shopping_cart {
+    display: inline-block;
+}
+.main_nav li {
+    display: inline-block;
+    position: relative;
+}
+.main_nav li:not(:last-child) {
+    margin-right: 44px;
+}
+.main_nav li a {
+    font-size: 18px;
+    font-weight: 500;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+.main_nav li.active::after {
+    display: block;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    content: "";
+}
+.search_button {
+    margin-left: 46px;
+    cursor: pointer;
+}
+.shopping_cart {
+    margin-left: 23px;
+    cursor: pointer;
+}
+.search_button i,
+.shopping_cart i {
+    font-size: 18px;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+.header_search_form {
+    display: block;
+    position: relative;
+    width: 40%;
+}
+.header_search_container {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: -1;
+    opacity: 0;
+    -webkit-transition: all 400ms ease;
+    -moz-transition: all 400ms ease;
+    -ms-transition: all 400ms ease;
+    -o-transition: all 400ms ease;
+    transition: all 400ms ease;
+}
+.header_search_container.active {
+    bottom: -73px;
+    opacity: 1;
+}
+.header_search_content {
+    width: 100%;
+    height: 73px;
+}
+.search_input {
+    width: 100%;
+    height: 40px;
+    border: none;
+    outline: none;
+    padding-left: 20px;
+}
+.header_search_button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 100%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+/*********************************
+3.5 Hamburger
+*********************************/
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+.hamburger i {
+    font-size: 20px;
+
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+
+/*********************************
+4. Menu
+*********************************/
+
+.menu {
+    position: fixed;
+    top: 0;
+    right: -400px;
+    width: 400px;
+    height: 100vh;
+    z-index: 101;
+    padding-right: 60px;
+    padding-top: 87px;
+    padding-left: 50px;
+}
+.menu.active {
+    right: 0;
+}
+.menu_close_container {
+    position: absolute;
+    top: 30px;
+    right: 60px;
+    width: 18px;
+    height: 18px;
+    transform-origin: center center;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+.menu_close {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3D;
+}
+.menu_close div {
+    width: 100%;
+    height: 2px;
+    top: 8px;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+.menu_close div:last-of-type {
+    -webkit-transform: rotate(90deg) translateX(-2px);
+    -moz-transform: rotate(90deg) translateX(-2px);
+    -ms-transform: rotate(90deg) translateX(-2px);
+    -o-transform: rotate(90deg) translateX(-2px);
+    transform: rotate(90deg) translateX(-2px);
+    transform-origin: center;
+}
+.menu .logo {
+    margin-bottom: 60px;
+}
+.menu_nav ul li {
+    margin-bottom: 9px;
+}
+.menu_nav ul li a {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+.menu .search {
+    width: 100%;
+    margin-bottom: 67px;
+}
+.search {
+    display: inline-block;
+    width: 400px;
+    -webkit-transform: translateY(2px);
+    -moz-transform: translateY(2px);
+    -ms-transform: translateY(2px);
+    -o-transform: translateY(2px);
+    transform: translateY(2px);
+}
+.menu .header_search_form {
+    width: 100%;
+}
+.search form {
+    position: relative;
+}
+.menu .search_input {
+    width: 100%;
+    height: 40px;
+    border-radius: 3px;
+    border: none;
+    outline: none;
+    padding-left: 15px;
+}
+.menu .search_input::-webkit-input-placeholder,
+.menu .search_input:-moz-placeholder,
+.menu .search_input::-moz-placeholder,
+.menu .search_input:-ms-input-placeholder,
+.menu .search_input::input-placeholder {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px !important;
+    font-weight: 400 !important;
+}
+
+/*********************************
+5. Section
+*********************************/
+
+.section_title_container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+.section_title {
+    line-height: 1.2;
+}
+.section_subtitle {
+    line-height: 1.85;
+    margin-top: 14px;
+}
+.section_background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/*********************************
+6. Home
+*********************************/
+
+/* Reemplazar en el intervalo de líneas [62 - 86] del archivo home.scss de la rama j3. Misma función, mejor formato. */
+.home_search_input::-webkit-input-placeholder,
+.home_search_input:-moz-placeholder,
+.home_search_input::-moz-placeholder,
+.home_search_input:-ms-input-placeholder,
+.home_search_input::input-placeholder {
+    font-family: "Museo Sans 500", "Roboto", sans-serif;
+    font-size: 14px !important;
+    font-weight: 400 !important;
+}
+.breadcrumbs_container {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding-bottom: 13px;
+    padding-left: 3px;
+}
+.breadcrumbs ul li {
+    display: inline-block;
+    position: relative;
+}
+.breadcrumbs ul li:not(:last-child)::after {
+    display: inline-block;
+    font-family: "FontAwesome";
+    content: "\f105";
+    margin-left: 7px;
+    margin-right: 4px;
+}
+.breadcrumbs ul li a {
+    font-size: 14px;
+    font-weight: 400;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+
+/*********************************
+7. Blog
+*********************************/
+
+.blog {
+    width: 100%;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.blog_post_container {
+    width: 100%;
+}
+.blog_post {
+    width: calc((100% - 60px) / 3);
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+.blog_post_image {
+    width: 100%;
+}
+.blog_post_image img {
+    max-width: 100%;
+}
+.blog_post_video_container {
+    width: 100%;
+}
+.video-js {
+    width: 100%;
+}
+.vjs-control-bar {
+    display: -webkit-box !important;
+    display: -moz-box !important;
+    display: -ms-flexbox !important;
+    display: -webkit-flex !important;
+    display: flex !important;
+}
+.blog_post_body {
+    padding-left: 32px;
+    padding-right: 30px;
+    padding-top: 23px;
+    padding-bottom: 23px;
+}
+.blog_post_title a {
+    font-family: "Roboto Slab", serif;
+    font-size: 20px;
+    line-height: 1.4;
+    font-weight: 700;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+.blog_post_meta {
+    margin-top: 11px;
+}
+.blog_post_meta ul li {
+    display: inline-block;
+    position: relative;
+}
+.blog_post_meta ul li:not(:last-of-type)::after {
+    display: inline-block;
+    position: relative;
+    content: "|";
+    margin-left: 14px;
+    margin-right: 11px;
+}
+.blog_post_meta ul li a {
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+.blog_post_text {
+    margin-top: 12px;
+}
+.blog_post_text p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 2;
+}
+.load_more {
+    width: 150px;
+    height: 46px;
+    border-radius: 3px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+}
+.load_more a {
+    display: block;
+    line-height: 46px;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+/*********************************
+7.1 Blog Single
+*********************************/
+
+.blog_content {
+    width: 100%;
+}
+.blog_content p {
+    font-size: 16px;
+    line-height: 1.75;
+    margin-top: 29px;
+    margin-bottom: 0;
+}
+.blog_title {
+    font-family: "Roboto Slab", serif;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+.blog_meta {
+    margin-top: 14px;
+}
+.blog_meta ul li {
+    display: inline-block;
+    position: relative;
+    font-size: 14px;
+}
+.blog_meta ul li a {
+    font-size: 14px;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+.blog_meta ul li:not(:last-child)::after {
+    display: inline-block;
+    content: "|";
+    margin-left: 14px;
+    margin-right: 14px;
+}
+.blog_image {
+    width: 100%;
+    margin-top: 18px;
+}
+.blog_image img {
+    max-width: 100%;
+}
+.blog_images {
+    margin-top: 31px;
+    margin-bottom: 35px;
+}
+.blog_image_small {
+    width: 100%;
+}
+.blog_image_small img {
+    max-width: 100%;
+}
+.blog_quote {
+    margin-top: 24px;
+    margin-bottom: -2px;
+}
+.blog_quote i {
+    font-size: 30px;
+}
+.blog_quote div {
+    font-size: 18px;
+    font-style: italic;
+    line-height: 1.66;
+    padding-left: 36px;
+}
+.blog_subtitle {
+    font-size: 24px;
+    line-height: 1.2;
+    margin-top: 48px;
+}
+.blog_extra {
+    margin-top: 39px;
+    padding-bottom: 18px;
+}
+.blog_tags ul {
+    display: inline-block;
+    margin-left: 3px;
+}
+.blog_tags ul li {
+    display: inline-block;
+}
+.blog_tags ul li a {
+    font-size: 14px;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+.blog_social span {
+    font-size: 14px;
+}
+.blog_social ul {
+    display: inline-block;
+    margin-left: 21px;
+}
+.blog_social ul li {
+    display: inline-block;
+}
+.blog_social ul li:not(:last-child) {
+    margin-right: 18px;
+}
+.blog_social ul li i {
+    font-size: 14px;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+.comments_title {
+    font-family: "Roboto Slab", serif;
+    font-size: 24px;
+    font-weight: 700;
+}
+.comment_item {
+    padding-top: 31px;
+    padding-bottom: 16px;
+}
+.comment_image div {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.comment_image div img {
+    max-width: 100%;
+}
+.comment_content {
+    width: 100%;
+    padding-left: 20px;
+    margin-top: -7px;
+}
+.comment_author::after {
+    display: inline-block;
+    content: "-";
+    margin-left: 6px;
+}
+.comment_author a {
+    font-family: "Roboto Slab", serif;
+    font-size: 18px;
+    font-weight: 700;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+.comments_container .rating_r {
+    margin-top: 3px;
+    margin-left: 5px;
+}
+.comment_text {
+    margin-top: 12px;
+}
+.comment_extras {
+    margin-top: 13px;
+}
+.comment_likes::after {
+    display: inline-block;
+    content: "|";
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.comment_extra a {
+    font-size: 12px;
+    font-weight: 400;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+.comment_extra a span {
+    margin-left: 3px;
+}
+.comment_reply {
+    margin-left: 35px;
+}
+.comments_list li ul {
+    padding-left: 99px;
+}
+.add_comment_container {
+    margin-top: 24px;
+}
+.add_comment_title {
+    font-family: "Roboto Slab", serif;
+    font-size: 24px;
+    font-weight: 700;
+}
+.add_comment_text {
+    margin-top: 14px;
+}
+.add_comment_text a {
+    text-decoration: underline;
+}
+.comment_form {
+    margin-top: 35px;
+}
+.comment_input {
+    width: 100%;
+    height: 46px;
+    border-radius: 3px;
+    padding-left: 19px;
+    font-size: 16px;
+    font-weight: 400;
+}
+.comment_input:focus {
+    outline: none;
+}
+.comment_notify {
+    margin-top: 29px;
+}
+.comment_notify span {
+    font-size: 16px;
+    font-weight: 400;
+    vertical-align: middle;
+    margin-left: 3px;
+}
+.comment_button {
+    width: 150px;
+    height: 46px;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    margin-top: 15px;
+}
+.comment_textarea {
+    width: 100%;
+    height: 150px;
+    margin-bottom: 18px;
+    padding-top: 15px;
+} 
+.comments_container {
+    margin-top: 80px;
+}
+.form_title {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 12px;
+}
+.regular_checkbox {
+    display: none;
+}
+.regular_checkbox + label {
+    position: relative;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    width: 14px;
+    height: 14px;
+    border-radius: 3px;
+    cursor: pointer;
+    vertical-align: middle;
+    margin-bottom: 0;
+    margin-top: -2px;
+}
+.regular_checkbox + label i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-size: 10px;
+}
+.regular_checkbox + label i {
+    display: none;
+}
+.regular_checkbox:checked + label i {
+    display: block;
+}
+
+/*********************************
+8. Course
+*********************************/
+
+.course {
+    width: 100%;
+    border-radius: 6px;
+}
+.course_title {
+    font-family: "Roboto Slab", serif;
+    font-size: 36px;
+    font-weight: 700;
+}
+.course_title a {
+    font-family: "Roboto Slab", serif;
+    font-size: 20px;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+.course_container {
+    width: 100%;
+}
+.course_info {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 400;
+    width: 100%;
+    height: 92px;
+    margin-top: 68px;
+}
+.course_info_item {
+    width: 33.33333333%;
+    padding-left: 30px;
+}
+.course_info:first-child {
+    margin-right: 18px;
+}
+.course_info_item:not(:last-child)::after {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1px;
+    height: 100%;
+    content: "";
+}
+.course_info_title {
+    font-family: "Roboto Slab", serif;
+    font-size: 18px;
+    font-weight: 700;
+}
+.course_info_text {
+    margin-top: 8px;
+}
+.course_info_text a {
+    font-size: 14px;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+.course_image img {
+    max-width: 100%;
+}
+.course_tabs_container {
+    width: 100%;
+    margin-top: 30px;
+}
+.course_col {
+    margin-bottom: 51px;
+}
+.course_col:nth-child(odd) {
+    padding-right: 30px;
+}
+.course_col:nth-child(even) {
+    padding-left: 30px;
+}
+.course_body {
+    padding-top: 22px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 23px;
+}
+.course_teacher {
+    font-size: 15px;
+    font-weight: 400;
+    margin-top: 6px;
+}
+.course_text {
+    margin-top: 13px;
+}
+.course_footer {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.course_footer_content {
+    width: 100%;
+    padding-top: 9px;
+    padding-bottom: 11px;
+}
+.course_price span {
+    font-family: "Roboto Slab", serif;
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: line-through;
+    margin-right: 10px;
+}
+/*  LISTA DE CLASES .course QUE SE LLAMAN IGUAL PERO TIENEN DISTINTOS VALORES
+    ELEGIR UNA DE LAS DOS Y/O FUCIONARLAS
+
+.course_image {
+    margin-top: 21px;
+    width: 100%;
+}
+.course_image {
+    width: 100%;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    overflow: hidden;
+}
+
+.course_price {
+    font-family: "Roboto Slab", serif;
+    font-size: 24px;
+    font-weight: 400;
+}
+.course_price {
+    font-family: "Roboto Slab", serif;
+    font-size: 20px;
+    font-weight: 700;
+}
+*/
+
+/* rating de course.scss */
+.rating_r {
+    margin-top: 7px;
+}
+.rating_r i::before {
+    font-family: "FontAwesome";
+    content: "\f006";
+    font-style: normal;
+    font-size: 14px;
+    margin-right: 4px;
+}
+.rating_r_1 i:first-child::before,
+.rating_r_2 i:first-child::before,
+.rating_r_2 i:nth-child(2)::before,
+.rating_r_3 i:first-child::before,
+.rating_r_3 i:nth-child(2)::before,
+.rating_r_3 i:nth-child(3)::before,
+.rating_r_4 i:first-child::before,
+.rating_r_4 i:nth-child(2)::before,
+.rating_r_4 i:nth-child(3)::before,
+.rating_r_4 i:nth-child(4)::before,
+.rating_r_5 i:first-child::before,
+.rating_r_5 i:nth-child(2)::before,
+.rating_r_5 i:nth-child(3)::before,
+.rating_r_5 i:nth-child(4)::before,
+.rating_r_5 i:nth-child(5)::before {
+    content: "\f005";
+}
+
+/* tab de course .scss */
+.tab {
+    height: 40px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-right: 10px;
+    padding-left: 21px;
+    padding-right: 20px;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+.tab_panel {
+    display: none !important;
+    width: 100%;
+    height: 100%;
+    -webkit-animation: fadeEffect 1s;
+    animation: fadeEffect 1s;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
+    padding-bottom: 25px;
+}
+/* Fade in tabs */
+@-webkit-keyframes fadeEffect {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes fadeEffect {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.tab_panel.active {
+    display: block !important;
+}
+.tab_panel_title {
+    font-family: "Roboto Slab", serif;
+    font-size: 20px;
+    font-weight: 700;
+}
+.tab_panel_text {
+    margin-top: 10px;
+}
+.tab_panel_text p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.75;
+}
+.tab_panel_section {
+    margin-top: 17px;
+}
+.tab_panel_subtitle {
+    font-size: 18px;
+    font-weight: 400;
+}
+.tab_panel_bullets {
+    margin-top: 9px;
+}
+.tab_panel_bullets li {
+    position: relative;
+    padding-left: 27px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.75;
+}
+.tab_panel_bullets li:not(:last-child) {
+    margin-bottom: 2px;
+}
+.tab_panel_bullets li::before {
+    display: block1;
+    position: absolute;
+    top: 9px;
+    left: 1px;
+    width: 7px;
+    height: 7px;
+    content: "";
+    border-radius: 50%;
+}
+.tab_panel_faq {
+    margin-top: 51px;
+}
+.tab_panel_2 {
+    padding-bottom: 10px;
+}
+.tab_panel_3 {
+    padding-bottom: 42px;
+}
+
+/* clases de course.scss que referencian y/o tienen accordion */
+
+.elements_accordions {
+    margin-top: 34px;
+}
+.accordion_container:not(:last-child) {
+    margin-bottom: 12px;
+}
+.accordion {
+    width: 100%;
+    padding-left: 38px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+.accordion div {
+    max-width: 90%;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 18px;
+    font-weight: 400;
+}
+.accordion::before {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -1px;
+    left: 0;
+    height: 100%;
+    font-family: "FontAwesome";
+    content: "\f105";
+    font-size: 30px;
+    font-weight: 400;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+.accordion.active::before {
+    content: "\f107";
+}
+.accordion_panel {
+    padding-right: 8px;
+    padding-left: 38px;
+    padding-top: 9px;
+    max-height: 0px;
+    overflow: hidden;
+    -webkit-transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+.accordion.active + .accordion_panel {
+    margin-bottom: 20px;
+}
+.accordion_panel p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.75;
+}
+
+/* clases dropdown de course.scss */
+
+.dropdowns {
+    margin-top: 17px;
+}
+.dropdowns li ul {
+    max-height: 0;
+    padding-left: 30px;
+    overflow: hidden;
+    -webkit-transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+.dropdowns li {
+    position: relative;
+}
+.dropdowns li.has_children > .dropdown_item {
+    cursor: pointer;
+}
+.dropdown_item {
+    padding-top: 26px;
+    padding-bottom: 25px;
+}
+.dropdown_item_title {
+    font-family: "Roboto Slab", serif;
+    font-size: 16px;
+    font-weight: 700;
+    padding-left: 24px;
+}
+.dropdown_item_title span {
+    font-size: 18px;
+}
+.dropdown_item_title::before {
+    position: absolute;
+    top: 1px;
+    left: 0;
+    font-family: "FontAwesome";
+    content: "\f0f6";
+    font-size: 18px;
+    opacity: 0.65;
+}
+.has_children > .dropdown_item > .dropdown_item_title::after {
+    position: absolute;
+    top: -10px;
+    right: 0;
+    font-family: "FontAwesome";
+    content: "\f105";
+    font-size: 30px;
+    font-weight: 400;
+}
+.has_children.active > .dropdown_item > .dropdown_item_title::after {
+    content: "\f107";
+}
+.dropdown_item_text {
+    margin-top: 10px;
+}
+.dropdown_item_text p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.75;
+}
+
+.review_rating_container {
+    margin-top: 43px;
+}
+.review_rating {
+    display: inline-block;
+    text-align: center;
+    padding-left: 35px;
+    padding-top: 28px;
+    vertical-align: top;
+}
+.review_rating_num {
+    font-size: 72px;
+    line-height: 0.75;
+    font-weight: 900;
+}
+.review_rating_stars {
+    margin-top: 27px;
+    margin-left: 3px;
+}
+.review_rating_stars .rating_r i::before {
+    font-size: 18px;
+}
+.review_rating_text {
+    font-size: 16px;
+    margin-top: 12px;
+}
+.review_rating_bars {
+    display: inline-block;
+    padding-left: 134px;
+}
+.review_rating_bars ul li:not(:last-child) {
+    margin-bottom: 10px;
+}
+.review_rating_bars ul li span {
+    font-size: 16px;
+    font-weight: 400;
+    vertical-align: middle;
+}
+.review_rating_bar {
+    display: inline-block;
+    vertical-align: middle;
+    width: 300px;
+    height: 30px;
+    margin-left: 22px;
+}
+.review_rating_bar > div {
+    height: 100%;
+}
+.feature_list {
+    margin-top: 16px;
+}
+.feature:not(:last-child) {
+    margin-bottom: 21px;
+}
+.feature_title {
+    padding-left: 31px;
+}
+.feature_title i {
+    position: absolute;
+    top: calc(50% - 1px);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    left: 0;
+    font-size: 18px;
+}
+.teacher_image {
+    width: 102px;
+    height: 102px;
+}
+.teacher_image img {
+    max-width: 100%;
+}
+.teacher_title {
+    padding-left: 35px;
+}
+.teacher_position {
+    font-size: 14px;
+    margin-top: 4px;
+}
+.teacher_name a {
+    font-family: "Roboto Slab", serif;
+    font-size: 24px;
+    font-weight: 700;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+.teacher_meta_container {
+    margin-top: 27px;
+}
+.teacher_meta:not(:last-child) {
+    margin-bottom: 9px;
+}
+.teacher_meta_title,
+.teacher_meta_text span {
+    font-size: 14px;
+    font-weight: 400;
+}
+.teacher_meta_text span {
+    margin-right: 4px;
+}
+.teacher_info {
+    margin-top: 17px;
+}
+.teacher_info p {
+    line-height: 2;
+}
+
+/*********************************
+8.1 Courses
+*********************************/
+
+.courses {
+    width: 100%;
+    padding: 100px 0;
+}
+.courses_search_container {
+    padding: 0 20px;
+}
+.courses_search_form {
+    width: 100%;
+    height: 92px;
+}
+.courses_search_input {
+    width: 240px;
+    height: 46px;
+    border-radius: 3px;
+    padding-left: 20px;
+}
+.courses_search_form > input {
+    margin-right: 19px;
+}
+.courses_search_select {
+    position: relative;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    -webkit-user-select: none;
+    background-image: url(../images/down.png);
+    background-position: center right;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.courses_search_button {
+    width: 161px;
+    height: 46px;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.courses_row {
+    margin-top: 25px;
+}
+.courses_button {
+    width: 210px;
+    height: 46px;
+    border-radius: 3px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 41px;
+}
+.courses_button a {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 46px;
+}
+.courses_show_text {
+    display: inline-block;
+}
+.courses_show_content {
+    display: inline-block;
+    width: 144px;
+}
+.courses_show_content span {
+    line-height: 40px;
+    padding-left: 20px;
+    font-size: 16px;
+}
+.courses_show_text {
+    font-size: 16px;
+    font-weight: 400;
+    margin-right: 16px;
+}
+.courses_show_select {
+    position: relative;
+    float: right;
+    width: 50px;
+    height: 40px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    -webkit-user-select: none;
+    background-image: url(../images/down.png);
+    background-position: center right;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    font-size: 16px;
+    border: none;
+    outline: none;
+}
+.courses_show_select option {
+    padding-left: 20px;
+    text-align: right;
+}
+
+/*********************************
+9. Sidebar
+*********************************/
+
+.sidebar {
+    width: 100%;
+    padding-left: 40px;
+    padding-top: 120px;
+}
+.sidebar_section:not(:last-child) {
+    margin-bottom: 60px;
+}
+.sidebar_section_title {
+    font-family: "Roboto Slab", serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 0.75;
+}
+.sidebar_categories {
+    margin-top: 16px;
+}
+.sidebar_categories ul li {
+    position: relative;
+    width: 100%;
+    height: 51px;
+}
+.sidebar_categories ul li a {
+    display: block;
+    position: relative;
+    font-size: 14px;
+    line-height: 51px;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+.sidebar_categories ul li a::before {
+    display: inline-block;
+    position: relative;
+    font-family: "FontAwesome";
+    content: "\f101";
+    margin-right: 4px;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+.sidebar_latest {
+    margin-top: 31px;
+}
+.sidebar_gallery {
+    margin-top: 34px;
+}
+.sidebar_tags {
+    margin-top: 40px;
+}
+.sidebar_banner {
+    width: 100%;
+    height: 100%;
+}
+.sidebar_banner_background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+.sidebar_banner_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+}
+.sidebar_feature {
+    margin-top: 33px;
+}
+.sidebar_latest {
+    margin-top: 31px;
+}
+.sidebar_teacher {
+    margin-top: 40px;
+}
+.categories_list li a span {
+    float: right;
+}
+.latest:not(:last-child) {
+    margin-bottom: 20px;
+}
+.latest_image div {
+    width: 90px;
+    height: 74px;
+    border-radius: 3px;
+    overflow: hidden;
+}
+.latest_image div img {
+    max-width: 100%;
+}
+.latest_content {
+    padding-left: 21px;
+    margin-top: -4px;
+}
+.latest_title a {
+    font-family: "Roboto Slab", serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.625;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+.latest_price {
+    font-family: "Roboto Slab", serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 0.75;
+    margin-top: 16px;
+}
+.latest_date {
+    font-size: 14px;
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+.gallery_item {
+    position: relative;
+    width: calc((100% - 36px) / 3);
+    margin-bottom: 18px;
+    cursor: pointer;
+}
+.gallery_item img {
+    width: 100%;
+}
+.gallery_item_overlay {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    pointer-events: none;
+    font-size: 33px;
+    font-weight: 300;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+.gallery_item:hover .gallery_item_overlay {
+    opacity: 1;
+}
+.colorbox {
+    outline: none;
+}
+.tags_list li {
+    display: inline-block;
+    padding-left: 19px;
+    padding-right: 18px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+.tags_list li:not(:last-child) {
+    margin-right: 5px;
+}
+.tags_list li a {
+    display: block;
+    font-size: 12px;
+    text-transform: uppercase;
+    line-height: 30px;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+.banner_title {
+    font-family: "Roboto Slab", serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 0.75;
+}
+.banner_button {
+    width: 200px;
+    height: 46px;
+    border-radius: 3px;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+.banner_button a {
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    margin-left: -0.1em;
+    text-transform: uppercase;
+    line-height: 46px;
+    margin-top: 21px;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+.pagination_row {
+    margin-top: 11px;
+}
+.pagination_list li {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+.pagination_list li:not(:last-child) {
+    margin-right: 5px;
+}
+.pagination_list li a {
+    display: block;
+    position: relative;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 40px;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+
+/*********************************
+13. Newsletter
+*********************************/
+
+.newsletter_background {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+/* Reemplazar en el intervalo de líneas [49 - 68] del archivo newsletter.scss de la rama j3. Misma función, mejor formato. */
+.newsletter_input::-webkit-input-placeholder,
+.newsletter_input:-moz-placeholder,
+.newsletter_input::-moz-placeholder,
+.newsletter_input:-ms-input-placeholder,
+.newsletter_input::input-placeholder {
+    font-size: 14px !important;
+    font-weight: 400 !important;
+}
+
+/*********************************
+16. Footer
+*********************************/
+
+.footer_title {
+    font-size: 18px;
+}
+.footer_contact_info ul li {
+    font-size: 14px;
+    font-weight: 400;
+}
+.copyright div {
+    font-size: 14px;
+}
+.contact_info_container {
+    margin-top: 100px;
+}
+.contact_info_title {
+    font-family: "Roboto Slab", serif;
+    font-size: 36px;
+    font-weight: 700;
+}
+.contact_info {
+    padding-left: 45px;
+}
+.contact_info_text {
+    margin-top: 27px;
+}
+.contact_info_location {
+    margin-top: 28px;
+}
+.contact_info_location_title {
+    font-family: "Roboto Slab", serif;
+    font-size: 18px;
+    font-weight: 700;
+}
+.contact_form {
+    padding-right: 10px;
+}

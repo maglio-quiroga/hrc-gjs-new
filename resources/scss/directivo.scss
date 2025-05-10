@@ -2,34 +2,27 @@
  Equipo Directivo
 *********************************/
 
-.directivo
-{
+.directivo {
 	width: 100%;
-	/*padding-top: 93px;*/
 	padding-bottom: 60px;
 }
-.directivo_background
-{
+.directivo_background {
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
 }
-.directivo_row
-{
+.directivo_row {
 	margin-top: 43px;
 }
-.directivo_col
-{
+.directivo_col {
 	margin-bottom: 40px;
 }
-.directivo_item
-{
+.directivo_item {
 	width: 100%;
 }
-.directivo_image
-{
+.directivo_image {
 	width: 250px;
 	height: 200px;
 	border-radius: 6px;
@@ -39,12 +32,10 @@
 	margin-bottom: -86px;
 	z-index: 5;
 }
-.directivo_image img
-{
+.directivo_image img {
 	max-width: 100%;
 }
-.directivo_body
-{
+.directivo_body {
 	width: 100%;
 	padding-top: 108px;
 	padding-bottom: 24px;
@@ -56,8 +47,7 @@
 	-o-transition: all 200ms ease;
 	transition: all 200ms ease;
 }
-.directivo_title a
-{
+.directivo_title a {
 	font-family: 'Montserrat','Roboto Slab', serif;
 	font-size: 20px;
 	font-weight: 700;
@@ -67,45 +57,44 @@
 	-o-transition: all 200ms ease;
 	transition: all 200ms ease;
 }
-.directivo_subtitle
-{
+.directivo_subtitle {
 	font-size: 14px;
 	font-weight: 400;
 	margin-top: 6px;
 }
-.social_list
-{
+.social_list {
 	margin-top: 16px;
 }
-.social_list ul li
-{
+.social_list ul li {
 	display: inline-block;
+    width: 100%;
+    height: 46px;
+    border-radius: 3px;
+    padding-left: 19px;
+    font-size: 16px;
+    font-weight: 400;
 }
-.social_list ul li:not(:last-child)
-{
+.social_list ul li:not(:last-child) {
 	margin-right: 10px;
 }
-.social_list ul li a i
-{
+.social_list ul li a i {
 	font-size: 32px;
+    outline: none;
 	-webkit-transition: all 200ms ease;
 	-moz-transition: all 200ms ease;
 	-ms-transition: all 200ms ease;
 	-o-transition: all 200ms ease;
 	transition: all 200ms ease;
 }
-.directivo_col .directivo_item
-{
+.directivo_col .directivo_item {
 	padding-left: 6px;
 	padding-right: 6px;
 }
-.directivo_col:first-child .directivo_item
-{
+.directivo_col:first-child .directivo_item {
 	padding-left: 0;
 	padding-right: 6px;
 }
-.directivo_col:nth-child(4n) .directivo_item
-{
+.directivo_col:nth-child(4n) .directivo_item {
 	padding-left: 6px;
 	padding-right: 0;
 }
