@@ -10,17 +10,20 @@
     <link rel="stylesheet" href="{{ asset('styles/elements/admin.css') }}">
     <title>Categorías</title>
 </head>
-<body class="font-sans antialiased">
-    <div class="placeholder1">
-        <div class="placeholder2">
-            @include('admin.templates.sidebar')
-        </div>
-        <div class="placeholder3">
+<body>
+    <div class="structure">
+
+        <div class="navbar-container">
             @include('admin.templates.navbar')
         </div>
-        <div class="placeholder4 container mt-5">
+
+        <div class="sidebar-container">
+            @include('admin.templates.sidebar')
+        </div>
+
+        <div class="content-display">
             <div class="d-flex justify-content-between align-items-center mb-4">
-                <h1 class="h3">Categorías</h1>
+                <h1 class="h1">Categorías</h1>
                 <a href="{{ route('admin.handle.view', ['model' => 'categories', 'action' => 'create']) }}" class="btn btn-success">
                     <i class="bi bi-plus-circle me-1"></i> Agregar nueva categoría
                 </a>

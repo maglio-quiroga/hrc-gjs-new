@@ -31,9 +31,12 @@
 <body>
     <div class="container py-5">
         <div class="card card-custom bg-white rounded">
+
             <h1 class="text-center bg-success text-white py-3 m-0 rounded-top">
-                <i class="bi bi-person-plus me-2"></i>Agregar nuevo miembro al equipo
+                <i class="bi bi-person-vcard-fill" style="font-size: 50px;"></i><i class="bi bi-plus" style="margin-left: -8px;"></i>
+                Agregar nuevo miembro al equipo
             </h1>
+
             <form action="{{ route('admin.handle.create', ['model' => 'teams']) }}" method="POST" enctype="multipart/form-data" class="p-4">
                 @csrf
 

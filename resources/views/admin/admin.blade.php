@@ -9,15 +9,18 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
     <title>Document</title>
 </head>
-<body class="font-sans antialiased">
-    <div class="placeholder1">
-        <div class="placeholder2">
-            @include('admin.templates.sidebar')
-        </div>
-        <div class="placeholder3">
+<body>
+    <div class="structure">
+
+        <div class="navbar-container">
             @include('admin.templates.navbar')
         </div>
-        <div class="placeholder4">
+
+        <div class="sidebar-container">
+            @include('admin.templates.sidebar')
+        </div>
+
+        <div class="content-display">
 
             <div class=".container d-flex justify-content-center p-3">
                 <h1 class="h1">Resumen de Sitio Administrativo</h1>
@@ -27,11 +30,11 @@
             
             <div class=".container d-flex justify-content-center p-3">
                     <div class="btn-group" role="group" aria-label="Basic outlined example">
-                        <a type="button" href="#" class="btn btn-outline-success">Crear Usuario</a>
-                        <a type="button" href="{{ route('admin.handle.view', ['model' => 'posts', 'action' => 'create']) }}" class="btn btn-outline-success">Crear Noticia</a>
-                        <a type="button" href="{{ route('admin.handle.view', ['model' => 'categories', 'action' => 'create']) }}" class="btn btn-outline-success">Crear Categoria</a>
-                        <a type="button" href="{{ route('admin.handle.view', ['model' => 'services', 'action' => 'create']) }}" class="btn btn-outline-success">Crear Servicio</a>
-                        <a type="button" href="{{ route('admin.handle.view', ['model' => 'teams', 'action' => 'create']) }}" class="btn btn-outline-success">Crear Equipo</a>
+                        <a type="button" href="#" class="btn btn-outline-success btn-lg"><i class="bi bi-person"style="margin-right: 2px;"></i>Crear Usuario</a>
+                        <a type="button" href="{{ route('admin.handle.view', ['model' => 'posts', 'action' => 'create']) }}" class="btn btn-outline-success btn-lg"><i class="bi bi-newspaper" style="margin-right: 2px;"></i>Crear Noticia</a>
+                        <a type="button" href="{{ route('admin.handle.view', ['model' => 'categories', 'action' => 'create']) }}" class="btn btn-outline-success btn-lg"><i class="bi bi-menu-button-wide-fill"style="margin-right: 2px;"></i>Crear Categoria</a>
+                        <a type="button" href="{{ route('admin.handle.view', ['model' => 'services', 'action' => 'create']) }}" class="btn btn-outline-success btn-lg"><i class="bi bi-menu-up"style="margin-right: 2px;"></i>Crear Servicio</a>
+                        <a type="button" href="{{ route('admin.handle.view', ['model' => 'teams', 'action' => 'create']) }}" class="btn btn-outline-success btn-lg"><i class="bi bi-person-vcard-fill"style="margin-right: 2px;"></i>Crear Equipo</a>
                     </div>
             </div>
 
