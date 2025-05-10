@@ -10,8 +10,9 @@
 				<span>Sesión</span>
 			</button>
 			<div class="dropdown-content">
+				<!-- Enlace al perfil -->
 				<div class="navbtn" role="button">
-					<a style="display: flex; align-items: center;justify-content: flex-start ;width: 100%; height: 100%;" href="{{ route('profile.edit') }}">
+					<a style="display: flex; align-items: center; justify-content: flex-start; width: 100%; height: 100%;" href="{{ route('profile.edit') }}">
 						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width: 30px; height: 30px; margin-right: 8px; color: #509414;">
 							<path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"></path>
 						</svg>
@@ -19,6 +20,17 @@
 					</a>
 				</div>
 
+				<!-- Enlace al panel de administración (opcional) -->
+				<div class="navbtn" role="button">
+					<a style="display: flex; align-items: center; justify-content: flex-start; width: 100%; height: 100%;" href="{{ route('admin.resume') }}">
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width: 30px; height: 30px; margin-right: 8px; color: #509414;">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M12 5v14m7-7H5"></path>
+						</svg>
+						<span>Administración</span>
+					</a>
+				</div>
+
+				<!-- Formulario de cierre de sesión -->
 				<form method="POST" action="{{ route('logout') }}">
 					@csrf
 					<button type="submit" class="navbtn" style="cursor: pointer;">
@@ -32,6 +44,3 @@
 		</div>
 	</div>
 </header>
-
-
-
