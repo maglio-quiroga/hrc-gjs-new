@@ -9,15 +9,18 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
     <title>Document</title>
 </head>
-<body class="font-sans antialiased">
-    <div class="placeholder1">
-        <div class="placeholder2">
-            @include('admin.templates.sidebar')
-        </div>
-        <div class="placeholder3">
+<body>
+    <div class="structure">
+
+        <div class="navbar-container">
             @include('admin.templates.navbar')
         </div>
-        <div class="placeholder4">
+
+        <div class="sidebar-container">
+            @include('admin.templates.sidebar')
+        </div>
+
+        <div class="content-display">
 
             <div class=".container d-flex justify-content-center p-3">
                 <h1 class="h1">Resumen de Sitio Administrativo</h1>
