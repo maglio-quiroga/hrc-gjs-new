@@ -11,7 +11,11 @@
 </head>
 <body>
 <div class="container mt-5">
-    <h1 class="mb-4">Agregar nueva Categoría</h1>
+
+    <h1 class="text-center bg-success text-white py-3 m-0 rounded-top">
+        <i class="bi bi-menu-button-wide-fill"></i><i class="bi bi-plus" style="margin-left: -8px;"></i>
+        Agregar nueva Categoría
+    </h1>
 
     <form action="{{ route('admin.handle.create', ['model' => 'categories']) }}" method="POST" class="card shadow p-4">
         @csrf
@@ -27,9 +31,11 @@
 
         {{-- Botones --}}
         <div class="d-flex justify-content-between">
-            <a href="{{ route('admin.handle.view', ['model' => 'categories']) }}" class="btn btn-secondary">Cancelar</a>
-            <button type="submit" class="btn btn-primary">
-                <i class="bi bi-check-circle me-1"></i> Guardar
+            <a href="{{ route('admin.handle.view', ['model' => 'categories']) }}" class="btn btn-outline-secondary btn-icon">
+                <i class="bi bi-arrow-left"></i> Cancelar
+            </a>
+            <button type="submit" class="btn btn-primary btn-icon">
+                <i class="bi bi-save"></i> Guardar
             </button>
         </div>
     </form>
