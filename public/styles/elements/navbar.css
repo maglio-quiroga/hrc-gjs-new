@@ -28,6 +28,8 @@
     justify-content:flex-start;
     align-items: center;
     
+    gap: 20px;
+
     border-top-left-radius:50px;
     border-bottom-left-radius: 50px;
     border-top-right-radius: 10px;
@@ -41,17 +43,6 @@
     background-color: aliceblue;
     color: #509414;
     cursor: pointer;
-}
-.navbar-btn img {
-    max-height: 80%;
-    max-width: 80%;
-    height: auto;
-    width: auto;
-
-    object-fit: cover;
-
-    border-radius: 50%;
-    margin-right: 20px;
 }
 .dropdown-item{
     color: #509414;
@@ -68,13 +59,5 @@
 
     .navbar-btn span {
         display: none;
-    }
-
-    .navbar-btn img {
-        width: 80%;
-        height: 80%;
-        object-fit: cover;
-        border-radius: 50%;
-        margin: 0;
     }
 }
