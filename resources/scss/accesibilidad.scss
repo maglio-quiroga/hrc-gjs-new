@@ -1,9 +1,5 @@
 @charset "utf-8";
-/* CSS Document */
-
-
 /**************************
-    blablablablablabla
     --HACCECIBILIDAD--
 **************************/
 #btnAccesibilidad {
@@ -17,7 +13,6 @@
     cursor: pointer;
     z-index: 10000;
 }
-
 #menuAccesibilidad {
     position: fixed;
     bottom: 80px;
@@ -29,25 +24,20 @@
     gap: 10px;
     z-index: 10000;
 }
-
 #menuAccesibilidad button {
     border: none;
     padding: 8px 12px;
     border-radius: 8px;
     cursor: pointer;
 }
-
 #menuAccesibilidad button:hover {
 }
-
 .texto-grande {
     font-size: 1.5em !important;
 }
-
 .high-contrast {
     filter: contrast(120%);
 }
-
 .larger-text {
     font-size: 0.05em !important;
 }
@@ -55,4 +45,3 @@
 .smaller-text {
     font-size: 0.5em !important;
 }
-
