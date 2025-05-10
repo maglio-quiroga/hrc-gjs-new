@@ -2,6 +2,9 @@
 
 <header>
 	<div class="navbar">
+		@auth
+		<p style="color: #fafafa;margin-top:10px;"><i class="bi bi-person"></i>{{ auth()->user()->name }}</p>
+		@endauth
 		<div class="dropdown">
 			<button class="dropdown-toggle navbtn">
 				<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width: 30px; height: 30px; color:rgb(255, 255, 255);" >
