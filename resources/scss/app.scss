@@ -1,35 +1,47 @@
-// resources/scss/app.scss - OPCIÓN A
-
 // 1. Importar Bootstrap SCSS (Completo)
 @import "bootstrap/scss/bootstrap";
+
+/*********************************************
+* Custom CSS is listed in alphabetical order *
+*********************************************/
+// A
 @import "./accesibilidad";
+// B
 @import "./body_general";
-@import "./header";
-@import "./home";
-@import "./team";
-@import "./footer";
-@import "./newsletter";
-@import "./news";
-@import "./mapa";
-@import "./gobierno";
+// C
+@import "./cambiosYClasesNuevas";
 @import "./campain";
 @import "./card_style";
-@import "./service_card";
-@import "./main";
-@import "./table";
-@import "./modal";
-@import "./icon";
-@import "./meanMenu";
-@import "./courses";
-@import "./lightbox";
+// D
 @import "./directivo";
+// F
 @import "./flexslider";
-@import "./blog";
-@import "./blog_single";
-@import "./contact";
-@import "./course";
 @import "./focus-style"; /* Import de los estilos de la funcionalidad de recuadro de enfoque */
+@import "./footer";
+// G
+@import "./gobierno";
+// H
+@import "./header";
+@import "./home";
+// I
+@import "./icon";
+// L
+@import "./lightbox";
+// M
+@import "./main";
+@import "./mapa";
+@import "./meanMenu";
+@import "./modal";
+// N
+@import "./news";
+@import "./newsletter";
+// S
+@import "./service_card";
+// T
+@import "./table";
+@import "./team";
 
+// Fonts
 @import url("https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:300,400,500,700,900");
 
 // 2. Estilos personalizados ESPECÍFICOS que NO son reemplazados por Bootstrap.
