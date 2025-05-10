@@ -9,11 +9,11 @@
     <link rel="stylesheet" href="{{ asset('styles/elements/admin.css') }}">
 </head>
 <body class="font-sans antialiased">
-    <div class="placeholder1">
-        <div class="placeholder2">
+    <div class="structure">
+        <div class="sidebar-container">
             @include('admin.templates.sidebar')
         </div>
-        <div class="placeholder3">
+        <div class="navbar-container">
             @include('admin.templates.navbar')
         </div>
     <div class="placeholder4 container mt-5">
