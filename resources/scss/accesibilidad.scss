@@ -9,7 +9,6 @@
     padding: 12px 20px;
     border: none;
     border-radius: 50%;
-    font-size: 24px;
     cursor: pointer;
     z-index: 10000;
 }
@@ -33,16 +32,13 @@
 #menuAccesibilidad button:hover {
 }
 .accMenu {
-    width: 300px;
+    width: 20em;
 }
 .texto-grande {
-    font-size: 1.5em !important;
+    font-size: 1.25em !important;
 }
 .high-contrast {
     filter: contrast(120%);
-}
-.larger-text {
-    font-size: 0.05em !important;
 }
 /*reducir el tamaño del texto*/
 .smaller-text {

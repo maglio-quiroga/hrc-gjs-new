@@ -10,7 +10,7 @@
 }
 body {
     font-family: "Museo Sans 500", "Roboto", sans-serif;
-    font-size: 0.75rem;
+    font-size: 0.75em;
     font-weight: 400;
 }
 div {
@@ -22,11 +22,11 @@ div {
 }
 ul {
     list-style: none;
-    margin-bottom: 0px;
+    margin-bottom: 0em;
 }
 p {
     font-family: "Museo Sans 500", "Roboto", sans-serif;
-    font-size: 0.75rem;
+    font-size: 1em;
     line-height: 1.85;
     font-weight: 400;
     -webkit-font-smoothing: antialiased;
@@ -63,19 +63,19 @@ p a:hover::after {
 p::selection {
 }
 h1 {
-    font-size: 2.5rem;
+    font-size: 2.5em;
 }
 h2 {
-    font-size: 2rem;
+    font-size: 2em;
 }
 h3 {
-    font-size: 1.5rem;
+    font-size: 1.5em;
 }
 h4 {
-    font-size: 1.25rem;
+    font-size: 1.25em;
 }
 h5 {
-    font-size: 1rem;
+    font-size: 1em;
 }
 h1,
 h2,
@@ -94,6 +94,9 @@ h3::selection,
 h4::selection,
 h5::selection,
 h6::selection {
+}
+.btn {
+    font-size: 1.25em !important;
 }
 section {
     display: block;
@@ -166,5 +169,5 @@ section {
     background: transparent;
 }
 .nopadding {
-    padding: 0px;
+    padding: 0em;
 }
