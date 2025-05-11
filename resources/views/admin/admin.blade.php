@@ -14,8 +14,8 @@
     <title>Document</title>
     <style>
         .chart-container {
-            width: 30%;
-            height: 30%;
+            width: 25%;
+            height: 25%;
             margin: auto;
         }
     </style>
@@ -183,12 +183,14 @@
             </div>
         </div>
     </div>
-    <div class="card chart-container mt-4 mb-0 text-center">
-        <h5 class="card-header">Posts Publicados/Borradores</h4>
-        <div class="card-body p-0 pb-2">
+    <div class="card w-50 mx-auto mt-4 mb-0 text-center">
+        <h5 class="card-header">Porcentaje de Posts Publicados y Post Borradores</h4>
+        <div class="chart-wrapper w-100 w-md-50 w-lg-75 mx-auto" style="height: auto;">
             <canvas id="chart"></canvas>
         </div>
     </div>
+</div>
+
 </div>    
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -196,7 +198,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
     <script>
         console.log("Script cargado correctamente");
-        fetch('/admin/chart-data') // Usa el prefijo admin
+        fetch('/admin/chart-data')
         .then(res => res.json())
         .then(data => {
             const ctx = document.getElementById("chart").getContext('2d');
@@ -211,42 +213,43 @@
                     }]
                 },
                 options: {
-                    responsive: true, // Hace que el gráfico sea sensible
+                    responsive: true, 
+                    maintainAspectRatio: false,
                     plugins: {
                         datalabels: {
-                            color: '#fff',  // Color de las etiquetas
+                            color: '#fff',  
                             formatter: function(value, context) {
-                                let percentage = (value).toFixed(1) + '%'; // Formatear el porcentaje con un decimal
-                                return percentage;  // Mostrar el porcentaje
+                                let percentage = (value).toFixed(1) + '%'; 
+                                return percentage;
                             },
                             font: {
                                 weight: 'bold',
                                 size: 16
                             },
-                            align: 'center',  // Centrar las etiquetas en los segmentos
-                            anchor: 'center',  // Centrar las etiquetas
+                            align: 'center', 
+                            anchor: 'center', 
                         },
                         legend: {
-                            display: true,  // Mostrar la leyenda
+                            display: true,
                             onClick: function(e) {
-                                e.preventDefault();  // Previene la acción predeterminada de la leyenda
+                                e.preventDefault();
                             },
                             labels: {
-                                boxWidth: 20,  // Tamaño de la caja en la leyenda
-                                padding: 15     // Espaciado entre los elementos de la leyenda
+                                boxWidth: 20, 
+                                padding: 15
                             }
                         }
                     },
                     interaction: {
-                        mode: null,  // Desactivar la interacción de los segmentos (sin interacción)
-                        intersect: false, // No es necesario que el clic esté en el borde exacto de los segmentos
-                        axis: 'none' // Desactiva la interacción por el eje
+                        mode: null, 
+                        intersect: false,
+                        axis: 'none'
                     },
                     hover: {
-                        mode: null,  // Desactivar hover
+                        mode: null, 
                     }
                 },
-                plugins: [ChartDataLabels] // Usar el plugin para las etiquetas
+                plugins: [ChartDataLabels]
             });
         });
     </script>
