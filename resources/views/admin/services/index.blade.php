@@ -8,18 +8,20 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('styles/elements/admin.css') }}">
 </head>
-<body class="font-sans antialiased">
-    <div class="placeholder1">
-        <div class="placeholder2">
-            @include('admin.templates.sidebar')
-        </div>
-        <div class="placeholder3">
+<body>
+    <div class="structure">
+
+        <div class="navbar-container">
             @include('admin.templates.navbar')
         </div>
-    <div class="placeholder4 container mt-5">
-    
+
+        <div class="sidebar-container">
+            @include('admin.templates.sidebar')
+        </div>
+
+        <div class="content-display">
     <div class="d-flex justify-content-between  align-items-center">
-    <h2>Servicios</h2>
+    <h1 class="h1">Servicios</h1>
     <a href="{{ route('admin.handle.view', ['model' => 'services', 'action' => 'create']) }}" class="btn btn-success "><i class="bi bi-plus-circle me-1"></i> Agregar nuevo servicio</a>
     </div>
     

@@ -10,18 +10,21 @@
     
 
 </head>
-<body class="font-sans antialiased">
-    <div class="placeholder1">
-        <div class="placeholder2">
-            @include('admin.templates.sidebar')
-        </div>
-        <div class="placeholder3">
+<body>
+    <div class="structure">
+
+        <div class="navbar-container">
             @include('admin.templates.navbar')
         </div>
-    <div class="placeholder4 container mt-5">
+
+        <div class="sidebar-container">
+            @include('admin.templates.sidebar')
+        </div>
+
+        <div class="content-display">
     
-    <div class="d-flex justify-content-between align-items-center mb-4">
-            <h1 class="h3">Noticias</h1>
+        <div class="d-flex justify-content-between align-items-center mb-4">    
+            <h1 class="h1">Noticias</h1>
             <a href="{{ route('admin.handle.view', ['model' => 'posts', 'action' => 'create']) }}" class="btn btn-success">
                 <i class="bi bi-plus-circle me-1"></i> Agregar nueva noticia
             </a>
@@ -46,7 +49,7 @@
                 </select>
             </div>
 
-            <div class="col">
+            <div class="col">   
             <select id="selectCategoria" class="form-select" onchange="buscarTabla()">
                 <option value="">Todas las categorías</option>
                 @foreach ($categories as $category)

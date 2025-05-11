@@ -9,6 +9,7 @@ use App\Models\Category;
 use App\Models\Post;
 use App\Models\Service;
 use App\Models\Team;
+use App\Models\User; 
 
 class AdminController extends Controller
 {
@@ -23,8 +24,9 @@ class AdminController extends Controller
         $posts      = Post::orderByDesc('updated_at')->take(5)->get();
         $services   = Service::orderByDesc('updated_at')->take(5)->get();
         $teams      = Team::orderByDesc('updated_at')->take(5)->get();
+        $users      = User::orderByDesc('updated_at')->take(5)->get();
 
-        return view("admin.admin", compact('categories','posts','services','teams'));
+        return view("admin.admin", compact('categories','posts','services','teams','users'));
     }
 
     function handleRoute(string $model , ?string $action = null, ?int $target = null) {
@@ -125,6 +127,11 @@ class AdminController extends Controller
                 $data = $request->all();
 
             }
+            //NO sobreescribe la contra si esta vacia :3
+            if (empty($data['password'])) {
+                unset($data['password']);
+            }
+        
 
             foreach ($request->files as $key => $file) {
 
