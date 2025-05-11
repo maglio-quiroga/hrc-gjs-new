@@ -7,12 +7,25 @@ export function accesibilidad() {
         // Toggle menu visibility
         const toggle = document.getElementById("accessibilityToggle");
         const menu = document.getElementById("accessibilityMenu");
+        const accessibilityIcon = document.getElementById("accessibilityIcon");
+        const closeIcon = document.getElementById("closeIcon");
 
-        if (toggle && menu) {
+        if (toggle && menu && accessibilityIcon && closeIcon) {
             console.log("Found accessibility elements");
             toggle.addEventListener("click", function () {
                 console.log("Toggle clicked");
+                const isExpanded =
+                    toggle.getAttribute("aria-expanded") === "true";
+
+                // Toggle menu visibility
                 menu.classList.toggle("d-none");
+
+                // Toggle icons
+                accessibilityIcon.classList.toggle("d-none");
+                closeIcon.classList.toggle("d-none");
+
+                // Update ARIA attributes
+                toggle.setAttribute("aria-expanded", !isExpanded);
             });
         } else {
             console.error("Could not find accessibility elements");
@@ -31,38 +44,24 @@ export function accesibilidad() {
             const body = document.body;
 
             switch (action) {
-                //cambiar constraste
                 case "contrast":
                     body.classList.toggle("high-contrast");
                     document.body.classList.toggle("modo-alto-contraste");
                     break;
-                //AUMENTA EL TAÑO DEL TEXTO
                 case "increase-font":
-                    //si "smaller-text" SI existe
                     if (document.body.classList.contains("smaller-text")) {
-                        //remueve la clase "smaller-text"
                         document.body.classList.remove("smaller-text");
                         break;
-                    }
-                    //si "smaller-text" NO existe
-                    else {
-                        //CREANDO la lista para agregar la etiqueta
+                    } else {
                         document.body.classList.add("texto-grande");
-                        //AGREGAR etieueta fontSize a body
                         document.body.style.fontSize = fontSize + "em";
                         break;
                     }
-                //REDUCIR TAMAÑO DEL TEXTO
                 case "decrease-font":
-                    //si "texto-grande" SI existe
                     if (document.body.classList.contains("texto-grande")) {
-                        //remueve la clase "texto-grande" mostrando el tamaño originañ
                         document.body.classList.remove("texto-grande");
                         break;
-                    }
-                    //si "texto-grande" NO existe
-                    else {
-                        //AGrege la clase para reducir texto
+                    } else {
                         document.body.classList.add("smaller-text");
                         break;
                     }

@@ -1,5 +1,6 @@
 import "bootstrap"; // Importa Bootstrap JS
 import "../scss/compile.scss";
+import "../scss/compileTemp.scss";
 import "./focus-style"; /* Import de los estilos de la funcionalidad de recuadro de enfoque */
 
 import { accesibilidad } from "./accesibilidad"; // Componente de accesibilidad

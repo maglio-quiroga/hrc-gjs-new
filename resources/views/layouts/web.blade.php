@@ -27,7 +27,6 @@
 
     {{-- Permite añadir CSS específico desde las vistas hijas --}}
     @stack('styles')
-
 </head>
 <body>
     {{-- Div para recuadro de enfoque de accesibilidad --}}
@@ -65,8 +64,7 @@
     {{-- <script src="{{ asset('js/course.js') }}"></script> --}}
     {{-- <script src="{{ asset('js/custom.js') }}"></script> --}} {{-- Considera incluir custom.js en app.js --}}
 
-     {{-- Permite añadir JS específico desde las vistas hijas --}}
+    {{-- Permite añadir JS específico desde las vistas hijas --}}
     @stack('scripts')
-
 </body>
 </html>
