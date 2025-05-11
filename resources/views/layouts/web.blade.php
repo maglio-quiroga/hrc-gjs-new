@@ -25,12 +25,6 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('plugins/OwlCarousel2-2.2.1/owl.theme.default.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('plugins/OwlCarousel2-2.2.1/animate.css') }}">
 
-    {{-- Otros estilos específicos que podrían no estar en app.scss --}}
-    {{-- Si course.css o main.css son necesarios globalmente y no están en app.scss, añádelos aquí --}}
-    {{-- <link rel="stylesheet" type="text/css" href="{{ asset('styles/course.css') }}"> --}}
-    {{-- <link rel="stylesheet" type="text/css" href="{{ asset('styles/main.css') }}"> --}}
-    <link rel="stylesheet" type="text/css" href="{{ asset('styles/responsive.css') }}"> {{-- Presente en ambos --}}
-
     {{-- Permite añadir CSS específico desde las vistas hijas --}}
     @stack('styles')
 
@@ -38,39 +32,23 @@
 <body>
     {{-- Div para recuadro de enfoque de accesibilidad --}}
     <div id="focus-overlay"></div>
-
-    <div id="app"> {{-- Útil si usas Vue o similar --}}
+   <div id="app">
         <div class="super_container">
-
-            {{-- Incluir la cabecera (que contiene la navegación principal) --}}
             @include('template.header')
-
-            {{-- Contenedor principal para el contenido de la página --}}
             <div>
                 <main>
-                    {{-- Componente de Accesibilidad --}}
                     <x-accesibilidad/>
-
                     {{-- Contenido principal de las vistas hijas --}}
                     {{ $slot ?? '' }} {{-- Para componentes anónimos --}}
                     @yield('content') {{-- Para secciones Blade tradicionales --}}
                 </main>
             </div>
-
-            {{-- Incluir el pie de página --}}
             @include('template.footer')
-
-        </div> {{-- Fin super_container --}}
-    </div> {{-- Fin app --}}
-
+        </div>
+    </div>
     {{-- Scripts JS --}}
     {{-- jQuery (A menudo necesario para plugins antiguos, verifica si Vite ya lo incluye o si es necesario) --}}
     <script src="{{ asset('js/jquery-3.2.1.min.js') }}"></script>
-
-    {{-- Popper y Bootstrap JS (Si Vite no los carga globalmente o si se necesitan antes que app.js) --}}
-    {{-- Nota: app.js ya importa Bootstrap JS, así que estos podrían ser redundantes --}}
-    {{-- <script src="{{ asset('styles/bootstrap4/popper.js') }}"></script> --}}
-    {{-- <script src="{{ asset('styles/bootstrap4/bootstrap.min.js') }}"></script> --}}
 
     {{-- Plugins JS específicos (Incluir después de jQuery/Bootstrap si dependen de ellos y si no están en app.js) --}}
     <script src="{{ asset('plugins/greensock/TweenMax.min.js') }}"></script>
