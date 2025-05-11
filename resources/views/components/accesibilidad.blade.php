@@ -9,6 +9,15 @@
             <button data-action="toggle-focus" id="focus-toggle-button" class="btn btn-outline-secondary text-start">Recuadro de Enfoque</button>
             <button data-action="highlight-paragraphs">Resaltar párrafos</button>
             <button data-action="epilepsy-safe">Contraste para epilepsia</button>
+            <button data-action="toggle-filter">Activar/Desactivar filtro</button>
+                    <div>
+                        <label>Colores del filtro:</label><br>
+                        <button data-action="filter-yellow">Amarillo</button>
+                        <button data-action="filter-blue">Azul</button>
+                        <button data-action="filter-white">Blanco</button>
+                        <button data-action="filter-black">Negro</button>
+                    </div>
+            
         </div>
     </div>
 </div>

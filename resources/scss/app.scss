@@ -113,4 +113,34 @@
 .epilepsy-safe-contrast a {
     color: #005580 !important;
 }
+
+.color-filter-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 9999;
+    mix-blend-mode: multiply;
+    opacity: 0.4;
+}
+
+.color-filter-yellow {
+    background-color: yellow;
+}
+
+.color-filter-blue {
+    background-color: blue;
+}
+
+.color-filter-white {
+    background-color: white;
+}
+
+.color-filter-black {
+    background-color: black;
+}
+
+
 // --- FIN Opción A ---

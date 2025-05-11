@@ -95,6 +95,34 @@ export function accesibilidad() {
                 case "epilepsy-safe":
                     body.classList.toggle("epilepsy-safe-contrast");
                     break;
+
+                case "toggle-filter":
+                    const overlay = document.getElementById("colorFilterOverlay");
+                    if (!overlay) return;
+
+                    // Mostrar/ocultar
+                    overlay.classList.toggle("d-none");
+                    break;
+
+                case "filter-yellow":
+                case "filter-blue":
+                case "filter-white":
+                case "filter-black":
+                    const overlayColor = document.getElementById("colorFilterOverlay");
+                    if (!overlayColor) return;
+
+                    // Mostrar overlay si estaba oculto
+                    overlayColor.classList.remove("d-none");
+
+                    // Quitar clases anteriores
+                    overlayColor.classList.remove("color-filter-yellow", "color-filter-blue", "color-filter-white", "color-filter-black");
+
+                    // Agregar clase correspondiente
+                    const colorClass = action.replace("filter-", "color-filter-");
+                    overlayColor.classList.add(colorClass);
+                    break;
+
+
             }
         });
     });

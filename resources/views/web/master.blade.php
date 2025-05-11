@@ -56,5 +56,8 @@
     <script src="js/courses.js"></script>
     <script src="js/course.js"></script>
     <script src="js/custom.js"></script>
+
+    <div id="colorFilterOverlay" class="color-filter-overlay d-none"></div>
+
 </body>
 </html>
