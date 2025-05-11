@@ -67,10 +67,33 @@ export function accesibilidad() {
                         break;
                     }
                 case "screen-reader":
-                    const texto = document.body.innerText;
-                    const speech = new SpeechSynthesisUtterance(texto);
-                    speech.lang = "es-ES";
-                    window.speechSynthesis.speak(speech);
+                        // Cancelar la lectura anterior que este en ejecucion
+                        window.speechSynthesis.cancel();
+
+                        const selection = window.getSelection().toString().trim();
+                        const texto = selection !== "" ? selection : "Por favor seleccione un texto para leer.";
+
+                        // Dividir texto si es nuy largo para evitar bloqueos
+                        const MAX_LENGTH = 100000; // ajustar este valor mara el maximo a leer
+                        const partes = texto.match(new RegExp(`.{1,${MAX_LENGTH}}`, "g"));
+
+                        partes.forEach(parte => {
+                            const speech = new SpeechSynthesisUtterance(parte);
+                            speech.lang = "es-ES";
+                            speech.rate = 1.2;
+                            window.speechSynthesis.speak(speech);
+                        });
+                        break;
+
+                case "highlight-paragraphs":
+                    const paragraphs = document.querySelectorAll("p");
+                    paragraphs.forEach(p => {
+                        p.classList.toggle("highlighted-paragraph");
+                    });
+                    break;
+                
+                case "epilepsy-safe":
+                    body.classList.toggle("epilepsy-safe-contrast");
                     break;
             }
         });
