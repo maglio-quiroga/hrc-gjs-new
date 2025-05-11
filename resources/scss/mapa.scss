@@ -1,0 +1,106 @@
+@charset "utf-8";
+/*********************************
+12. Mapa
+*********************************/
+.mapa_container {
+    width: 100%;
+    padding-top: 50px;
+}
+.mapa {
+    width: 100%;
+    padding-top: 93px;
+    padding-bottom: 100px;
+}
+.mapa_row {
+    /*margin-top: 55px;*/
+}
+.mapa_post_large_container {
+    padding-right: 30px;
+}
+.mapa_post_large {
+    width: 100%;
+}
+.mapa_post_image {
+    width: 100%;
+    border-radius: 6px;
+    overflow: hidden;
+}
+.mapa_post_image img {
+    max-width: 100%;
+}
+.mapa_post_large_title {
+    margin-top: 23px;
+}
+.mapa_post_large_title a {
+    font-family: "Museo Sans 500", "Roboto Slab", serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.4;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+.mapa_post_meta {
+    margin-top: 11px;
+}
+.mapa_post_meta ul li {
+    display: inline-block;
+    position: relative;
+}
+.mapa_post_meta ul li:not(:last-of-type)::after {
+    display: inline-block;
+    position: relative;
+    content: "|";
+    margin-left: 14px;
+    margin-right: 11px;
+}
+.mapa_post_meta ul li a {
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+.mapa_post_text {
+    margin-top: 13px;
+}
+.mapa_post_link {
+    margin-top: 19px;
+}
+.mapa_post_link a {
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-decoration: underline;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+.mapa_posts_small {
+    padding-top: 20px;
+}
+.mapa_post_small:not(:last-child) {
+    padding-bottom: 15px;
+    /* border-bottom: solid 1px #e5e5e5; */
+}
+.mapa_post_small:not(:first-child) {
+    padding-top: 29px;
+}
+.mapa_post_small_title a {
+    font-family: "Museo Sans 500", "Roboto Slab", serif;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 1.55;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+}

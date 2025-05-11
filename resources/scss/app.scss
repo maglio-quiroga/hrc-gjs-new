@@ -1,49 +1,61 @@
-// resources/scss/app.scss - OPCIÓN A
-
 // 1. Importar Bootstrap SCSS (Completo)
 @import "bootstrap/scss/bootstrap";
+
+/*********************************************
+* Custom CSS is listed in alphabetical order *
+*********************************************/
+// A
 @import "./accesibilidad";
-@import "./meanMenu";
-@import "./courses";
-@import "./lightbox";
+// B
+@import "./body_general";
+// C
+@import "./cambiosYClasesNuevas";
+@import "./campain";
+@import "./card_style";
+// D
 @import "./directivo";
+// F
 @import "./flexslider";
-@import "./blog";
-@import "./blog_single";
-@import "./contact";
-@import "./course";
 @import "./focus-style"; /* Import de los estilos de la funcionalidad de recuadro de enfoque */
+@import "./footer";
+// G
+@import "./gobierno";
+// H
+@import "./header";
+@import "./home";
+// I
+@import "./icon";
+// L
+@import "./lightbox";
+// M
+@import "./main";
+@import "./mapa";
+@import "./meanMenu";
+@import "./modal";
+// N
+@import "./news";
+@import "./newsletter";
+// R
+@import "./responsive";
+// S
+@import "./service_card";
+// T
+@import "./table";
+@import "./team";
+
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:300,400,500,700,900");
 
 // 2. Estilos personalizados ESPECÍFICOS que NO son reemplazados por Bootstrap.
 //    (Hemos eliminado las definiciones de .table, .btn, .btn-*, .form-control, .card, .alert, .alert-*
 //     porque se asume que usarás las clases de Bootstrap directamente en el HTML)
 
-/* Ajustes específicos a la tabla si Bootstrap por sí solo no es suficiente */
-// Si necesitas el borde derecho blanco entre cabeceras y quitar el último:
-.table th {
-    text-align: center; // Mantener si es necesario
-    border-right: 2px solid white; // Mantener si es necesario
-}
-.table th:last-child {
-    border-right: none; // Mantener si es necesario
-}
-// Si quieres el redondeo específico en las esquinas de la tabla (Bootstrap puede hacerlo diferente)
-.table th:first-child,
-.table td:first-child {
-    border-top-left-radius: var(
-        --bs-border-radius-lg
-    ); // O var(--bs-border-radius) si prefieres el normal
-    border-bottom-left-radius: var(--bs-border-radius-lg);
-}
-.table th:last-child,
-.table td:last-child {
-    border-top-right-radius: var(--bs-border-radius-lg);
-    border-bottom-right-radius: var(--bs-border-radius-lg);
-}
 // NOTA: Los estilos de hover, zebra-striping (nth-child(even)) ya vienen con Bootstrap (.table-striped, .table-hover)
 //       y los padding/colores base también. Elimina los @apply correspondientes.
 
 // Ajustes adicionales a .card-title si son necesarios además de la clase de Bootstrap
+
+/* Omitidos por repetición
 .card-title {
     white-space: normal;
     word-wrap: break-word;
@@ -67,36 +79,6 @@
     // El padding, border, shadow, etc., vendrán de la clase .card de Bootstrap.
     // Los márgenes ml-6 mr-6 deberían aplicarse con clases de utilidad de Bootstrap en el HTML (ej: mx-3 o mx-sm-5)
 }
-// Ajustes adicionales a .card-img-top
-.card-img-top {
-    object-fit: cover;
-    height: 200px; // Ajuste específico
-}
-
-/* icon menu */
-.icon-menu {
-    // @apply flex items-center transform transition-colors duration-200 border-r-4 border-transparent;
-    display: flex;
-    align-items: center;
-    border-right: 4px solid transparent;
-    transition: border-color 0.2s ease-in-out; // transition-colors
-}
-
-/* Modal Adjustments */
-.modal-dialog {
-    max-width: 700px; // Mantener ajuste específico.
-}
-.modal-body img {
-    object-fit: cover;
-    max-height: 300px;
-    width: 100%;
-    border-radius: var(
-        --bs-border-radius-lg
-    ); // Usar variable Bootstrap para consistencia
-}
-.modal-body p {
-    text-align: justify;
-    font-size: 0.95rem;
-}
+    */
 
 // --- FIN Opción A ---

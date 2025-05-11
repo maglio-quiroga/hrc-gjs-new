@@ -1,0 +1,35 @@
+@charset "utf-8";
+/*********************************
+15. Campañas
+*********************************/
+.campañas {
+    padding: 40px 0;
+}
+.campañas .campaña {
+    margin-bottom: 15px;
+    transition: transform 0.3s;
+}
+.campañas .campaña:hover {
+    transform: scale(1.05);
+}
+.campañas .campaña_icon img {
+    max-width: 100%;
+    height: auto;
+    padding-bottom: 10px;
+}
+.campañas .section_title {
+    padding-bottom: 50px;
+}
+@media (max-width: 991px) {
+    .campañas .campaña_col {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 767px) {
+    .campañas .campaña_col {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
