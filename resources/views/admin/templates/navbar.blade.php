@@ -1,6 +1,5 @@
 <link rel="stylesheet" href="{{ asset('styles/elements/navbar.css') }}">
 
-
 <div class="navbar">
 	<div class="dropdown">
 	
@@ -21,6 +20,3 @@
 		</ul>
 	</div>
 </div>
-
-
-
