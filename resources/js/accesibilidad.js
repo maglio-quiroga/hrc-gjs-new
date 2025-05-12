@@ -49,27 +49,82 @@ export function accesibilidad() {
                     document.body.classList.toggle("modo-alto-contraste");
                     break;
                 case "increase-font":
-                    if (document.body.classList.contains("smaller-text")) {
+                    if (document.body.classList.contains("smaller-text"))
                         document.body.classList.remove("smaller-text");
-                        break;
-                    } else {
-                        document.body.classList.add("texto-grande");
-                        document.body.style.fontSize = fontSize + "em";
-                        break;
-                    }
+                    else document.body.classList.add("texto-grande");
+                    break;
                 case "decrease-font":
-                    if (document.body.classList.contains("texto-grande")) {
+                    if (document.body.classList.contains("texto-grande"))
                         document.body.classList.remove("texto-grande");
-                        break;
-                    } else {
-                        document.body.classList.add("smaller-text");
-                        break;
-                    }
+                    else document.body.classList.add("smaller-text");
+                    break;
                 case "screen-reader":
-                    const texto = document.body.innerText;
-                    const speech = new SpeechSynthesisUtterance(texto);
-                    speech.lang = "es-ES";
-                    window.speechSynthesis.speak(speech);
+                    // Cancelar la lectura anterior que este en ejecucion
+                    window.speechSynthesis.cancel();
+                    const selection = window.getSelection().toString().trim();
+                    const texto =
+                        selection !== ""
+                            ? selection
+                            : "Por favor seleccione un texto para leer.";
+                    // Dividir texto si es nuy largo para evitar bloqueos
+                    const MAX_LENGTH = 100000; // ajustar este valor mara el maximo a leer
+                    const partes = texto.match(
+                        new RegExp(`.{1,${MAX_LENGTH}}`, "g"),
+                    );
+                    partes.forEach((parte) => {
+                        const speech = new SpeechSynthesisUtterance(parte);
+                        speech.lang = "es-ES";
+                        speech.rate = 1.2;
+                        window.speechSynthesis.speak(speech);
+                    });
+                    break;
+                case "highlight-paragraphs":
+                    // Select all elements we want to highlight
+                    const elementsToHighlight = document.querySelectorAll(
+                        "p, li, aside, section",
+                    );
+
+                    elementsToHighlight.forEach((element) => {
+                        if (element.offsetParent !== null) {
+                            element.classList.toggle("highlighted-element");
+                        }
+                    });
+                    break;
+                case "epilepsy-safe":
+                    body.classList.toggle("epilepsy-safe-contrast");
+                    break;
+                case "toggle-filter":
+                    const overlay =
+                        document.getElementById("colorFilterOverlay");
+                    if (!overlay) return;
+                    // Mostrar/ocultar
+                    overlay.classList.toggle("d-none");
+                    break;
+                case "filter-yellow":
+                case "filter-blue":
+                case "filter-white":
+                case "filter-black":
+                    const overlayColor =
+                        document.getElementById("colorFilterOverlay");
+                    if (!overlayColor) return;
+
+                    // Mostrar overlay si estaba oculto
+                    overlayColor.classList.remove("d-none");
+
+                    // Quitar clases anteriores
+                    overlayColor.classList.remove(
+                        "color-filter-yellow",
+                        "color-filter-blue",
+                        "color-filter-white",
+                        "color-filter-black",
+                    );
+
+                    // Agregar clase correspondiente
+                    const colorClass = action.replace(
+                        "filter-",
+                        "color-filter-",
+                    );
+                    overlayColor.classList.add(colorClass);
                     break;
             }
         });

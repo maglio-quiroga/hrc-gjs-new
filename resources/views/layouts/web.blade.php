@@ -16,7 +16,7 @@
 
     {{-- Plugins CSS específicos (Incluidos aquí por si no están en app.scss) --}}
     {{-- Font Awesome (Tomado de diplomat/master) --}}
-    <link href="{{ asset('plugins/font-awesome-4.7.0/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="{{ asset('plugins/font-awesome-4.7.0/css/font-awesome.min.css') }}">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/v4-shims.css">
 
@@ -29,14 +29,17 @@
     @stack('styles')
 </head>
 <body>
+    {{-- El componente de accesibilidad --}}
+    <x-accesibilidad/>
     {{-- Div para recuadro de enfoque de accesibilidad --}}
     <div id="focus-overlay"></div>
+    {{-- Div para filtro de accesibilidad --}}
+    <div id="colorFilterOverlay" class="color-filter-overlay"></div>
    <div id="app">
         <div class="super_container">
             @include('template.header')
             <div>
                 <main>
-                    <x-accesibilidad/>
                     {{-- Contenido principal de las vistas hijas --}}
                     {{ $slot ?? '' }} {{-- Para componentes anónimos --}}
                     @yield('content') {{-- Para secciones Blade tradicionales --}}
