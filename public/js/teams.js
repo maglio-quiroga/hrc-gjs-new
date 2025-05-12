@@ -1,4 +1,20 @@
 document.addEventListener("DOMContentLoaded", function() {
+    (function () {
+        'use strict';
+        const forms = document.querySelectorAll('.needs-validation');
+
+        Array.from(forms).forEach(function (form) {
+            form.addEventListener('submit', function (event) {
+                if (!form.checkValidity()) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+            }, false);
+        });
+    })();
+
+    
     const rows = document.querySelectorAll("#team-tbody .team-row");
     const loadMoreBtn = document.getElementById("loadMore");
     let visibleRows = 5; // filas visibles por defecto

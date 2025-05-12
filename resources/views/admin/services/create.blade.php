@@ -15,7 +15,7 @@
             Crear nuevo Servicio
         </h1>
 
-        <form id="serviceForm" action="{{ route('admin.handle.create', ['model' => 'services']) }}" method="POST" enctype="multipart/form-data" class="card p-4 shadow-sm bg-white">
+        <form id="serviceForm" action="{{ route('admin.handle.create', ['model' => 'services']) }}" method="POST" enctype="multipart/form-data" class="card p-4 shadow-sm bg-white needs-validation" novalidate>
             @csrf
 
             <div class="mb-3">
@@ -25,7 +25,7 @@
 
             <div class="mb-3">
                 <label class="form-label">Descripción:</label>
-                <textarea name="description" id="description" rows="4" class="form-control"></textarea>
+                <textarea name="description" id="description" class="form-control" required></textarea>
             </div>
 
             <div class="mb-3">

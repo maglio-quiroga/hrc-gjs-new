@@ -10,7 +10,7 @@
     <div class="container">
         <h1 class="mb-4">Crear nuevo Usuario</h1>
 
-        <form id="userForm" action="{{ route('admin.handle.create', ['model' => 'users']) }}" method="POST" class="card p-4 shadow-sm bg-white">
+        <form id="userForm" action="{{ route('admin.handle.create', ['model' => 'users']) }}" method="POST" class="card p-4 shadow-sm bg-white needs-validation" novalidate>
             @csrf
 
             <div class="mb-3">
@@ -41,7 +41,7 @@
 
 
     </div>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="{{ asset('js/users.js') }}"></script>
 </body>
 </html>

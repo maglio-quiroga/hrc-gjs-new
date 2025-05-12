@@ -17,16 +17,16 @@
         Agregar nueva Categoría
     </h1>
 
-    <form action="{{ route('admin.handle.create', ['model' => 'categories']) }}" method="POST" class="card shadow p-4">
+    <form action="{{ route('admin.handle.create', ['model' => 'categories']) }}" method="POST" class="card shadow p-4 needs-validation" novalidate>
         @csrf
 
         {{-- Título --}}
         <div class="mb-3">
             <label for="title" class="form-label">Título</label>
             <input type="text" name="title" id="title" class="form-control @error('title') is-invalid @enderror" value="{{ old('title') }}" required>
-            @error('title')
-                <div class="invalid-feedback">{{ $message }}</div>
-            @enderror
+            <div class="invalid-feedback">
+                Por favor, ingresa un título.
+            </div>
         </div>
 
         {{-- Botones --}}
@@ -39,6 +39,8 @@
             </button>
         </div>
     </form>
-</div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ asset('js/posts.js') }}"></script>
 </body>
 </html>
