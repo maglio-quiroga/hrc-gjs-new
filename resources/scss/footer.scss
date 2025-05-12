@@ -1,8 +1,4 @@
 @charset "utf-8";
-/*********************************
-16. Footer
-*********************************/
-/*FIN DE LA PAGINA FOOTER*/
 .footer {
     display: block;
     position: relative;
@@ -116,6 +112,7 @@
 .cr_list li {
     display: inline-block;
 }
+.cr_list li a,
 .cr_text a {
     -webkit-transition: all 200ms ease;
     -moz-transition: all 200ms ease;
@@ -126,11 +123,38 @@
 .cr_list li:not(:last-child) {
     margin-right: 50px;
 }
-.cr_list li a {
-    font-size: 1em;
-    -webkit-transition: all 200ms ease;
-    -moz-transition: all 200ms ease;
-    -ms-transition: all 200ms ease;
-    -o-transition: all 200ms ease;
-    transition: all 200ms ease;
+.footer_title {
+    font-size: 18px;
+}
+.footer_contact_info ul li {
+    font-size: 14px;
+    font-weight: 400;
+}
+.copyright div {
+    font-size: 14px;
+}
+.contact_info_container {
+    margin-top: 100px;
+}
+.contact_info_title {
+    font-family: "Roboto Slab", serif;
+    font-size: 36px;
+    font-weight: 700;
+}
+.contact_info {
+    padding-left: 45px;
+}
+.contact_info_text {
+    margin-top: 27px;
+}
+.contact_info_location {
+    margin-top: 28px;
+}
+.contact_info_location_title {
+    font-family: "Roboto Slab", serif;
+    font-size: 18px;
+    font-weight: 700;
+}
+.contact_form {
+    padding-right: 10px;
 }

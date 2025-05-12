@@ -1,8 +1,4 @@
 @charset "utf-8";
-/*********************************
-6. Home
-*********************************/
-/*CARRUSEL*/
 .home {
     width: 100%;
     height: 800px;
@@ -59,26 +55,10 @@
     height: 25px;
     padding-left: 20px;
 }
-.home_search_input::-webkit-input-placeholder {
-    font-family: "Museo Sans 500", "Roboto", sans-serif;
-    font-size: 14px !important;
-    font-weight: 400 !important;
-}
-.home_search_input:-moz-placeholder {
-    font-family: "Museo Sans 500", "Roboto", sans-serif;
-    font-size: 14px !important;
-    font-weight: 400 !important;
-}
-.home_search_input::-moz-placeholder {
-    font-family: "Museo Sans 500", "Roboto", sans-serif;
-    font-size: 14px !important;
-    font-weight: 400 !important;
-}
-.home_search_input:-ms-input-placeholder {
-    font-family: "Museo Sans 500", "Roboto", sans-serif;
-    font-size: 14px !important;
-    font-weight: 400 !important;
-}
+.home_search_input::-webkit-input-placeholder,
+.home_search_input:-moz-placeholder,
+.home_search_input::-moz-placeholder,
+.home_search_input:-ms-input-placeholder,
 .home_search_input::input-placeholder {
     font-family: "Museo Sans 500", "Roboto", sans-serif;
     font-size: 14px !important;
@@ -133,4 +113,32 @@
 .home_slider_nav i {
     line-height: 50px;
     font-size: 22px;
+}
+.breadcrumbs_container {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding-bottom: 13px;
+    padding-left: 3px;
+}
+.breadcrumbs ul li {
+    display: inline-block;
+    position: relative;
+}
+.breadcrumbs ul li:not(:last-child)::after {
+    display: inline-block;
+    font-family: "FontAwesome";
+    content: "\f105";
+    margin-left: 7px;
+    margin-right: 4px;
+}
+.breadcrumbs ul li a {
+    font-size: 14px;
+    font-weight: 400;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
 }
