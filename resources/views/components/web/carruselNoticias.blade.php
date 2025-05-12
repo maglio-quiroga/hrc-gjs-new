@@ -7,7 +7,7 @@
                 <div class="col-lg-4 noticia_col">
                     <div class="noticia noticia_left">
                         <div class="noticia_image">
-                            <img src="{{ '/image/uploads/posts/' . $post->image }}" alt="{{ $post->title }}">
+                        <img src="{{ asset($post['image']) }}" alt="Imagen de la noticia" class="img-fluid">
                         </div>
                         <div class="noticia_body d-flex flex-row align-items-start justify-content-start">
                             <div class="noticia_date">
