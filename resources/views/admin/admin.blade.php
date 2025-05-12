@@ -5,9 +5,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/cdbootstrap/js/cdb.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/cdbootstrap/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/9d1d9a82d2.js" crossorigin="anonymous"></script>
     <title>Document</title>
+    <style>
+        .chart-container {
+            width: 25%;
+            height: 25%;
+            margin: auto;
+        }
+    </style>
 </head>
 <body>
     <div class="structure">
@@ -172,13 +183,75 @@
             </div>
         </div>
     </div>
-</div>
-
-
+    <div class="card w-50 mx-auto mt-4 mb-0 text-center">
+        <h5 class="card-header">Porcentaje de Posts Publicados y Post Borradores</h4>
+        <div class="chart-wrapper w-100 w-md-50 w-lg-75 mx-auto" style="height: auto;">
+            <canvas id="chart"></canvas>
         </div>
     </div>
-    
+</div>
+
+</div>    
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+    <script>
+        console.log("Script cargado correctamente");
+        fetch('/admin/chart-data')
+        .then(res => res.json())
+        .then(data => {
+            const ctx = document.getElementById("chart").getContext('2d');
+            new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ["Publicados", "Borradores"],
+                    datasets: [{
+                        label: 'Posts',
+                        data: [data.published, data.draft],
+                        backgroundColor: ["#0074D9", "#FF4136"]
+                    }]
+                },
+                options: {
+                    responsive: true, 
+                    maintainAspectRatio: false,
+                    plugins: {
+                        datalabels: {
+                            color: '#fff',  
+                            formatter: function(value, context) {
+                                let percentage = (value).toFixed(1) + '%'; 
+                                return percentage;
+                            },
+                            font: {
+                                weight: 'bold',
+                                size: 16
+                            },
+                            align: 'center', 
+                            anchor: 'center', 
+                        },
+                        legend: {
+                            display: true,
+                            onClick: function(e) {
+                                e.preventDefault();
+                            },
+                            labels: {
+                                boxWidth: 20, 
+                                padding: 15
+                            }
+                        }
+                    },
+                    interaction: {
+                        mode: null, 
+                        intersect: false,
+                        axis: 'none'
+                    },
+                    hover: {
+                        mode: null, 
+                    }
+                },
+                plugins: [ChartDataLabels]
+            });
+        });
+    </script>
 </body>
 </html>

@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\Dashboard\PostController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Web\WebPostController;
 use App\Http\Middleware\UserAccessDashboardMiddleware;
@@ -35,7 +36,7 @@ Route::get('/ley_rs', [PageController::class, 'ley_rs'])->name('ley_rs');
 Route::get('/cuentas_publicas', [PageController::class, 'cuentas_publicas'])->name('cuentas_publicas');
 Route::get('/hospital_amigo', [PageController::class, 'hospital_amigo'])->name('hospital_amigo');
 Route::get('/consejo_consultivo', [PageController::class, 'consejo_consultivo'])->name('consejo_consultivo');
-
+Route::get('/admin/chart-data', [PostController::class, 'chartData']);
 Route::group(['prefix'=>'posted'],function(){
     Route::controller(WebPostController::class)->group(function(){
         Route::get('/','index')->name('web.post.index');
