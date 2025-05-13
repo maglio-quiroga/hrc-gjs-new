@@ -15,7 +15,7 @@
     </button>
     <div id="accessibilityMenu" class="accMenu bg-white border rounded shadow-sm p-3 mt-2 d-none position-absolute end-0" style="bottom: 100%;">
         <div class="d-grid gap-2">
-            <label>Tamaño deñ texto:</label><br>
+            <label>Tamaño del texto:</label><br>
             <div class="btn-group" role="group" aria-label="Basic example">
               <button data-action="increase-font" class="btn btn-outline-secondary">++</button>
               <button data-action="decrease-font" class="btn btn-outline-secondary">- -</button>
@@ -23,7 +23,7 @@
             <button data-action="screen-reader" class="btn btn-outline-secondary text-start">Lectura de Pantalla</button>
             <button data-action="toggle-focus" id="focus-toggle-button" class="btn btn-outline-secondary text-start">Recuadro de Enfoque</button>
             <button data-action="highlight-paragraphs" class="btn btn-outline-secondary text-start">Resaltar párrafos</button>
-            <button data-action="epilepsy-safe" class="btn btn-outline-secondary text-start">Contraste para epilepsia</button>
+            <!--button data-action="epilepsy-safe" class="btn btn-outline-secondary text-start">Contraste para epilepsia</button-->
             <label>Colores del filtro:</label><br>
             <div class="btn-group" role="group" aria-label="Basic example">
                 <button data-action="filter-yellow" class="btn btn-outline-secondary text-start">Amarillo</button>
