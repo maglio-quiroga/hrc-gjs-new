@@ -49,6 +49,7 @@ window.addEventListener("accessibilityPrefsChanged", (e) => {
         "texto-grande",
         updatedPrefs.textSize === "large",
     );
+    if (updatedPrefs.focusBox !== prefs.focusBox) toggleFocusFeature();
 
     if (updatedPrefs.colorFilter !== prefs.colorFilter)
         overlayFilter(updatedPrefs.colorFilter);

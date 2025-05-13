@@ -124,10 +124,7 @@ export function accesibilidad() {
                     break;
                 case "toggle-focus":
                     toggleFocusFeature();
-                    newPrefs = {
-                        ...currentPrefs,
-                        focusBox: !currentPrefs.focusBox,
-                    };
+                    newPrefs = { ...currentPrefs, focusBox: "black" };
                     break;
             }
             if (Object.keys(newPrefs).length > 0) {

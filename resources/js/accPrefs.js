@@ -1,3 +1,5 @@
+import { toggleFocusFeature } from "./accesibilidad";
+
 const ALLOWED_TEXT_SIZES = ["small", "normal", "large"];
 const ALLOWED_COLOR_FILTERS = ["yellow", "blue", "white", "black"];
 
