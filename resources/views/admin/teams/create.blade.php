@@ -37,43 +37,41 @@
                 Agregar nuevo miembro al equipo
             </h1>
 
-            <form action="{{ route('admin.handle.create', ['model' => 'teams']) }}" method="POST" enctype="multipart/form-data" class="p-4">
+            <form action="{{ route('admin.handle.create', ['model' => 'teams']) }}" method="POST" enctype="multipart/form-data" class="p-4 needs-validation" novalidate>
                 @csrf
 
                 {{-- Nombre --}}
                 <div class="mb-3">
                     <label for="name" class="form-label">Nombre</label>
                     <input type="text" name="name" id="name" class="form-control @error('name') is-invalid @enderror" value="{{ old('name') }}" required>
-                    @error('name')
-                        <div class="invalid-feedback">{{ $message }}</div>
-                    @enderror
+                    <div class="invalid-feedback">
+                        Por favor, escriba un nombre.
+                    </div>
                 </div>
 
                 {{-- Posición --}}
                 <div class="mb-3">
                     <label for="position" class="form-label">Posición</label>
                     <input type="text" name="position" id="position" class="form-control @error('position') is-invalid @enderror" value="{{ old('position') }}" required>
-                    @error('position')
-                        <div class="invalid-feedback">{{ $message }}</div>
-                    @enderror
+                    <div class="invalid-feedback">
+                        Por favor, coloque una posición.
+                    </div>
                 </div>
 
                 {{-- Descripción --}}
                 <div class="mb-3">
                     <label for="description" class="form-label">Descripción</label>
                     <textarea name="description" id="description" class="form-control @error('description') is-invalid @enderror" rows="4" required>{{ old('description') }}</textarea>
-                    @error('description')
-                        <div class="invalid-feedback">{{ $message }}</div>
-                    @enderror
+                    <div class="invalid-feedback">
+                        Por favor, coloque una descripción.
+                    </div>
                 </div>
 
                 {{-- Imagen de perfil --}}
                 <div class="mb-3">
                     <label for="image" class="form-label">Imagen de perfil</label>
                     <input type="file" name="image" id="image" class="form-control @error('image') is-invalid @enderror" accept="image/*">
-                    @error('image')
-                        <div class="invalid-feedback">{{ $message }}</div>
-                    @enderror
+                    
                 </div>
 
                 {{-- Botones --}}
@@ -88,5 +86,7 @@
             </form>
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ asset('js/posts.js') }}"></script>
 </body>
 </html>

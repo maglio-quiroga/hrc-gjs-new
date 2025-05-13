@@ -1,50 +1,65 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const form = document.getElementById("serviceForm"); // puedes renombrarlo si prefieres
+    const form = document.getElementById("userForm");
     const loadMoreBtn = document.getElementById("loadMoreBtn");
     const searchInput = document.getElementById("searchInput");
     const tableBody = document.querySelector("tbody");
 
+    // Función para mostrar errores con Bootstrap
+    function showError(input, message) {
+        input.classList.add("is-invalid");
+
+        let feedback = input.parentNode.querySelector(".invalid-feedback");
+        if (!feedback) {
+            feedback = document.createElement("div");
+            feedback.className = "invalid-feedback";
+            input.parentNode.appendChild(feedback);
+        }
+
+        feedback.textContent = message;
+    }
+
+    // Limpia validaciones previas
+    function clearValidation(form) {
+        form.querySelectorAll(".is-invalid").forEach(el => el.classList.remove("is-invalid"));
+        form.querySelectorAll(".invalid-feedback").forEach(el => el.remove());
+    }
+
+    // Validación del email
+    function validateEmail(email) {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    }
+
     if (form) {
         form.addEventListener("submit", function (e) {
             let isValid = true;
-            document.querySelectorAll(".error-msg").forEach(el => el.remove());
+            clearValidation(form);
 
-            const nameInput = document.getElementById("name");
+            const nameInput = form.querySelector("input[name='name']");
             if (!nameInput.value.trim()) {
                 isValid = false;
                 showError(nameInput, "El nombre es obligatorio.");
             }
 
-            const emailInput = document.getElementById("email");
+            const emailInput = form.querySelector("input[name='email']");
             if (!emailInput.value.trim() || !validateEmail(emailInput.value.trim())) {
                 isValid = false;
                 showError(emailInput, "Debes ingresar un correo electrónico válido.");
             }
 
-            const passwordInput = document.getElementById("password");
-            if (passwordInput && passwordInput.value.length < 6) {
+            const passwordInput = form.querySelector("input[name='password']");
+            if (!passwordInput.value.trim() || passwordInput.value.length < 6) {
                 isValid = false;
                 showError(passwordInput, "La contraseña debe tener al menos 6 caracteres.");
             }
 
             if (!isValid) {
-                e.preventDefault();
+                e.preventDefault(); // Detiene envío
+                form.classList.add('was-validated');
             }
         });
-
-        function showError(input, message) {
-            const error = document.createElement("div");
-            error.className = "error-msg";
-            error.style.color = "red";
-            error.style.fontSize = "0.9em";
-            error.textContent = message;
-            input.parentNode.insertBefore(error, input.nextSibling);
-        }
-
-        function validateEmail(email) {
-            return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-        }
     }
+
+    // ---------------- TABLA ----------------
 
     let currentItems = 5;
 

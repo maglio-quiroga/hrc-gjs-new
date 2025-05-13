@@ -1,4 +1,21 @@
 document.addEventListener('DOMContentLoaded', function () {
+    
+    (function () {
+        'use strict';
+        const forms = document.querySelectorAll('.needs-validation');
+
+        Array.from(forms).forEach(function (form) {
+            form.addEventListener('submit', function (event) {
+                if (!form.checkValidity()) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+            }, false);
+        });
+    })();
+
+
     const rows = document.querySelectorAll('table tbody tr');
     const loadMoreBtn = document.getElementById('loadMore');
     const rowsPerPage = 5;
@@ -43,7 +60,6 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
 
-        // Ocultar el botón si hay filtros activos
         if (hayFiltro) {
             loadMoreBtn.classList.add('d-none');
         } else {
