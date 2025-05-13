@@ -9,8 +9,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/cdbootstrap/js/cdb.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/cdbootstrap/js/bootstrap.min.js"></script>
-    <script src="https://kit.fontawesome.com/9d1d9a82d2.js" crossorigin="anonymous"></script>
     <title>Document</title>
     <style>
         .chart-container {
@@ -41,7 +39,7 @@
             
             <div class=".container d-flex justify-content-center p-3">
                     <div class="btn-group" role="group" aria-label="Basic outlined example">
-                        <a type="button" href="#" class="btn btn-outline-success btn-lg"><i class="bi bi-person"style="margin-right: 2px;"></i>Crear Usuario</a>
+                        <a type="button" href="{{ route('admin.handle.view', ['model' => 'users', 'action' => 'create']) }}" class="btn btn-outline-success btn-lg"><i class="bi bi-person"style="margin-right: 2px;"></i>Crear Usuario</a>
                         <a type="button" href="{{ route('admin.handle.view', ['model' => 'posts', 'action' => 'create']) }}" class="btn btn-outline-success btn-lg"><i class="bi bi-newspaper" style="margin-right: 2px;"></i>Crear Noticia</a>
                         <a type="button" href="{{ route('admin.handle.view', ['model' => 'categories', 'action' => 'create']) }}" class="btn btn-outline-success btn-lg"><i class="bi bi-menu-button-wide-fill"style="margin-right: 2px;"></i>Crear Categoria</a>
                         <a type="button" href="{{ route('admin.handle.view', ['model' => 'services', 'action' => 'create']) }}" class="btn btn-outline-success btn-lg"><i class="bi bi-menu-up"style="margin-right: 2px;"></i>Crear Servicio</a>
@@ -201,7 +199,6 @@
 
 </div>    
     
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
     <script>
@@ -327,3 +324,4 @@
     </script>
 </body>
 </html>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
