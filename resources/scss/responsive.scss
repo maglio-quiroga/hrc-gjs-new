@@ -153,12 +153,15 @@
 	}
 	.footer_contact,
 	.footer_links {
-		padding-left: 0;
+		padding-left: 12px;
 	}
 	.footer_links ul {
 		columns: 1;
 		-webkit-columns: 1;
 		-moz-columns: 1;
+	}
+	.footer_contact_buttons {
+		padding-left: 32px;
 	}
 	.footer_mobile {
 		float: none;
