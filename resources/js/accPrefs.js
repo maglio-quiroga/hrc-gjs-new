@@ -1,11 +1,11 @@
-const ALLOWED_TEXT_SIZES = ["xsmall", "small", "normal", "large", "xlarge"];
-const ALLOWED_COLOR_FILTERS = ["Amarillo", "Azul", "Blanco", "Negro"];
+const ALLOWED_TEXT_SIZES = ["small", "normal", "large"];
+const ALLOWED_COLOR_FILTERS = ["yellow", "blue", "white", "black"];
 
 const DEFAULTS = {
     textSize: "normal",
     focusBox: false,
     highlightParagraphs: false,
-    colorFilter: "Blanco",
+    colorFilter: "white",
 };
 
 export function getPreferences() {

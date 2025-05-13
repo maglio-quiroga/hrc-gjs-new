@@ -64,8 +64,14 @@ export function accesibilidad() {
                     body.classList.toggle("epilepsy-safe-contrast");
                     break;
                 case "filter-yellow":
+                    overlayFilter("yellow");
+                    break;
                 case "filter-blue":
+                    overlayFilter("blue");
+                    break;
                 case "filter-white":
+                    overlayFilter("white");
+                    break;
                 case "filter-black":
                     overlayFilter("black");
                     break;
@@ -126,6 +132,6 @@ export function overlayFilter(color) {
     );
 
     // Agregar clase correspondiente
-    const colorClass = action.replace("filter-", "color-filter-");
+    const colorClass = `color-filter-${color}`;
     overlayColor.classList.add(colorClass);
 }
