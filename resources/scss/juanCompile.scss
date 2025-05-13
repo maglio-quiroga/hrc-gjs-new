@@ -5,7 +5,9 @@
     --green-400: #75c891; 
     --green-450: #58bd7c;
     --green-525: #4ab66e;
+    --green-535: #28a745;
     --green-550: #029834;
+    --orange: #ff8800;
     --white: #ffffff;
     --white-FA: #FAFAFA;
 }
@@ -46,4 +48,25 @@ resources/views/web/post
 
 .temp_5a {
     background-color: var(--white-FA);
+}
+
+.we_2b {
+    color: var(--green-535);
+}
+
+.we_5f {
+  background-color: var(--green-525); 
+  color: var(--white); 
+}
+
+.we-6a {
+  border: 2px solid var(--green-535);
+}
+
+.we_7a {
+  color: var(--orange); 
+}
+
+.we_8a {
+  background-color: var(--green-535); 
 }

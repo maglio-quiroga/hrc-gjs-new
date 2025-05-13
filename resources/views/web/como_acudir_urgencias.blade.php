@@ -4,15 +4,15 @@
 <!--PAGINA
         INFORMACION DE PACIENTES 
             CCUANDO ACUDIR A URGENCIAS -->
-<div class="container" style="margin-top: 150px; margin-bottom: 50px;">
+<div class="container we_2a">
 
     <!-- Título Principal -->
     <div class="text-center mb-4">
-        <h2 style="color: #28a745; font-weight: bold;">¿Cuándo acudir al Servicio de Urgencia?</h2>
+        <h2 class="we_2b">¿Cuándo acudir al Servicio de Urgencia?</h2>
     </div>
 
     <!-- Descripción -->
-    <div class="mb-4" style="text-align: justify;">
+    <div class="mb-4 we_1f">
         <p>
             Con el objetivo de hacer un buen uso de la Red Asistencial, el Hospital Regional de Copiapó hace llamado a la comunidad a acudir a la Unidad de Urgencia Hospitalaria de acuerdo con la gravedad de cada caso. De esta manera se optimizan los tiempos y se brinda una atención dependiendo del nivel de complejidad resolviendo la situación ya sea en un Servicio de Urgencia de Hospital o bien en un Centro de Atención Primaria.
         </p>
@@ -23,17 +23,17 @@
 
     <!-- Subtítulo -->
     <div class="mb-3">
-        <h4 style="font-weight: bold;">CATEGORIZACIÓN – PRIORIZACIÓN PEDIÁTRICA</h4>
+        <h4 class="we_3a">CATEGORIZACIÓN – PRIORIZACIÓN PEDIÁTRICA</h4>
     </div>
 
     <!-- Lista de Categorización -->
-    <div style="text-align: justify;">
+    <div class="we_1f">
         <ul>
-            <li><strong>C1 Paciente Grave:</strong> <span style="color: #28a745; font-weight: bold;">Con riesgo vital INMINENTE</span>, pasará inmediatamente a box de reanimación.</li>
-            <li><strong>C2 Paciente Grave:</strong> <span style="color: #28a745; font-weight: bold;">Sin riesgo vital inminente</span>, se requiere evaluación médica urgente. De ser necesario pasará a un box de atención en espera de evaluación médica.</li>
-            <li><strong>C3 Complejidad Media:</strong> <span style="color: #28a745; font-weight: bold;">Puede progresar a estado grave</span>, esperará llamado de box a categorización y regresará a sala de espera general hasta que lo llame el médico.</li>
-            <li><strong>C4 Condición no urgente:</strong> <span style="color: #28a745; font-weight: bold;">De complejidad baja</span>, permanecerá en sala de espera general. Puede consultar en su CESFAM, SAPU, SUR o llamar a Salud Responde. Si decide esperar será atendido después de los C1, C2 y C3.</li>
-            <li><strong>C5 Consulta General:</strong> <span style="color: #28a745; font-weight: bold;">Sin complejidad</span>, puede consultar en su CESFAM, SAPU, SUR o llamar a Salud Responde. Si decide esperar será atendido después de los C1, C2, C3 y C4.</li>
+            <li><strong>C1 Paciente Grave:</strong> <span class="we_2b">Con riesgo vital INMINENTE</span>, pasará inmediatamente a box de reanimación.</li>
+            <li><strong>C2 Paciente Grave:</strong> <span class="we_2b">Sin riesgo vital inminente</span>, se requiere evaluación médica urgente. De ser necesario pasará a un box de atención en espera de evaluación médica.</li>
+            <li><strong>C3 Complejidad Media:</strong> <span class="we_2b">Puede progresar a estado grave</span>, esperará llamado de box a categorización y regresará a sala de espera general hasta que lo llame el médico.</li>
+            <li><strong>C4 Condición no urgente:</strong> <span class="we_2b">De complejidad baja</span>, permanecerá en sala de espera general. Puede consultar en su CESFAM, SAPU, SUR o llamar a Salud Responde. Si decide esperar será atendido después de los C1, C2 y C3.</li>
+            <li><strong>C5 Consulta General:</strong> <span class="we_2b">Sin complejidad</span>, puede consultar en su CESFAM, SAPU, SUR o llamar a Salud Responde. Si decide esperar será atendido después de los C1, C2, C3 y C4.</li>
         </ul>
     </div>
 </div>

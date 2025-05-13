@@ -3,7 +3,7 @@
 <!--PAGINA
         QUIENES SOMOS
             NOSOTROS -->
-<div class="container" style="margin-top: 150px">
+<div class="container we_1a">
     <div class="super_container">
         <div class="about">
             <div class="container">
@@ -20,7 +20,7 @@
                     </div>
                 </div>
 
-                <div style="width: 100%;">
+                <div class="we_1b">
                     <iframe width="100%" height="610" class="embed-responsive-item"
                             src="https://www.youtube.com/embed/oqsil9V2c7Q?autoplay=1&controls=0"
                             allowfullscreen></iframe>
@@ -63,20 +63,20 @@
                         ]
                     ]
                 ] as $section)
-                    <div class="card mb-3" style="max-width: 100%;">
-                        <div class="row g-0"style="margin: auto; padding-bottom: 20px">
+                    <div class="card mb-3 we_1c">
+                        <div class="row g-0 we_1d">
                             <div class="col-md-4 px-3" >
                                 <br>
-                                <img src="{{ $section['img'] }}" class="img-fluid rounded-start" style="border-radius: 3%;" alt="...">
+                                <img src="{{ $section['img'] }}" class="img-fluid rounded-start we_1e" alt="...">
                             </div>
                             <div class="col-md-8">
                                 <div class="card-body">
                                     <h3 class="card-title">{{ $section['title'] }}</h3>
                                     @if (isset($section['text']))
-                                        <p class="card-text" style="text-align: justify">{{ $section['text'] }}</p>
+                                        <p class="card-text we_1f">{{ $section['text'] }}</p>
                                     @else
                                         @foreach ($section['texts'] as $key => $text)
-                                        <p class="card-text" style="text-align: justify"><b>{{ $key }}</b>: {{ $text }}</p>
+                                        <p class="card-text we_1f"><b>{{ $key }}</b>: {{ $text }}</p>
                                         @endforeach
                                     @endif
                                 </div>

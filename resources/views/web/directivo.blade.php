@@ -4,7 +4,7 @@
 <!--PAGINA
         QUIENES SOMOS
             EQUIPO DIRECTIVO -->
-<div class="container" style="margin-top: 150px">
+<div class="container we_1a">
     <div class="super_container">
         <div class="about">
             <div class="container">
@@ -22,19 +22,18 @@
                 <div class="row justify-content-center">
                 @foreach($members as $member)
                 <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 mb-4">
-                    <div class="card text-center d-flex flex-column h-100" style="position: relative;">
-                        <img src="/image/uploads/team/{{ $member['image'] ?? 'default.jpg' }}"class="card-img-top img-fluid" style="object-fit: cover; height: 200px;" alt="{{ $member['name'] ?? 'Nombre no disponible' }}">
-                        <div class="card-body d-flex flex-column" style="flex-grow: 1;">
-                            <h5 class="card-title" style="font-size: 1rem; line-height: 1.2; margin-bottom: 0.5rem;">
+                    <div class="card text-center d-flex flex-column h-100 we_5a">
+                        <img src="/image/uploads/team/{{ $member['image'] ?? 'default.jpg' }}"class="card-img-top img-fluid we_5b" alt="{{ $member['name'] ?? 'Nombre no disponible' }}">
+                        <div class="card-body d-flex flex-column we_5c">
+                            <h5 class="card-title we_5d">
                                 {{ $member['name'] ?? 'Nombre no disponible' }}
                             </h5>
-                            <p class="card-text" 
-                               style="white-space: normal; word-wrap: break-word; overflow: visible; font-size: 0.9rem; line-height: 1.3; margin-bottom: 0;">
+                            <p class="card-text we_5e">
                                 {{ $member['position'] ?? 'Título no disponible' }}
                             </p>
                         </div>
                         <div class="mt-auto">
-                            <button class="card-button" data-bs-toggle="modal" data-bs-target="#modal-{{ $loop->index }}"style="background-color: #4bb584; color: #fff; border: none; padding: 10px; font-size: 1rem; text-align: center; cursor: pointer; width: 100%; transition: background-color 0.2s ease;">
+                            <button class="card-button we_5f" data-bs-toggle="modal" data-bs-target="#modal-{{ $loop->index }}">
                                 Más información
                             </button>
                         </div>
@@ -57,7 +56,7 @@
                                     <p>{{ $member['description'] ?? 'Descripción no disponible' }}</p>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="background-color: #4bb584; color: #fff; border: none; padding: 10px; font-size: 1rem; text-align: center; cursor: pointer; width: 100%; transition: background-color 0.2s ease;">Cerrar</button>
+                                    <button type="button" class="btn btn-secondary we_5f" data-bs-dismiss="modal">Cerrar</button>
                                 </div>
                             </div>
                         </div>
