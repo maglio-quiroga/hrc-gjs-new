@@ -1,6 +1,8 @@
 @charset "utf-8";
 :root {
     /*=== Colores Base ===*/
+    --black-a50: rgba(0, 0, 0, 0.5);
+    --black-a80: rgba(0, 0, 0, 0.8);
     --dark-shade-blue: #1e2434;
     --green-400: #75c891; 
     --green-450: #58bd7c;
@@ -20,6 +22,15 @@ resources/views/web/comunidad
 resources/views/web/diplomat
 resources/views/web/post
 */
+
+/* resources/views/components/web */
+.custom-carousel-control {
+    background-color: var(--black-a50) /* Fondo semitransparente */
+}
+
+.custom-carousel-control:hover {
+    background-color: var(--black-a80); /* Fondo más oscuro al pasar el mouse */
+}
 
 /* resources/views/template */
 .temp_1a {
