@@ -183,10 +183,18 @@
             </div>
         </div>
     </div>
-    <div class="card w-50 mx-auto mt-4 mb-0 text-center">
-        <h5 class="card-header">Porcentaje de Posts Publicados y Post Borradores</h4>
-        <div class="chart-wrapper w-100 w-md-50 w-lg-75 mx-auto" style="height: auto;">
-            <canvas id="chart"></canvas>
+    <div class="d-flex flex-row gap-4">
+        <div class="card w-50 mt-4 mb-0 text-center">
+            <h5 class="card-header">Porcentaje de Post Publicados y Post Borradores</h5>
+            <div class="chart-wrapper w-100 w-md-50 w-lg-75 mx-auto" style="height: auto;">
+                <canvas id="chart"></canvas>
+            </div>
+        </div>
+        <div class="card w-50 mt-4 mb-0 text-center">
+            <h5 class="card-header">Porcentaje de Categorias por cada Post</h5>
+            <div class="chart-wrapper w-100 w-md-50 w-lg-75 mx-auto" style="height: auto;">
+                <canvas id="chart2"></canvas>
+            </div>
         </div>
     </div>
 </div>
@@ -197,8 +205,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
     <script>
-        console.log("Script cargado correctamente");
-        fetch('/admin/chart-data')
+        fetch('/Posts-chart')
         .then(res => res.json())
         .then(data => {
             const ctx = document.getElementById("chart").getContext('2d');
@@ -247,6 +254,71 @@
                     },
                     hover: {
                         mode: null, 
+                    }
+                },
+                plugins: [ChartDataLabels]
+            });
+        });
+    </script>
+    <script>
+
+    fetch('/Categories-chart')
+        .then(res => res.json())
+        .then(data => {
+            const ctx = document.getElementById("chart2").getContext('2d');
+
+            // Generar colores aleatorios
+            const colors = data.labels.map(() => {
+                const r = Math.floor(Math.random() * 256);
+                const g = Math.floor(Math.random() * 256);
+                const b = Math.floor(Math.random() * 256);
+                return `rgb(${r}, ${g}, ${b})`;
+            });
+
+            new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: data.labels,
+                    datasets: [{
+                        label: 'Categorías',
+                        data: data.data,
+                        backgroundColor: colors
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        datalabels: {
+                            color: '#fff',
+                            formatter: function(value) {
+                                return value.toFixed(1) + '%';
+                            },
+                            font: {
+                                weight: 'bold',
+                                size: 16
+                            },
+                            align: 'center',
+                            anchor: 'center',
+                        },
+                        legend: {
+                            display: true,
+                            onClick: function(e) {
+                                e.preventDefault();
+                            },
+                            labels: {
+                                boxWidth: 20,
+                                padding: 15
+                            }
+                        }
+                    },
+                    interaction: {
+                        mode: null,
+                        intersect: false,
+                        axis: 'none'
+                    },
+                    hover: {
+                        mode: null,
                     }
                 },
                 plugins: [ChartDataLabels]

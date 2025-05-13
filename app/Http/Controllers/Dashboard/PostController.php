@@ -11,9 +11,6 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Post\PutRequest;
 use App\Http\Requests\Post\StoreRequest;
 
-/**Quiero que le agregues algun grafico a la ruta admin.resume , puedes crearlo tu mismo o usar el progress de bootstrap, 
- * la idea es que muestres por ejemplo el porcentaje de posts publicados y en borrador y el porcentaje de categorias con cada post */
-
 class PostController extends Controller
 {
     /**
@@ -91,27 +88,20 @@ class PostController extends Controller
         return to_route("post.index")->with('status','Información eliminada');
     }
 
-    public function chartData()
+    public function PostsData()
     {
-        // Contar los posts publicados
         $publishedCount = Post::where('posted', 'yes')->count();
 
-        // Contar los posts en borrador
         $draftCount = Post::where('posted', '')->count();
 
-        // Total de posts
         $totalPosts = $publishedCount + $draftCount;
 
-        // Calcular porcentaje
         $publishedPercentage = $totalPosts > 0 ? ($publishedCount / $totalPosts) * 100 : 0;
         $draftPercentage = $totalPosts > 0 ? ($draftCount / $totalPosts) * 100 : 0;
 
-        // Devolver los datos en formato JSON para el gráfico
         return response()->json([
             'published' => $publishedPercentage,
             'draft' => $draftPercentage,
         ]);
     }
-
-
 }
