@@ -9,11 +9,23 @@ const DEFAULTS = {
 };
 
 export function getPreferences() {
-    const prefsJson =
-        localStorage.getItem("accessibility_prefs") ||
-        document.cookie.match(/accessibility_prefs=([^;]+)/)?.[1];
+    const localStoragePrefs = localStorage.getItem("accessibility_prefs");
+
+    let cookiePrefs = null;
+    const cookieMatch = document.cookie.match(/accessibility_prefs=([^;]+)/);
+    if (cookieMatch) {
+        try {
+            cookiePrefs = JSON.parse(decodeURIComponent(cookieMatch[1]));
+        } catch (e) {
+            console.warn("Invalid cookie preferences format");
+        }
+    }
+
+    // Merge with defaults
     try {
-        const prefs = prefsJson ? JSON.parse(prefsJson) : {};
+        const prefs = localStoragePrefs
+            ? JSON.parse(localStoragePrefs)
+            : cookiePrefs || {};
         return { ...DEFAULTS, ...prefs };
     } catch (e) {
         console.warn("Invalid preferences format, using defaults");
@@ -25,33 +37,21 @@ export function updatePreferences(newPrefs) {
     const currentPrefs = getPreferences();
     const updatedPrefs = {
         ...currentPrefs,
+        ...newPrefs,
         textSize: ALLOWED_TEXT_SIZES.includes(newPrefs.textSize)
             ? newPrefs.textSize
             : currentPrefs.textSize,
-        focusBox:
-            typeof newPrefs.focusBox === "boolean"
-                ? newPrefs.focusBox
-                : currentPrefs.focusBox,
-        highlightParagraphs:
-            typeof newPrefs.highlightParagraphs === "boolean"
-                ? newPrefs.highlightParagraphs
-                : currentPrefs.highlightParagraphs,
         colorFilter: ALLOWED_COLOR_FILTERS.includes(newPrefs.colorFilter)
             ? newPrefs.colorFilter
             : currentPrefs.colorFilter,
     };
 
-    // Store in localStorage (preferred) and cookie (fallback)
+    // Store in localStorage
     localStorage.setItem("accessibility_prefs", JSON.stringify(updatedPrefs));
-    document.cookie = `accessibility_prefs=${JSON.stringify(updatedPrefs)}; path=/; max-age=${60 * 60 * 24 * 365 * 2}; SameSite=Lax${location.protocol === "https:" ? "; Secure" : ""}`;
+
+    // Store in cookie with proper encoding
+    const cookieValue = encodeURIComponent(JSON.stringify(updatedPrefs));
+    document.cookie = `accessibility_prefs=${cookieValue}; path=/; max-age=${60 * 60 * 24 * 365 * 2}; SameSite=Lax${location.protocol === "https:" ? "; Secure" : ""}`;
 
     return updatedPrefs;
-}
-
-// Initialize with defaults if no preferences exist
-if (
-    !localStorage.getItem("accessibility_prefs") &&
-    !document.cookie.includes("accessibility_prefs=")
-) {
-    localStorage.setItem("accessibility_prefs", JSON.stringify(DEFAULTS));
 }

@@ -21,7 +21,7 @@
               <button data-action="decrease-font" class="btn btn-outline-secondary">- -</button>
             </div>
             <button data-action="screen-reader" class="btn btn-outline-secondary text-start">Lectura de Pantalla</button>
-            <button data-action="toggle-focus" id="focus-toggle-button" class="btn btn-outline-secondary text-start">Recuadro de Enfoque</button>
+            <button data-action="toggle-focus" class="btn btn-outline-secondary text-start">Recuadro de Enfoque</button>
             <button data-action="highlight-paragraphs" class="btn btn-outline-secondary text-start">Resaltar párrafos</button>
             <!--button data-action="epilepsy-safe" class="btn btn-outline-secondary text-start">Contraste para epilepsia</button-->
             <label>Colores del filtro:</label><br>

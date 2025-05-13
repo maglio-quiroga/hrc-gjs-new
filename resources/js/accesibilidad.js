@@ -1,10 +1,13 @@
+import { getPreferences, updatePreferences } from "./accPrefs";
+
+let isFocusActive = false;
+let overlay = null;
+const focusHeight = 75; // Altura del recuadro en píxeles
+
 export function accesibilidad() {
     console.log("Accessibility component initialized");
 
     document.addEventListener("DOMContentLoaded", function () {
-        console.log("DOM fully loaded");
-
-        // Toggle menu visibility
         const toggle = document.getElementById("accessibilityToggle");
         const menu = document.getElementById("accessibilityMenu");
         const accessibilityIcon = document.getElementById("accessibilityIcon");
@@ -31,6 +34,22 @@ export function accesibilidad() {
             console.error("Could not find accessibility elements");
         }
 
+        // Focus Feature
+        overlay = document.getElementById("focus-overlay");
+        if (!overlay) {
+            console.error(
+                "Error Crítico: No se encontró el elemento #focus-overlay.",
+            );
+            return;
+        }
+        document.addEventListener("mousemove", updateFocus);
+        document.addEventListener("mouseleave", hideFocus); // Ocultar cuando el mouse sale
+        document.addEventListener("mouseenter", (e) => {
+            // Reactivar/actualizar cuando entra
+            if (!isFocusActive) return;
+            updateFocus(e);
+        });
+
         // Handle accessibility actions
         document.addEventListener("click", function (e) {
             if (!e.target.matches("[data-action]")) return;
@@ -42,6 +61,8 @@ export function accesibilidad() {
 
             const action = e.target.getAttribute("data-action");
             const body = document.body;
+            const currentPrefs = getPreferences();
+            let newPrefs = {};
 
             switch (action) {
                 case "contrast":
@@ -50,31 +71,72 @@ export function accesibilidad() {
                     break;
                 case "increase-font":
                     increaseFont();
+                    newPrefs = {
+                        ...currentPrefs,
+                        textSize:
+                            currentPrefs.textSize === "large"
+                                ? "large"
+                                : currentPrefs.textSize === "normal"
+                                  ? "large"
+                                  : "normal",
+                    };
                     break;
                 case "decrease-font":
                     decreaseFont();
+                    newPrefs = {
+                        ...currentPrefs,
+                        textSize:
+                            currentPrefs.textSize === "small"
+                                ? "small"
+                                : currentPrefs.textSize === "normal"
+                                  ? "small"
+                                  : "normal",
+                    };
                     break;
                 case "screen-reader":
                     screenReader();
                     break;
                 case "highlight-paragraphs":
-                    highlightElements();
+                    highlightElements(!currentPrefs.highlightElements);
+                    newPrefs = {
+                        ...currentPrefs,
+                        highlightParagraphs: !currentPrefs.highlightParagraphs,
+                    };
                     break;
                 case "epilepsy-safe":
                     body.classList.toggle("epilepsy-safe-contrast");
                     break;
                 case "filter-yellow":
                     overlayFilter("yellow");
+                    newPrefs = { ...currentPrefs, colorFilter: "yellow" };
                     break;
                 case "filter-blue":
                     overlayFilter("blue");
+                    newPrefs = { ...currentPrefs, colorFilter: "blue" };
                     break;
                 case "filter-white":
                     overlayFilter("white");
+                    newPrefs = { ...currentPrefs, colorFilter: "white" };
                     break;
                 case "filter-black":
                     overlayFilter("black");
+                    newPrefs = { ...currentPrefs, colorFilter: "black" };
                     break;
+                case "toggle-focus":
+                    toggleFocusFeature();
+                    newPrefs = {
+                        ...currentPrefs,
+                        focusBox: !currentPrefs.focusBox,
+                    };
+                    break;
+            }
+            if (Object.keys(newPrefs).length > 0) {
+                updatePreferences(newPrefs);
+                window.dispatchEvent(
+                    new CustomEvent("accessibilityPrefsChanged", {
+                        detail: newPrefs,
+                    }),
+                );
             }
         });
     });
@@ -108,7 +170,7 @@ export function screenReader() {
         window.speechSynthesis.speak(speech);
     });
 }
-export function highlightElements() {
+export function highlightElements(highlight) {
     // Select all elements we want to highlight
     const elementsToHighlight = document.querySelectorAll(
         "p, li, aside, section",
@@ -134,4 +196,58 @@ export function overlayFilter(color) {
     // Agregar clase correspondiente
     const colorClass = `color-filter-${color}`;
     overlayColor.classList.add(colorClass);
+}
+
+export function toggleFocusFeature() {
+    if (!overlay) {
+        console.warn("Overlay no listo aún.");
+        return;
+    }
+    isFocusActive = !isFocusActive;
+    overlay.classList.toggle("focus-active", isFocusActive);
+    // Si está activo, actualiza la posición inicial por si el mouse no se ha movido
+    //if (isFocusActive) {
+    // Podrías simular un evento o poner una posición inicial si es necesario
+    // updateFocus({ clientY: window.innerHeight / 2 }); // Ejemplo: centrar inicialmente
+    //}
+}
+
+export function updateFocus(event) {
+    if (!isFocusActive || !overlay) {
+        return;
+    }
+
+    const mouseY = event.clientY;
+    const rectY = mouseY - focusHeight / 2;
+    const y1 = Math.max(0, rectY); // Evita valores negativos
+    const y2 = y1 + focusHeight;
+    const x1 = 0;
+    const x2 = window.innerWidth;
+
+    const clipPathValue = `polygon(
+        evenodd,
+        0% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 0%,
+        ${x1}px ${y1}px, ${x2}px ${y1}px, ${x2}px ${y2}px, ${x1}px ${y2}px, ${x1}px ${y1}px
+    )`;
+
+    requestAnimationFrame(() => {
+        if (isFocusActive && overlay) {
+            overlay.style.clipPath = clipPathValue;
+        }
+    });
+}
+
+export function hideFocus() {
+    if (!isFocusActive || !overlay) return;
+    requestAnimationFrame(() => {
+        if (!overlay) return;
+        const y1_off = -focusHeight - 10; // Posiciona el recorte fuera de la vista
+        const y2_off = -10;
+        const x1 = 0;
+        const x2 = window.innerWidth;
+        overlay.style.clipPath = `polygon(
+            evenodd, 0% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 0%,
+            ${x1}px ${y1_off}px, ${x2}px ${y1_off}px, ${x2}px ${y2_off}px, ${x1}px ${y2_off}px, ${x1}px ${y1_off}px
+        )`;
+    });
 }

@@ -63,9 +63,9 @@
     <script src="{{ asset('plugins/parallax-js-master/parallax.min.js') }}"></script>
 
     {{-- Scripts JS específicos de página/sección (Si no están en app.js) --}}
-    {{-- <script src="{{ asset('js/courses.js') }}"></script> --}}
-    {{-- <script src="{{ asset('js/course.js') }}"></script> --}}
-    {{-- <script src="{{ asset('js/custom.js') }}"></script> --}} {{-- Considera incluir custom.js en app.js --}}
+    <script src="{{ asset('js/courses.js') }}"></script>
+    <script src="{{ asset('js/course.js') }}"></script>
+    <script src="{{ asset('js/custom.js') }}"></script> {{-- Considera incluir custom.js en app.js --}}
 
     {{-- Permite añadir JS específico desde las vistas hijas --}}
     @stack('scripts')
