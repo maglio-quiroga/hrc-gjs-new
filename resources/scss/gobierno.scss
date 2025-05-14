@@ -1,8 +1,4 @@
 @charset "utf-8";
-/*********************************
-14. Paginas del gobierno
-*********************************/
-
 .pagespublic {
     padding: 40px 0;
 }
@@ -21,14 +17,12 @@
 .pagespublic .section_title {
     padding-bottom: 50px;
 }
-
 @media (max-width: 991px) {
     .pagespublic .pagepublic_col {
         flex: 0 0 50%;
         max-width: 50%;
     }
 }
-
 @media (max-width: 767px) {
     .pagespublic .pagepublic_col {
         flex: 0 0 100%;
