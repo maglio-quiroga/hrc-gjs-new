@@ -43,28 +43,6 @@
 .footer_social {
     padding-top: 5px;
 }
-.footer_social ul li {
-    display: inline-block;
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    -webkit-transition: all 200ms ease;
-    -moz-transition: all 200ms ease;
-    -ms-transition: all 200ms ease;
-    -o-transition: all 200ms ease;
-    transition: all 200ms ease;
-}
-.footer_social ul li:not(:last-child) {
-    margin-right: 10px;
-}
-.footer_social ul li a {
-    display: block;
-    position: relative;
-    text-align: center;
-}
-.footer_social ul li a i {
-    line-height: 25px;
-}
 .footer_contact {
     padding-left: 36px;
 }
@@ -86,7 +64,6 @@
     margin-top: 33px;
 }
 .footer_links_container ul li a {
-    font-size: 0.75em;
     -webkit-transition: all 200ms ease;
     -moz-transition: all 200ms ease;
     -ms-transition: all 200ms ease;
@@ -124,21 +101,21 @@
     margin-right: 50px;
 }
 .footer_title {
-    font-size: 18px;
+    font-size: 1.5em;
 }
 .footer_contact_info ul li {
-    font-size: 14px;
+    font-size: 1em;
     font-weight: 400;
 }
 .copyright div {
-    font-size: 14px;
+    font-size: 1em;
 }
 .contact_info_container {
     margin-top: 100px;
 }
 .contact_info_title {
     font-family: "Roboto Slab", serif;
-    font-size: 36px;
+    font-size: 1.5em;
     font-weight: 700;
 }
 .contact_info {
@@ -152,7 +129,7 @@
 }
 .contact_info_location_title {
     font-family: "Roboto Slab", serif;
-    font-size: 18px;
+    font-size: 1em;
     font-weight: 700;
 }
 .contact_form {

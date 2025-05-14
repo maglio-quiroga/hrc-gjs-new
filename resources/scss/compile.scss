@@ -960,7 +960,7 @@ h6 {
 *********************************/
 
 .footer {
-    background: var(--gray-1000);
+    background: var(--primary-green);
 }
 .footer_logo_text {
     color: var(--white);
@@ -974,29 +974,23 @@ h6 {
 .footer_about_text p {
     color: var(--white);
 }
-.footer_social ul li {
-    background: var(--gray-800);
-}
 .footer_social ul li a i {
     color: var(--white);
 }
-.footer_social ul li:hover {
-    background: var(--primary-blue);
-}
 .footer_contact_info ul li {
-    color: var(--gray-500);
+    color: var(--gray-100);
 }
 .footer_links_container ul li a {
-    color: var(--gray-500);
+    color: var(--gray-100);
 }
 .footer_links_container ul li a:hover {
     color: var(--primary-blue);
 }
 .copyright {
-    border-top: solid 1px var(--gray-1000);
+    border-top: solid 1px var(--gray-100);
 }
 .copyright div {
-    color: var(--gray-500);
+    color: var(--gray-100);
 }
 .cr_text a {
     color: var(--white);
