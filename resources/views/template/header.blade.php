@@ -4,13 +4,7 @@
         <div class="top_bar_container">
             <div class="container">
                 <div class="top_bar_content d-flex flex-row align-items-center justify-content-end">
-                    <div class="footer_social">
-                        <ul>
-                            <li><a href="login"><i
-                                class="fa fa-sign-in temp_2b" aria-hidden="true"></i></a>
-                            </li>
-                        </ul>
-                    </div>
+                  <a href="login"><i class="button_text fa fa-sign-in round_button temp_2b" aria-hidden="true"></i></a>
                 </div>
             </div>
         </div>

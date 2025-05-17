@@ -3,9 +3,7 @@
 <div class="container we_1a">
     <div class="super_container d-flex flex-wrap justify-content-center">
         <div class="about">
-                <div class="container text-center">
-                    <h2 class="section_title">Servicios y Unidades</h2>
-                </div>
+                <div class="container text-center"><h2 class="section_title">Servicios y Unidades</h2></div>
                 <div class="service-container">
                     @foreach ($services as $service)
                         <div class="m-3"><x-service-card :service="$service" /></div>

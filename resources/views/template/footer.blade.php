@@ -41,17 +41,17 @@
                                                 -->
                                                 <li>
                                                     <a href="https://www.instagram.com/hospitalregionalcopiapo/" class="d-flex align-items-center justify-content-center rounded-circle">
-                                                        <i class="fa fa-instagram text-white temp_1e" aria-hidden="true"></i>
+                                                        <i class="round_button fa fa-instagram button_text temp_1e" aria-hidden="true"></i>
                                                     </a>
                                                 </li>
                                                 <li>
                                                     <a href="https://x.com/hospitalcopiapo/" class="d-flex align-items-center justify-content-center rounded-circle">
-                                                        <i class="fa fa-twitter text-white temp_1f" aria-hidden="true"></i>
+                                                        <i class="round_button fa fa-twitter button_text temp_1f" aria-hidden="true"></i>
                                                     </a>
                                                 </li>
                                                 <li>
                                                     <a href="https://www.youtube.com/@hospitalregionalcopiaposan9695" class="d-flex align-items-center justify-content-center rounded-circle">
-                                                        <i class="fa fa-youtube-play text-white temp_1f" aria-hidden="true"></i>
+                                                        <i class="round_button fa fa-youtube-play button_text temp_1f" aria-hidden="true"></i>
                                                     </a>
                                                 </li>
                                             </ul>

@@ -157,3 +157,13 @@ section {
 .nopadding {
     padding: 0em;
 }
+.round_button {
+  display: flex !important;
+  justify-content: center;  /* centra horizontalmente */
+  align-items: center;      /* centra verticalmente */
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  text-decoration: none;
+  font-weight: bold;
+}
