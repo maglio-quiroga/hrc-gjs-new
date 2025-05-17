@@ -1,5 +1,5 @@
 <footer class='footer'>
-    <!--div class="footer_background" style="background-image:url(images/footer_background.png);background-color: #029834"></!--div-->
+    <div class="footer_background temp_1a"></div>
     <div class="container">
         <div class="row footer_row">
             <div class="col">
@@ -8,7 +8,7 @@
                         <div class="col-lg-3 footer_col">
                             <div class="footer_section footer_about">
                                 <div class="footer_title mb-3">Ubicación</div>
-                                <iframe class="footer_section footer_about" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3543.053862234236!2d-70.32424948528067!3d-27.37403321919398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x96980464c2822341%3A0x1f207c3838ef7818!2sHospital%20Regional%20Copiap%C3%B3%20San%20Jos%C3%A9%20del%20Carmen!5e0!3m2!1ses!2scl!4v1638557364795!5m2!1ses!2scl" width="400" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                                <iframe class="footer_section footer_about temp_1c" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3543.053862234236!2d-70.32424948528067!3d-27.37403321919398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x96980464c2822341%3A0x1f207c3838ef7818!2sHospital%20Regional%20Copiap%C3%B3%20San%20Jos%C3%A9%20del%20Carmen!5e0!3m2!1ses!2scl!4v1638557364795!5m2!1ses!2scl" width="400" height="200" allowfullscreen="" loading="lazy"></iframe>
                             </div>
                         </div>
 
@@ -40,18 +40,18 @@
                                                 </li>
                                                 -->
                                                 <li>
-                                                    <a href="https://www.instagram.com/hospitalregionalcopiapo/" class="d-flex align-items-center justify-content-center rounded-circle" style="background-color: #4ab66e; width: 40px; height: 40px;">
-                                                        <i class="fa fa-instagram text-white" aria-hidden="true"></i>
+                                                    <a href="https://www.instagram.com/hospitalregionalcopiapo/" class="d-flex align-items-center justify-content-center rounded-circle">
+                                                        <i class="fa fa-instagram text-white temp_1e" aria-hidden="true"></i>
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="https://x.com/hospitalcopiapo/" class="d-flex align-items-center justify-content-center rounded-circle" style="background-color: #58bd7c; width: 40px; height: 40px;">
-                                                        <i class="fa fa-twitter text-white" aria-hidden="true"></i>
+                                                    <a href="https://x.com/hospitalcopiapo/" class="d-flex align-items-center justify-content-center rounded-circle">
+                                                        <i class="fa fa-twitter text-white temp_1f" aria-hidden="true"></i>
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="https://www.youtube.com/@hospitalregionalcopiaposan9695" class="d-flex align-items-center justify-content-center rounded-circle" style="background-color: #58bd7c; width: 40px; height: 40px;">
-                                                        <i class="fa fa-youtube-play text-white" aria-hidden="true"></i>
+                                                    <a href="https://www.youtube.com/@hospitalregionalcopiaposan9695" class="d-flex align-items-center justify-content-center rounded-circle">
+                                                        <i class="fa fa-youtube-play text-white temp_1f" aria-hidden="true"></i>
                                                     </a>
                                                 </li>
                                             </ul>

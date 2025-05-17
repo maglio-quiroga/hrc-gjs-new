@@ -4,7 +4,7 @@
         COMUNIDAD
             HOSPITAL AMIGOS -->
 
-<div class="container" style="margin-top: 200px; margin-bottom: 50px;">
+<div class="container we_4a">
     <h2 class="text-center mb-5">Hospital Amigo</h2>
 
     <p>

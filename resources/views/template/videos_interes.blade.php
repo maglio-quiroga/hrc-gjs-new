@@ -1,5 +1,5 @@
 <div class="container">
-    <div class="text-center py-5" style="background-color: #FAFAFA;">
+    <div class="text-center py-5 temp_5a">
         <h2 class="mb-5">Videos de Interés</h2>
     
         <div class="row g-4">

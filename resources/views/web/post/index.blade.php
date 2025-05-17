@@ -1,6 +1,6 @@
 @extends('layouts.web')
 @section('content')
-	<div class="container h-full" style="margin-top:130px">
+	<div class="container h-full dip_1a">
 		<x-web.posted.post.index :posts="$posts" >
 			
 			<div class="section_title_container text-center">
