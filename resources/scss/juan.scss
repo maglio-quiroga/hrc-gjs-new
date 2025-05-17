@@ -9,7 +9,7 @@ resources/views/web/diplomat
 resources/views/web/post
 */
 
-
+/* resources/views/components */
 .cmpnt_1a {
   z-index: 10000;
 }
@@ -17,6 +17,15 @@ resources/views/web/post
 .cmpnt_1b {
   bottom: 100%;
 }
+
+.accesibleBlade_1 {
+  z-index: 10000;
+}
+
+.accesibleBlade_2 {
+  bottom: 100%;
+}
+/* --- */
 
 /* resources/views/components/web */
 .custom-carousel-control {
@@ -49,6 +58,7 @@ resources/views/web/post
 
 /* --- */
 
+/* resources/views/template */
 .temp_1a {
   background-image:url(images/footer_background.png);
 }
@@ -78,6 +88,37 @@ resources/views/web/post
   padding-bottom: 50px;
 }
 
+.footerBlade_1 {
+  background-image:url(images/footer_background.png);
+}
+
+.footerBlade_2 {
+  font-family: 'Montserrat';
+}
+
+.footerBlade_3 {
+  border:0;
+}
+
+.footerBlade_4 {
+  font-family: 'Montserrat';
+  font-size: 18px;
+}
+
+.headerBlade_1 {
+  font-family: 'Museo Sans 500';
+}
+
+.homeBlade_1 {
+  background-image:url(images/100años.png);
+}
+
+.gobiernoBlade_2 {
+  padding-bottom: 50px;
+}
+/* --- */
+
+/* resources/views/web */
 .we_1a {
   margin-top: 150px;
 }
@@ -184,6 +225,119 @@ resources/views/web/post
   line-height: 1.8;
 }
 
+.aboutBlade_1 {
+  margin-top: 150px;
+}
+
+.aboutBlade_2 {
+  width: 100%;
+}
+
+.aboutBlade_3 {
+  max-width: 100%;
+}
+
+.aboutBlade_4 {
+  margin: auto; 
+  padding-bottom: 20px;
+}
+
+.aboutBlade_5 {
+  border-radius: 3%;
+}
+
+.aboutBlade_6 {
+  text-align: justify;
+}
+
+.arancelBlade_1 {
+  margin-top: 150px; 
+  margin-bottom: 50px;
+}
+
+.arancelBlade_2 {
+  font-weight: bold;
+}
+
+.urgenciaBlade_1 {
+  font-weight: bold;
+}
+
+.deberDerechoBlade_1 {
+  margin-top: 200px; 
+  margin-bottom: 50px;
+}
+
+.directivoBlade_1 {
+  position: relative;
+}
+
+.directivoBlade_2 {
+  object-fit: cover; 
+  height: 200px;
+}
+
+.directivoBlade_3 {
+  flex-grow: 1;
+}
+
+.directivoBlade_4 {
+  font-size: 1rem; 
+  line-height: 1.2; 
+  margin-bottom: 0.5rem;
+}
+
+.directivoBlade_5 {
+  white-space: normal; 
+  word-wrap: break-word; 
+  overflow: visible; 
+  font-size: 0.9rem; 
+  line-height: 1.3; 
+  margin-bottom: 0;
+}
+
+.directivoBlade_6 {
+  border: none; 
+  padding: 10px; 
+  font-size: 1rem; 
+  text-align: center; 
+  cursor: pointer; 
+  width: 100%; 
+  transition: background-color 0.2s ease;
+}
+
+.horarioBlade_1 {
+  font-weight: bold;
+}
+
+.domingaBlade_1 {
+  width:150px; 
+  height:2px; 
+  border: none; 
+  opacity: 1;
+}
+
+.domingaBlade_2 {
+  line-height: 25px;
+}
+
+.oirsBlade_1 {
+  font-size: 1.1rem;
+}
+
+.estrategiaBlade_1 {
+  text-align: justify; 
+  font-size: 1.1rem; 
+  line-height: 1.8;
+}
+/* --- */
+
+/* resources/views/web/diplomat */
 .dip_1a {
   margin-top:130px;
 }
+
+.indexBlade_1 {
+  margin-top:130px;
+}
+/* --- */
