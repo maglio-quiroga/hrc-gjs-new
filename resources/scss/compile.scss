@@ -740,15 +740,6 @@ h6 {
 .mapa_post_small_title a:hover {
     color: var(--green-300);
 }
-.noticia_date {
-    box-shadow: 0px 1px 10px var(--black-a10);
-}
-.noticia_day {
-    color: var(--primary-blue);
-}
-.noticia_month {
-    color: var(--primary-blue);
-}
 .noticia:hover .event_date > div {
     background: var(--primary-blue);
 }
@@ -762,19 +753,6 @@ h6 {
 .noticia_title a:hover {
     color: var(--primary-blue);
 }
-.noticia_info {
-    color: var(--gray-500);
-}
-.btn-secondary {
-    background-color: var(--primary-green);
-}
-.custom-carousel-control {
-    background-color: var(--green-a50);
-}
-.team_body {
-    background: var(--white);
-    box-shadow: 0px 1px 10px var(--black-a10);
-}
 .team_item:hover .team_body {
     box-shadow: 0px 5px 40px var(--black-a10);
 }
@@ -783,15 +761,6 @@ h6 {
 }
 .team_title a:hover {
     color: var(--green-300);
-}
-.team_subtitle {
-    color: var(--gray-700);
-}
-.mapa_container {
-    background: var(--white);
-}
-.mapa {
-    background: var(--white);
 }
 .mapa_post_large_title a {
     color: var(--black);
@@ -822,15 +791,6 @@ h6 {
              CELES
 *********************************/
 
-.noticia_date {
-    box-shadow: 0px 1px 10px var(--black-a10);
-}
-.noticia_day {
-    color: var(--primary-green);
-}
-.noticia_month {
-    color: var(--primary-green);
-}
 .noticia:hover .event_date > div {
     background: var(--primary-green);
 }
@@ -844,15 +804,6 @@ h6 {
 .noticia_title a:hover {
     color: var(--primary-blue);
 }
-.noticia_info {
-    color: var(--gray-500);
-}
-.btn-secondary {
-    background-color: var(--gray-900);
-}
-.custom-carousel-control {
-    background-color: var(--green-a50);
-}
 
 /*********************************
 11. Team
@@ -860,10 +811,6 @@ h6 {
 
 .card-title {
     color: var(--gray-1000);
-}
-.team_body {
-    background: var(--white);
-    box-shadow: 0px 1px 10px var(--black-a10);
 }
 .team_item:hover .team_body {
     box-shadow: 0px 5px 40px var(--black-a10);
@@ -874,20 +821,11 @@ h6 {
 .team_title a:hover {
     color: var(--green-300);
 }
-.team_subtitle {
-    color: var(--gray-700);
-}
 
 /*********************************
 12. Mapa
 *********************************/
 
-.mapa_container {
-    background: var(--white);
-}
-.mapa {
-    background: var(--white);
-}
 .mapa_post_large_title a {
     color: var(--black);
 }
@@ -1092,9 +1030,6 @@ h6 {
 .card-button:hover {
     background-color: var(--green-700);
 }
-.card-title {
-    color: var(--gray-1000);
-}
 .card-text {
     color: var(--gray-800);
 }
@@ -1185,13 +1120,6 @@ h6 {
 .search_button:hover i,
 .shopping_cart:hover i {
     color: var(--primary-blue);
-}
-.header_search_container {
-    background: var(--primary-blue);
-}
-.home {
-    background: var(--gray-300);
-    border-bottom: solid 1px var(--gray-400);
 }
 .breadcrumbs ul li:not(:last-child)::after {
     color: var(--gray-900);
@@ -1300,9 +1228,6 @@ h6 {
 .comment_button:hover {
     box-shadow: 0px 5px 40px var(--black-a30);
 }
-.sidebar_section_title {
-    color: var(--gray-900);
-}
 .sidebar_categories ul li:not(:last-of-type) {
     border-bottom: solid 1px var(--gray-400);
 }
@@ -1322,10 +1247,6 @@ h6 {
 .latest_date {
     color: var(--gray-500);
 }
-.gallery_item_overlay {
-    background: var(--blue-a70);
-    color: var(--white);
-}
 .tags_list li {
     background: var(--gray-300);
 }
@@ -1337,16 +1258,6 @@ h6 {
 }
 .tags_list li a {
     color: var(--gray-700);
-}
-.sidebar_banner_overlay {
-    background: var(--primary-blue);
-}
-.banner_title {
-    color: var(--white);
-}
-.banner_button {
-    background: var(--white);
-    border-radius: 3px;
 }
 .banner_button a {
     color: var(--primary-blue);
@@ -1521,9 +1432,6 @@ h6 {
     color: var(--gray-700);
 }
 .teacher_meta_text i {
-    color: var(--primary-blue);
-}
-.latest_price {
     color: var(--primary-blue);
 }
 
