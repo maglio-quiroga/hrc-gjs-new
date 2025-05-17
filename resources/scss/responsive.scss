@@ -246,6 +246,9 @@
 		width: calc(100% + 80px);
 		left: -40px;
 	}
+	body {
+		padding-right: 0 !important; // Diego: FIXEA EL ESPACIADO AL MOMENTO DE APARECER EL MODAL (EN CELULARES)
+	}
 }
 /************
 4. 575px

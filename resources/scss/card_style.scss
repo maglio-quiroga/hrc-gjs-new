@@ -8,6 +8,7 @@
     border-radius: 0.375rem; /* Esquinas redondeadas */
     overflow: hidden; /* Asegura que la barra superior no se salga */
     flex-grow: 1; /* Permite que la tarjeta crezca para llenar el espacio */
+    cursor: pointer;
     transition:
         transform 0.3s ease,
         box-shadow 0.3s ease;
@@ -15,8 +16,10 @@
 .card-header {
     font-family: "Museo Sans 500";
 }
-.card:hover {
+@media (hover: hover) and (pointer: fine) { // Diego: FIXEA LA ANIMACIÓN EN MÓVILES
+  .card:hover {
     transform: translateY(-5px);
+  }
 }
 .card-top-border {
     height: 5px; /* Altura de la barra superior */

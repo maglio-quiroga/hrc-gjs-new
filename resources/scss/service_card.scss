@@ -46,6 +46,10 @@
     flex-wrap: wrap;
     justify-content: center; /* Opcional, para centrar */
 }
+.service-item {
+    flex: 0 0 80%;
+    padding-bottom: 36px;
+}
 .service-card {
     /* Estilos existentes para service card */
     flex: 0 0 calc(25% - 20px); /* Ajustar el porcentaje y margen como se necesite */

@@ -14,3 +14,7 @@
     text-align: justify;
     font-size: 0.95rem;
 }
+.modal-backdrop { // Diego: AVISO: SOBREESCRIBE LA CLASE modal-backdrop DE BOOTSTRAP. 
+    height: 100%; // Fixea el fondo negro transparente, para que abarque toda la página.
+    width: 100%; // Esto es para los celulares
+}

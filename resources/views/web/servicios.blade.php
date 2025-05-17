@@ -6,7 +6,7 @@
                 <div class="container text-center"><h2 class="section_title">Servicios y Unidades</h2></div>
                 <div class="service-container">
                     @foreach ($services as $service)
-                        <div class="m-3"><x-service-card :service="$service" /></div>
+                        <div class="service-item"><x-service-card :service="$service" /></div>
                     @endforeach
                 </div>
             </div>
