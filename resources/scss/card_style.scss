@@ -35,9 +35,13 @@
     text-decoration: none;
 }
 .card-body {
-    padding: 1.25rem; /* Relleno interno del cuerpo de la tarjeta */
-    text-align: center; /* Centra el texto */
-    font-weight: 500; /* Peso de la fuente */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* separa texto y botón */
+    align-items: center;            /* centra horizontalmente */
+    padding: 1.25rem;
+    text-align: center;
+    font-weight: 500;
     font-size: 1.5em;
     -webkit-transition: all 200ms ease;
     -moz-transition: all 200ms ease;

@@ -1,32 +1,14 @@
 @extends('layouts.web')
 @section('content')
-<!--PAGINA
-        QUIENES SOMOS
-            NOSOTROS -->
 <div class="container we_1a">
     <div class="super_container">
         <div class="about">
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <div class="container text-center">
-                            <br><br>
-                            <h2 class="section_title">Sobre Nosotros</h2>
-                            <br><br>
-                            <div class="section_subtitle">
-                                <p></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="we_1b">
+            <div class="container text-center"><h2 class="section_title">Sobre Nosotros</h2></div>
+                <div class="we_1b mb-4">
                     <iframe width="100%" height="610" class="embed-responsive-item"
                             src="https://www.youtube.com/embed/oqsil9V2c7Q?autoplay=1&controls=0"
                             allowfullscreen></iframe>
                 </div>
-                <br><br>
-
                 @foreach ([
                     ['title' => 'Reseña histórica',
                       'img' => 'images/about/01-frontis-hrc-anos-40-1.jpg',
@@ -63,10 +45,9 @@
                         ]
                     ]
                 ] as $section)
-                    <div class="card mb-3 we_1c">
-                        <div class="row g-0 we_1d">
-                            <div class="col-md-4 px-3" >
-                                <br>
+                    <div class="card-only-color mb-4 we_1c">
+                        <div class="row my-3">
+                            <div class="col-md-4 d-flex align-items-center px-3" >
                                 <img src="{{ $section['img'] }}" class="img-fluid rounded-start we_1e" alt="...">
                             </div>
                             <div class="col-md-8">
@@ -83,7 +64,6 @@
                             </div>
                         </div>
                     </div>
-                    <br>
                 @endforeach
             </div>
         </div>
