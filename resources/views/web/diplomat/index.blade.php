@@ -1,6 +1,6 @@
 @extends('layouts.web')
 @section('content')
-	<div class="container h-full" style="margin-top:130px">
+	<div class="container h-full dip_1a">
 		<x-web.diplomaed.diplomat.index :programs="$programs" >
 			<div class="section_title_container text-center">
 				</br></br>

@@ -1,4 +1,4 @@
-<div class="position-fixed bottom-0 end-0 m-3" style="z-index: 10000;">
+<div class="position-fixed bottom-0 end-0 m-3 cmpnt_1a">
     <button id="accessibilityToggle"
             class="btn btn-dark rounded-circle p-3 d-flex align-items-center justify-content-center position-relative"
             aria-label="Accessibility options"
@@ -13,17 +13,17 @@
             <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
         </svg>
     </button>
-    <div id="accessibilityMenu" class="accMenu bg-white border rounded shadow-sm p-3 mt-2 d-none position-absolute end-0" style="bottom: 100%;">
+    <div id="accessibilityMenu" class="accMenu bg-white border rounded shadow-sm p-3 mt-2 d-none position-absolute end-0 cmpnt_1b">
         <div class="d-grid gap-2">
-            <label>Tamaño deñ texto:</label><br>
+            <label>Tamaño del texto:</label><br>
             <div class="btn-group" role="group" aria-label="Basic example">
               <button data-action="increase-font" class="btn btn-outline-secondary">++</button>
               <button data-action="decrease-font" class="btn btn-outline-secondary">- -</button>
             </div>
             <button data-action="screen-reader" class="btn btn-outline-secondary text-start">Lectura de Pantalla</button>
-            <button data-action="toggle-focus" id="focus-toggle-button" class="btn btn-outline-secondary text-start">Recuadro de Enfoque</button>
+            <button data-action="toggle-focus" class="btn btn-outline-secondary text-start">Recuadro de Enfoque</button>
             <button data-action="highlight-paragraphs" class="btn btn-outline-secondary text-start">Resaltar párrafos</button>
-            <button data-action="epilepsy-safe" class="btn btn-outline-secondary text-start">Contraste para epilepsia</button>
+            <!--button data-action="epilepsy-safe" class="btn btn-outline-secondary text-start">Contraste para epilepsia</button-->
             <label>Colores del filtro:</label><br>
             <div class="btn-group" role="group" aria-label="Basic example">
                 <button data-action="filter-yellow" class="btn btn-outline-secondary text-start">Amarillo</button>

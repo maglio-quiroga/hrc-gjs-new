@@ -49,18 +49,8 @@
 
 .highlighted-element {
     padding: 0.2em;
-    border-radius: 0.5em;
     background-color: #ffeb3b; /* Yellow highlight */
-    box-shadow: 0 0 0 2px #ffc107; /* Orange border */
     transition: all 0.3s ease; /* Smooth transition */
-}
-.epilepsy-safe-contrast {
-    background-color: #f4f4f4 !important;
-    filter: contrast(50%);
-    color: #222 !important;
-}
-.epilepsy-safe-contrast a {
-    color: #005580 !important;
 }
 .color-filter-overlay {
     position: fixed;

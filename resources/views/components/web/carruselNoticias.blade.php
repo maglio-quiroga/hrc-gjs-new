@@ -49,37 +49,3 @@
     </button>
 </div>
 
-<style>
-    .custom-carousel-control {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 60px;
-        height: 60px;
-        background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
-        border-radius: 50%;
-        z-index: 10;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .carousel-control-prev.custom-carousel-control {
-        left: -70px; /* Mover el botón hacia fuera de la noticia */
-    }
-
-    .carousel-control-next.custom-carousel-control {
-        right: -70px; /* Mover el botón hacia fuera de la noticia */
-    }
-
-    .custom-carousel-control .carousel-control-prev-icon,
-    .custom-carousel-control .carousel-control-next-icon {
-        width: 30px;
-        height: 30px;
-        filter: invert(1); /* Cambiar color del icono */
-    }
-
-    .custom-carousel-control:hover {
-        background-color: rgba(0, 0, 0, 0.8); /* Fondo más oscuro al pasar el mouse */
-    }
-</style>

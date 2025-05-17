@@ -3,7 +3,7 @@
 <!--PAGINA
         QUIENES SOMOS
             CUENTAS PUBLICAS -->
-<div class="container" style="margin-top: 200px; margin-bottom: 50px;">
+<div class="container we_4a">
     <h2 class="text-center mb-5">Cuentas Públicas</h2>
 
     <div class="container text-center my-5">

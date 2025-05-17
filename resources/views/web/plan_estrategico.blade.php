@@ -4,18 +4,18 @@
 <!--PAGINA
         INFORMACION DE PACIENTES 
             PLAN ESTRATEGICO -->
-<div class="container" style="margin-top: 150px; margin-bottom: 50px;">
+<div class="container we_2a">
 
     <!-- Título Principal -->
     <div class="text-center mb-4">
-        <h2 style="color: #28a745; font-weight: bold;">Planificación Estratégica</h2>
+        <h2 class="we_2b">Planificación Estratégica</h2>
     </div>
 
     <!-- Sección del Contenido -->
     <section class="mb-5">
         <div class="row justify-content-center">
             <div class="col-md-10">
-                <p style="text-align: justify; font-size: 1.1rem; line-height: 1.8;">
+                <p class="we_10a">
                     <em>
                         “Un proceso de Planificación Estratégica supone de <strong>Liderazgos Eficientes y Efectivos</strong> 
                         para direccionar a la organización desde donde estamos, hasta o hacia dónde queremos llegar de 
@@ -33,7 +33,7 @@
 
     <!-- Sección Destacada -->
     <section class="text-center mt-5">
-        <div class="alert alert-success" role="alert" style="font-size: 1.1rem;">
+        <div class="alert alert-success we_9a" role="alert">
             La Planificación Estratégica guía el presente y el futuro de la organización, asegurando el uso eficiente de los recursos 
             y la toma de decisiones orientadas al éxito corporativo.
         </div>
