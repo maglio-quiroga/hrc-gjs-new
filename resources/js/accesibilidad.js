@@ -51,63 +51,55 @@ export function accesibilidad() {
                 //texto muy grande
                 case "increase-more-font":
                     if (document.body.classList.contains("texto-muy-pequeño")) {
-                        document.body.classList.remove(".texto-muy-pequeño");
-                        break;
+                        document.body.classList.remove("texto-muy-pequeño");
                     } 
                     else if(document.body.classList.contains("smaller-text")){
                         document.body.classList.remove("smaller-text");
-                        break;
                     }
                     else if(document.body.classList.contains("texto-grande")) {
                         document.body.classList.remove("texto-grande");
-                        break;
                     }
                     document.body.classList.add("texto-muy-grande");
+                    break;
                 //texto grande
                 case "increase-font":
                     if (document.body.classList.contains("texto-muy-pequeño")) {
-                        document.body.classList.remove(".texto-muy-pequeño");
-                        break;
+                        document.body.classList.remove("texto-muy-pequeño");
                     } 
                     else if(document.body.classList.contains("smaller-text")){
                         document.body.classList.remove("smaller-text");
-                        break;
                     }
                     else if(document.body.classList.contains("texto-muy-grande")) {
                         document.body.classList.remove("texto-muy-grande");
-                        break;
                     }
                     document.body.classList.add("texto-grande");
+                    break;
                 //texto pequeño
                 case "decrease-font":
                     if(document.body.classList.contains("texto-muy-grande")) {
                         document.body.classList.remove("texto-muy-grande");
-                        break;
                     }
-                    else if (document.body.classList.contains("texto-grande")) {
+                    else if(document.body.classList.contains("texto-grande")) {
                         document.body.classList.remove("texto-grande");
-                        break;
                     }
                     else if(document.body.classList.contains("texto-muy-pequeño")){
                         document.body.classList.remove("texto-muy-pequeño");
-                        break;
                     }
                     document.body.classList.add("smaller-text");
-                //texto muy pequeño
+                    break;
+                    //texto muy pequeño
                 case "decrease-any-font":
                     if(document.body.classList.contains("texto-muy-grande")) {
                         document.body.classList.remove("texto-muy-grande");
-                        break;
                     }
                     else if (document.body.classList.contains("texto-grande")) {
                         document.body.classList.remove("texto-grande");
-                        break;
                     }
                     else if(document.body.classList.contains("smaller-text")){
                         document.body.classList.remove("smaller-text");
-                        break;
                     }
                     document.body.classList.add("texto-muy-pequeño");
+                    break;
                 //teto normal
                 case "normali-font":
                     if(document.body.classList.contains("texto-muy-grande")) {
@@ -122,9 +114,8 @@ export function accesibilidad() {
                         document.body.classList.remove("smaller-text");
                         break;
                     }
-                    else if(document.body.classList.contains("smaller-text")){
-                        document.body.classList.remove("smaller-text");
-                        break;
+                    else if(document.body.classList.contains("texto-muy-pequeño")){
+                        document.body.classList.remove("texto-muy-pequeño");
                     }
                 case "screen-reader":
                     const texto = document.body.innerText;

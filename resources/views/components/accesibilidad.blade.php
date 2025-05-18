@@ -15,8 +15,11 @@
     </button>
     <div id="accessibilityMenu" class="accMenu bg-white border rounded shadow-sm p-3 mt-2 d-none position-absolute end-0" style="bottom: 100%;">
         <div class="d-grid gap-2">
+            <button data-action="increase-more-font" class="btn btn-outline-secondary text-start">Aumentar mucho el Texto</button>
             <button data-action="increase-font" class="btn btn-outline-secondary text-start">Aumentar Texto</button>
+            <button data-action="normali-font" class="btn btn-outline-secondary text-start">Normalizar Texto</button>
             <button data-action="decrease-font" class="btn btn-outline-secondary text-start">Reducir Texto</button>
+            <button data-action="decrease-any-font" class="btn btn-outline-secondary text-start">Reducir mucho el Texto</button>
             <button data-action="screen-reader" class="btn btn-outline-secondary text-start">Lectura de Pantalla</button>
             <button data-action="toggle-focus" id="focus-toggle-button" class="btn btn-outline-secondary text-start">Recuadro de Enfoque</button>
         </div>
