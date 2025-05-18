@@ -34,13 +34,21 @@
 .accMenu {
     width: 20em;
 }
+/*aumeta el tamaño del texto*/
+.texto-muy-grande{
+    font-size: 1.5em !important;
+}
 .texto-grande {
     font-size: 1.25em !important;
 }
-.high-contrast {
-    filter: contrast(120%);
-}
 /*reducir el tamaño del texto*/
 .smaller-text {
+    font-size: 0.75em !important;
+}
+.texto-muy-pequeño{
     font-size: 0.5em !important;
+}
+/*constraste*/
+.high-contrast {
+    filter: contrast(120%);
 }
