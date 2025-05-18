@@ -24,12 +24,12 @@
     ];
 @endphp
 
-<div class="pagespublic temp_5a">
+<div class="pagespublic enlaces">
     <div class="container">
         <div class="row">
             <div class="col">
                 <div class="section_title_container text-center">
-                    <h2 class="section_title temp_5b">Enlaces de Interés</h2>
+                    <h2 class="section_title ajusteEnlacesInteres">Enlaces de Interés</h2>
                 </div>
             </div>
         </div>
