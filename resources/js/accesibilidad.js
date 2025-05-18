@@ -48,21 +48,82 @@ export function accesibilidad() {
                     body.classList.toggle("high-contrast");
                     document.body.classList.toggle("modo-alto-contraste");
                     break;
-                case "increase-font":
-                    if (document.body.classList.contains("smaller-text")) {
+                //texto muy grande
+                case "increase-more-font":
+                    if (document.body.classList.contains("texto-muy-pequeño")) {
+                        document.body.classList.remove(".texto-muy-pequeño");
+                        break;
+                    } 
+                    else if(document.body.classList.contains("smaller-text")){
                         document.body.classList.remove("smaller-text");
                         break;
-                    } else {
-                        document.body.classList.add("texto-grande");
-                        document.body.style.fontSize = fontSize + "em";
-                        break;
                     }
-                case "decrease-font":
-                    if (document.body.classList.contains("texto-grande")) {
+                    else if(document.body.classList.contains("texto-grande")) {
                         document.body.classList.remove("texto-grande");
                         break;
-                    } else {
-                        document.body.classList.add("smaller-text");
+                    }
+                    document.body.classList.add("texto-muy-grande");
+                //texto grande
+                case "increase-font":
+                    if (document.body.classList.contains("texto-muy-pequeño")) {
+                        document.body.classList.remove(".texto-muy-pequeño");
+                        break;
+                    } 
+                    else if(document.body.classList.contains("smaller-text")){
+                        document.body.classList.remove("smaller-text");
+                        break;
+                    }
+                    else if(document.body.classList.contains("texto-muy-grande")) {
+                        document.body.classList.remove("texto-muy-grande");
+                        break;
+                    }
+                    document.body.classList.add("texto-grande");
+                //texto pequeño
+                case "decrease-font":
+                    if(document.body.classList.contains("texto-muy-grande")) {
+                        document.body.classList.remove("texto-muy-grande");
+                        break;
+                    }
+                    else if (document.body.classList.contains("texto-grande")) {
+                        document.body.classList.remove("texto-grande");
+                        break;
+                    }
+                    else if(document.body.classList.contains("texto-muy-pequeño")){
+                        document.body.classList.remove("texto-muy-pequeño");
+                        break;
+                    }
+                    document.body.classList.add("smaller-text");
+                //texto muy pequeño
+                case "decrease-any-font":
+                    if(document.body.classList.contains("texto-muy-grande")) {
+                        document.body.classList.remove("texto-muy-grande");
+                        break;
+                    }
+                    else if (document.body.classList.contains("texto-grande")) {
+                        document.body.classList.remove("texto-grande");
+                        break;
+                    }
+                    else if(document.body.classList.contains("smaller-text")){
+                        document.body.classList.remove("smaller-text");
+                        break;
+                    }
+                    document.body.classList.add("texto-muy-pequeño");
+                //teto normal
+                case "normali-font":
+                    if(document.body.classList.contains("texto-muy-grande")) {
+                        document.body.classList.remove("texto-muy-grande");
+                        break;
+                    }
+                    else if (document.body.classList.contains("texto-grande")) {
+                        document.body.classList.remove("texto-grande");
+                        break;
+                    }
+                    else if(document.body.classList.contains("smaller-text")){
+                        document.body.classList.remove("smaller-text");
+                        break;
+                    }
+                    else if(document.body.classList.contains("smaller-text")){
+                        document.body.classList.remove("smaller-text");
                         break;
                     }
                 case "screen-reader":
