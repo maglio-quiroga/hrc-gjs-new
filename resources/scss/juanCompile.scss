@@ -37,7 +37,15 @@ resources/views/web/post
   background-color: var(--green-550);
 }
 
+.footerFondos {
+  background-color: var(--green-550);
+}
+
 .temp_1d {
+  color: var(--white);
+}
+
+.footerBlade_4 {
   color: var(--white);
 }
 
@@ -45,7 +53,15 @@ resources/views/web/post
   background-color: var(--green-525);
 }
 
+.footerInstagram {
+  background-color: var(--green-525);
+}
+
 .temp_1f {
+    background-color: var(--green-450);
+}
+
+.footerXYou {
     background-color: var(--green-450);
 }
 
@@ -53,36 +69,20 @@ resources/views/web/post
     background-color: var(--dark-shade-blue);
 }
 
+.headerLoginColor {
+    background-color: var(--dark-shade-blue);
+}
+
 .temp_4a {
+  color: var(--green-400);
+}
+
+.colorSwiper {
   color: var(--green-400);
 }
 
 .temp_5a {
     background-color: var(--white-FA);
-}
-
-.footerFondos {
-  background-color: var(--green-550);
-}
-
-.footerBlade_4 {
-  color: var(--white);
-}
-
-.footerInstagram {
-  background-color: var(--green-525);
-}
-
-.footerXYou {
-    background-color: var(--green-450);
-}
-
-.headerLoginColor {
-    background-color: var(--dark-shade-blue);
-}
-
-.colorSwiper {
-  color: var(--green-400);
 }
 
 .colorEnlaces {
@@ -95,7 +95,16 @@ resources/views/web/post
     color: var(--green-535);
 }
 
+.arancelBlade_2 {
+    color: var(--green-535);
+}
+
 .we_5f {
+  background-color: var(--green-525); 
+  color: var(--white); 
+}
+
+.directivoBlade_6 {
   background-color: var(--green-525); 
   color: var(--white); 
 }
@@ -104,29 +113,20 @@ resources/views/web/post
   border: 2px solid var(--green-535);
 }
 
+.donacionBlade_1 {
+  border: 2px solid var(--green-535);
+}
+
 .we_7a {
+  color: var(--orange); 
+}
+
+.horarioBlade_1 {
   color: var(--orange); 
 }
 
 .we_8a {
   background-color: var(--green-535); 
-}
-
-.arancelBlade_2 {
-    color: var(--green-535);
-}
-
-.directivoBlade_6 {
-  background-color: var(--green-525); 
-  color: var(--white); 
-}
-
-.donacionBlade_1 {
-  border: 2px solid var(--green-535);
-}
-
-.horarioBlade_1 {
-  color: var(--orange); 
 }
 
 .domingaBlade_1 {
