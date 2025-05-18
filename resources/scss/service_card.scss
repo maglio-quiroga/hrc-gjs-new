@@ -1,8 +1,4 @@
 @charset "utf-8";
-/*********************************
-15 Service Card
-*********************************/
-
 .card-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
@@ -31,7 +27,7 @@
 .card-text {
     font-size: 0.9rem;
     text-align: justify;
-    margin-bottom: 50px; /* Space for the button */
+    margin-bottom: 50px; /* Espacio para el botón */
 }
 .card-button {
     border: none;
@@ -48,20 +44,19 @@
 .service-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Optional, for centering */
+    justify-content: center; /* Opcional, para centrar */
 }
 .service-card {
-    /* Existing styles for service card */
-    flex: 0 0 calc(25% - 20px); /* Adjust the percentage and margin as needed */
-    margin: 10px; /* Adjust the margin for spacing between cards */
+    /* Estilos existentes para service card */
+    flex: 0 0 calc(25% - 20px); /* Ajustar el porcentaje y margen como se necesite */
+    margin: 10px; /* Ajustar el margen para espaciado entre cartas */
 }
-/* Optional: Media query for smaller screens */
+/* Opcional: Media query para pantallas más pequeñas */
 @media (max-width: 768px) {
     .service-card {
         flex: 0 0 calc(50% - 20px);
     }
 }
-
 // Ajustes adicionales a .card-img-top
 .card-img-top {
     object-fit: cover;

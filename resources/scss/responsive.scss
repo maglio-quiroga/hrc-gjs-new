@@ -15,7 +15,6 @@
 /************
 1. 1199px
 ************/
-
 @media only screen and (max-width: 1199px) {
 	.home_slider_prev {
 		left: 25px;
@@ -72,11 +71,9 @@
 		left: -80px;
 	}
 }
-
 /************
 2. 991px
 ************/
-
 @media only screen and (max-width: 991px) {
 	.main_nav,
 	.search_button {
@@ -128,16 +125,10 @@
 	.event_col:not(:last-child) {
 		margin-bottom: 20px;
 	}
-	.team_col .team_item {
-		padding-left: 0px;
-		padding-right: 0px;
-	}
-	.team_col:first-child .team_item {
-		padding-left: 0;
-		padding-right: 0px;
-	}
+	.team_col .team_item,
+	.team_col:first-child .team_item,
 	.team_col:nth-child(4n) .team_item {
-		padding-left: 0px;
+		padding-left: 0;
 		padding-right: 0;
 	}
 	.team_col:nth-child(odd) .team_item {
@@ -162,12 +153,15 @@
 	}
 	.footer_contact,
 	.footer_links {
-		padding-left: 0;
+		padding-left: 12px;
 	}
 	.footer_links ul {
 		columns: 1;
 		-webkit-columns: 1;
 		-moz-columns: 1;
+	}
+	.footer_contact_buttons {
+		padding-left: 32px;
 	}
 	.footer_mobile {
 		float: none;
@@ -208,11 +202,9 @@
 		margin-top: 80px;
 	}
 }
-
 /************
 3. 767px
 ************/
-
 @media only screen and (max-width: 767px) {
 	.top_bar {
 		display: none;
@@ -238,16 +230,10 @@
 	.milestone:not(:last-child) {
 		margin-bottom: 50px;
 	}
-	.team_col .team_item {
-		padding-left: 0px;
-		padding-right: 0px;
-	}
-	.team_col:first-child .team_item {
-		padding-left: 0;
-		padding-right: 0px;
-	}
+	.team_col .team_item,
+	.team_col:first-child .team_item,
 	.team_col:nth-child(4n) .team_item {
-		padding-left: 0px;
+		padding-left: 0;
 		padding-right: 0;
 	}
 	.team_col:nth-child(odd) .team_item {
@@ -261,11 +247,9 @@
 		left: -40px;
 	}
 }
-
 /************
 4. 575px
 ************/
-
 @media only screen and (max-width: 575px) {
 	h2 {
 		font-size: 24px;

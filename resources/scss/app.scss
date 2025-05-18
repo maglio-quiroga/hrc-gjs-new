@@ -2,16 +2,17 @@
 @import "bootstrap/scss/bootstrap";
 
 /*********************************************
-* Custom CSS is listed in alphabetical order *
+* Los CSS personalizados se enumeran en orden alfabético *
 *********************************************/
 // A
 @import "./accesibilidad";
 // B
+@import "./blog-single";
 @import "./body_general";
 // C
-@import "./cambiosYClasesNuevas";
 @import "./campain";
 @import "./card_style";
+@import "./course&courses";
 // D
 @import "./directivo";
 // F
@@ -34,19 +35,21 @@
 @import "./main";
 @import "./mapa";
 @import "./meanMenu";
+@import "./menu";
 @import "./modal";
 // N
-@import "./news";
-@import "./newsletter";
+@import "./news-letter";
 // R
 @import "./responsive";
 // S
+@import "./section";
 @import "./service_card";
+@import "./sidebar";
 // T
 @import "./table";
 @import "./team";
 
-// Fonts
+// Fonts (Fuentes)
 @import url("https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:300,400,500,700,900");
 
 // 2. Estilos personalizados ESPECÍFICOS que NO son reemplazados por Bootstrap.
