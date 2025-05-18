@@ -3,7 +3,7 @@
 <!--PAGINA
         QUIENES SOMOS
             NOSOTROS -->
-<div class="container we_1a">
+<div class="container quienesSomos">
     <div class="super_container">
         <div class="about">
             <div class="container">
@@ -20,7 +20,7 @@
                     </div>
                 </div>
 
-                <div class="we_1b">
+                <div class="videoNosotros">
                     <iframe width="100%" height="610" class="embed-responsive-item"
                             src="https://www.youtube.com/embed/oqsil9V2c7Q?autoplay=1&controls=0"
                             allowfullscreen></iframe>
@@ -63,20 +63,20 @@
                         ]
                     ]
                 ] as $section)
-                    <div class="card mb-3 we_1c">
-                        <div class="row g-0 we_1d">
+                    <div class="card mb-3 tarjetasNosotros">
+                        <div class="row g-0 llenarTarjeta">
                             <div class="col-md-4 px-3" >
                                 <br>
-                                <img src="{{ $section['img'] }}" class="img-fluid rounded-start we_1e" alt="...">
+                                <img src="{{ $section['img'] }}" class="img-fluid rounded-start imagenNosotros" alt="...">
                             </div>
                             <div class="col-md-8">
                                 <div class="card-body">
                                     <h3 class="card-title">{{ $section['title'] }}</h3>
                                     @if (isset($section['text']))
-                                        <p class="card-text we_1f">{{ $section['text'] }}</p>
+                                        <p class="card-text textoTarjeta">{{ $section['text'] }}</p>
                                     @else
                                         @foreach ($section['texts'] as $key => $text)
-                                        <p class="card-text we_1f"><b>{{ $key }}</b>: {{ $text }}</p>
+                                        <p class="card-text textoTarjeta"><b>{{ $key }}</b>: {{ $text }}</p>
                                         @endforeach
                                     @endif
                                 </div>
