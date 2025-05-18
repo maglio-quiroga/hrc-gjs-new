@@ -4,7 +4,7 @@
 <!--PAGINA
         QUIENES SOMOS
             EQUIPO DIRECTIVO -->
-<div class="container we_1a">
+<div class="container quienesSomos">
     <div class="super_container">
         <div class="about">
             <div class="container">
@@ -22,18 +22,18 @@
                 <div class="row justify-content-center">
                 @foreach($members as $member)
                 <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 mb-4">
-                    <div class="card text-center d-flex flex-column h-100 we_5a">
-                        <img src="/image/uploads/team/{{ $member['image'] ?? 'default.jpg' }}"class="card-img-top img-fluid we_5b" alt="{{ $member['name'] ?? 'Nombre no disponible' }}">
-                        <div class="card-body d-flex flex-column we_5c">
-                            <h5 class="card-title we_5d">
+                    <div class="card text-center d-flex flex-column h-100 tarjetaDirectivo">
+                        <img src="/image/uploads/team/{{ $member['image'] ?? 'default.jpg' }}"class="card-img-top img-fluid presentarDirectivo" alt="{{ $member['name'] ?? 'Nombre no disponible' }}">
+                        <div class="card-body d-flex flex-column presentarDirectivo_b">
+                            <h5 class="card-title nombreDirectivo">
                                 {{ $member['name'] ?? 'Nombre no disponible' }}
                             </h5>
-                            <p class="card-text we_5e">
+                            <p class="card-text tituloDirectivo">
                                 {{ $member['position'] ?? 'Título no disponible' }}
                             </p>
                         </div>
                         <div class="mt-auto">
-                            <button class="card-button we_5f" data-bs-toggle="modal" data-bs-target="#modal-{{ $loop->index }}">
+                            <button class="card-button mostrarInfoDirectivo" data-bs-toggle="modal" data-bs-target="#modal-{{ $loop->index }}">
                                 Más información
                             </button>
                         </div>
@@ -56,7 +56,7 @@
                                     <p>{{ $member['description'] ?? 'Descripción no disponible' }}</p>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary we_5f" data-bs-dismiss="modal">Cerrar</button>
+                                    <button type="button" class="btn btn-secondary mostrarInfoDirectivo" data-bs-dismiss="modal">Cerrar</button>
                                 </div>
                             </div>
                         </div>

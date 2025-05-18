@@ -203,7 +203,7 @@ resources/views/web/post
     position: relative;
 }
 
-.directivoBlade_1 {
+.tarjetaDirectivo {
   position: relative;
 }
 
@@ -212,7 +212,7 @@ resources/views/web/post
     height: 200px;
 }
 
-.directivoBlade_2 {
+.presentarDirectivo {
   object-fit: cover; 
   height: 200px;
 }
@@ -221,7 +221,7 @@ resources/views/web/post
     flex-grow: 1;
 }
 
-.directivoBlade_3 {
+.presentarDirectivo_b {
   flex-grow: 1;
 }
 
@@ -231,7 +231,7 @@ resources/views/web/post
     margin-bottom: 0.5rem;
 }
 
-.directivoBlade_4 {
+.nombreDirectivo {
   font-size: 1rem; 
   line-height: 1.2; 
   margin-bottom: 0.5rem;
@@ -246,7 +246,7 @@ resources/views/web/post
     margin-bottom: 0;
 }
 
-.directivoBlade_5 {
+.tituloDirectivo {
   white-space: normal; 
   word-wrap: break-word; 
   overflow: visible; 
@@ -265,7 +265,7 @@ resources/views/web/post
     transition: background-color 0.2s ease;
 }
 
-.directivoBlade_6 {
+.mostrarInfoDirectivo {
   border: none; 
   padding: 10px; 
   font-size: 1rem; 
