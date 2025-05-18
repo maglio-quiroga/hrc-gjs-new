@@ -73,10 +73,10 @@
                                 <div class="card-body">
                                     <h3 class="card-title">{{ $section['title'] }}</h3>
                                     @if (isset($section['text']))
-                                        <p class="card-text textoTarjeta">{{ $section['text'] }}</p>
+                                        <p class="card-text textoRelleno">{{ $section['text'] }}</p>
                                     @else
                                         @foreach ($section['texts'] as $key => $text)
-                                        <p class="card-text textoTarjeta"><b>{{ $key }}</b>: {{ $text }}</p>
+                                        <p class="card-text textoRelleno"><b>{{ $key }}</b>: {{ $text }}</p>
                                         @endforeach
                                     @endif
                                 </div>
