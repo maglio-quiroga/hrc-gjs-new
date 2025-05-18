@@ -24,7 +24,7 @@
     ];
 @endphp
 
-<div class="pagespublic enlaces">
+<div class="pagespublic colorEnlaces">
     <div class="container">
         <div class="row">
             <div class="col">
