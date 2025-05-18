@@ -4,14 +4,14 @@
 <!--PAGINA
         INFORMACION DE PACIENTES 
             HORARIOS -->
-<div class="container we_2a">
+<div class="container infoPacientes">
 
     <!-- Título Principal -->
     <div class="text-center mb-4">
-        <h2 class="we_2b">
+        <h2 class="titulo_texto">
             ENTREGA DE INFORMACIÓN A FAMILIARES DE USUARIOS(AS) HOSPITALIZADOS(AS)
         </h2>
-        <p class="we_7a">(Sólo un familiar por paciente)</p>
+        <p class="familiarUsuario">(Sólo un familiar por paciente)</p>
     </div>
 
     <!-- UPC -->
