@@ -4,21 +4,21 @@
 <!--PAGINA
         INFORMACION DE PACIENTES 
             GES -->
-<div class="container we_2a">
+<div class="container infoPacientes">
 
     <!-- Título Principal -->
     <div class="text-center mb-4">
-        <h2 class="we_2b">Garantías Explícitas en Salud (GES / AUGE)</h2>
+        <h2 class="titulo_texto">Garantías Explícitas en Salud (GES / AUGE)</h2>
         <p class="text-muted">Acceso a atención de salud garantizada, oportuna y de calidad.</p>
     </div>
 
     <!-- Contenido Principal -->
     <section class="mb-5">
         <h4 class="text-success">¿Qué es el AUGE/GES?</h4>
-        <p class="we_1f">
+        <p class="textoRelleno">
             El <strong>AUGE</strong> surge en el año <strong>2005</strong> como parte de un <strong>Régimen General de Garantías en Salud</strong> establecido por el <strong>Ministerio de Salud</strong> (MINSAL). Este régimen representa un conjunto de beneficios de salud garantizados para los ciudadanos.
         </p>
-        <p class="we_1f">
+        <p class="textoRelleno">
             Con el tiempo, el nombre del programa cambió a <strong>Garantías Explícitas en Salud (GES)</strong>, un término que define de manera más precisa su objetivo principal: 
             <em>"Garantizar de manera legal y exigible aquellas prestaciones de los problemas de salud que están cubiertos por el AUGE."</em>
         </p>
@@ -46,7 +46,7 @@
     <!-- Enlace a Información Oficial -->
     <section class="text-center mt-5">
         <h4 class="text-success">Más Información</h4>
-        <p class="we_1f">
+        <p class="textoRelleno">
             Si deseas obtener más información oficial sobre las Garantías Explícitas en Salud (AUGE/GES), puedes visitar el sitio oficial del Ministerio de Salud haciendo clic en el siguiente enlace:
         </p>
         <a href="https://auge.minsal.cl/" target="_blank" class="btn btn-primary">
