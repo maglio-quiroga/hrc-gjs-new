@@ -59,8 +59,8 @@
 					</div>
 
 					<!-- Navigation Buttons -->
-					<div class="swiper-button-next temp_4a"></div>
-					<div class="swiper-button-prev temp_4a"></div>
+					<div class="swiper-button-next colorSwiper"></div>
+					<div class="swiper-button-prev colorSwiper"></div>
 				</div>
 			</div>
 		</div>
