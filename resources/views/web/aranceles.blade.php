@@ -4,11 +4,11 @@
 <!--PAGINA
         INFORMACION DE PACIENTES 
             ARANCELES -->
-<div class="container infoArancel">
+<div class="container infoPacientes">
 
     <!-- Título Principal -->
     <div class="text-center mb-4">
-        <h2 class="tituloArancel">Aranceles 2024</h2>
+        <h2 class="tituloTexto">Aranceles 2024</h2>
         <p class="text-muted">Información de costos, procedimientos y servicios hospitalarios</p>
     </div>
 
