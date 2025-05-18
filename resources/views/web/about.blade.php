@@ -20,7 +20,7 @@
                     </div>
                 </div>
 
-                <div class="videoNosotros">
+                <div class="visualNosotros">
                     <iframe width="100%" height="610" class="embed-responsive-item"
                             src="https://www.youtube.com/embed/oqsil9V2c7Q?autoplay=1&controls=0"
                             allowfullscreen></iframe>
