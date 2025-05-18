@@ -8,7 +8,7 @@
 
     <!-- Título Principal -->
     <div class="text-center mb-4">
-        <h2 class="tituloTexto">¿Cuándo acudir al Servicio de Urgencia?</h2>
+        <h2 class="titulo_texto">¿Cuándo acudir al Servicio de Urgencia?</h2>
     </div>
 
     <!-- Descripción -->
@@ -29,11 +29,11 @@
     <!-- Lista de Categorización -->
     <div class="textoRelleno">
         <ul>
-            <li><strong>C1 Paciente Grave:</strong> <span class="tituloTexto">Con riesgo vital INMINENTE</span>, pasará inmediatamente a box de reanimación.</li>
-            <li><strong>C2 Paciente Grave:</strong> <span class="tituloTexto">Sin riesgo vital inminente</span>, se requiere evaluación médica urgente. De ser necesario pasará a un box de atención en espera de evaluación médica.</li>
-            <li><strong>C3 Complejidad Media:</strong> <span class="tituloTexto">Puede progresar a estado grave</span>, esperará llamado de box a categorización y regresará a sala de espera general hasta que lo llame el médico.</li>
-            <li><strong>C4 Condición no urgente:</strong> <span class="tituloTexto">De complejidad baja</span>, permanecerá en sala de espera general. Puede consultar en su CESFAM, SAPU, SUR o llamar a Salud Responde. Si decide esperar será atendido después de los C1, C2 y C3.</li>
-            <li><strong>C5 Consulta General:</strong> <span class="tituloTexto">Sin complejidad</span>, puede consultar en su CESFAM, SAPU, SUR o llamar a Salud Responde. Si decide esperar será atendido después de los C1, C2, C3 y C4.</li>
+            <li><strong>C1 Paciente Grave:</strong> <span class="titulo_texto">Con riesgo vital INMINENTE</span>, pasará inmediatamente a box de reanimación.</li>
+            <li><strong>C2 Paciente Grave:</strong> <span class="titulo_texto">Sin riesgo vital inminente</span>, se requiere evaluación médica urgente. De ser necesario pasará a un box de atención en espera de evaluación médica.</li>
+            <li><strong>C3 Complejidad Media:</strong> <span class="titulo_texto">Puede progresar a estado grave</span>, esperará llamado de box a categorización y regresará a sala de espera general hasta que lo llame el médico.</li>
+            <li><strong>C4 Condición no urgente:</strong> <span class="titulo_texto">De complejidad baja</span>, permanecerá en sala de espera general. Puede consultar en su CESFAM, SAPU, SUR o llamar a Salud Responde. Si decide esperar será atendido después de los C1, C2 y C3.</li>
+            <li><strong>C5 Consulta General:</strong> <span class="titulo_texto">Sin complejidad</span>, puede consultar en su CESFAM, SAPU, SUR o llamar a Salud Responde. Si decide esperar será atendido después de los C1, C2, C3 y C4.</li>
         </ul>
     </div>
 </div>
