@@ -19,7 +19,7 @@
 
     <div class="my-3">
         <h3 class="">¿Cuál es su objetivo?</h3>
-        <hr class="mt-2 dominga">
+        <hr class="mt-2 ley">
         <p>
             El objetivo es que todas las instituciones de salud cuenten con un protocolo en caso de muerte perinatal, con manejo clínico y acompañamiento psico-emocional para contener a la madre, al padre y al núcleo más cercano.
         </p>
@@ -29,8 +29,8 @@
 
     <div class="my-3">
         <h3>¿Qué garantiza le ley?</h3>
-        <hr class="mt-2 domingaInfo">
-        <ul class="domingaInfo">
+        <hr class="mt-2 leyInfo">
+        <ul class="leyInfo">
             <li>Recibir toda la información sobre el fallecimiento de su hija o hijo y los procedimientos a seguir, de parte de profesionales de la salud y de una manera empática y sensible.</li>
             <li>Contar con asistencia inmediata y seguimiento multidisciplinario.</li>
             <li>La madre podrá ser acompañada en todo momento por al menos una persona significativa. </li>
