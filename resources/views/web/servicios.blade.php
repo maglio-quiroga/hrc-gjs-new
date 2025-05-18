@@ -1,6 +1,6 @@
 @extends('layouts.web')
 @section('content')
-<div class="container we_1a">
+<div class="container quienesSomos">
     <div class="super_container d-flex flex-wrap justify-content-center">
         <div class="about">
             <div class="container">
