@@ -45,30 +45,34 @@
 
                 {{-- Modal --}}
                 <div class="modal fade" id="modal-{{ $loop->index }}" tabindex="-1" 
-                     aria-labelledby="modalLabel-{{ $loop->index }}" aria-hidden="true">
-                   <div class="modal-dialog">
-                       <div class="modal-content">
-                           <div class="modal-header">
-                               <h5 class="modal-title" id="modalLabel-{{ $loop->index }}">
-                                   {{ $member['name'] ?? 'Nombre no disponible' }}
-                               </h5>
-                               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                           </div>
-                           <div class="modal-body">
-                               <img src="{{ asset($member['image']) }}"
+                    aria-labelledby="modalLabel-{{ $loop->index }}" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalLabel-{{ $loop->index }}">
+                                    {{ $member['name'] ?? 'Nombre no disponible' }}
+                                </h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="{{ asset($member['image']) }}"
                                     class="img-fluid mb-3" 
                                     alt="{{ $member['name'] ?? 'Nombre no disponible' }}">
-                               <p>{{ $member['description'] ?? 'Descripción no disponible' }}</p>
-                           </div>
-                           <div class="modal-footer">
-                               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" 
-                                       style="background-color: #4bb584; color: #fff; border: none; padding: 10px; font-size: 1rem; text-align: center; cursor: pointer; width: 100%; transition: background-color 0.2s ease;">
-                                   Cerrar
-                               </button>
-                           </div>
-                       </div>
-                   </div>
-               </div>               
+
+                                <div style="width: 100%; white-space: normal; word-break: break-word; overflow-wrap: break-word; box-sizing: border-box;">
+                                    {!! $member['description'] ?? '<p>Descripción no disponible</p>' !!}
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" 
+                                        style="background-color: #4bb584; color: #fff; border: none; padding: 10px; font-size: 1rem; text-align: center; cursor: pointer; width: 100%; transition: background-color 0.2s ease;">
+                                    Cerrar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 @endforeach
                 </div>
             </div>

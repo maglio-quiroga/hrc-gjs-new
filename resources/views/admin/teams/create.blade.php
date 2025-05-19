@@ -7,26 +7,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- TinyMCE -->
+    <script src="{{ asset('tinymce/js/tinymce/tinymce.min.js') }}"></script>
     <title>Crear miembro</title>
-    <style>
-        body {
-            background-color: #f8f9fa;
-        }
-        .card-custom {
-            border-radius: 1rem;
-            box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
-        }
-        .form-label {
-            font-weight: 500;
-        }
-        .btn-icon {
-            display: inline-flex;
-            align-items: center;
-        }
-        .btn-icon i {
-            margin-right: 0.5rem;
-        }
-    </style>
 </head>
 <body>
     <div class="container py-5">
@@ -58,10 +41,10 @@
                     </div>
                 </div>
 
-                {{-- Descripción --}}
+                {{-- Descripción con TinyMCE --}}
                 <div class="mb-3">
                     <label for="description" class="form-label">Descripción</label>
-                    <textarea name="description" id="description" class="form-control @error('description') is-invalid @enderror" rows="4" required>{{ old('description') }}</textarea>
+                    <textarea name="description" id="description" class="form-control @error('description') is-invalid @enderror" required>{{ old('description') }}</textarea>
                     <div class="invalid-feedback">
                         Por favor, coloque una descripción.
                     </div>
@@ -71,7 +54,6 @@
                 <div class="mb-3">
                     <label for="image" class="form-label">Imagen de perfil</label>
                     <input type="file" name="image" id="image" class="form-control @error('image') is-invalid @enderror" accept="image/*">
-                    
                 </div>
 
                 {{-- Botones --}}
@@ -86,7 +68,19 @@
             </form>
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Inicializar TinyMCE -->
+    <script>
+        tinymce.init({
+            selector: '#description',
+            height: 300,
+            menubar: false,
+            plugins: 'lists link image preview',
+            toolbar: 'undo redo | bold italic underline | bullist numlist',
+            language: 'es'
+        });
+    </script>
+    
     <script src="{{ asset('js/posts.js') }}"></script>
 </body>
 </html>

@@ -51,7 +51,8 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
             const descriptionInput = document.getElementById("description");
-            if (descriptionInput.value.trim().length < 10) {
+            const descriptionContent = tinymce.get("description")?.getContent({ format: 'text' }) || '';
+            if (descriptionContent.trim().length < 10) {
                 isValid = false;
                 showError(descriptionInput, "La descripción debe tener al menos 10 caracteres.");
             }
@@ -112,10 +113,19 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    const initialRows = tableBody.querySelectorAll("tr");
-    initialRows.forEach((row, index) => {
-        if (index >= currentItems) {
-            row.style.display = "none";
-        }
+    if(tableBody){
+        const initialRows = tableBody.querySelectorAll("tr");
+        initialRows.forEach((row, index) => {
+            if (index >= currentItems) {
+                row.style.display = "none";
+            }
+        });
+    }
+    tinymce.init({
+        selector: "#description",
+        language: 'es',
+        height: 300,
     });
 });
+
+

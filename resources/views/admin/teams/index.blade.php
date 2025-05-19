@@ -57,7 +57,11 @@
                             <td>{{ $record->id }}</td>
                             <td>{{ $record->name }}</td>
                             <td>{{ $record->position }}</td>
-                            <td>{{ $record->description }}</td>
+                            <td>
+                                <div style="max-width: 300px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+                                    {!! strip_tags($record->description) !!}
+                                </div>
+                            </td>
                             <td>
                                 @if ($record->image)
                                     <img src="{{ asset($record->image) }}" alt="{{ $record->name }}" width="100" loading="lazy">
