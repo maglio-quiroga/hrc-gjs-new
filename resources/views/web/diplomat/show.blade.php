@@ -1,7 +1,7 @@
 @extends('web.master')
 @section('content')
 
-	<div class="container we_1a">
+	<div class="container quienesSomos">
 		<div class="course">
 			<div class="container">
 				<div class="row">
