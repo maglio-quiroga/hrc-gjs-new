@@ -69,28 +69,42 @@ export function accesibilidad() {
                     body.classList.toggle("high-contrast");
                     document.body.classList.toggle("modo-alto-contraste");
                     break;
+                case "epilepsy-safe":
+                    body.classList.toggle("epilepsy-safe-contrast");
+                    break;
                 case "increase-font":
                     increaseFont();
                     newPrefs = {
                         ...currentPrefs,
-                        textSize:
-                            currentPrefs.textSize === "large"
-                                ? "large"
-                                : currentPrefs.textSize === "normal"
-                                  ? "large"
-                                  : "normal",
+                        textSize: "large",
+                    };
+                    break;
+                case "increase-more-font":
+                    increaseMoreFont();
+                    newPrefs = {
+                        ...currentPrefs,
+                        textSize: "larger",
                     };
                     break;
                 case "decrease-font":
                     decreaseFont();
                     newPrefs = {
                         ...currentPrefs,
-                        textSize:
-                            currentPrefs.textSize === "small"
-                                ? "small"
-                                : currentPrefs.textSize === "normal"
-                                  ? "small"
-                                  : "normal",
+                        textSize: "small",
+                    };
+                    break;
+                case "decrease-any-font":
+                    decreaseAnyFont();
+                    newPrefs = {
+                        ...currentPrefs,
+                        textSize: "smaller",
+                    };
+                    break;
+                case "normali-font":
+                    normaliFont();
+                    newPrefs = {
+                        ...currentPrefs,
+                        textSize: "normal",
                     };
                     break;
                 case "screen-reader":
@@ -102,9 +116,6 @@ export function accesibilidad() {
                         ...currentPrefs,
                         highlightParagraphs: !currentPrefs.highlightParagraphs,
                     };
-                    break;
-                case "epilepsy-safe":
-                    body.classList.toggle("epilepsy-safe-contrast");
                     break;
                 case "filter-yellow":
                     overlayFilter("yellow");
@@ -139,15 +150,35 @@ export function accesibilidad() {
     });
 }
 
+export function normaliFont() {
+    document.body.classList.remove("texto-muy-grande");
+    document.body.classList.remove("texto-grande");
+    document.body.classList.remove("smaller-text");
+    document.body.classList.remove("texto-muy-pequeño");
+}
 export function increaseFont() {
-    if (document.body.classList.contains("smaller-text"))
-        document.body.classList.remove("smaller-text");
-    else document.body.classList.add("texto-grande");
+    document.body.classList.remove("texto-muy-pequeño");
+    document.body.classList.remove("smaller-text");
+    document.body.classList.remove("texto-muy-grande");
+    document.body.classList.add("texto-grande");
+}
+export function increaseMoreFont() {
+    document.body.classList.remove("texto-muy-pequeño");
+    document.body.classList.remove("smaller-text");
+    document.body.classList.remove("texto-grande");
+    document.body.classList.add("texto-muy-grande");
 }
 export function decreaseFont() {
-    if (document.body.classList.contains("texto-grande"))
-        document.body.classList.remove("texto-grande");
-    else document.body.classList.add("smaller-text");
+    document.body.classList.remove("texto-muy-grande");
+    document.body.classList.remove("texto-grande");
+    document.body.classList.remove("texto-muy-pequeño");
+    document.body.classList.add("smaller-text");
+}
+export function decreaseAnyFont() {
+    document.body.classList.remove("texto-muy-grande");
+    document.body.classList.remove("texto-grande");
+    document.body.classList.remove("smaller-text");
+    document.body.classList.add("texto-muy-pequeño");
 }
 export function screenReader() {
     // Cancelar la lectura anterior que este en ejecucion

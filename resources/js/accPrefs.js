@@ -1,8 +1,3 @@
-import { toggleFocusFeature } from "./accesibilidad";
-
-const ALLOWED_TEXT_SIZES = ["small", "normal", "large"];
-const ALLOWED_COLOR_FILTERS = ["yellow", "blue", "white", "black"];
-
 const DEFAULTS = {
     textSize: "normal",
     focusBox: false,
@@ -12,7 +7,6 @@ const DEFAULTS = {
 
 export function getPreferences() {
     const localStoragePrefs = localStorage.getItem("accessibility_prefs");
-
     let cookiePrefs = null;
     const cookieMatch = document.cookie.match(/accessibility_prefs=([^;]+)/);
     if (cookieMatch) {
@@ -22,7 +16,6 @@ export function getPreferences() {
             console.warn("Invalid cookie preferences format");
         }
     }
-
     // Merge with defaults
     try {
         const prefs = localStoragePrefs
@@ -40,12 +33,8 @@ export function updatePreferences(newPrefs) {
     const updatedPrefs = {
         ...currentPrefs,
         ...newPrefs,
-        textSize: ALLOWED_TEXT_SIZES.includes(newPrefs.textSize)
-            ? newPrefs.textSize
-            : currentPrefs.textSize,
-        colorFilter: ALLOWED_COLOR_FILTERS.includes(newPrefs.colorFilter)
-            ? newPrefs.colorFilter
-            : currentPrefs.colorFilter,
+        textSize: newPrefs.textSize,
+        colorFilter: newPrefs.colorFilter,
     };
 
     // Store in localStorage

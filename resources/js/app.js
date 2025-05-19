@@ -4,8 +4,6 @@ import "../scss/compileTemp.scss";
 
 import {
     accesibilidad,
-    increaseFont,
-    decreaseFont,
     highlightElements,
     overlayFilter,
     toggleFocusFeature,
@@ -26,6 +24,11 @@ const prefs = getPreferences();
 
 document.body.classList.toggle("smaller-text", prefs.textSize === "small");
 document.body.classList.toggle("texto-grande", prefs.textSize === "large");
+document.body.classList.toggle(
+    "texto-muy-pequeño",
+    prefs.textSize === "smaller",
+);
+document.body.classList.toggle("texto-muy-grande", prefs.textSize === "larger");
 //document.body.classList.toggle("high-contrast", prefs.highContrast);
 //document.body.classList.toggle("modo-alto-contraste", prefs.highContrast);
 if (prefs.focusBox) toggleFocusFeature();

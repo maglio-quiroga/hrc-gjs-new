@@ -15,16 +15,19 @@
     </button>
     <div id="accessibilityMenu" class="accMenu bg-white border rounded shadow-sm p-3 mt-2 d-none position-absolute end-0 cmpnt_1b">
         <div class="d-grid gap-2">
-            <label>Tamaño del texto:</label><br>
+            <label>Tamaño del texto:</label>
             <div class="btn-group" role="group" aria-label="Basic example">
-              <button data-action="increase-font" class="btn btn-outline-secondary">++</button>
-              <button data-action="decrease-font" class="btn btn-outline-secondary">- -</button>
+                <button data-action="decrease-any-font" class="btn btn-outline-secondary">50%</button>
+                <button data-action="decrease-font" class="btn btn-outline-secondary">75%</button>
+              <button data-action="normali-font" class="btn btn-outline-secondary">100%</button>
+              <button data-action="increase-font" class="btn btn-outline-secondary">125%</button>
+              <button data-action="increase-more-font" class="btn btn-outline-secondary">150%</button>
             </div>
             <button data-action="screen-reader" class="btn btn-outline-secondary text-start">Lectura de Pantalla</button>
             <button data-action="toggle-focus" class="btn btn-outline-secondary text-start">Recuadro de Enfoque</button>
             <button data-action="highlight-paragraphs" class="btn btn-outline-secondary text-start">Resaltar párrafos</button>
             <!--button data-action="epilepsy-safe" class="btn btn-outline-secondary text-start">Contraste para epilepsia</button-->
-            <label>Colores del filtro:</label><br>
+            <label>Colores del filtro:</label>
             <div class="btn-group" role="group" aria-label="Basic example">
                 <button data-action="filter-yellow" class="btn btn-outline-secondary text-start">Amarillo</button>
                 <button data-action="filter-blue" class="btn btn-outline-secondary text-start">Azul</button>
