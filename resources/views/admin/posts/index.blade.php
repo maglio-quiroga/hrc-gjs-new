@@ -80,7 +80,7 @@
                 <tr>
                     <td>{{ $post->id }}</td>
                     <td>{{ $post->title }}</td>
-                    <td>{{ Str::limit($post->content, 100) }}</td>
+                    <td>{{ Str::limit(strip_tags($post->content), 100) }}</td>
                     <td>
                         @if ($post->image)
                             <img src="{{ asset($post->image) }}" width="100" class="img-thumbnail">

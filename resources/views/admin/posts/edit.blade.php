@@ -5,6 +5,8 @@
     <title>Editar Post</title>
     <link rel="stylesheet" href="{{ asset('css/posts.css') }}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- TinyMCE -->
+    <script src="{{ asset('tinymce/js/tinymce/tinymce.min.js') }}"></script>
 </head>
 <body class="bg-light py-5">
     <div class="container">
@@ -64,5 +66,26 @@
             </div>
         </form>
     </div>
+<script>
+    
+    document.addEventListener('DOMContentLoaded', function () {
+        tinymce.init({
+            selector: 'textarea[name="content"]',
+            plugins: 'lists link image table code',
+            toolbar: 'undo redo | blocks | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image table | code',
+            menubar: 'file edit view insert format',
+            height: 400,
+            setup: function (editor) {
+                document.querySelector('form').addEventListener('submit', function () {
+                    // Obtener el contenido como texto sin etiquetas HTML
+                    const plainText = editor.getContent({ format: 'text' });
+
+                    // Colocar ese texto limpio directamente en el textarea del formulario
+                    document.querySelector('textarea[name="content"]').value = plainText;
+                });
+            }
+        });
+    });
+</script>
 </body>
 </html>
