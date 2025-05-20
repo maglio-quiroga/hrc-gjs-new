@@ -1,6 +1,6 @@
 @extends('layouts.web')
 @section('content')
-	<div class="container h-full indexDiplomatPost_1">
+	<div class="container h-full diplomatPost_1">
 		<x-web.posted.post.index :posts="$posts" >
 			
 			<div class="section_title_container text-center">
