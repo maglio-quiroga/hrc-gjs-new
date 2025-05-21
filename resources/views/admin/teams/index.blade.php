@@ -88,13 +88,13 @@
                     @endforelse
                 </tbody>
             </table>
-            <div class="text-center my-3">
-                <button id="loadMore" class="btn btn-primary">Cargar más</button>
+            <div class="d-flex justify-content-center">
+                {{ $records->links() }}
             </div>
         </div>
     </div>
     </div>
-    <script src="{{ asset('js/teams.js') }}"></script>
+
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
 </body>
 </html>

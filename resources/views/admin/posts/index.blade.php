@@ -33,37 +33,13 @@
         @include('admin.templates.alerts')
     
         <div class="row mb-3">
-        @php
-            use App\Models\Category;
-            $categories = Category::all();
-        @endphp
             <div class="col">
-                <input type="text" id="inputBuscarNombre" class="form-control" placeholder="Buscar por titulo" onkeyup="buscarTabla()">
-            </div>
-
-            <div class="col">
-                <select id="selectEstado" class="form-select" onchange="buscarTabla()">
-                    <option value="">Todos los estados</option>
-                    <option value="Publicado">Publicado</option>
-                    <option value="Borrador">Borrador</option>
-                </select>
-            </div>
-
-            <div class="col">   
-            <select id="selectCategoria" class="form-select" onchange="buscarTabla()">
-                <option value="">Todas las categorías</option>
-                @foreach ($categories as $category)
-                        <!-- <option value="{{ $category->id }}" {{ old('category_id') == $category->id ? 'selected' : '' }}> -->
-                        <option value="{{ $category->title }}">{{ $category->title }}</option>
-                            {{ $category->title }}
-                        <!-- </option> -->
-                @endforeach
-            </select>
+                <input type="text" id="inputBuscarNombre" class="form-control" placeholder="Buscar por titulo">
             </div>
         </div>
 
-    <div class="table-responsive">
-    <table  class="table table-hover table-bordered align-middle text-center">
+    <div class="table-responsive" id="posts-container">
+    <table id="posts-table"  class="table table-hover table-bordered align-middle text-center">
         <thead class="table-dark">
             <tr>
                 <th>ID</th>
@@ -112,15 +88,80 @@
             @endforelse
         </tbody>
     </table>
-    <div class="text-center my-3">
-        <button id="loadMore" class="btn btn-primary">Cargar más</button>
-    </div>
+    <div class="d-flex justify-content-center" id="posts-pagination">
+            {{ $records->links() }}
+        </div>
 
     </div>
 
     </div>
     </div>
-    <script src="{{ asset('js/posts.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+document.addEventListener('DOMContentLoaded', () => {
+  // Inputs de filtro
+  const inputNombre   = document.getElementById('inputBuscarNombre');
+  // Contenedores a reemplazar
+  const container     = document.getElementById('posts-container');
+
+  // Ruta base (sin parámetros)
+  const baseUrl       = "{{ route('admin.handle.view', ['model' => 'posts']) }}";
+
+  // Construye querystring con todos los filtros y (opcional) la página
+  function buildUrl(href) {
+    if (href) return href; 
+    const params = new URLSearchParams();
+
+    if (inputNombre.value.trim())
+      params.append('title', inputNombre.value.trim());
+
+    return baseUrl + (params.toString() ? ('?'+params.toString()) : '');
+  }
+
+  // Reemplaza la tabla + paginación en el DOM
+  function updateTable(html) {
+    const tmp = document.createElement('div');
+    tmp.innerHTML = html;
+
+    const newTable      = tmp.querySelector('#posts-table');
+    const newPagination = tmp.querySelector('#posts-pagination');
+
+    // sustituye
+    container.querySelector('#posts-table').replaceWith(newTable);
+    container.querySelector('#posts-pagination').replaceWith(newPagination);
+
+    bindPaginationLinks();
+  }
+
+  // Hace la petición AJAX y actualiza
+  function fetchAndUpdate(href = null) {
+    const url = buildUrl(href);
+    fetch(url, { headers: { 'X-Requested-With': 'XMLHttpRequest' } })
+      .then(r => r.text())
+      .then(updateTable)
+      .catch(console.error);
+  }
+
+  // Engancha los enlaces de paginación para que llamen a fetchAndUpdate()
+  function bindPaginationLinks() {
+    container.querySelectorAll('#posts-pagination a').forEach(a => {
+      a.addEventListener('click', e => {
+        e.preventDefault();
+        fetchAndUpdate(a.href);
+      });
+    });
+  }
+
+  // Cuando cambie cualquier filtro, recargamos la tabla
+  [inputNombre].forEach(el => {
+    el.addEventListener('input', () => fetchAndUpdate());
+    el.addEventListener('change', () => fetchAndUpdate());
+  });
+
+  // Al cargar la página, enganchamos la paginación
+  bindPaginationLinks();
+});
+</script>
+
 </body>
 </html>

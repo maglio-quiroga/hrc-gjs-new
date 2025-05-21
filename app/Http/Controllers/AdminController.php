@@ -10,6 +10,7 @@ use App\Models\Post;
 use App\Models\Service;
 use App\Models\Team;
 use App\Models\User; 
+use Illuminate\Support\Facades\Schema;
 
 class AdminController extends Controller
 {
@@ -29,7 +30,7 @@ class AdminController extends Controller
         return view("admin.admin", compact('categories','posts','services','teams','users'));
     }
 
-    function handleRoute(string $model , ?string $action = null, ?int $target = null) {
+    function handleRoute(Request $request, string $model, ?string $action = null, ?int $target = null) {
 
         $modelClass = $this->resolveModelClass($model);
 
@@ -37,8 +38,22 @@ class AdminController extends Controller
             return redirect()->route('admin.resume')->with('error', 'El modelo no esta registrado.');
         }
 
+        $queryBuilder = $modelClass::query();
         $action = $action ?: 'index'; // valores de $action son [index , create , edit]
         $viewName = "admin.{$model}.{$action}";
+
+        foreach ($request->query() as $field => $value) {
+        if (in_array($field, ['page'])) {
+            continue;
+        }
+        if (strlen(trim($value)) === 0) {
+            continue;
+        }
+    
+        if (Schema::hasColumn($modelClass::getModel()->getTable(), $field)) {
+            $queryBuilder->where($field, 'like', "%{$value}%"); 
+        }
+    }
 
         if (! view()->exists($viewName)) {
             return redirect()->route('admin.resume')->with('error', 'No se ha podido encontrar la ruta.');
@@ -52,8 +67,14 @@ class AdminController extends Controller
 
         try {
 
-            $records = $modelClass::all();
+            $records = $queryBuilder->orderByDesc('updated_at')->paginate(5)->appends($request->query());
             $record = $target ? $modelClass::findOrFail($target) : null;
+
+            if ($request->ajax()) {
+
+                return view($viewName, compact('model','action','records','record'))->render();
+
+            }
 
             return response()->view($viewName, compact('model', 'action', 'records', 'record'), 200);
 

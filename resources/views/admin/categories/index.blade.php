@@ -72,13 +72,11 @@
                 </table>
             </div>
 
-            <div class="text-center my-3">
-                <button id="loadMore" class="btn btn-primary">Cargar más</button>
-            </div>
+            <div class="d-flex justify-content-center">
+            {{ $records->links() }}
+        </div>
         </div>
     </div>
 
-    <script src="{{ asset('js/categories.js') }}">
-    </script>
 </body>
 </html>

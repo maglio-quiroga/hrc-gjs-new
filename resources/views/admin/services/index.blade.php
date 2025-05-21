@@ -71,13 +71,12 @@
         </tbody>
     </table>
             <div class="d-flex justify-content-center">
-                <button id="loadMoreBtn" class="btn btn-primary mt-3">Cargar más</button>
-            </div>
+            {{ $records->links() }}
+        </div>
          </div>
 
         </div>
     </div>
-    <script src="{{ asset('js/services.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -68,15 +68,15 @@
                 @endforelse
             </tbody>
         </table>
+    </div>
 
-        <div class="d-flex justify-content-center">
-            <button id="loadMoreBtn" class="btn btn-primary mt-3">Cargar más</button>
-        </div>
+    <div class="d-flex justify-content-center">
+            {{ $records->links() }}
     </div>
 
     </div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
-<script src="{{ asset('js/users.js') }}"></script>
+
 </body>
 </html>
