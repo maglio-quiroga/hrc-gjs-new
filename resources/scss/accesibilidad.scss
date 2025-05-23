@@ -30,7 +30,8 @@
     cursor: pointer;
 }
 .accMenu {
-    width: 30em;
+    width: 30em !important;
+    font-size: 14px !important;
 }
 
 /*aumeta el tamaño del texto*/
@@ -89,4 +90,7 @@
 
 .accesibleOpcion {
   bottom: 100%;
+.accessibility-icon {
+    width: 56px !important;
+    height: 56px !important;
 }

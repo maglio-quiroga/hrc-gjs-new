@@ -1,6 +1,6 @@
 <div class="position-fixed bottom-0 end-0 m-3 accesibleBoton">
     <button id="accessibilityToggle"
-            class="btn btn-dark rounded-circle p-3 d-flex align-items-center justify-content-center position-relative"
+            class="btn btn-dark rounded-circle p-3 d-flex align-items-center justify-content-center position-relative accessibility-icon"
             aria-label="Accessibility options"
             aria-expanded="false"
             aria-controls="accessibilityMenu">
@@ -15,19 +15,29 @@
     </button>
     <div id="accessibilityMenu" class="accMenu bg-white border rounded shadow-sm p-3 mt-2 d-none position-absolute end-0 accesibleOpcion">
         <div class="d-grid gap-2">
-            <label>Tamaño del texto:</label>
-            <div class="btn-group" role="group" aria-label="Basic example">
-                <button data-action="decrease-any-font" class="btn btn-outline-secondary">50%</button>
-                <button data-action="decrease-font" class="btn btn-outline-secondary">75%</button>
-              <button data-action="normali-font" class="btn btn-outline-secondary">100%</button>
-              <button data-action="increase-font" class="btn btn-outline-secondary">125%</button>
-              <button data-action="increase-more-font" class="btn btn-outline-secondary">150%</button>
-            </div>
+            <h4>Tamaño del texto:</h4>
+            <div class="btn-group" role="group" aria-label="radio toggle button group">
+            <input data-action="decrease-any-font" type="radio" class="btn-check" name="font-size" id="decrease-50">
+            <label class="btn btn-outline-dark" for="decrease-50">50%</label>
+            
+            <input data-action="decrease-font" type="radio" class="btn-check" name="font-size" id="decrease-75">
+            <label class="btn btn-outline-dark" for="decrease-75">75%</label>
+            
+            <input data-action="normali-font" type="radio" class="btn-check" name="font-size" id="decrease-100" checked>
+            <label class="btn btn-outline-dark" for="decrease-100">100%</label>
+            
+            <input data-action="increase-font" type="radio" class="btn-check" name="font-size" id="decrease-125">
+            <label class="btn btn-outline-dark" for="decrease-125">125%</label>
+            
+            <input data-action="increase-more-font" type="radio" class="btn-check" name="font-size" id="decrease-150">
+            <label class="btn btn-outline-dark" for="decrease-150">150%</label>
+        </div>
+
             <button data-action="screen-reader" class="btn btn-outline-secondary text-start">Lectura de Pantalla</button>
             <button data-action="toggle-focus" class="btn btn-outline-secondary text-start">Recuadro de Enfoque</button>
             <button data-action="highlight-paragraphs" class="btn btn-outline-secondary text-start">Resaltar párrafos</button>
             <!--button data-action="epilepsy-safe" class="btn btn-outline-secondary text-start">Contraste para epilepsia</button-->
-            <label>Colores del filtro:</label>
+            <h4>Colores del filtro:</h4>
             <div class="btn-group" role="group" aria-label="Basic example">
                 <button data-action="filter-yellow" class="btn btn-outline-secondary text-start">Amarillo</button>
                 <button data-action="filter-blue" class="btn btn-outline-secondary text-start">Azul</button>

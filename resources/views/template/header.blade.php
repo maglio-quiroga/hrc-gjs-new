@@ -1,7 +1,7 @@
 <header class = "header">
     <!-- Top Bar -->
-    <div class="top_bar headerTop">
-        <div class="top_bar_container">
+    <div class="top_bar headerTop py-1">
+        <div class="top_bar_container px-5 pr-5">
             <div class="container">
                 <div class="top_bar_content d-flex flex-row align-items-center justify-content-end">
                   <a href="login"><i class="button_text fa fa-sign-in round_button headerLoginColor" aria-hidden="true"></i></a>
