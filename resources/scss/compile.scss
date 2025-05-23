@@ -1469,3 +1469,91 @@ p a:hover
 .button_text {   
     color: var(--white);
 }
+
+/* === Añadidos desde compileTemp y juanCompile === */
+
+.home_slider_title {
+    color: #384158;
+}
+
+.home_slider_subtitle {
+    color: #76777a;
+}
+
+.home_search_form div {
+    background: #ffffff;
+}
+
+.home_search_input:not(:last-child) {
+    border-right: solid 1px #e5e5e5;
+}
+
+.tags_list li:hover {
+    background: #14bdee;
+}
+
+.card-title {
+	color: #232323;
+}
+
+.card-only-color {
+    box-shadow: 0 0.125rem 0.25rem var(--black-a10);
+    background-color: var(--gray-300);
+}
+
+.custom-carousel-control {
+    background-color: var(--black-a50) /* Fondo semitransparente */
+}
+
+.custom-carousel-control:hover {
+    background-color: var(--black-a80); /* Fondo más oscuro al pasar el mouse */
+}
+
+.temp_1a {
+  background-color: var(--green-550);
+}
+
+.temp_1d {
+  color: var(--white);
+}
+
+.temp_1e {
+  background-color: var(--green-525);
+}
+
+.temp_1f {
+    background-color: var(--green-450);
+}
+
+.temp_2b {
+    background-color: var(--dark-shade-blue);
+}
+
+.temp_4a {
+  color: var(--green-400);
+}
+
+.temp_5a {
+    background-color: var(--white-FA);
+}
+
+.we_2b {
+    color: var(--green-535);
+}
+
+.we_5f {
+  background-color: var(--green-525); 
+  color: var(--white); 
+}
+
+.we-6a {
+  border: 2px solid var(--green-535);
+}
+
+.we_7a {
+  color: var(--orange); 
+}
+
+.we_8a {
+  background-color: var(--green-535); 
+}
