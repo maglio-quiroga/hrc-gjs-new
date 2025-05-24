@@ -91,7 +91,7 @@
             const params = new URLSearchParams();
 
             if (inputNombre.value.trim())
-            params.append('title', inputNombre.value.trim());
+            params.append('name', inputNombre.value.trim());
 
             return baseUrl + (params.toString() ? ('?'+params.toString()) : '');
         }
