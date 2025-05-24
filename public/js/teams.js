@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     })();
 
-    
+    // Código para mostrar filas con botón "Cargar más"
     const rows = document.querySelectorAll("#team-tbody .team-row");
     const loadMoreBtn = document.getElementById("loadMore");
     let visibleRows = 5; // filas visibles por defecto
@@ -30,11 +30,15 @@ document.addEventListener("DOMContentLoaded", function() {
         });
 
         if (visibleRows >= rows.length) {
-            loadMoreBtn.textContent = "No hay más miembros del equipo";
-            loadMoreBtn.disabled = true; // se mantiene el color original
+            if (loadMoreBtn) {
+                loadMoreBtn.textContent = "No hay más miembros del equipo";
+                loadMoreBtn.disabled = true; // se mantiene el color original
+            }
         } else {
-            loadMoreBtn.textContent = "Cargar más";
-            loadMoreBtn.disabled = false;
+            if (loadMoreBtn) {
+                loadMoreBtn.textContent = "Cargar más";
+                loadMoreBtn.disabled = false;
+            }
         }
     }
 
@@ -45,46 +49,110 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    updateVisibility();
+    updateVisibility(); // inicializa visibilidad
 
-    window.buscarTabla = function() {
-        const inputNombre = document.getElementById("inputBuscarNombre").value.toUpperCase();
-        const inputPosicion = document.getElementById("inputBuscarPosicion").value.toUpperCase();
-        const isFiltering = inputNombre.length > 0 || inputPosicion.length > 0;
+    // ------------------- Búsqueda dinámica con AJAX ---------------------
+    const inputBuscar = document.getElementById('inputBuscarNombre');
+    const tableBody = document.getElementById('team-tbody');
+    const paginationContainer = document.getElementById('teams-pagination');
+    let typingTimer;
+    const typingDelay = 500;
 
-        rows.forEach((row, index) => {
-            const tdNombre = row.getElementsByTagName("td")[1];
-            const tdPosicion = row.getElementsByTagName("td")[2];
-
-            if (isFiltering) {
-                if (
-                    (tdNombre && tdNombre.textContent.toUpperCase().includes(inputNombre)) &&
-                    (tdPosicion && tdPosicion.textContent.toUpperCase().includes(inputPosicion))
-                ) {
-                    row.classList.remove('d-none');
-                } else {
-                    row.classList.add('d-none');
-                }
-            } else {
-                if (index < visibleRows) {
-                    row.classList.remove('d-none');
-                } else {
-                    row.classList.add('d-none');
-                }
-            }
-        });
-
-        if (isFiltering) {
-            loadMoreBtn.textContent = "Cargar más";
-            loadMoreBtn.disabled = true;
+    function fetchTeams(query = '') {
+        const url = new URL(window.location.href);
+        if (query) {
+            url.searchParams.set('name', query);
         } else {
-            if (visibleRows >= rows.length) {
-                loadMoreBtn.textContent = "No hay más miembros del equipo";
-                loadMoreBtn.disabled = true;
-            } else {
-                loadMoreBtn.textContent = "Cargar más";
-                loadMoreBtn.disabled = false;
-            }
+            url.searchParams.delete('name');
         }
-    };
+        url.searchParams.delete('page'); // reset página al buscar
+
+        fetch(url.toString(), {
+            headers: {
+                'X-Requested-With': 'XMLHttpRequest'
+            }
+        })
+        .then(response => {
+            if (!response.ok) throw new Error('Error en la petición');
+            return response.text();
+        })
+        .then(html => {
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(html, 'text/html');
+            const newTbody = doc.getElementById('team-tbody');
+            const newPagination = doc.getElementById('teams-pagination');
+
+            if (newTbody) {
+                tableBody.innerHTML = newTbody.innerHTML;
+            }
+            if (newPagination) {
+                paginationContainer.innerHTML = newPagination.innerHTML;
+            }
+
+            // Actualizamos las filas y visibilidad para "Cargar más" después del filtro
+            updateRowsAfterFetch();
+        })
+        .catch(err => {
+            console.error('Error al cargar equipos:', err);
+        });
+    }
+
+    function updateRowsAfterFetch() {
+        // Actualizar variables con las nuevas filas cargadas
+        const newRows = document.querySelectorAll("#team-tbody .team-row");
+        visibleRows = 5;
+        // Quitar clase d-none a todas
+        newRows.forEach(row => row.classList.remove('d-none'));
+
+        // Si hay botón cargar más, reiniciar visibilidad y comportamiento
+        if (loadMoreBtn) {
+            visibleRows = 5;
+            rows.forEach(row => row.classList.remove('d-none'));
+            updateVisibility();
+        }
+    }
+
+    if (inputBuscar) {
+        inputBuscar.addEventListener('input', () => {
+            clearTimeout(typingTimer);
+            typingTimer = setTimeout(() => {
+                fetchTeams(inputBuscar.value.trim());
+            }, typingDelay);
+        });
+    }
+
+    // Paginación AJAX
+    document.addEventListener('click', function(e) {
+        if (e.target.closest('#teams-pagination a')) {
+            e.preventDefault();
+            const url = e.target.closest('a').href;
+
+            fetch(url, {
+                headers: {
+                    'X-Requested-With': 'XMLHttpRequest'
+                }
+            })
+            .then(response => {
+                if (!response.ok) throw new Error('Error en la petición de paginación');
+                return response.text();
+            })
+            .then(html => {
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(html, 'text/html');
+                const newTbody = doc.getElementById('team-tbody');
+                const newPagination = doc.getElementById('teams-pagination');
+
+                if (newTbody) {
+                    tableBody.innerHTML = newTbody.innerHTML;
+                }
+                if (newPagination) {
+                    paginationContainer.innerHTML = newPagination.innerHTML;
+                }
+                updateRowsAfterFetch();
+            })
+            .catch(err => {
+                console.error('Error al cargar paginación:', err);
+            });
+        }
+    });
 });
