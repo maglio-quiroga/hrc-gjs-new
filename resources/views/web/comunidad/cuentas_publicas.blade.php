@@ -3,7 +3,7 @@
 <!--PAGINA
         QUIENES SOMOS
             CUENTAS PUBLICAS -->
-<div class="container we_4a">
+<div class="container deberDerecho">
     <h2 class="text-center mb-5">Cuentas Públicas</h2>
 
     <div class="container text-center my-5">

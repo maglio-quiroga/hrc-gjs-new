@@ -81,6 +81,15 @@
 .color-filter-black {
     background-color: black;
 }
+
+// De juan.scss
+
+.accesibleBoton {
+  z-index: 10000;
+}
+
+.accesibleOpcion {
+  bottom: 100%;
 .accessibility-icon {
     width: 56px !important;
     height: 56px !important;

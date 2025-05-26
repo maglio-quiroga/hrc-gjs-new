@@ -4,7 +4,7 @@
     <div class="super_container">
         <div class="about">
             <div class="container text-center"><h2 class="section_title">Sobre Nosotros</h2></div>
-                <div class="we_1b mb-4">
+                <div class="visualNosotros mb-4">
                     <iframe width="100%" height="610" class="embed-responsive-item"
                             src="https://www.youtube.com/embed/oqsil9V2c7Q?autoplay=1&controls=0"
                             allowfullscreen></iframe>
@@ -45,19 +45,19 @@
                         ]
                     ]
                 ] as $section)
-                    <div class="card-only-color mb-4 we_1c">
+                    <div class="card-only-color mb-4 tarjetasNosotros">
                         <div class="row my-3">
                             <div class="col-md-4 d-flex align-items-center px-3" >
-                                <img src="{{ $section['img'] }}" class="img-fluid rounded-start we_1e" alt="...">
+                                <img src="{{ $section['img'] }}" class="img-fluid rounded-start imagenNosotros" alt="...">
                             </div>
                             <div class="col-md-8">
                                 <div class="card-body">
                                     <h3 class="card-title">{{ $section['title'] }}</h3>
                                     @if (isset($section['text']))
-                                        <p class="card-text we_1f">{{ $section['text'] }}</p>
+                                        <p class="card-text textoRelleno">{{ $section['text'] }}</p>
                                     @else
                                         @foreach ($section['texts'] as $key => $text)
-                                        <p class="card-text we_1f"><b>{{ $key }}</b>: {{ $text }}</p>
+                                        <p class="card-text textoRelleno"><b>{{ $key }}</b>: {{ $text }}</p>
                                         @endforeach
                                     @endif
                                 </div>

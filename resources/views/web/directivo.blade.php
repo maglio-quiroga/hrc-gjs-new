@@ -1,6 +1,9 @@
 @extends('layouts.web')
 @section('content')
-<div class="container we_1a">
+<!--PAGINA
+        QUIENES SOMOS
+            EQUIPO DIRECTIVO -->
+<div class="container quienesSomos">
     <div class="super_container">
         <div class="about">
             <div class="container text-center"><h2 class="section_title">Equipo Directivo</h2></div>
@@ -8,16 +11,16 @@
                 <div class="row justify-content-center">
                 @foreach($members as $member)
                 <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 mb-4">
-                    <div class="card text-center d-flex flex-column h-100 we_5a" data-bs-toggle="modal" data-bs-target="#modal-{{ $loop->index }}">
-                        <img src="/image/uploads/team/{{ $member['image'] ?? 'default.jpg' }}"class="card-img-top img-fluid we_5b" alt="{{ $member['name'] ?? 'Nombre no disponible' }}">
+                    <div class="card text-center d-flex flex-column h-100 tarjetaDirectivo" data-bs-toggle="modal" data-bs-target="#modal-{{ $loop->index }}">
+                        <img src="/image/uploads/team/{{ $member['image'] ?? 'default.jpg' }}"class="card-img-top img-fluid presentarDirectivo" alt="{{ $member['name'] ?? 'Nombre no disponible' }}">
                         <div class="card-body">
-                            <h5 class="card-title we_5d">{{ $member['name'] ?? 'Nombre no disponible' }} </h5>
-                            <p class="card-text we_5e">{{ $member['position'] ?? 'Título no disponible' }}</p>
+                            <h5 class="card-title nombreDirectivo">{{ $member['name'] ?? 'Nombre no disponible' }} </h5>
+                            <p class="card-text tituloDirectivo">{{ $member['position'] ?? 'Título no disponible' }}</p>
                         </div>
                         <button class="card-button">Más información</button>
                     </div>
                 </div>
-                    <div class="modal fade" id="modal-{{ $loop->index }}" tabindex="-1" 
+                    <div class="modal fade" id="modal-{{ $loop->index }}" tabindex="-1"
                          aria-labelledby="modalLabel-{{ $loop->index }}" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
@@ -28,13 +31,13 @@
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <img src="/image/uploads/team/{{ $member['image'] ?? 'default.jpg' }}" 
-                                         class="img-fluid mb-3" 
+                                    <img src="/image/uploads/team/{{ $member['image'] ?? 'default.jpg' }}"
+                                         class="img-fluid mb-3"
                                          alt="{{ $member['name'] ?? 'Nombre no disponible' }}">
                                     <p>{{ $member['description'] ?? 'Descripción no disponible' }}</p>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary we_5f" data-bs-dismiss="modal">Cerrar</button>
+                                    <button type="button" class="btn btn-secondary mostrarInfoDirectivo" data-bs-dismiss="modal">Cerrar</button>
                                 </div>
                             </div>
                         </div>
@@ -46,4 +49,3 @@
     </div>
 </div>
 @endsection
-

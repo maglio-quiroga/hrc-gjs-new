@@ -3,7 +3,7 @@
 <!--PAGINA
         QUIENES SOMOS
             CONSEJO CONSULTIVO -->
-<div class="container we_4a">
+<div class="container deberDerecho">
     <h2 class="text-center mb-5">Consejo Consultivo</h2>
 
     <p>

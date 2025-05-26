@@ -5,10 +5,10 @@
         INFORMACION DE PACIENTES 
             ASPECTO LEGAL
                 Ley Ricarte Soto -->
-<div class="container we_4a">
+<div class="container deberDerecho">
 
     <div class="text-center mb-5">
-        <h2 class="we_2b">Ley N°21.371: Ley Ricarte Soto</h2>
+        <h2 class="titulo_texto">Ley N°21.371: Ley Ricarte Soto</h2>
     </div>
 
     <p class="fs-4 text-center lh-sm text-info-emphasis">
@@ -19,7 +19,7 @@
 
     <div class="my-3">
         <h3 class="">¿Qué es la Ley Ricarte Soto?</h3>
-        <hr class="mt-2 we_8a">
+        <hr class="mt-2 ley">
         <p>
             Es un Sistema de Protección Financiera para Diagnósticos y Tratamientos de Alto Costo. Posee cobertura universal, es decir, pueden hacer uso de este beneficio todas las personas usuarias de los sistemas previsionales de salud: Esto es, isapres, Fonasa y las Instituciones de Salud Previsional de las Fuerzas Armadas y de Orden y de Seguridad Pública.
         </p>
@@ -29,7 +29,7 @@
 
     <div class="my-3">
         <h3 class="">¿Cómo se puede acceder?</h3>
-        <hr class="mt-2 we_8a">
+        <hr class="mt-2 ley">
         <ol>
             <li>El tratamiento requerido debe encontrarse financiado por la Ley Ricarte Soto.</li>
             <li>El o la especialista tratante se debe inscribir en el Sistema informático de la Ley Ricarte Soto.</li>
@@ -43,7 +43,7 @@
 
     <div class="my-3">
         <h3 class="">¿Qué cubre la Ley Ricarte Soto?</h3>
-        <hr class="mt-2 we_8a">
+        <hr class="mt-2 ley">
         <p>
             Cubre el 100% del valor de los medicamentos, dispositivos médicos o alimentos de alto costo, que se encuentran expresamente garantizados para cada problema de salud definido, según el decreto que los fija. Para algunos de estos problemas de salud, también garantiza la cobertura del examen de confirmación diagnóstica definido, exámenes específicos que, siendo también de alto costo, le permitirán verificar si tiene el problema de salud.
         </p>
@@ -53,7 +53,7 @@
 
     <div class="my-3">
         <h3 class="">¿Existen costos asociados al usuario?</h3>
-        <hr class="mt-2 we_8a">
+        <hr class="mt-2 ley">
         <p>
             Las prestaciones asociadas tendrán la cobertura de su sistema de salud previsional.
         </p>
@@ -63,7 +63,7 @@
 
     <div class="my-3">
         <h3 class="">¿Cómo sabré que mi tratamiento de alto costo tendrá Protección Financiera?</h3>
-        <hr class="mt-2 we_8a">
+        <hr class="mt-2 ley">
         <p>
             Es responsabilidad del/la médico/a tratante informar sobre las prestaciones garantizadas de la Ley Ricarte Soto. Además, puede consultar a través de los canales de atención disponibles en Superintendencia de Salud, Ministerio de Salud y Fonasa.
         </p>
@@ -73,7 +73,7 @@
 
     <div class="my-3">
         <h3 class="">¿Qué condiciones me dejan fuera de la Ley Ricarte Soto?</h3>
-        <hr class="mt-2 we_8a">
+        <hr class="mt-2 ley">
         <p>
             No tendrán esta protección financiera aquellos tratamientos que no están dentro del listado de prestaciones garantizadas para cada problema de salud definidas por el Ministerio de Salud y aquellas que, teniendo cobertura por el decreto, quedan sujetas a leyes y coberturas especiales, como la Ley de Accidentes Laborales o Enfermedades Profesionales.
         </p>
@@ -83,7 +83,7 @@
 
     <div class="my-3">
         <h3 class="">¿Cuáles son los problemas de Salud que poseen garantías?</h3>
-        <hr class="mt-2 we_8a">
+        <hr class="mt-2 ley">
         <ol>
             <li>Mucopolisacaridosis tipo I</li>
             <li>Mucopolisacaridosis tipo II</li>

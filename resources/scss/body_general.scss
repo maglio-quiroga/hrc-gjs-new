@@ -158,12 +158,26 @@ section {
     padding: 0em;
 }
 .round_button {
-  display: flex !important;
-  justify-content: center;  /* centra horizontalmente */
-  align-items: center;      /* centra verticalmente */
-  width: 2em;
-  height: 2em;
-  border-radius: 50%;
-  text-decoration: none;
-  font-weight: bold;
+    display: flex !important;
+    justify-content: center; /* centra horizontalmente */
+    align-items: center; /* centra verticalmente */
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+// de juan.scss
+
+.textoRelleno {
+    text-align: justify;
+}
+
+.titulo_texto {
+    font-weight: bold;
+}
+
+.ajusteEnlacesInteres {
+    padding-bottom: 50px;
 }
