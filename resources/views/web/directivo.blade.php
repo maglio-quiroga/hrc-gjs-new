@@ -32,7 +32,7 @@
                                 </div>
                                 <div class="modal-body">
                                     <img src="/image/uploads/team/{{ $member['image'] ?? 'default.jpg' }}"
-                                         class="img-fluid mb-3"
+                                         class="img-fluid mb-3 object-fit-contain"
                                          alt="{{ $member['name'] ?? 'Nombre no disponible' }}">
                                     <p>{{ $member['description'] ?? 'Descripción no disponible' }}</p>
                                 </div>

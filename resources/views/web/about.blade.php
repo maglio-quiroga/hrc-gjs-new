@@ -1,7 +1,7 @@
 @extends('layouts.web')
 @section('content')
 <div class="container we_1a">
-    <div class="super_container">
+    <div class="super_container quienesSomos">
         <div class="about">
             <div class="container text-center"><h2 class="section_title">Sobre Nosotros</h2></div>
                 <div class="visualNosotros mb-4">

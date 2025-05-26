@@ -5,5 +5,4 @@
 		<div class="container section_title text-center"><h2>Noticias</h2></div>
 		</x-web.posted.post.index>
 	</div>
-	
 @endsection

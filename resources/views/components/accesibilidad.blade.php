@@ -33,16 +33,16 @@
             <label class="btn btn-outline-dark" for="decrease-150">150%</label>
         </div>
 
-            <button data-action="screen-reader" class="btn btn-outline-secondary text-start">Lectura de Pantalla</button>
-            <button data-action="toggle-focus" class="btn btn-outline-secondary text-start">Recuadro de Enfoque</button>
-            <button data-action="highlight-paragraphs" class="btn btn-outline-secondary text-start">Resaltar párrafos</button>
-            <!--button data-action="epilepsy-safe" class="btn btn-outline-secondary text-start">Contraste para epilepsia</button-->
+            <button data-action="screen-reader" class="btn btn-outline-dark text-start">Lectura de Pantalla</button>
+            <button data-action="toggle-focus" class="btn btn-outline-dark text-start">Recuadro de Enfoque</button>
+            <button data-action="highlight-paragraphs" class="btn btn-outline-dark text-start">Resaltar párrafos</button>
+            <!--button data-action="epilepsy-safe" class="btn btn-outline-dark text-start">Contraste para epilepsia</button-->
             <h4>Colores del filtro:</h4>
             <div class="btn-group" role="group" aria-label="Basic example">
-                <button data-action="filter-yellow" class="btn btn-outline-secondary text-start">Amarillo</button>
-                <button data-action="filter-blue" class="btn btn-outline-secondary text-start">Azul</button>
-                <button data-action="filter-white" class="btn btn-outline-secondary text-start">Blanco</button>
-                <button data-action="filter-black" class="btn btn-outline-secondary text-start">Negro</button>
+                <button data-action="filter-yellow" class="btn btn-outline-dark text-center">🟡</button>
+                <button data-action="filter-blue" class="btn btn-outline-dark text-center">🔵</button>
+                <button data-action="filter-white" class="btn btn-outline-dark text-center">⚪</button>
+                <button data-action="filter-black" class="btn btn-outline-dark text-center">⚫</button>
             </div>
         </div>
     </div>
