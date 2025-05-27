@@ -36,8 +36,8 @@
                 <input type="text" id="searchInput" class="form-control" placeholder="Buscar categoría...">
             </div>
 
-            <div class="table-responsive">
-                <table class="table table-hover table-bordered align-middle text-center">
+            <div class="table-responsive" id="posts-container">
+                <table class="table table-hover table-bordered align-middle text-center" id="posts-table">
                     <thead class="table-dark">
                         <tr>
                             <th>ID</th>
@@ -72,7 +72,7 @@
                 </table>
             </div>
 
-            <div class="d-flex justify-content-center">
+            <div class="d-flex justify-content-center" id="posts-pagination">
             {{ $records->links() }}
         </div>
         </div>
@@ -93,7 +93,7 @@
             const params = new URLSearchParams();
 
             if (inputNombre.value.trim())
-            params.append('name', inputNombre.value.trim());
+            params.append('title', inputNombre.value.trim());
 
             return baseUrl + (params.toString() ? ('?'+params.toString()) : '');
         }
