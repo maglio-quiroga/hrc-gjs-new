@@ -18,7 +18,7 @@
         </div>
     <div class="placeholder4 container mt-5">
 
-    <div class="d-flex justify-content-between align-items-center">
+    <div class="d-flex justify-content-between align-items-center mb-3">
         <h2>Usuarios</h2>
         <a href="{{ route('admin.handle.view', ['model' => 'users', 'action' => 'create']) }}" class="btn btn-success">
             <i class="bi bi-plus-circle me-1"></i> Agregar nuevo usuario
@@ -27,9 +27,6 @@
 
     @include('admin.templates.alerts')
 
-    <div class="d-flex justify-content-end mt-3 my-4">
-        <input type="text" id="searchInput" class="form-control" placeholder="Buscar usuario...">
-    </div>
 
     <div class="table-responsive">
         <table class="table table-hover table-bordered align-middle text-center">
