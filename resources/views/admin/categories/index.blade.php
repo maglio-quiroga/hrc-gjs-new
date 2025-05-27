@@ -77,6 +77,71 @@
         </div>
         </div>
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+        // Inputs de filtro
+        const inputNombre   = document.getElementById('searchInput');
+        // Contenedores a reemplazar
+        const container     = document.getElementById('posts-container');
+
+        // Ruta base (sin parámetros)
+        const baseUrl       = "{{ route('admin.handle.view', ['model' => 'categories']) }}";
+
+        // Construye querystring con todos los filtros y (opcional) la página
+        function buildUrl(href) {
+            if (href) return href; 
+            const params = new URLSearchParams();
+
+            if (inputNombre.value.trim())
+            params.append('name', inputNombre.value.trim());
+
+            return baseUrl + (params.toString() ? ('?'+params.toString()) : '');
+        }
+
+        // Reemplaza la tabla + paginación en el DOM
+        function updateTable(html) {
+            const tmp = document.createElement('div');
+            tmp.innerHTML = html;
+
+            const newTable      = tmp.querySelector('#posts-table');
+            const newPagination = tmp.querySelector('#posts-pagination');
+
+            // sustituye
+            container.querySelector('#posts-table').replaceWith(newTable);
+            container.querySelector('#posts-pagination').replaceWith(newPagination);
+
+            bindPaginationLinks();
+        }
+
+        // Hace la petición AJAX y actualiza
+        function fetchAndUpdate(href = null) {
+            const url = buildUrl(href);
+            fetch(url, { headers: { 'X-Requested-With': 'XMLHttpRequest' } })
+            .then(r => r.text())
+            .then(updateTable)
+            .catch(console.error);
+        }
+
+        // Engancha los enlaces de paginación para que llamen a fetchAndUpdate()
+        function bindPaginationLinks() {
+            container.querySelectorAll('#posts-pagination a').forEach(a => {
+            a.addEventListener('click', e => {
+                e.preventDefault();
+                fetchAndUpdate(a.href);
+            });
+            });
+        }
+
+        // Cuando cambie cualquier filtro, recargamos la tabla
+        [inputNombre].forEach(el => {
+            el.addEventListener('input', () => fetchAndUpdate());
+            el.addEventListener('change', () => fetchAndUpdate());
+        });
+
+        // Al cargar la página, enganchamos la paginación
+        bindPaginationLinks();
+        });
+        </script>
 
 </body>
 </html>
