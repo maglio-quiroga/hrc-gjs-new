@@ -10,6 +10,7 @@ use App\Models\Post;
 use App\Models\Service;
 use App\Models\Team;
 use App\Models\User; 
+use App\Models\PostImage;
 use Illuminate\Support\Facades\Schema;
 
 class AdminController extends Controller
@@ -26,8 +27,9 @@ class AdminController extends Controller
         $services   = Service::orderByDesc('updated_at')->take(5)->get();
         $teams      = Team::orderByDesc('updated_at')->take(5)->get();
         $users      = User::orderByDesc('updated_at')->take(5)->get();
+        $post_images = PostImage::orderByDesc('updated_at')->take(5)->get();
 
-        return view("admin.admin", compact('categories','posts','services','teams','users'));
+        return view("admin.admin", compact('categories','posts','services','teams','users','post_images'));
     }
 
     function handleRoute(Request $request, string $model, ?string $action = null, ?int $target = null) {
@@ -113,7 +115,11 @@ class AdminController extends Controller
                     $filename = time() . '_' . $originalName;
                     $destinationPath = public_path("image/uploads/{$model}");
                     $file->move($destinationPath, $filename);
-                    $data[$key] = "image/uploads/{$model}/{$filename}";
+                    if ($model === 'post_images') {
+                        $data['image'] = "image/uploads/{$model}/{$filename}";
+                    } else {
+                        $data[$key] = "image/uploads/{$model}/{$filename}";
+                    }
 
                 }
             }
@@ -139,15 +145,14 @@ class AdminController extends Controller
         try {
             $record = $modelClass::findOrFail($target);
 
-            if (property_exists($modelClass, 'rules')) {
-
+            if (method_exists($modelClass, 'updateRules')) {
+                $data = $request->validate($modelClass::updateRules());
+            } elseif (property_exists($modelClass, 'rules')) {
                 $data = $request->validate($modelClass::$rules);
-
             } else {
-
                 $data = $request->all();
-
             }
+
             //NO sobreescribe la contra si esta vacia :3
             if (empty($data['password'])) {
                 unset($data['password']);
@@ -162,12 +167,12 @@ class AdminController extends Controller
                     $filename = time() . '_' . $originalName;
                     $destinationPath = public_path("image/uploads/{$model}");
                     $file->move($destinationPath, $filename);
-                    $data[$key] = "image/uploads/{$model}/{$filename}";
 
-                } else {
-
-                    $data[$key] = $record->$key;
-
+                    if ($model === 'post_images') {
+                        $data['image'] = "image/uploads/{$model}/{$filename}";
+                    } else {
+                        $data[$key] = "image/uploads/{$model}/{$filename}";
+                    }
                 }
             }
 

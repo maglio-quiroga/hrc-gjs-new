@@ -18,7 +18,9 @@
         
         <a type="button" class="sidebar-btn {{ request('model') === 'services' ? 'selected' : '' }}" onclick="setActive(this)" href="{{ route('admin.handle.view', ['model' => 'services']) }}" ><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-menu-up" viewBox="0 0 16 16"><path d="M7.646 15.854a.5.5 0 0 0 .708 0L10.207 14H14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3.793zM1 9V6h14v3zm14 1v2a1 1 0 0 1-1 1h-3.793a1 1 0 0 0-.707.293l-1.5 1.5-1.5-1.5A1 1 0 0 0 5.793 13H2a1 1 0 0 1-1-1v-2zm0-5H1V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1zM2 11.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 0-1h-8a.5.5 0 0 0-.5.5m0-4a.5.5 0 0 0 .5.5h11a.5.5 0 0 0 0-1h-11a.5.5 0 0 0-.5.5m0-4a.5.5 0 0 0 .5.5h6a.5.5 0 0 0 0-1h-6a.5.5 0 0 0-.5.5"/></svg>
         <span>Servicios</span></a>
-
+        
+        <a type="button" class="sidebar-btn {{ request('model') === 'post_images' ? 'selected' : '' }}" onclick="setActive(this)" href="{{ route('admin.handle.view', ['model' => 'post_images']) }}"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-image" viewBox="0 0 16 16"><path d="M14.002 3H2a1 1 0 0 0-1 1v8.002a1 1 0 0 0 1 1h12.002a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zM2 2h12.002A2 2 0 0 1 16 4v8.002a2 2 0 0 1-1.998 2H2a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z"/><path d="M10.648 8.646a.5.5 0 0 1 .704.054l2.5 2.667V12a.5.5 0 0 1-.5.5H2.5a.5.5 0 0 1-.4-.8l3.1-4.133a.5.5 0 0 1 .767-.057l2.228 2.451 2.453-2.315z"/><path d="M4.502 5.002a1.5 1.5 0 1 0 3.002 0 1.5 1.5 0 0 0-3.002 0z"/></svg>
+        <span>Imágenes</span></a>
     </div>
     
 </div>
