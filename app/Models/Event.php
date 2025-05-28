@@ -19,4 +19,3 @@ class Evento extends Model
     protected $dates = ['fecha_evento'];
 }
 
-}
