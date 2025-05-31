@@ -29,7 +29,7 @@
                 <label class="btn btn-outline-dark" for="decrease-150">150%</label>
             </div>
             <button data-action="screen-reader" class="btn btn-outline-dark text-start">Lectura de Pantalla</button>
-            <button data-action="toggle-focus" class="btn btn-outline-dark text-start">Recuadro de Enfoque</button>
+            <button data-action="toggle-focus" class="btn btn-outline-dark text-start focus-option">Recuadro de Enfoque</button>
             <!--button data-action="highlight-paragraphs" class="btn btn-outline-secondary text-start">Resaltar párrafos</button-->
             <h4>Resaltado de Párrafos:</h4>
             <div class="btn-group" role="group" aria-label="Opciones de resaltado de párrafos">

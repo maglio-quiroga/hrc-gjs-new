@@ -34,6 +34,13 @@
     font-size: 14px !important;
 }
 
+/* Hide focus option by default on small screens */
+@media (max-width: 768px) {
+    .focus-option {
+        display: none !important;
+    }
+}
+
 /*aumeta el tamaño del texto*/
 .texto-muy-grande {
     font-size: 1.2em !important;
@@ -57,11 +64,10 @@
 .highlighted-element {
     padding: 0.2em;
     background-color: yellow;
-    transition: all 0.3s ease; 
-    font-weight: bolder; 
+    transition: all 0.3s ease;
+    font-weight: bolder;
 }
 */
-
 
 .highlighted-element-yellow {
     padding: 0.2em;
@@ -121,11 +127,11 @@
 // De juan.scss
 
 .accesibleBoton {
-  z-index: 10000;
+    z-index: 10000;
 }
 
 .accesibleOpcion {
-  bottom: 100%;
+    bottom: 100%;
 }
 .accessibility-icon {
     width: 56px !important;
