@@ -31,21 +31,20 @@
             <button data-action="screen-reader" class="btn btn-outline-dark text-start">Lectura de Pantalla</button>
             <button data-action="toggle-focus" class="btn btn-outline-dark text-start">Recuadro de Enfoque</button>
             <!--button data-action="highlight-paragraphs" class="btn btn-outline-secondary text-start">Resaltar párrafos</button-->
-            <label>Resaltado de Párrafos:</label>
+            <h4>Resaltado de Párrafos:</h4>
             <div class="btn-group" role="group" aria-label="Opciones de resaltado de párrafos">
-                <button data-action="highlight-paragraphs-yellow" class="btn btn-outline-secondary">Amarillo</button>
-                <button data-action="highlight-paragraphs-blue" class="btn btn-outline-secondary">Azul</button>
-                <button data-action="highlight-paragraphs-white" class="btn btn-outline-secondary">Blanco</button>
-                <button data-action="highlight-paragraphs-black" class="btn btn-outline-secondary">Negro</button>
-                <button data-action="highlight-paragraphs-none" class="btn btn-outline-secondary">Desactivar</button>
+                <button data-action="highlight-paragraphs-yellow" class="btn btn-outline-secondary">🟡</button>
+                <button data-action="highlight-paragraphs-blue" class="btn btn-outline-secondary">🔵</button>
+                <button data-action="highlight-paragraphs-black" class="btn btn-outline-secondary">⚫</button>
+                <button data-action="highlight-paragraphs-none" class="btn btn-outline-secondary">⚪</button>
             </div>
             <!--button data-action="epilepsy-safe" class="btn btn-outline-dark text-start">Contraste para epilepsia</button-->
             <h4>Colores del filtro:</h4>
             <div class="btn-group" role="group" aria-label="Basic example">
                 <button data-action="filter-yellow" class="btn btn-outline-dark text-center">🟡</button>
                 <button data-action="filter-blue" class="btn btn-outline-dark text-center">🔵</button>
-                <button data-action="filter-white" class="btn btn-outline-dark text-center">⚪</button>
                 <button data-action="filter-black" class="btn btn-outline-dark text-center">⚫</button>
+                <button data-action="filter-white" class="btn btn-outline-dark text-center">⚪</button>
             </div>
         </div>
     </div>
