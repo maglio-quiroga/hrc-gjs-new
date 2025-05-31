@@ -13,7 +13,7 @@
             <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
         </svg>
     </button>
-    <div id="accessibilityMenu" class="accMenu bg-white border rounded shadow-sm p-3 mt-2 d-none position-absolute end-0 accesibleOpcion">
+    <div id="accessibilityMenu" class="accMenu bg-white border rounded shadow-sm p-3 mt-2 mb-4 d-none position-absolute end-0 accesibleOpcion">
         <div class="d-grid gap-2">
             <h4>Tamaño del texto:</h4>
             <div class="btn-group" role="group" aria-label="radio toggle button group">
@@ -32,19 +32,27 @@
             <button data-action="toggle-focus" class="btn btn-outline-dark text-start focus-option">Recuadro de Enfoque</button>
             <!--button data-action="highlight-paragraphs" class="btn btn-outline-secondary text-start">Resaltar párrafos</button-->
             <h4>Resaltado de Párrafos:</h4>
-            <div class="btn-group" role="group" aria-label="Opciones de resaltado de párrafos">
-                <button data-action="highlight-paragraphs-yellow" class="btn btn-outline-secondary">🟡</button>
-                <button data-action="highlight-paragraphs-blue" class="btn btn-outline-secondary">🔵</button>
-                <button data-action="highlight-paragraphs-black" class="btn btn-outline-secondary">⚫</button>
-                <button data-action="highlight-paragraphs-none" class="btn btn-outline-secondary">⚪</button>
+            <div class="btn-group" role="group" aria-label="radio toggle button group">
+                <input data-action="highlight-paragraphs-yellow" type="radio" class="btn-check" name="highlight-text" id="highlight-text-yellow">
+                <label class="btn btn-outline-dark" for="highlight-text-yellow">🟡</label>
+                <input data-action="highlight-paragraphs-blue" type="radio" class="btn-check" name="highlight-text" id="highlight-text-blue">
+                <label class="btn btn-outline-dark" for="highlight-text-blue">🔵</label>
+                <input data-action="highlight-paragraphs-black" type="radio" class="btn-check" name="highlight-text" id="highlight-text-black">
+                <label class="btn btn-outline-dark" for="highlight-text-black">⚫</label>
+                <input data-action="highlight-paragraphs-none" type="radio" class="btn-check" name="highlight-text" id="highlight-text-none" checked>
+                <label class="btn btn-outline-dark" for="highlight-text-none">⚪</label>
             </div>
             <!--button data-action="epilepsy-safe" class="btn btn-outline-dark text-start">Contraste para epilepsia</button-->
             <h4>Colores del filtro:</h4>
-            <div class="btn-group" role="group" aria-label="Basic example">
-                <button data-action="filter-yellow" class="btn btn-outline-dark text-center">🟡</button>
-                <button data-action="filter-blue" class="btn btn-outline-dark text-center">🔵</button>
-                <button data-action="filter-black" class="btn btn-outline-dark text-center">⚫</button>
-                <button data-action="filter-white" class="btn btn-outline-dark text-center">⚪</button>
+            <div class="btn-group" role="group" aria-label="radio toggle button group">
+                <input data-action="filter-yellow" type="radio" class="btn-check" name="filter" id="filter-yellow">
+                <label class="btn btn-outline-dark" for="filter-yellow">🟡</label>
+                <input data-action="filter-blue" type="radio" class="btn-check" name="filter" id="filter-blue">
+                <label class="btn btn-outline-dark" for="filter-blue">🔵</label>
+                <input data-action="filter-black" type="radio" class="btn-check" name="filter" id="filter-black">
+                <label class="btn btn-outline-dark" for="filter-black">⚫</label>
+                <input data-action="filter-white" type="radio" class="btn-check" name="filter" id="filter-white" checked>
+                <label class="btn btn-outline-dark" for="filter-white">⚪</label>
             </div>
         </div>
     </div>

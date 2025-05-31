@@ -26,8 +26,6 @@
 @import "./home";
 // I
 @import "./icon";
-// J
-@import "./juanCompile";
 // L
 @import "./lightbox";
 // M
@@ -52,12 +50,3 @@
 
 // Fonts (Fuentes)
 @import url("https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:300,400,500,700,900");
-
-// 2. Estilos personalizados ESPECÍFICOS que NO son reemplazados por Bootstrap.
-//    (Hemos eliminado las definiciones de .table, .btn, .btn-*, .form-control, .card, .alert, .alert-*
-//     porque se asume que usarás las clases de Bootstrap directamente en el HTML)
-
-// NOTA: Los estilos de hover, zebra-striping (nth-child(even)) ya vienen con Bootstrap (.table-striped, .table-hover)
-//       y los padding/colores base también. Elimina los @apply correspondientes.
-
-// Ajustes adicionales a .card-title si son necesarios además de la clase de Bootstrap

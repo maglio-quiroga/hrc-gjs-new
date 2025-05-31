@@ -1,6 +1,5 @@
 import "bootstrap"; // Importa Bootstrap JS
 import "../scss/compile.scss";
-import "../scss/compileTemp.scss";
 
 import {
     accesibilidad,
