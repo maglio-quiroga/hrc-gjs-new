@@ -1,7 +1,8 @@
 const DEFAULTS = {
     textSize: "normal",
     focusBox: false,
-    highlightParagraphs: false,
+    //highlightParagraphs: false,
+    highlightParagraphsColor: "none",
     colorFilter: "white",
 };
 

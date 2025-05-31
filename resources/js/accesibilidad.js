@@ -64,6 +64,9 @@ export function accesibilidad() {
             const currentPrefs = getPreferences();
             let newPrefs = {};
 
+            // Variable para almacenar el color de resaltado si la acción es de resaltado
+            let highlightActionColor = null;
+
             switch (action) {
                 case "contrast":
                     body.classList.toggle("high-contrast");
@@ -110,11 +113,26 @@ export function accesibilidad() {
                 case "screen-reader":
                     screenReader();
                     break;
+                /*
                 case "highlight-paragraphs":
                     highlightElements(!currentPrefs.highlightElements);
                     newPrefs = {
                         ...currentPrefs,
                         highlightParagraphs: !currentPrefs.highlightParagraphs,
+                    };
+                    break;
+                */
+                case "highlight-paragraphs-yellow":
+                case "highlight-paragraphs-blue":
+                case "highlight-paragraphs-white":
+                case "highlight-paragraphs-black":
+                case "highlight-paragraphs-none": // Acción para desactivar
+                    // Extraer el color del final de la acción (o "none")
+                    highlightActionColor = action.replace("highlight-paragraphs-", "");
+                    highlightElements(highlightActionColor); // Llamar a la función con el color
+                    newPrefs = {
+                        ...currentPrefs,
+                        highlightParagraphsColor: highlightActionColor, // Guardar el color en las preferencias
                     };
                     break;
                 case "filter-yellow":
@@ -138,6 +156,9 @@ export function accesibilidad() {
                     newPrefs = { ...currentPrefs, focusBox: "black" };
                     break;
             }
+
+
+
             if (Object.keys(newPrefs).length > 0) {
                 updatePreferences(newPrefs);
                 window.dispatchEvent(
@@ -198,6 +219,7 @@ export function screenReader() {
         window.speechSynthesis.speak(speech);
     });
 }
+/*
 export function highlightElements(highlight) {
     // Select all elements we want to highlight
     const elementsToHighlight = document.querySelectorAll(
@@ -209,6 +231,31 @@ export function highlightElements(highlight) {
         }
     });
 }
+*/
+
+const highlight_colors = ["yellow", "blue", "white", "black"];
+
+export function highlightElements(color) {
+    // Seleccionar todos los elementos que queremos resaltar
+    const elementsToHighlight = document.querySelectorAll(
+        "p, li, aside, section",
+    );
+
+    elementsToHighlight.forEach((element) => {
+        if (element.offsetParent !== null) {
+            // 1. Quitar *todas* las clases de resaltado anteriores
+            highlight_colors.forEach((c) => {
+                element.classList.remove(`highlighted-element-${c}`);
+            });
+
+            // 2. Si se especificó un color (y no es 'none' para desactivar), agregar la nueva clase
+            if (color && color !== "none") {
+                element.classList.add(`highlighted-element-${color}`);
+            }
+        }
+    });
+}
+
 export function overlayFilter(color) {
     const overlayColor = document.getElementById("colorFilterOverlay");
     if (!overlayColor) return;

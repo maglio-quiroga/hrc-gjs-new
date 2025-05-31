@@ -53,11 +53,47 @@
 * PROGRESO CHINO *
 *****************/
 
+/*
 .highlighted-element {
     padding: 0.2em;
-    background-color: #ffeb3b; /* Yellow highlight */
-    transition: all 0.3s ease; /* Smooth transition */
+    background-color: yellow;
+    transition: all 0.3s ease; 
+    font-weight: bolder; 
 }
+*/
+
+
+.highlighted-element-yellow {
+    padding: 0.2em;
+    background-color: yellow; /* Fondo amarillo */
+    transition: all 0.3s ease; /* Transición suave */
+    font-weight: bolder; /* Texto más negrita */
+    color: black;
+}
+
+.highlighted-element-blue {
+    padding: 0.2em;
+    background-color: blue; /* Fondo azul */
+    transition: all 0.3s ease;
+    font-weight: bolder;
+    color: white;
+}
+
+.highlighted-element-white {
+    padding: 0.2em;
+    background-color: white; /* Fondo blanco */
+    transition: all 0.3s ease;
+    font-weight: bolder;
+    color: black;
+}
+
+.highlighted-element-black {
+    padding: 0.2em;
+    background-color: black; /* Fondo negro */
+    transition: all 0.3s ease;
+    color: white;
+}
+
 .color-filter-overlay {
     position: fixed;
     top: 0;
