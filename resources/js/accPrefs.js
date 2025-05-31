@@ -1,8 +1,7 @@
 const DEFAULTS = {
     textSize: "normal",
     focusBox: false,
-    //highlightParagraphs: false,
-    highlightParagraphsColor: "none",
+    highlightParagraphsColor: "white",
     colorFilter: "white",
 };
 
@@ -35,6 +34,7 @@ export function updatePreferences(newPrefs) {
         ...currentPrefs,
         ...newPrefs,
         textSize: newPrefs.textSize,
+        highlightParagraphsColor: newPrefs.highlightParagraphsColor,
         colorFilter: newPrefs.colorFilter,
     };
 

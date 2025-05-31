@@ -21,6 +21,7 @@ import { getPreferences, updatePreferences } from "./accPrefs";
 
 const prefs = getPreferences();
 
+// Dadas las preferencias, carga el tamaño de texto deseado
 document.body.classList.toggle("smaller-text", prefs.textSize === "small");
 document.body.classList.toggle("texto-grande", prefs.textSize === "large");
 document.body.classList.toggle(
@@ -28,10 +29,13 @@ document.body.classList.toggle(
     prefs.textSize === "smaller",
 );
 document.body.classList.toggle("texto-muy-grande", prefs.textSize === "larger");
+
+// Esto para añadir los contrastes pertinentes, although, no es algo que se terminara de cocinar
 //document.body.classList.toggle("high-contrast", prefs.highContrast);
 //document.body.classList.toggle("modo-alto-contraste", prefs.highContrast);
-if (prefs.focusBox) toggleFocusFeature();
-if (prefs.highlightParagraphs) highlightElements();
+
+// Destacar texto
+highlightElements(prefs.highlightParagraphsColor);
 overlayFilter(prefs.colorFilter);
 
 // Store prefs in window for other scripts if needed

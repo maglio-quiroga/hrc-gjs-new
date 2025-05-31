@@ -49,6 +49,14 @@ export function accesibilidad() {
             if (!isFocusActive) return;
             updateFocus(e);
         });
+        {
+            const currentPrefs = getPreferences();
+            updateFontSizeRadioButtons(currentPrefs.textSize);
+            updateHighlightColorRadioButtons(
+                currentPrefs.highlightParagraphsColor,
+            );
+            updateFilterRadioButtons(currentPrefs.colorFilter);
+        }
 
         // Handle accessibility actions
         document.addEventListener("click", function (e) {
@@ -127,37 +135,32 @@ export function accesibilidad() {
                 case "highlight-paragraphs-white":
                 case "highlight-paragraphs-black":
                 case "highlight-paragraphs-none": // Acción para desactivar
-                    // Extraer el color del final de la acción (o "none")
-                    highlightActionColor = action.replace("highlight-paragraphs-", "");
-                    highlightElements(highlightActionColor); // Llamar a la función con el color
+                    highlightElements(
+                        action.replace("highlight-paragraphs-", ""),
+                    );
                     newPrefs = {
                         ...currentPrefs,
-                        highlightParagraphsColor: highlightActionColor, // Guardar el color en las preferencias
+                        highlightParagraphsColor: action.replace(
+                            "highlight-paragraphs-",
+                            "",
+                        ),
                     };
                     break;
                 case "filter-yellow":
-                    overlayFilter("yellow");
-                    newPrefs = { ...currentPrefs, colorFilter: "yellow" };
-                    break;
                 case "filter-blue":
-                    overlayFilter("blue");
-                    newPrefs = { ...currentPrefs, colorFilter: "blue" };
-                    break;
                 case "filter-white":
-                    overlayFilter("white");
-                    newPrefs = { ...currentPrefs, colorFilter: "white" };
-                    break;
                 case "filter-black":
-                    overlayFilter("black");
-                    newPrefs = { ...currentPrefs, colorFilter: "black" };
+                    overlayFilter(action.replace("filter-", ""));
+                    newPrefs = {
+                        ...currentPrefs,
+                        colorFilter: action.replace("filter-", ""),
+                    };
                     break;
                 case "toggle-focus":
                     toggleFocusFeature();
                     newPrefs = { ...currentPrefs, focusBox: "black" };
                     break;
             }
-
-
 
             if (Object.keys(newPrefs).length > 0) {
                 updatePreferences(newPrefs);
@@ -219,21 +222,6 @@ export function screenReader() {
         window.speechSynthesis.speak(speech);
     });
 }
-/*
-export function highlightElements(highlight) {
-    // Select all elements we want to highlight
-    const elementsToHighlight = document.querySelectorAll(
-        "p, li, aside, section",
-    );
-    elementsToHighlight.forEach((element) => {
-        if (element.offsetParent !== null) {
-            element.classList.toggle("highlighted-element");
-        }
-    });
-}
-*/
-
-const highlight_colors = ["yellow", "blue", "white", "black"];
 
 export function highlightElements(color) {
     // Seleccionar todos los elementos que queremos resaltar
@@ -243,10 +231,9 @@ export function highlightElements(color) {
 
     elementsToHighlight.forEach((element) => {
         if (element.offsetParent !== null) {
-            // 1. Quitar *todas* las clases de resaltado anteriores
-            highlight_colors.forEach((c) => {
-                element.classList.remove(`highlighted-element-${c}`);
-            });
+            element.classList.remove("highlighted-element-yellow");
+            element.classList.remove("highlighted-element-blue");
+            element.classList.remove("highlighted-element-black");
 
             // 2. Si se especificó un color (y no es 'none' para desactivar), agregar la nueva clase
             if (color && color !== "none") {
@@ -264,7 +251,6 @@ export function overlayFilter(color) {
     overlayColor.classList.remove(
         "color-filter-yellow",
         "color-filter-blue",
-        "color-filter-white",
         "color-filter-black",
     );
 
@@ -325,4 +311,97 @@ export function hideFocus() {
             ${x1}px ${y1_off}px, ${x2}px ${y1_off}px, ${x2}px ${y2_off}px, ${x1}px ${y2_off}px, ${x1}px ${y1_off}px
         )`;
     });
+}
+
+// Pa' settear las opciones marcadas por defecto
+function updateFontSizeRadioButtons(textSize) {
+    let radioId = "decrease-100"; // Default to 100%
+    switch (textSize) {
+        case "smaller":
+            radioId = "decrease-50";
+            break;
+        case "small":
+            radioId = "decrease-75";
+            break;
+        case "normal":
+            radioId = "decrease-100";
+            break;
+        case "large":
+            radioId = "decrease-125";
+            break;
+        case "larger":
+            radioId = "decrease-150";
+            break;
+    }
+    // Uncheck all radio buttons first
+    document.querySelectorAll('input[name="font-size"]').forEach((radio) => {
+        radio.checked = false;
+        radio.removeAttribute("checked");
+    });
+    // Check the correct radio button
+    const selectedRadio = document.getElementById(radioId);
+    if (selectedRadio) {
+        selectedRadio.checked = true;
+        selectedRadio.setAttribute("checked", "checked");
+    }
+}
+
+function updateHighlightColorRadioButtons(textSize) {
+    let radioId = "highlight-text-none"; // Default to none
+    switch (textSize) {
+        case "yellow":
+            radioId = "highlight-text-yellow";
+            break;
+        case "blue":
+            radioId = "highlight-text-blue";
+            break;
+        case "black":
+            radioId = "highlight-text-black";
+            break;
+        case "none":
+            radioId = "highlight-text-none";
+            break;
+    }
+    // Uncheck all radio buttons first
+    document
+        .querySelectorAll('input[name="highlight-text"]')
+        .forEach((radio) => {
+            radio.checked = false;
+            radio.removeAttribute("checked");
+        });
+    // Check the correct radio button
+    const selectedRadio = document.getElementById(radioId);
+    if (selectedRadio) {
+        selectedRadio.checked = true;
+        selectedRadio.setAttribute("checked", "checked");
+    }
+}
+
+function updateFilterRadioButtons(textSize) {
+    let radioId = "filter-white"; // Default to none
+    switch (textSize) {
+        case "yellow":
+            radioId = "filter-yellow";
+            break;
+        case "blue":
+            radioId = "filter-blue";
+            break;
+        case "black":
+            radioId = "filter-black";
+            break;
+        case "white":
+            radioId = "filter-white";
+            break;
+    }
+    // Uncheck all radio buttons first
+    document.querySelectorAll('input[name="filter"]').forEach((radio) => {
+        radio.checked = false;
+        radio.removeAttribute("checked");
+    });
+    // Check the correct radio button
+    const selectedRadio = document.getElementById(radioId);
+    if (selectedRadio) {
+        selectedRadio.checked = true;
+        selectedRadio.setAttribute("checked", "checked");
+    }
 }

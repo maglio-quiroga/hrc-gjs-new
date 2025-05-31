@@ -10,10 +10,12 @@
 
     /*=== Rojos ===*/
     --red-100: #ffa07f;
+    --red-200: #ff8800;
     --red-400: #dd5d54; /* Rojo ladrillo (Color texto form-control) */
 
     /*=== Azules ===*/
     --blue-a70: rgba(20, 189, 238, 0.7); /*--primary-blue semi-transparente */
+    --blue-200: #12e9fe;
     --blue-400: #60a5fa;
     --blue-600: #416fc4;
     --blue-700: #4338ca;
@@ -67,12 +69,6 @@
     --white-a40: rgba(255, 255, 255, 0.4);
     --white-a30: rgba(255, 255, 255, 0.3);
     --white-a20: rgba(255, 255, 255, 0.2);
-
-    --green-450: #58bd7c;
-    --green-525: #4ab66e;
-    --green-535: #28a745;
-    --green-550: #029834;
-    --orange: #ff8800;
 }
 
 text-gray-900,
@@ -170,9 +166,6 @@ h6 {
 }
 .navbar {
     background-color: var(--green-100); /* Modificado */
-}
-.navbar-nav .nav-link {
-    color: var(--black); /* Modificado */
 }
 .navbar-nav .nav-link:hover {
     color: var(--green-400); /* Modificado */
@@ -1009,6 +1002,39 @@ h6 {
     color: var(--white);
 }
 
+.color-filter-yellow {
+    background-color: var(--yellow-400);
+}
+.color-filter-blue {
+    background-color: var(--blue-400);
+}
+.color-filter-white {
+    background-color: var(--white);
+}
+.color-filter-black {
+    background-color: var(--black);
+}
+
+.highlighted-element-yellow {
+    background-color: var(--yellow-400) !important; /* Fondo amarillo */
+    color: var(--black) !important;
+}
+
+.highlighted-element-blue {
+    background-color: var(--blue-200) !important; /* Fondo azul */
+    color: var(--black) !important;
+}
+
+.highlighted-element-white {
+    background-color: var(--white) !important; /* Fondo blanco */
+    color: var(--black) !important;
+}
+
+.highlighted-element-black {
+    background-color: var(--black) !important; /* Fondo negro */
+    color: var(--white) !important;
+}
+
 /*******************************************
 *           Detalles Nuevos                *
 *******************************************/
@@ -1486,7 +1512,7 @@ h6 {
 }
 
 .footerFondos {
-    background-color: var(--green-550);
+    background-color: var(--green-700);
 }
 
 .footerBlade_4 {
@@ -1494,11 +1520,11 @@ h6 {
 }
 
 .footerInstagram {
-    background-color: var(--green-525);
+    background-color: var(--green-800);
 }
 
 .footerXYou {
-    background-color: var(--green-450);
+    background-color: var(--green-700);
 }
 
 .headerLoginColor {
@@ -1514,22 +1540,22 @@ h6 {
 }
 
 .titulo_texto {
-    color: var(--green-535);
+    color: var(--green-600);
 }
 
 .mostrarInfoDirectivo {
-    background-color: var(--green-525);
+    background-color: var(--green-800);
     color: var(--white);
 }
 
 .tablaDetalles {
-    border: 2px solid var(--green-535);
+    border: 2px solid var(--green-600);
 }
 
 .familiarUsuario {
-    color: var(--orange);
+    color: var(--red-200);
 }
 
 .ley {
-    background-color: var(--green-535);
+    background-color: var(--green-600);
 }
