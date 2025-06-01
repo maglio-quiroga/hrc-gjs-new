@@ -27,7 +27,7 @@
     };
 
     async function exec() {
-        await delaySet(2500);
+        await delaySet(5500);
         dismisibleAlert();
     }
 

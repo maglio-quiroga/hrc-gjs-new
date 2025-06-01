@@ -37,7 +37,7 @@ class AdminController extends Controller
         $modelClass = $this->resolveModelClass($model);
 
         if (! class_exists($modelClass)) {
-            return redirect()->route('admin.resume')->with('error', 'El modelo no esta registrado.');
+            return redirect()->route('admin.resume')->with('error', 'El modelo no esta registrado.'.$modelClass);
         }
 
         $queryBuilder = $modelClass::query();
