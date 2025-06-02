@@ -1,15 +1,18 @@
-@extends('web.master')
+@extends('layouts.web')
 
 @section('content')
-<div class="container" style="margin-top: 150px; margin-bottom: 50px;">
+<!--PAGINA
+        INFORMACION DE PACIENTES 
+            DONACION DE SANGRE -->
+<div class="container infoPacientes">
 
     <!-- Título Principal -->
     <div class="text-center mb-4">
-        <h2 style="color: #28a745; font-weight: bold;">Donar Sangre es Donar Vida</h2>
+        <h2 class="titulo_texto">Donar Sangre es Donar Vida</h2>
     </div>
 
     <!-- Contenido de la Sección -->
-    <div class="mb-4" style="text-align: justify;">
+    <div class="mb-4 textoRelleno">
         <p>
             La donación de sangre es un acto voluntario, altruista y simple. Se le extraerán <strong>450 ml</strong> de sangre, lo que generalmente no produce molestias. El tiempo aproximado del proceso de donación es de <strong>30 minutos</strong>, si no hay donantes en espera.
         </p>
@@ -21,8 +24,8 @@
     <!-- Tabla: Podrías Ser Donante -->
     <div class="row mb-5">
         <div class="col">
-            <h4 class="text-center" style="color: #28a745; font-weight: bold;">Podrías ser donante si:</h4>
-            <table class="table table-bordered table-hover text-center" style="border: 2px solid #28a745;">
+            <h4 class="text-center titulo_texto">Podrías ser donante si:</h4>
+            <table class="table table-bordered table-hover text-center tablaDetalles">
                 <thead class="table-success">
                     <tr>
                         <th>Condición</th>

@@ -1,10 +1,11 @@
-@extends('web.master')
+@extends('layouts.web')
 
 @section('content')
-<div class="container" style="margin-top: 200px; margin-bottom: 50px;">
+
+<div class="container deberDerecho">
 
     <div class="text-center mb-5">
-        <h2 style="color: #28a745; font-weight: bold;">Ley N°20.584: Derechos y Deberes de los Pacientes en Salud</h2>
+        <h2 class="titulo_texto">Ley N°20.584: Derechos y Deberes de los Pacientes en Salud</h2>
     </div>
 
     <p class="fs-4 text-center lh-sm text-info-emphasis">

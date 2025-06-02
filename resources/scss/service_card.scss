@@ -1,0 +1,70 @@
+@charset "utf-8";
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+    justify-content: center;
+    gap: 20px;
+    align-items: stretch;
+}
+.card-img {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}
+.card-content {
+    padding: 15px;
+    height: 300px;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.card-title {
+    font-size: 1.25em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.card-text {
+    font-size: 0.9em;
+    text-align: justify;
+    text-align: center;
+    margin-bottom: 50px; /* Espacio para el botón */
+}
+.card-button {
+    border: none;
+    padding: 10px;
+    font-size: 1em;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+/*    position: absolute;
+    bottom: 0;
+    left: 0; */
+    margin-top: auto;
+    transition: background-color 0.2s ease;
+}
+.service-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Opcional, para centrar */
+}
+.service-item {
+    flex: 0 0 80%;
+    padding-bottom: 36px;
+}
+.service-card {
+    /* Estilos existentes para service card */
+    flex: 0 0 calc(25% - 20px); /* Ajustar el porcentaje y margen como se necesite */
+    margin: 10px; /* Ajustar el margen para espaciado entre cartas */
+}
+/* Opcional: Media query para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .service-card {
+        flex: 0 0 calc(50% - 20px);
+    }
+}
+// Ajustes adicionales a .card-img-top
+.card-img-top {
+    object-fit: cover;
+    height: 200px; // Ajuste específico
+}

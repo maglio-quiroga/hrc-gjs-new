@@ -1,22 +1,14 @@
-@extends('web.master')
+@extends('layouts.web')
 
 @section('content')
-
-<style>
-    p{
-        font-size: 16px;
-        line-height: 20px;
-    }
-
-    ul{
-        list-style: circle;
-    }
-</style>
-
-<div class="container" style="margin-top: 200px; margin-bottom: 50px;">
+<!--PAGINA
+        INFORMACION DE PACIENTES 
+            ASPECTO LEGAL
+                Ley Mila -->
+<div class="container deberDerecho">
 
     <div class="text-center mb-5">
-        <h2 style="color: #28a745; font-weight: bold;">Ley N°21.372: Ley Mila</h2>
+        <h2 class="titulo_texto">Ley N°21.372: Ley Mila</h2>
     </div>
 
     <p class="fs-4 text-center lh-sm text-info-emphasis">
@@ -28,7 +20,7 @@
         
     <div class="my-3">
         <h3 class="">¿En qué consiste?</h3>
-        <hr style="width:150px; height:2px; background-color: #28a745; border: none; opacity: 100;" class="mt-2">
+        <hr class="mt-2 ley">
         <p>
             Establece como derecho el que los prestadores permitirán en todo momento la compañia a niños, niñas, adolescentes, mujeres o personas gestantes en su atención y hospitalización.
         </p>
@@ -44,7 +36,7 @@
 
     <div class="my-3">
         <h3 class="">¿A quiénes beneficia?</h3>
-        <hr style="width:150px; height:2px; background-color: #28a745; border: none; opacity: 100;" class="mt-2">
+        <hr class="mt-2 ley">
         <ul>
             <li><p><strong>Niños, niñas y adolescentes (NNA):</strong> Desde recién nacidos hasta los 19 años, 11 meses y 29 días, tienen derecho a estar acompañados durante su hospitalización y atención ambulatoria.</p></li>
             <li><p><strong>Mujeres embarazadas y personas gestantes:</strong> Durante las etapas de preparto, parto y puerperio.</p></li>
@@ -55,7 +47,7 @@
 
     <div class="my-3">
         <h3 class="">¿Quiénes pueden acompañar a los pacientes?</h3>
-        <hr style="width:150px; height:2px; background-color: #28a745; border: none; opacity: 100;" class="mt-2">
+        <hr class="mt-2 ley">
         <p>
             Los niños y niñas deben estar acompañados por un adulto responsable que tenga una relación cercana con ellos, como el padre, la madre o los tutores legales.
         </p>
@@ -71,7 +63,7 @@
 
     <div class="my-3">
         <h3 class="">¿Cuáles son los horarios?</h3>
-        <hr style="width:150px; height:2px; background-color: #28a745; border: none; opacity: 100;" class="mt-2">
+        <hr class="mt-2 ley">
         <p>
             El acompañante de niños, niñas y adolescentes está autorizado para permanecer las 24 horas del día con el paciente. Sin embargo, las visitas adicionales deben ajustarse al horario establecido por el hospital para estos fines.
         </p>
@@ -84,11 +76,11 @@
 
     <div class="my-3">
         <h3 class="">¿Se puede restringir el acompañamiento?</h3>
-        <hr style="width:150px; height:2px; background-color: #28a745; border: none; opacity: 100;" class="mt-2">
+        <hr class="mt-2 ley">
         <p class="mb-2">
             Si, existen restricciones que se aplican en casos específicos donde la presencia del acompañante pueda representar un riesgo, vulnerar derechos, o incumplir normas legales, sanitarias o institucionales. A continuación, se detallan las situaciones en las que el acompañamiento durante la atención de un Niño, Niña o Adolescente (NNA) o una persona gestante puede ser restringido.
         </p>
-        <ul style="line-height: 25px;">
+        <ul class="leyInfo">
             <li><strong>Riesgo para el NNA o persona gestante:</strong> Si la presencia del acompañante representa un peligro para su seguridad o bienestar.</li>
             <li><strong>Falta de consentimiento o privacidad solicitada:</strong> Cuando el paciente solicita privacidad y no autoriza el acompañamiento.</li>
             <li><strong>Condiciones de salud del acompañante:</strong> Si el acompañante se encuentra con una condición de salud que no le permite ejercer el rol de acompañante o ponga en riesgo al paciente.</li>

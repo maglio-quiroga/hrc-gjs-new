@@ -1,0 +1,9 @@
+@charset "utf-8";
+/* icon menu */
+.icon-menu {
+    // @apply flex items-center transform transition-colors duration-200 border-r-4 border-transparent;
+    display: flex;
+    align-items: center;
+    border-right: 4px solid transparent;
+    transition: border-color 0.2s ease-in-out; // transition-colors
+}

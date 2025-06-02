@@ -1,18 +1,21 @@
-@extends('web.master')
+@extends('layouts.web')
 
 @section('content')
-<div class="container" style="margin-top: 150px; margin-bottom: 50px;">
+<!--PAGINA
+        INFORMACION DE PACIENTES 
+            OIRS -->
+<div class="container infoPacientes">
 
     <!-- Título Principal -->
     <div class="text-center mb-4">
-        <h2 style="color: #28a745; font-weight: bold;">Plan de Contingencia OIRS</h2>
+        <h2 class="titulo_texto">Plan de Contingencia OIRS</h2>
         <p class="text-muted">Atención a solicitudes ciudadanas</p>
     </div>
 
     <!-- Sección: Información General -->
     <section class="mb-5">
         <h4 class="text-success">¿Cómo puedes realizar tus solicitudes?</h4>
-        <p style="text-align: justify;">
+        <p class="textoRelleno">
             Las solicitudes ciudadanas, que incluyen <strong>reclamos</strong>, <strong>sugerencias</strong>, <strong>solicitudes</strong>, 
             <strong>consultas</strong> y <strong>felicitaciones</strong>, serán recepcionadas a través de los siguientes canales:
         </p>
@@ -99,7 +102,7 @@
 
     <!-- Mensaje Final -->
     <section class="text-center">
-        <p class="alert alert-info" style="font-size: 1.1rem;">
+        <p class="alert alert-info alert_oirs">
             <em>"Se aceptan indicaciones rechazando completar el formulario de manera presencial."</em>
         </p>
     </section>

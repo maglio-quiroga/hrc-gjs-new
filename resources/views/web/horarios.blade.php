@@ -1,14 +1,17 @@
-@extends('web.master')
+@extends('layouts.web')
 
 @section('content')
-<div class="container" style="margin-top: 150px; margin-bottom: 50px;">
+<!--PAGINA
+        INFORMACION DE PACIENTES 
+            HORARIOS -->
+<div class="container infoPacientes">
 
     <!-- Título Principal -->
     <div class="text-center mb-4">
-        <h2 style="color: #28a745; font-weight: bold;">
+        <h2 class="titulo_texto">
             ENTREGA DE INFORMACIÓN A FAMILIARES DE USUARIOS(AS) HOSPITALIZADOS(AS)
         </h2>
-        <p style="color: #ff8800; font-weight: bold;">(Sólo un familiar por paciente)</p>
+        <p class="familiarUsuario">(Sólo un familiar por paciente)</p>
     </div>
 
     <!-- UPC -->

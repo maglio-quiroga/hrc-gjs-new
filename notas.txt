@@ -1,0 +1,12 @@
+1. Se modificaron los archivos:
+   - resources/js/accesibilidad.js
+   - resources/js/accPrefs.js
+   - resources/scss/accesibilidad.scss
+   - resources/views/components/accesibilidad.blade.php
+
+2. Se experimentó con la creación de más opciones de resaltar párrafo, pero el sistema de cookies falló para estas nuevas opciones.
+3. Si queremos la solución más facil, es necesario deshacer todos los cambios hechos en los archivos anteriormente mencionados.
+   - Para ello, tenemos que borrar todos los cambios nuevos
+   - Las variables y funciones antiguas fueron comentadas, por lo que basta con tan solo descomentarlas.
+   - En resources/scss/accesibilidad.scss, la etiqueta comentada ".highlighted-element" ya posee la capacidad de transformar en negrita el texto de los párrafos resaltados,
+     por lo que solo falta descomentarla.

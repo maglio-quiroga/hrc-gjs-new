@@ -1,0 +1,281 @@
+@charset "utf-8";
+/*********************************
+    Header
+*********************************/
+/*BANNER ARRIBA DEL PRINCIPAL (VERDE)*/
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+.header.scrolled {
+    top: -40px;
+}
+.header_container {
+    width: 100%;
+}
+.header_content {
+    height: 90px;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+.header.scrolled .header_content {
+    height: 80px;
+}
+/*********************************
+    Top Bar
+*********************************/
+/*BARRA VERDE ARRIBA DEL BANNER*/
+.top_bar {
+    width: 100%;
+}
+.top_bar_container {
+    width: 100%;
+    height: 3em !important;
+}
+.top_bar_content {
+    width: 100%;
+    height: 100%;
+}
+.top_bar_contact_list li {
+    display: inline-block;
+}
+.question {
+    font-family: "Museo Sans 500", "Roboto Slab", serif;
+    font-size: 14px;
+    margin-left: 0px;
+}
+.top_bar_contact_list li i,
+.top_bar_contact_list li > div {
+    display: inline-block;
+    font-size: 14px;
+}
+.top_bar_contact_list li > div {
+    margin-left: 1px;
+}
+.top_bar_contact_list li:not(:last-child) {
+    margin-right: 21px;
+}
+.top_bar_login {
+    height: 100%;
+}
+.login_button {
+    width: 160px;
+    height: 100%;
+    text-align: center;
+}
+.login_button a {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 40px;
+}
+/*********************************
+    Navbar
+*********************************/
+/*BANNER PRINCIPAL (INICIO, QUIENES SOMOS, INFORMACION PACIENTE, ETC)*/
+.navbar_container {
+    width: 100%;
+}
+@media only screen and (max-width: 991px) {
+    .navbar {
+        width: 100%;
+    }
+}
+.navbar-nav .nav-link {
+    transition: color 0.2s ease-in-out;
+}
+.navbar-brand img {
+    max-width: 80px;
+    height: auto;
+}
+@media (max-width: 768px) {
+    .navbar-brand img {
+        width: 150px;
+        height: auto;
+    }
+}
+.navbar-nav li a {
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+.navbar-nav li.active::after {
+    display: block;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    content: "";
+}
+.navbar-nav .dropdown-menu a {
+    font-size: 16px;
+}
+/*********************************
+    Logo
+*********************************/
+/*IMAGEN DEL BANNER PRINCIPAL*/
+.logo,
+.logo_text {
+    display: inline-block;
+}
+.logo {
+    width: 60px;
+    height: 60px;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+.logo img {
+    max-width: 100%;
+}
+.logo_text {
+    font-family: "Museo Sans 500", "Roboto Slab", serif;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 0.75;
+    vertical-align: middle;
+    margin-left: 7px;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+.header.scrolled .logo {
+    width: 40px;
+    height: 40px;
+}
+.header.scrolled .logo_text {
+    font-size: 24px;
+}
+/********************************
+    Main Nav
+*********************************/
+.main_nav,
+.search_button,
+.shopping_cart {
+    display: inline-block;
+}
+.main_nav li {
+    display: inline-block;
+    position: relative;
+}
+.main_nav li:not(:last-child) {
+    margin-right: 44px;
+}
+.main_nav li a {
+    font-size: 18px;
+    font-weight: 500;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+.main_nav li.active::after {
+    display: block;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    content: "";
+}
+.search_button {
+    margin-left: 46px;
+    cursor: pointer;
+}
+.shopping_cart {
+    margin-left: 23px;
+    cursor: pointer;
+}
+.search_button i,
+.shopping_cart i {
+    font-size: 18px;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+.header_search_form {
+    display: block;
+    position: relative;
+    width: 40%;
+}
+.header_search_container {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: -1;
+    opacity: 0;
+    -webkit-transition: all 400ms ease;
+    -moz-transition: all 400ms ease;
+    -ms-transition: all 400ms ease;
+    -o-transition: all 400ms ease;
+    transition: all 400ms ease;
+}
+.header_search_container.active {
+    bottom: -73px;
+    opacity: 1;
+}
+.header_search_content {
+    width: 100%;
+    height: 73px;
+}
+.search_input {
+    width: 100%;
+    height: 40px;
+    border: none;
+    outline: none;
+    padding-left: 20px;
+}
+.header_search_button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 100%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+/*********************************
+    Hamburger
+*********************************/
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+.hamburger i {
+    font-size: 20px;
+
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+
+// de juan.scss
+
+.headerTop {
+  font-family: 'Museo Sans 500';
+}

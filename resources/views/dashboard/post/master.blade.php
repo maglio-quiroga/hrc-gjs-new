@@ -10,13 +10,11 @@
 
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
-
     <!-- Styles -->
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-    <!--<link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">-->
+    <!-- accesibilidad y bloques de separaciones (div) con sus estilos-->
+    <link rel="stylesheet" href="styles/accesibilidad.css">
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
 </head>
 <body class="font-sans antialiased">
     <div class="min-h-screen">
@@ -37,6 +35,8 @@
         </div>
         
     </div>
+    <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}" defer></script>
     <script src="{{ asset('js/app.js') }}"></script>
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="styles/bootstrap4/popper.js"></script>

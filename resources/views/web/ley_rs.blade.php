@@ -1,22 +1,14 @@
-@extends('web.master')
+@extends('layouts.web')
 
 @section('content')
-
-<style>
-    p{
-        font-size: 16px;
-        line-height: 20px;
-    }
-
-    ul{
-        list-style: circle;
-    }
-</style>
-
-<div class="container" style="margin-top: 200px; margin-bottom: 50px;">
+<!--PAGINA
+        INFORMACION DE PACIENTES 
+            ASPECTO LEGAL
+                Ley Ricarte Soto -->
+<div class="container deberDerecho">
 
     <div class="text-center mb-5">
-        <h2 style="color: #28a745; font-weight: bold;">Ley N°21.371: Ley Ricarte Soto</h2>
+        <h2 class="titulo_texto">Ley N°21.371: Ley Ricarte Soto</h2>
     </div>
 
     <p class="fs-4 text-center lh-sm text-info-emphasis">
@@ -27,7 +19,7 @@
 
     <div class="my-3">
         <h3 class="">¿Qué es la Ley Ricarte Soto?</h3>
-        <hr style="width:150px; height:2px; background-color: #28a745; border: none; opacity: 100;" class="mt-2">
+        <hr class="mt-2 ley">
         <p>
             Es un Sistema de Protección Financiera para Diagnósticos y Tratamientos de Alto Costo. Posee cobertura universal, es decir, pueden hacer uso de este beneficio todas las personas usuarias de los sistemas previsionales de salud: Esto es, isapres, Fonasa y las Instituciones de Salud Previsional de las Fuerzas Armadas y de Orden y de Seguridad Pública.
         </p>
@@ -37,7 +29,7 @@
 
     <div class="my-3">
         <h3 class="">¿Cómo se puede acceder?</h3>
-        <hr style="width:150px; height:2px; background-color: #28a745; border: none; opacity: 100;" class="mt-2">
+        <hr class="mt-2 ley">
         <ol>
             <li>El tratamiento requerido debe encontrarse financiado por la Ley Ricarte Soto.</li>
             <li>El o la especialista tratante se debe inscribir en el Sistema informático de la Ley Ricarte Soto.</li>
@@ -51,7 +43,7 @@
 
     <div class="my-3">
         <h3 class="">¿Qué cubre la Ley Ricarte Soto?</h3>
-        <hr style="width:150px; height:2px; background-color: #28a745; border: none; opacity: 100;" class="mt-2">
+        <hr class="mt-2 ley">
         <p>
             Cubre el 100% del valor de los medicamentos, dispositivos médicos o alimentos de alto costo, que se encuentran expresamente garantizados para cada problema de salud definido, según el decreto que los fija. Para algunos de estos problemas de salud, también garantiza la cobertura del examen de confirmación diagnóstica definido, exámenes específicos que, siendo también de alto costo, le permitirán verificar si tiene el problema de salud.
         </p>
@@ -61,7 +53,7 @@
 
     <div class="my-3">
         <h3 class="">¿Existen costos asociados al usuario?</h3>
-        <hr style="width:150px; height:2px; background-color: #28a745; border: none; opacity: 100;" class="mt-2">
+        <hr class="mt-2 ley">
         <p>
             Las prestaciones asociadas tendrán la cobertura de su sistema de salud previsional.
         </p>
@@ -71,7 +63,7 @@
 
     <div class="my-3">
         <h3 class="">¿Cómo sabré que mi tratamiento de alto costo tendrá Protección Financiera?</h3>
-        <hr style="width:150px; height:2px; background-color: #28a745; border: none; opacity: 100;" class="mt-2">
+        <hr class="mt-2 ley">
         <p>
             Es responsabilidad del/la médico/a tratante informar sobre las prestaciones garantizadas de la Ley Ricarte Soto. Además, puede consultar a través de los canales de atención disponibles en Superintendencia de Salud, Ministerio de Salud y Fonasa.
         </p>
@@ -81,7 +73,7 @@
 
     <div class="my-3">
         <h3 class="">¿Qué condiciones me dejan fuera de la Ley Ricarte Soto?</h3>
-        <hr style="width:150px; height:2px; background-color: #28a745; border: none; opacity: 100;" class="mt-2">
+        <hr class="mt-2 ley">
         <p>
             No tendrán esta protección financiera aquellos tratamientos que no están dentro del listado de prestaciones garantizadas para cada problema de salud definidas por el Ministerio de Salud y aquellas que, teniendo cobertura por el decreto, quedan sujetas a leyes y coberturas especiales, como la Ley de Accidentes Laborales o Enfermedades Profesionales.
         </p>
@@ -91,7 +83,7 @@
 
     <div class="my-3">
         <h3 class="">¿Cuáles son los problemas de Salud que poseen garantías?</h3>
-        <hr style="width:150px; height:2px; background-color: #28a745; border: none; opacity: 100;" class="mt-2">
+        <hr class="mt-2 ley">
         <ol>
             <li>Mucopolisacaridosis tipo I</li>
             <li>Mucopolisacaridosis tipo II</li>
