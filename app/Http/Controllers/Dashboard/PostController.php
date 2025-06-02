@@ -41,7 +41,7 @@ class PostController extends Controller
         $data = $request->validated();
 
         Post::create($data);
-        return to_route("post.index")->with('status','Información agregada');
+        return to_route("web.post.index")->with('status','Información agregada');
     }
 
     /**
@@ -76,7 +76,7 @@ class PostController extends Controller
         
         $post->update($data);
         //return back()->with('status','Información actualizada');
-        return to_route("post.index")->with('status','Información actualizada');
+        return to_route("web.post.index")->with('status','Información actualizada');
     }
 
     /**
@@ -85,7 +85,7 @@ class PostController extends Controller
     public function destroy(Post $post)
     {
         $post->delete();
-        return to_route("post.index")->with('status','Información eliminada');
+        return to_route("web.post.index")->with('status','Información eliminada');
     }
 
     public function PostsData()

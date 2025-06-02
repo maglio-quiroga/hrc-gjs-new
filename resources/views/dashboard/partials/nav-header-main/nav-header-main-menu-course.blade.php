@@ -4,7 +4,7 @@
 <li><h6 class="dropdown-header">Cursos</h6></li>
 
 {{-- Enlace Postulación Programa --}}
-<li><a class="dropdown-item {{ request()->routeIs('post.index') ? 'active' : '' }}" href="{{ route('post.index') }}"> {{-- ¡REVISAR RUTA! route('post.index') parece incorrecto aquí --}}
+<li><a class="dropdown-item {{ request()->routeIs('web.post.index') ? 'active' : '' }}" href="{{ route('web.post.index') }}"> {{-- ¡REVISAR RUTA! route('post.index') parece incorrecto aquí --}}
     <i class="fas fa-file-alt fa-fw me-2 text-success"></i> {{-- Icono FontAwesome --}}
     {{ __('Postulación Programa') }}
 </a></li>
@@ -13,7 +13,7 @@
 <li><hr class="dropdown-divider"></li>
 
 {{-- Enlace Planificar Cursos --}}
-<li><a class="dropdown-item {{ request()->routeIs('post.index') ? 'active' : '' }}" href="{{ route('post.index') }}"> {{-- ¡REVISAR RUTA! route('post.index') parece incorrecto aquí --}}
+<li><a class="dropdown-item {{ request()->routeIs('web.post.index') ? 'active' : '' }}" href="{{ route('web.post.index') }}"> {{-- ¡REVISAR RUTA! route('post.index') parece incorrecto aquí --}}
     <i class="fas fa-calendar-alt fa-fw me-2 text-success"></i> {{-- Icono FontAwesome --}}
     {{ __('Planificar Cursos') }}
 </a></li>

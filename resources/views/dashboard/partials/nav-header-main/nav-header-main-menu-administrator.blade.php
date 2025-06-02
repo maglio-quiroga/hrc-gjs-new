@@ -11,7 +11,7 @@
 </x-dropdown-link>
 
 {{-- Enlace Noticias --}}
-<li><a class="dropdown-item {{ request()->routeIs('post.index') ? 'active' : '' }}" href="{{ route('post.index') }}">
+<li><a class="dropdown-item {{ request()->routeIs('web.post.index') ? 'active' : '' }}" href="{{ route('web.post.index') }}">
     <i class="fas fa-newspaper fa-fw me-2 text-primary"></i> {{-- Icono FontAwesome + Clases Bootstrap --}}
     {{ __('Noticias') }}
 </a></li>
