@@ -1,37 +1,19 @@
 <?php
 
-use Illuminate\Routing\RouteGroup;
+use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\Dashboard\PostController;
+use App\Http\Controllers\Dashboard\PostImageController;
+use App\Http\Controllers\Dashboard\CategoryController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Web\WebPostController;
-use App\Http\Controllers\Dashboard\PostController;
-use App\Http\Controllers\Dashboard\CategoryController;
-use App\Http\Controllers\Dashboard\UserController;
-use App\Http\Controllers\Dashboard\ServiceController;
-use App\Http\Controllers\Dashboard\TeamController;
 use App\Http\Middleware\UserAccessDashboardMiddleware;
 
-/*Route::get('/', function () {
-    return view('welcome');
-});*/
-
-Route::get("/dashboard", function () {
-    return view("dashboard");
-})
-    ->middleware(["auth", "verified"])
-    ->name("dashboard");
-
-Route::middleware("auth")->group(function () {
-    Route::get("/profile", [ProfileController::class, "edit"])->name(
-        "profile.edit"
-    );
-    Route::patch("/profile", [ProfileController::class, "update"])->name(
-        "profile.update"
-    );
-    Route::delete("/profile", [ProfileController::class, "destroy"])->name(
-        "profile.destroy"
-    );
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 Route::get("/", [PageController::class, "inicio"])->name("inicio");
 Route::get("/nosotros", [PageController::class, "about"])->name("about");
@@ -90,19 +72,8 @@ Route::get("/consejo_consultivo", [
     "consejo_consultivo",
 ])->name("consejo_consultivo");
 
-Route::group(
-    [
-        "prefix" => "dashboard",
-        "middleware" => ["auth", UserAccessDashboardMiddleware::class],
-    ],
-    function () {
-        Route::resource("post", PostController::class);
-        Route::resource("category", CategoryController::class);
-        Route::resource("user", UserController::class);
-        Route::resource("service", ServiceController::class);
-        Route::resource("team", TeamController::class);
-    }
-);
+Route::get('/Posts-chart', [PostController::class, 'PostsData']);
+Route::get('/Categories-chart', [CategoryController::class, 'CategoriesData']);
 
 /* Funciona con resources/views/web/master2.blade.php */
 Route::group(["prefix" => "posted"], function () {
@@ -110,6 +81,15 @@ Route::group(["prefix" => "posted"], function () {
         Route::get("/", "index")->name("web.post.index");
         Route::get("/{post}", "show")->name("web.post.show");
     });
-})->name("posted");
+})->name('posted');
 
+Route::middleware(['auth',UserAccessDashboardMiddleware::class])->prefix('admin')->group(
+    function () {
+        Route::get('/',[AdminController::class , 'dashboard'])->name('admin.resume');
+        Route::get('/{model}/{action?}/{target?}',[AdminController::class , 'handleRoute'])->name('admin.handle.view');
+        Route::post('{model}/create',[AdminController::class , 'create'])->name('admin.handle.create');
+        Route::post('{model}/{target}/update',[AdminController::class , 'update'])->name('admin.handle.update');
+        Route::post('{model}/{target}/delete',[AdminController::class , 'delete'])->name('admin.handle.delete');
+    }
+);
 require __DIR__ . "/auth.php";

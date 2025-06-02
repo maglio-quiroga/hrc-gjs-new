@@ -4,7 +4,7 @@
         <p>{{ $post->created_at }}</p>
     </div>
     <div class="text-center">
-        <img src="{{ '/image/uploads/posts/' . $post->image }}" alt="Imagen de la noticia" class="img-fluid">
+        <img src="{{ asset($post['image']) }}" alt="Imagen de la noticia" class="img-fluid">
     </div>
     <div class="mt-4">
         <p class="text-justify">{{ $post->content }}</p>

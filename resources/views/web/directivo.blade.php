@@ -40,12 +40,21 @@
                                     <button type="button" class="btn btn-secondary mostrarInfoDirectivo" data-bs-dismiss="modal">Cerrar</button>
                                 </div>
                             </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" 
+                                        style="background-color: #4bb584; color: #fff; border: none; padding: 10px; font-size: 1rem; text-align: center; cursor: pointer; width: 100%; transition: background-color 0.2s ease;">
+                                    Cerrar
+                                </button>
+                            </div>
                         </div>
                     </div>
+                </div>
+
                 @endforeach
                 </div>
             </div>
         </div>
     </div>
 </div>
+
 @endsection

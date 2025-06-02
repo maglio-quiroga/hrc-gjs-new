@@ -6,6 +6,7 @@ use App\Models\Post;
 use App\Models\Category;
 use App\Models\PostImage;
 use Illuminate\Http\Request;
+use Illuminate\Http\JsonResponse;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Post\PutRequest;
 use App\Http\Requests\Post\StoreRequest;
@@ -17,7 +18,6 @@ class PostController extends Controller
      */
     public function index()
     {
-        
         $posts=Post::orderBy('created_at','desc')->paginate(10);
         return view('dashboard.post.index',['posts'=>$posts]);
     }
@@ -86,5 +86,22 @@ class PostController extends Controller
     {
         $post->delete();
         return to_route("post.index")->with('status','Información eliminada');
+    }
+
+    public function PostsData()
+    {
+        $publishedCount = Post::where('posted', 'yes')->count();
+
+        $draftCount = Post::where('posted', '')->count();
+
+        $totalPosts = $publishedCount + $draftCount;
+
+        $publishedPercentage = $totalPosts > 0 ? ($publishedCount / $totalPosts) * 100 : 0;
+        $draftPercentage = $totalPosts > 0 ? ($draftCount / $totalPosts) * 100 : 0;
+
+        return response()->json([
+            'published' => $publishedPercentage,
+            'draft' => $draftPercentage,
+        ]);
     }
 }

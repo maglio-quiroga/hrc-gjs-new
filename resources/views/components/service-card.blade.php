@@ -1,3 +1,4 @@
+
 <div class="card" data-bs-toggle="modal" data-bs-target="#modal-{{ $service['id'] }}">
     <img src="/image/uploads/service/{{ $service['image'] }}" class="card-img" alt="{{ $service['name'] }}">
     <div class="card-body">

@@ -3,7 +3,9 @@
 namespace App\Http\Controllers\Dashboard;
 
 use App\Models\Category;
+use App\Models\Post;
 use Illuminate\Http\Request;
+use Illuminate\Http\JsonResponse;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Category\StoreRequest;
 
@@ -90,7 +92,26 @@ class CategoryController extends Controller
     {
         $category->delete();
         return to_route("category.index")->with('status','Información eliminada');
-
     }
-    
+
+    public function CategoriesData()
+    {
+        $totalPosts = Post::count(); 
+        $categories = Category::withCount('post')->get(); 
+
+        $labels = [];
+        $percentages = [];
+
+        foreach ($categories as $category) {
+            $labels[] = $category->title;
+            $count = $category->post_count; 
+            $percentage = $totalPosts > 0 ? round(($count / $totalPosts) * 100, 2) : 0;
+            $percentages[] = $percentage;
+        }
+
+        return response()->json([
+            'labels' => $labels,
+            'data' => $percentages
+        ]);
+    }
 }
