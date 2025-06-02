@@ -1,0 +1,52 @@
+// 1. Importar Bootstrap SCSS (Completo)
+@import "bootstrap/scss/bootstrap";
+
+/*********************************************
+* Los CSS personalizados se enumeran en orden alfabético *
+*********************************************/
+// A
+@import "./accesibilidad";
+// B
+@import "./blog-single";
+@import "./body_general";
+// C
+@import "./campain";
+@import "./card_style";
+@import "./course&courses";
+// D
+@import "./directivo";
+// F
+@import "./flexslider";
+@import "./focus-style"; /* Import de los estilos de la funcionalidad de recuadro de enfoque */
+@import "./footer";
+// G
+@import "./gobierno";
+// H
+@import "./header";
+@import "./home";
+// I
+@import "./icon";
+// L
+@import "./lightbox";
+// M
+@import "./main";
+@import "./mapa";
+@import "./meanMenu";
+@import "./menu";
+@import "./modal";
+// N
+@import "./news-letter";
+// P
+@import "./pacientes_familiares";
+// R
+@import "./responsive";
+// S
+@import "./section";
+@import "./service_card";
+@import "./sidebar";
+// T
+@import "./table";
+@import "./team";
+
+// Fonts (Fuentes)
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:300,400,500,700,900");

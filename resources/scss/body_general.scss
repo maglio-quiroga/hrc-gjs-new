@@ -1,0 +1,183 @@
+@charset "utf-8";
+/*MAPA DEL GOOGLE FIN DE LA PAGINA*/
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+}
+body {
+    font-family: "Museo Sans 500", "Roboto", sans-serif;
+    font-size: 0.75em;
+    font-weight: 400;
+}
+div {
+    display: block;
+    position: relative;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+ul {
+    list-style: none;
+    margin-bottom: 0em;
+}
+p {
+    font-family: "Museo Sans 500", "Roboto", sans-serif;
+    font-size: 1em;
+    line-height: 1.85;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+}
+p a {
+    display: inline;
+    position: relative;
+    color: inherit;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+p:last-of-type {
+    margin-bottom: 0;
+}
+a,
+a:hover,
+a:visited,
+a:active,
+a:link {
+    text-decoration: none;
+    -webkit-font-smoothing: antialiased;
+}
+p a:active {
+    position: relative;
+}
+p a:hover::after {
+    opacity: 0.2;
+}
+h1 {
+    font-size: 2.5em;
+}
+h2 {
+    font-size: 2em;
+}
+h3 {
+    font-size: 1.5em;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Museo Sans 500", "Roboto Slab", serif;
+    font-weight: 700;
+    -webkit-font-smoothing: antialiased;
+    margin-bottom: 0;
+}
+.btn {
+    font-size: 1.25em !important;
+}
+section {
+    display: block;
+    position: relative;
+    box-sizing: border-box;
+}
+.clear {
+    clear: both;
+}
+.clearfix::before,
+.clearfix::after {
+    content: "";
+    display: table;
+}
+.clearfix::after {
+    clear: both;
+}
+.clearfix {
+    zoom: 1;
+}
+.float_left {
+    float: left;
+}
+.float_right {
+    float: right;
+}
+.trans_200 {
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+.trans_300 {
+    -webkit-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    -ms-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+    transition: all 300ms ease;
+}
+.trans_400 {
+    -webkit-transition: all 400ms ease;
+    -moz-transition: all 400ms ease;
+    -ms-transition: all 400ms ease;
+    -o-transition: all 400ms ease;
+    transition: all 400ms ease;
+}
+.trans_500 {
+    -webkit-transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+.fill_height {
+    height: 100%;
+}
+.super_container {
+    width: 100%;
+    overflow: hidden;
+}
+.prlx_parent {
+    overflow: hidden;
+}
+.prlx {
+    height: 130%;
+}
+.parallax-window {
+    min-height: 400px;
+    background: transparent;
+}
+.nopadding {
+    padding: 0em;
+}
+.round_button {
+    display: flex !important;
+    justify-content: center; /* centra horizontalmente */
+    align-items: center; /* centra verticalmente */
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+// de juan.scss
+
+.textoRelleno {
+    text-align: justify;
+}
+
+.titulo_texto {
+    font-weight: bold;
+}
+
+.ajusteEnlacesInteres {
+    padding-bottom: 50px;
+}

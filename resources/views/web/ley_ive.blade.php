@@ -1,22 +1,14 @@
-@extends('web.master')
+@extends('layouts.web')
 
 @section('content')
-
-<style>
-    p{
-        font-size: 16px;
-        line-height: 20px;
-    }
-
-    ul{
-        list-style: circle;
-    }
-</style>
-
-<div class="container" style="margin-top: 200px; margin-bottom: 50px;">
+<!--PAGINA
+        INFORMACION DE PACIENTES 
+            ASPECTO LEGAL
+                Interrupción Voluntaria del Embarazo -->
+<div class="container deberDerecho">
 
     <div class="text-center mb-5">
-        <h2 style="color: #28a745; font-weight: bold;">Ley N°21.030: Interrupción Voluntaria del Embarazo</h2>
+        <h2 class="titulo_texto">Ley N°21.030: Interrupción Voluntaria del Embarazo</h2>
     </div>
 
     <p class="fs-4 text-center lh-sm text-info-emphasis">
@@ -27,7 +19,7 @@
 
     <div class="my-3">
         <h3 class="">Primera causal: la mujer se encuentra en riesgo vital</h3>
-        <hr style="width:150px; height:2px; background-color: #28a745; border: none; opacity: 100;" class="mt-2">
+        <hr class="mt-2 ley">
         <p class="fs-5 text-center lh-sm">
             La primera causal de la Ley N° 21.030 señala que se autoriza la interrupción voluntaria del embarazo cuando “La mujer se encuentre en riesgo vital, de modo que la interrupción del embarazo evite un peligro para su vida”.
         </p>
@@ -70,7 +62,7 @@
     <div class="my-3">
         <h3 class="">Segunda causal: patología congénita adquirida o genética, incompatible con la vida extrauterina
         independiente, en todo caso de carácter letal</h3>
-        <hr style="width:150px; height:2px; background-color: #28a745; border: none; opacity: 100;" class="mt-2">
+        <hr class="mt-2 ley">
         <p class="fs-5 text-center lh-sm">La Ley Nº 21.030 señala que se autoriza la interrupción voluntaria del embarazo cuando “el embrión o feto padezca una patología congénita adquirida o genética, incompatible con la vida extrauterina independiente, en todo caso de carácter letal”.</p>
 
         <h4 class="mt-4 mb-2">Constitución de la Causal</h4>
@@ -101,7 +93,7 @@
 
     <div class="my-3">
         <h3 class="">Tercera causal: embarazo resultado de una violación</h3>
-        <hr style="width:150px; height:2px; background-color: #28a745; border: none; opacity: 100;" class="mt-2">
+        <hr class="mt-2 ley">
         <p class="fs-5 text-center lh-sm">La tercera causal de la Ley N° 21.030 explicita que se autoriza la interrupción voluntaria del embarazo cuando éste “Sea resultado de una violación, siempre que no hayan transcurrido más de doce semanas de gestación. Tratándose de una niña menor de 14 años, la interrupción del embarazo podrá realizarse siempre que no hayan transcurrido más de catorce semanas de gestación”.</p>
 
         <h4 class="mt-4 mb-2">Constitución de la Causal</h4>

@@ -1,6 +1,9 @@
-@extends('web.master')
+@extends('layouts.web')
 @section('content')
-<div class="container" style="margin-top: 200px; margin-bottom: 50px;">
+<!--PAGINA
+        QUIENES SOMOS
+            CUENTAS PUBLICAS -->
+<div class="container deberDerecho">
     <h2 class="text-center mb-5">Cuentas Públicas</h2>
 
     <div class="container text-center my-5">

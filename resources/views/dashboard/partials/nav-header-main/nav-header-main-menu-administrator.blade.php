@@ -10,7 +10,11 @@
     </div>{{ __('Categorías de Noticias') }}
 </x-dropdown-link>
 
-<hr class="h-0 my-2 border border-solid border-t-0 border-gray-400 opacity-50" />
+{{-- Enlace Noticias --}}
+<li><a class="dropdown-item {{ request()->routeIs('post.index') ? 'active' : '' }}" href="{{ route('post.index') }}">
+    <i class="fas fa-newspaper fa-fw me-2 text-primary"></i> {{-- Icono FontAwesome + Clases Bootstrap --}}
+    {{ __('Noticias') }}
+</a></li>
 
 <x-dropdown-link :href="route('admin.handle.view', ['model' => 'users'])" :active="request()->routeIs('users.index')" class="icon-menu icon-menu-hover-blue">
     <div class="mr-3 text-blue-600">

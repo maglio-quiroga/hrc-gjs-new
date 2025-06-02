@@ -10,7 +10,7 @@
                 <p>{{ $service['description'] }}</p>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="w-100 btn btn-secondary we_5f" data-bs-dismiss="modal">Cerrar</button>
             </div>
         </div>
     </div>

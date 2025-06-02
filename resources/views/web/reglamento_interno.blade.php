@@ -1,17 +1,20 @@
-@extends('web.master')
+@extends('layouts.web')
 
 @section('content')
-<div class="container" style="margin-top: 150px; margin-bottom: 50px;">
+<!--PAGINA
+        INFORMACION DE PACIENTES 
+            REGLAMENTO INTERNO -->
+<div class="container infoPacientes">
 
     <!-- Título Principal -->
     <div class="text-center mb-4">
-        <h2 style="color: #28a745; font-weight: bold;">Reglamento Interno</h2>
+        <h2 class="titulo_texto">Reglamento Interno</h2>
     </div>
 
     <!-- Sección: Normas de Higiene y Seguridad -->
     <div class="mb-5">
         <h3 class="text-success">NORMAS DE HIGIENE Y SEGURIDAD</h3>
-        <p style="text-align: justify;">
+        <p class="textoRelleno">
             La empresa, de acuerdo con la <strong>ley 16.744</strong> y el artículo 67, tiene la obligación de implementar normas estrictas de higiene y seguridad en el lugar de trabajo. 
             Todo trabajador deberá:
         </p>
@@ -21,7 +24,7 @@
             <li>Reportar incidentes, accidentes o situaciones de riesgo al supervisor directo.</li>
             <li>Participar en las capacitaciones y entrenamientos de seguridad impartidos por la empresa.</li>
         </ul>
-        <p style="text-align: justify;">
+        <p class="textoRelleno">
             Además, cualquier incumplimiento a estas normas será sancionado conforme a lo establecido en el presente reglamento y en la legislación laboral vigente.
         </p>
     </div>
@@ -29,7 +32,7 @@
     <!-- Sección: Capítulo I -->
     <div class="mb-5">
         <h3 class="text-success">CAPÍTULO I: DISPOSICIONES GENERALES</h3>
-        <p style="text-align: justify;">
+        <p class="textoRelleno">
             El ingreso de los nuevos trabajadores al establecimiento queda condicionado a la realización de una inducción de seguridad y prevención de riesgos. Durante esta inducción, se les informará:
         </p>
         <ul>
@@ -38,7 +41,7 @@
             <li>Los procedimientos de evacuación en caso de emergencias.</li>
             <li>Los riesgos específicos asociados a su puesto de trabajo.</li>
         </ul>
-        <p style="text-align: justify;">
+        <p class="textoRelleno">
             Todo nuevo trabajador deberá firmar un acta de participación en la inducción, que quedará registrada en su expediente personal.
         </p>
     </div>
@@ -46,7 +49,7 @@
     <!-- Sección: Capítulo II -->
     <div class="mb-5">
         <h3 class="text-success">CAPÍTULO II: TERMINOLOGÍA Y DEFINICIONES</h3>
-        <p style="text-align: justify;">
+        <p class="textoRelleno">
             Para efectos del presente reglamento, se entenderá por:
         </p>
         <ul>
@@ -60,7 +63,7 @@
     <!-- Sección: Capítulo III -->
     <div class="mb-5">
         <h3 class="text-success">CAPÍTULO III: DE LAS CONDICIONES DE INGRESO</h3>
-        <p style="text-align: justify;">
+        <p class="textoRelleno">
             Los nuevos trabajadores deberán cumplir con las siguientes condiciones al momento de ingresar a la empresa:
         </p>
         <ol>
@@ -69,7 +72,7 @@
             <li>Realizar exámenes médicos pre-ocupacionales para verificar su estado de salud.</li>
             <li>Comprometerse por escrito a respetar las normas de seguridad y conducta establecidas.</li>
         </ol>
-        <p style="text-align: justify;">
+        <p class="textoRelleno">
             El incumplimiento de estas condiciones puede ser causal de rechazo del ingreso del trabajador.
         </p>
     </div>
@@ -77,7 +80,7 @@
     <!-- Sección: Capítulo IV -->
     <div class="mb-5">
         <h3 class="text-success">CAPÍTULO IV: DE LA JORNADA DE TRABAJO</h3>
-        <p style="text-align: justify;">
+        <p class="textoRelleno">
             La jornada laboral ordinaria se establece conforme a la legislación vigente y deberá ser respetada por todos los trabajadores:
         </p>
         <ul>
@@ -85,7 +88,7 @@
             <li><strong>Jornada Nocturna:</strong> 22:00 a 06:00 horas.</li>
             <li><strong>Horas Extraordinarias:</strong> Se pagarán de acuerdo con lo estipulado en el Código del Trabajo y sólo podrán realizarse con autorización expresa del empleador.</li>
         </ul>
-        <p style="text-align: justify;">
+        <p class="textoRelleno">
             Los trabajadores deberán registrar su asistencia diariamente mediante el sistema implementado por la empresa.
         </p>
     </div>
@@ -93,10 +96,10 @@
     <!-- Sección: Capítulo V -->
     <div class="mb-5">
         <h3 class="text-success">CAPÍTULO V: DE LAS REMUNERACIONES Y ASIGNACIONES</h3>
-        <p style="text-align: justify;">
+        <p class="textoRelleno">
             Las remuneraciones serán entregadas los días <strong>30 de cada mes</strong>. En caso de ser un día inhábil, el pago se realizará el día hábil anterior.
         </p>
-        <p style="text-align: justify;">
+        <p class="textoRelleno">
             Las asignaciones incluyen:
         </p>
         <ul>
@@ -104,7 +107,7 @@
             <li>Asignación de movilización.</li>
             <li>Asignación familiar, conforme a la normativa legal vigente.</li>
         </ul>
-        <p style="text-align: justify;">
+        <p class="textoRelleno">
             Los descuentos por atrasos, inasistencias injustificadas o sanciones se aplicarán conforme a lo establecido en este reglamento.
         </p>
     </div>

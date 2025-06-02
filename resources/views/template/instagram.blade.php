@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 
 <div class="team">
-	<div class="team_background parallax-window" data-parallax="scroll" data-image-src="images/team_background.jpg" data-speed="0.8"></div>
+	<!--div class="team_background parallax-window" data-parallax="scroll" data-image-src="images/team_background.jpg" data-speed="0.8"></div-->
 	<div class="container">
 		<div class="row">
 			<div class="col">
@@ -59,8 +59,8 @@
 					</div>
 
 					<!-- Navigation Buttons -->
-					<div class="swiper-button-next" style="color:#75c891"></div>
-					<div class="swiper-button-prev" style="color:#75c891"></div>
+					<div class="swiper-button-next colorSwiper"></div>
+					<div class="swiper-button-prev colorSwiper"></div>
 				</div>
 			</div>
 		</div>

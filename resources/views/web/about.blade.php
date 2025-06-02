@@ -1,30 +1,14 @@
-@extends('web.master')
+@extends('layouts.web')
 @section('content')
-<div class="container" style="margin-top: 150px">
-    <link rel="stylesheet" type="text/css" href="styles/about.css">
-    <div class="super_container">
+<div class="container we_1a">
+    <div class="super_container quienesSomos">
         <div class="about">
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <div class="container text-center">
-                            <br><br>
-                            <h2 class="section_title">Sobre Nosotros</h2>
-                            <br><br>
-                            <div class="section_subtitle">
-                                <p></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div style="width: 100%;">
+            <div class="container text-center"><h2 class="section_title">Sobre Nosotros</h2></div>
+                <div class="visualNosotros mb-4">
                     <iframe width="100%" height="610" class="embed-responsive-item"
                             src="https://www.youtube.com/embed/oqsil9V2c7Q?autoplay=1&controls=0"
                             allowfullscreen></iframe>
                 </div>
-                <br><br>
-
                 @foreach ([
                     ['title' => 'Reseña histórica',
                       'img' => 'images/about/01-frontis-hrc-anos-40-1.jpg',
@@ -61,27 +45,25 @@
                         ]
                     ]
                 ] as $section)
-                    <div class="card mb-3" style="max-width: 100%;">
-                        <div class="row g-0"style="margin: auto; padding-bottom: 20px">
-                            <div class="col-md-4 px-3" >
-                                <br>
-                                <img src="{{ $section['img'] }}" class="img-fluid rounded-start" style="border-radius: 3%;" alt="...">
+                    <div class="card-only-color mb-4 tarjetasNosotros">
+                        <div class="row my-3">
+                            <div class="col-md-4 d-flex align-items-center px-3" >
+                                <img src="{{ $section['img'] }}" class="img-fluid rounded-start imagenNosotros" alt="...">
                             </div>
                             <div class="col-md-8">
                                 <div class="card-body">
                                     <h3 class="card-title">{{ $section['title'] }}</h3>
                                     @if (isset($section['text']))
-                                        <p class="card-text" style="text-align: justify">{{ $section['text'] }}</p>
+                                        <p class="card-text textoRelleno">{{ $section['text'] }}</p>
                                     @else
                                         @foreach ($section['texts'] as $key => $text)
-                                        <p class="card-text" style="text-align: justify"><b>{{ $key }}</b>: {{ $text }}</p>
+                                        <p class="card-text textoRelleno"><b>{{ $key }}</b>: {{ $text }}</p>
                                         @endforeach
                                     @endif
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <br>
                 @endforeach
             </div>
         </div>

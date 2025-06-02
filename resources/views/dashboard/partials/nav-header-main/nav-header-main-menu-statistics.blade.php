@@ -1,6 +1,13 @@
-<x-dropdown-link :href="route('post.index')" :active="request()->routeIs('post.index')" class="icon-menu icon-menu-hover-yellow">
-    <div class="mr-3 text-yellow-600" >
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.5 16.875h3.375m0 0h3.375m-3.375 0V13.5m0 3.375v3.375M6 10.5h2.25a2.25 2.25 0 002.25-2.25V6a2.25 2.25 0 00-2.25-2.25H6A2.25 2.25 0 003.75 6v2.25A2.25 2.25 0 006 10.5zm0 9.75h2.25A2.25 2.25 0 0010.5 18v-2.25a2.25 2.25 0 00-2.25-2.25H6a2.25 2.25 0 00-2.25 2.25V18A2.25 2.25 0 006 20.25zm9.75-9.75H18a2.25 2.25 0 002.25-2.25V6A2.25 2.25 0 0018 3.75h-2.25A2.25 2.25 0 0013.5 6v2.25a2.25 2.25 0 002.25 2.25z"></path></svg>    
-    </div>{{ __('Postulación Programa') }}
-</x-dropdown-link>
-<hr class="h-0 my-2 border border-solid border-t-0 border-gray-700 opacity-25" />
+{{-- Convertido a Bootstrap 5 List Items --}}
+
+{{-- Encabezado Opcional para la sección --}}
+<li><h6 class="dropdown-header">Estadísticas</h6></li>
+
+{{-- Enlace Postulación Programa --}}
+<li><a class="dropdown-item {{ request()->routeIs('post.index') ? 'active' : '' }}" href="{{ route('post.index') }}"> {{-- ¡REVISAR RUTA! route('post.index') parece incorrecto aquí --}}
+    <i class="fas fa-chart-bar fa-fw me-2 text-warning"></i> {{-- Icono FontAwesome --}}
+    {{ __('Postulación Programa') }}
+</a></li>
+
+{{-- Divisor (Si se añaden más items después) --}}
+{{-- <li><hr class="dropdown-divider"></li> --}}

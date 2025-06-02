@@ -1,21 +1,9 @@
-@extends('web.master')
+@extends('layouts.web')
 @section('content')
-
-<style>
-    p{
-        font-size: 16px;
-        line-height: 20px;
-    }
-    ul{
-        list-style: circle;
-        line-height: 25px;
-    }
-    ol{
-        line-height: 25px;
-    }
-</style>
-
-<div class="container" style="margin-top: 200px; margin-bottom: 50px;">
+<!--PAGINA
+        QUIENES SOMOS
+            CONSEJO CONSULTIVO -->
+<div class="container deberDerecho">
     <h2 class="text-center mb-5">Consejo Consultivo</h2>
 
     <p>
