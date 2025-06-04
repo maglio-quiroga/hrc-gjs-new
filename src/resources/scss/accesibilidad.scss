@@ -1,0 +1,120 @@
+@charset "utf-8";
+/**************************
+    --HACCECIBILIDAD--
+**************************/
+#btnAccesibilidad {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10000;
+}
+#menuAccesibilidad {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    border-radius: 10px;
+    padding: 10px;
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 10000;
+}
+#menuAccesibilidad button {
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.accMenu {
+    width: 30em !important;
+    font-size: 14px !important;
+}
+
+/* Hide focus option by default on small screens */
+@media (max-width: 768px) {
+    .focus-option {
+        display: none !important;
+    }
+}
+
+/*aumeta el tamaño del texto*/
+.texto-muy-grande {
+    font-size: 1.2em !important;
+}
+.texto-grande {
+    font-size: 1em !important;
+}
+/*reducir el tamaño del texto*/
+.smaller-text {
+    font-size: 0.6em !important;
+}
+.texto-muy-pequeño {
+    font-size: 0.5em !important;
+}
+
+/*****************
+* PROGRESO CHINO *
+*****************/
+
+/*
+.highlighted-element {
+    padding: 0.2em;
+    background-color: yellow;
+    transition: all 0.3s ease;
+    font-weight: bolder;
+}
+*/
+
+.highlighted-element-yellow {
+    padding: 0.2em;
+    transition: all 0.3s ease; /* Transición suave */
+    font-weight: bolder; /* Texto más negrita */
+}
+
+.highlighted-element-blue {
+    padding: 0.2em;
+    transition: all 0.3s ease;
+    font-weight: bolder;
+}
+
+.highlighted-element-white {
+    padding: 0.2em;
+    transition: all 0.3s ease;
+    font-weight: bolder;
+}
+
+.highlighted-element-black {
+    padding: 0.2em;
+    transition: all 0.3s ease;
+    font-weight: bolder;
+}
+
+.color-filter-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 9999;
+    mix-blend-mode: multiply;
+    opacity: 0.4;
+}
+
+// De juan.scss
+
+.accesibleBoton {
+    z-index: 10000;
+}
+
+.accesibleOpcion {
+    bottom: 100%;
+}
+.accessibility-icon {
+    width: 56px !important;
+    height: 56px !important;
+}

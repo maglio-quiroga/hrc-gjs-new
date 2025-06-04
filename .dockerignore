@@ -1,0 +1,7 @@
+/src/node_modules
+/src/public/build
+/src/public/hot
+/src/storage
+/src/vendor
+/src/composer.lock
+/src/package-lock.json

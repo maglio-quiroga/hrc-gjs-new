@@ -1,0 +1,17 @@
+<div class="modal fade" id="modal-{{ $service['id'] }}" tabindex="-1" aria-labelledby="modalLabel-{{ $service['id'] }}" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalLabel-{{ $service['id'] }}">{{ $service['name'] }}</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <img src="{{ asset($service['image']) }}" alt="Imagen del servicio" class="img-fluid">
+                <p>{{ $service['description'] }}</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="w-100 btn btn-secondary we_5f" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>

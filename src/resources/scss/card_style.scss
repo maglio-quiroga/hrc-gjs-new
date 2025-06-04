@@ -1,0 +1,58 @@
+@charset "utf-8";
+/*********************************************
+*  Estilos personalizados para las tarjetas  *
+**********************************************/
+.card {
+    border: none; /* Remueve el borde por defecto de la tarjeta */
+    margin-bottom: 1.5rem; /* Espacio inferior entre tarjetas */
+    border-radius: 0.375rem; /* Esquinas redondeadas */
+    overflow: hidden; /* Asegura que la barra superior no se salga */
+    flex-grow: 1; /* Permite que la tarjeta crezca para llenar el espacio */
+    cursor: pointer;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+.card-header {
+    font-family: "Museo Sans 500";
+}
+@media (hover: hover) and (pointer: fine) { // Diego: FIXEA LA ANIMACIÓN EN MÓVILES
+  .card:hover {
+    transform: translateY(-5px);
+  }
+}
+.card-top-border {
+    height: 5px; /* Altura de la barra superior */
+    display: flex; /* Usa flexbox para alinear los colores */
+}
+.border-color-1 {
+    flex-basis: 50%; /* Ocupa el 50% del ancho */
+}
+.border-color-2 {
+    flex-basis: 50%; /* Ocupa el 50% del ancho */
+}
+.card-link {
+    text-decoration: none;
+}
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* separa texto y botón */
+    align-items: center;            /* centra horizontalmente */
+    padding: 1.25rem;
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.5em;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+
+//de juan.scss
+
+.llenarTarjeta {
+  margin: auto; 
+  padding-bottom: 20px;
+}
