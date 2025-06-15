@@ -109,7 +109,7 @@
   border: 2px solid #4f46e5;  
   border-radius: 0.5rem;      
   background-color: #4f46e5;  
-  color: white;               /* Texto blanco */
+  color: white;               
   cursor: pointer;
   transition: background-color 0.2s, border-color 0.2s;
 

@@ -54,23 +54,23 @@
 <style>
 
 .dark .section-title {
-    color: #f3f4f6;                /* text-gray-100 */
+    color: #f3f4f6;                
 }
 
 .section-subtitle {
-    margin-top: 0.25rem;           /* mt-1 */
-    font-size: 0.875rem;           /* text-sm */
-    color: #4b5563;                /* text-gray-600 */
+    margin-top: 0.25rem;           
+    font-size: 0.875rem;           
+    color: #4b5563;                
 }
 .dark .section-subtitle {
-    color: #9ca3af;                /* text-gray-400 */
+    color: #9ca3af;               
 }
 
 .form-section {
-    margin-top: 1.5rem;            /* mt-6 */
+    margin-top: 1.5rem;            
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;                   /* space-y-6 */
+    gap: 1.5rem;                   
 }
 
 
@@ -78,15 +78,15 @@
 .form-actions {
     display: flex;
     align-items: center;
-    gap: 1rem;                     /* gap-4 */
+    gap: 1rem;                     
 }
 
 .saved-message {
-    font-size: 0.875rem;           /* text-sm */
-    color: #4b5563;                /* text-gray-600 */
+    font-size: 0.875rem;          
+    color: #4b5563;                
 }
 .dark .saved-message {
-    color: #9ca3af;                /* text-gray-400 */
+    color: #9ca3af;                
 }
 
 </style>
