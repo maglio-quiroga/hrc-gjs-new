@@ -70,15 +70,15 @@
     .custom-primary-button {
   background-color: #4b9011;
   color: white;
-  padding: 0.75rem 1.5rem;    /* Tamaño más grande */
+  padding: 0.75rem 1.5rem;    
   font-size: 1rem;
   border: none;
-  border-radius: 0.5rem;       /* Bordes redondeados */
+  border-radius: 0.5rem;       
   cursor: pointer;
   transition: background-color 0.2s ease, box-shadow 0.2s ease;
 
   &:hover {
-    background-color: #3a720d; /* Versión más oscura al pasar el mouse */
+    background-color: #3a720d; 
   }
 
   &:focus {
@@ -88,96 +88,96 @@
 }
 
     .section-title {
-    font-size: 1.5rem;           /* text-lg */
-    font-weight: 500;              /* font-medium */
-    color: #111827;                /* text-gray-900 */
+    font-size: 1.5rem;           
+    font-weight: 500;              
+    color: #111827;                
 }
 
 .dark .section-title {
-    color: #f3f4f6;                /* text-gray-100 */
+    color: #f3f4f6;                
 }
 
 .section-subtitle {
-    margin-top: 0.25rem;           /* mt-1 */
-   font-size: 1rem;           /* text-sm */
-    color: #4b5563;                /* text-gray-600 */
+    margin-top: 0.25rem;           
+   font-size: 1rem;           
+    color: #4b5563;                
 }
 
 .dark .section-subtitle {
-    color: #9ca3af;                /* text-gray-400 */
+    color: #9ca3af;                
 }
 
 .form-section {
-    margin-top: 1.5rem;            /* mt-6 */
+    margin-top: 1.5rem;            
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;                   /* space-y-6 */
+    gap: 1.5rem;                   
 }
 
 .input-text {
-    margin-top: 0.25rem;     /* mt-1 */
+    margin-top: 0.25rem;     
   display: block;
   width: 100%;
-  padding: 0.75rem 1rem;   /* Espaciado interno para hacerlo más grande */
-  font-size: 1rem;         /* Tamaño de fuente más legible */
-  border: 1px solid #ccc;  /* Borde más definido */
-  border-radius: 0.5rem;   /* Bordes redondeados */
+  padding: 0.75rem 1rem;   
+  font-size: 1rem;         
+  border: 1px solid #ccc;  
+  border-radius: 0.5rem;
   transition: border-color 0.2s, box-shadow 0.2s;
 }
 
 .input-error {
-    margin-top: 0.5rem;            /* mt-2 */
+    margin-top: 0.5rem;           
 }
 
 .verification-warning {
-    font-size: 0.875rem;           /* text-sm */
-    margin-top: 0.5rem;            /* mt-2 */
-    color: #1f2937;                /* text-gray-800 */
+    font-size: 0.875rem;           
+    margin-top: 0.5rem;            
+    color: #1f2937;                
 }
 
 .dark .verification-warning {
-    color: #e5e7eb;                /* text-gray-200 */
+    color: #e5e7eb;                
 }
 
 .verify-button {
     text-decoration: underline;
-    font-size: 0.875rem;           /* text-sm */
-    color: #4b5563;                /* text-gray-600 */
-    border-radius: 0.375rem;       /* rounded-md */
+    font-size: 0.875rem;           
+    color: #4b5563;                
+    border-radius: 0.375rem;      
     outline: none;
     transition: all 0.2s;
 }
 
 .verify-button:hover {
-    color: #111827;                /* text-gray-900 */
+    color: #111827;                
 }
 
 .dark .verify-button {
-    color: #9ca3af;                /* dark:text-gray-400 */
+    color: #9ca3af;                
 }
 
 .dark .verify-button:hover {
-    color: #f3f4f6;                /* dark:hover:text-gray-100 */
+    color: #f3f4f6;               
 }
 
 .verify-button:focus {
     outline: none;
-    box-shadow: 0 0 0 2px #6366f1; /* focus:ring-indigo-500 */
+    box-shadow: 0 0 0 2px #6366f1; 
 }
 
 .dark .verify-button:focus {
-    box-shadow: 0 0 0 2px #6366f1, 0 0 0 4px #1f2937; /* dark:focus:ring-offset-gray-800 */
+    box-shadow: 0 0 0 2px #6366f1, 0 0 0 4px #1f2937; 
 }
 
 .verification-sent {
-    margin-top: 0.5rem;            /* mt-2 */
-    font-size: 0.875rem;           /* text-sm */
-    font-weight: 500;              /* font-medium */
-    color: #16a34a;                /* text-green-600 */
+    margin-top: 0.5rem;            
+    font-size: 0.875rem;           
+    font-weight: 500;              
+    color: #16a34a;                
 }
 
 .dark .verification-sent {
-    color: #4ade80;                /* text-green-400 */
+    color: #4ade80;              
 }
 
 .form-actions {
@@ -187,12 +187,12 @@
 }
 
 .saved-message {
-    font-size: 0.875rem;           /* text-sm */
-    color: #4b5563;                /* text-gray-600 */
+    font-size: 0.875rem;          
+    color: #4b5563;               
 }
 
 .dark .saved-message {
-    color: #9ca3af;                /* text-gray-400 */
+    color: #9ca3af;                
 }
 
 
