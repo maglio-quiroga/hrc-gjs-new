@@ -60,39 +60,39 @@
 .section-delete {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem; /* espacio vertical entre elementos (equivale a space-y-6) */
+    gap: 1.5rem; 
 }
 
 
 .dark .section-title {
-    color: #f3f4f6;      /* text-gray-100 */
+    color: #f3f4f6;      
 }
 
 .section-subtitle {
-    margin-top: 0.25rem; /* mt-1 */
-    font-size: 0.875rem; /* text-sm */
-    color: #4b5563;      /* text-gray-600 */
+    margin-top: 0.25rem; 
+    font-size: 0.875rem; 
+    color: #4b5563;     
 }
 .dark .section-subtitle {
-    color: #9ca3af;      /* text-gray-400 */
+    color: #9ca3af;      
 }
 
 .modal-form {
-    padding: 1.5rem; /* p-6 */
+    padding: 1.5rem; 
 }
 
 .form-group {
-    margin-top: 1.5rem; /* mt-6 */
+    margin-top: 1.5rem; 
 }
 
 .input-text-medium {
     margin-top: 0.25rem;
     display: block;
-    width: 75%;         /* w-3/4 */
+    width: 75%;         
 }
 
 .input-error {
-    margin-top: 0.5rem; /* mt-2 */
+    margin-top: 0.5rem; 
 }
 
 .form-actions-end {
@@ -103,12 +103,12 @@
 }
 
 .button-spacing-left {
-    margin-left: 0.75rem;       /* ms-3 */
-  padding: 0.75rem 1.5rem;    /* Hace el botón más grande */
-  font-size: 1rem;            /* Texto más legible */
-  border: 2px solid #4f46e5;  /* Borde con color (indigo) */
-  border-radius: 0.5rem;      /* Bordes redondeados */
-  background-color: #4f46e5;  /* Fondo del botón */
+    margin-left: 0.75rem;       
+  padding: 0.75rem 1.5rem;    
+  font-size: 1rem;            
+  border: 2px solid #4f46e5;  
+  border-radius: 0.5rem;      
+  background-color: #4f46e5;  
   color: white;               /* Texto blanco */
   cursor: pointer;
   transition: background-color 0.2s, border-color 0.2s;
