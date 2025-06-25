@@ -41,17 +41,17 @@
                     <thead class="table-dark">
                         <tr>
                             <th>ID</th>
-                            <th>ID Evento</th>
-                            <th>ID Tag</th>
+                            <th>Nombre Evento</th>
+                            <th>Nombre Tag</th>
                             <th>Acciones</th>
                         </tr>
                     </thead>
                     <tbody id="category-table-body">
                         @forelse ($records as $record)
-                            <tr class="category-row">
+                            <tr class   ="category-row">
                                 <td>{{ $record->id }}</td>
-                                <td>{{ $record->event_id }}</td>
-                                <td>{{ $record->tag_id }}</td>
+                                <td>{{ $record->event->title ?? 'Evento no encontrado' }}</td>
+                                <td>{{ $record->tag->name ?? 'Tag no encontrado' }}</td>
                                 <td>
                                     <a href="{{ route('admin.handle.view', ['model' => 'tag_per_event', 'action' => 'edit', 'target' => $record->id]) }}" class="btn btn-sm btn-warning me-1">
                                         <i class="bi bi-pencil-square"></i> Editar
