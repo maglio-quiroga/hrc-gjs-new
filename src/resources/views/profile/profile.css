@@ -1,38 +1,3 @@
-<link rel="stylesheet" href="{{ asset('css/profile.css') }}">
-<x-app-layout>
-    <x-slot name="header">
-        <h2 class="profile-header">
-   
-        </h2>
-    </x-slot>
-
-    <div class="profile-wrapper">
-        <div class="profile-container">
-            <div class="profile-card">
-                <div class="profile-form-wrapper">
-                    @include('profile.partials.update-profile-information-form')
-                </div>
-            </div>
-
-            <div class="profile-card">
-                <div class="profile-form-wrapper">
-                    @include('profile.partials.update-password-form')
-                </div>
-            </div>
-
-            <div class="profile-card">
-                <div class="profile-form-wrapper">
-                    @include('profile.partials.delete-user-form')
-                </div>
-            </div>
-        </div>
-    </div>
-</x-app-layout>
-
-
-
-
-<style>
 .profile-wrapper {
     padding-top: 3rem;
     padding-bottom: 3rem;
@@ -359,4 +324,3 @@
 
 
 /*fin seccion update password*/
-</style>
