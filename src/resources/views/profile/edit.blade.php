@@ -1,10 +1,74 @@
-<link rel="stylesheet" href="{{ asset('css/profile.css') }}">
-<x-app-layout>
-    <x-slot name="header">
-        <h2 class="profile-header">
-   
-        </h2>
-    </x-slot>
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/cdbootstrap/js/cdb.min.js"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ asset('styles/elements/profile.css') }}">
+</head>
+<header>
+    <div class="navbar">
+        <div class="inner">
+            <a href="{{ route('admin.resume') }}"><img src="{{ asset('images/logos/logo_white-236x191.png') }}" alt="logo de la pagina" class="navbar-logo"></a>
+            <!-- Botón Inicio a la izquierda -->
+            <a href="{{ route('admin.resume') }}" class="navbar-home">
+                <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor"
+                    class="bi bi-house-door-fill" viewBox="0 0 16 16">
+                    <path d="M6.5 14.5v-2.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v2.5a.5.5 0 0 0 .5.5h3a1 1 0 0 0 1-1V7.707l-6-5.999-6 6V14a1 1 0 0 0 1 1h3a.5.5 0 0 0 .5-.5z"/>
+                </svg>
+                Resumen
+            </a>
+        </div>
+        
+
+        <!-- Menú del usuario a la derecha -->
+        <div class="dropdown">
+            <button class="navbar-btn dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                    <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                </svg>
+                <span>
+                    {{ Auth::user()->name }}
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                        <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0"/>
+                    </svg>
+                </span>
+            </button>
+
+            <ul class="dropdown-menu dropdown-menu-end">
+                <li>
+                    <a class="dropdown-item" href="{{ route('profile.edit') }}">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                            class="bi bi-person-fill-gear" viewBox="0 0 16 16">
+                            <path d="M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0m-9 8c0 1 1 1 1 1h5.256A4.5 4.5 0 0 1 8 12.5a4.5 4.5 0 0 1 1.544-3.393Q8.844 9.002 8 9c-5 0-6 3-6 4m9.886-3.54c.18-.613 1.048-.613 1.229 0l.043.148a.64.64 0 0 0 .921.382l.136-.074c.561-.306 1.175.308.87.869l-.075.136a.64.64 0 0 0 .382.92l.149.045c.612.18.612 1.048 0 1.229l-.15.043a.64.64 0 0 0-.38.921l.074.136c.305.561-.309 1.175-.87.87l-.136-.075a.64.64 0 0 0-.92.382l-.045.149c-.18.612-1.048.612-1.229 0l-.043-.15a.64.64 0 0 0-.921-.38l-.136.074c-.561.305-1.175-.309-.87-.87l.075-.136a.64.64 0 0 0-.382-.92l-.148-.045c-.613-.18-.613-1.048 0-1.229l.148-.043a.64.64 0 0 0 .382-.921l-.074-.136c-.306-.561.308-1.175.869-.87l.136.075a.64.64 0 0 0 .92-.382zM14 12.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0"/>
+                        </svg>
+                        Perfil
+                    </a>
+                </li>
+
+                <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+                    <button type="submit" class="dropdown-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-door-open" viewBox="0 0 16 16">
+                            <path d="M8.5 10c-.276 0-.5-.448-.5-1s.224-1 .5-1 .5.448.5 1-.224 1-.5 1"/>
+                            <path d="M10.828.122A.5.5 0 0 1 11 .5V1h.5A1.5 1.5 0 0 1 13 2.5V15h1.5a.5.5 0 0 1 0 1h-13a.5.5 0 0 1 0-1H3V1.5a.5.5 0 0 1 .43-.495l7-1a.5.5 0 0 1 .398.117M11.5 2H11v13h1V2.5a.5.5 0 0 0-.5-.5M4 1.934V15h6V1.077z"/>
+                        </svg>
+                        Cerrar Sesión
+                    </button>
+                </form>
+            </ul>
+        </div>
+    </div>
+</div>
+</header>
+<body>
 
     <div class="profile-wrapper">
         <div class="profile-container">
@@ -27,336 +91,11 @@
             </div>
         </div>
     </div>
-</x-app-layout>
 
+</body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
 
 
 
-<style>
-.profile-wrapper {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
 
-}
-
-.profile-container {
-    max-width: 80rem;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    width: 100%;
-    align-items: center;
-}
-
-.profile-card {
-    padding: 1rem;
-    background-color: #ffffff;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-    border-radius: 0.5rem;
-    width: 100%;
-    max-width: 36rem;
-}
-
-.dark .profile-card {
-    background-color: #1f2937;
-}
-
-@media (min-width: 640px) {
-    .profile-card {
-        padding: 2rem;
-    
-    }
-}
-
-/* seccion de eliminar cuenta */
-.custom-danger-button {
-    background-color: #b91c1c;
-    color: white;
-    padding: 0.75rem 1.5rem;
-    font-size: 1rem;
-    border: none;
-    border-radius: 0.5rem;
-    cursor: pointer;
-    transition: background-color 0.2s ease, box-shadow 0.2s ease;
-}
-
-.custom-danger-button:hover {
-    background-color: #991b1b;
-}
-
-.custom-danger-button:focus {
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(185, 28, 28, 0.4);
-    /* rojo con transparencia */
-}
-
-/* Contenedor del formulario */
-.delete-confirm-form {
-    margin-top: 1.5rem;
-    background: #ffffff;
-    padding: 2rem;
-    border-radius: 0.75rem;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    max-width: 420px;
-    display: none;
-}
-
-/* Título del modal */
-.delete-confirm-title {
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: #1f2937;
-    margin-bottom: 1rem;
-}
-
-/* Texto informativo */
-.delete-confirm-text {
-    font-size: 1rem;
-    color: #4b5563;
-    margin-bottom: 1.5rem;
-    line-height: 1.6;
-}
-
-/* Grupo de input */
-.form-group {
-    margin-bottom: 1.5rem;
-}
-
-/* Input de contraseña */
-.modal-input {
-    width: 100%;
-    padding: 0.75rem 1rem;
-    font-size: 1rem;
-    border: 1px solid #d1d5db;
-    border-radius: 0.5rem;
-    transition: border-color 0.2s ease, box-shadow 0.2s ease;
-}
-
-.modal-input:focus {
-    border-color: #4b9011;
-    box-shadow: 0 0 0 3px rgba(75, 144, 17, 0.2);
-    outline: none;
-}
-
-
-
-.custom-cancel-button {
-    background-color: #d97706;
-    color: white;
-    padding: 0.75rem 1.5rem;
-    font-size: 1rem;
-    border: none;
-    border-radius: 0.5rem;
-    cursor: pointer;
-    transition: background-color 0.2s ease, box-shadow 0.2s ease;
-}
-
-.custom-cancel-button:hover {
-    background-color: #b45309;
-
-}
-
-.custom-cancel-button:focus {
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.4);
-  
-}
-
-
-.delete-button-container {
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 1rem;
-}
-
-
-#confirm-toggle {
-    display: none;
-}
-
-
-#confirm-toggle:not(:checked)~.delete-button-container {
-    display: flex;
-}
-
-
-#confirm-toggle:checked~.delete-button-container {
-    display: none;
-}
-
-
-#confirm-toggle:checked~.delete-confirm-form {
-    display: block;
-}
-
-/*fin seccion de eliminar*/
-
-/*seccion update info*/
-.custom-primary-button {
-    background-color: #4b9011;
-    color: white;
-    padding: 0.75rem 1.5rem;
-    font-size: 1rem;
-    border: none;
-    border-radius: 0.5rem;
-    cursor: pointer;
-    transition: background-color 0.2s ease, box-shadow 0.2s ease;
-
-    &:hover {
-        background-color: #3a720d;
-    }
-
-    &:focus {
-        outline: none;
-        box-shadow: 0 0 0 3px rgba(75, 144, 17, 0.4);
-    }
-}
-
-.section-title {
-    font-size: 1.5rem;
-    font-weight: 500;
-    color: #111827;
-
-}
-
-.dark .section-title {
-    color: #f3f4f6;
-
-}
-
-.section-subtitle {
-    margin-top: 0.25rem;
-    font-size: 1rem;
-    color: #4b5563;
-
-}
-
-.dark .section-subtitle {
-    color: #9ca3af;
-
-}
-
-.form-section {
-    margin-top: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
- 
-}
-
-.input-text {
-    margin-top: 0.25rem;
-    display: block;
-    width: 100%;
-    padding: 0.75rem 1rem;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 0.5rem;
-    transition: border-color 0.2s, box-shadow 0.2s;
-}
-
-.input-error {
-    margin-top: 0.5rem;
-}
-
-.verification-warning {
-    font-size: 0.875rem;
-    margin-top: 0.5rem;
-    color: #1f2937;
-}
-
-.dark .verification-warning {
-    color: #e5e7eb;
-}
-
-.verify-button {
-    text-decoration: underline;
-    font-size: 0.875rem;
-    color: #4b5563;
-    border-radius: 0.375rem;
-    outline: none;
-    transition: all 0.2s;
-}
-
-.verify-button:hover {
-    color: #111827;
-}
-
-.dark .verify-button {
-    color: #9ca3af;
-}
-
-.dark .verify-button:hover {
-    color: #f3f4f6;
-}
-
-.verify-button:focus {
-    outline: none;
-    box-shadow: 0 0 0 2px #6366f1;
-}
-
-.dark .verify-button:focus {
-    box-shadow: 0 0 0 2px #6366f1, 0 0 0 4px #1f2937;
-}
-
-.verification-sent {
-    margin-top: 0.5rem;
-    font-size: 0.875rem;
-    font-weight: 500;
-    color: #16a34a;
-}
-
-.dark .verification-sent {
-    color: #4ade80;
-}
-
-.form-actions {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-.saved-message {
-    font-size: 0.875rem;
-    color: #4b5563;
-}
-
-.dark .saved-message {
-    color: #9ca3af;
- }
-/*fin seccion update info*/
-
-/*seccion update password*/
-.dark .section-title {
-    color: #f3f4f6;
-}
-
-.section-subtitle {
-    margin-top: 0.25rem;
-    font-size: 0.875rem;
-    color: #4b5563;
-
-}
-
-.dark .section-subtitle {
-    color: #9ca3af;
-    
-}
-
-.form-section {
-    margin-top: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
- 
-}
-
-
-/*fin seccion update password*/
-</style>
